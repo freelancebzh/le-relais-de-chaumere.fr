@@ -117,7 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
     <header>
         <nav>
-            <div class="logo"><img src="photos/general/logo.png" alt="logo le relais de poste 35 qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+            <div class="logo"><img src="photos/general/logo1.png" alt="logo le relais de poste 35 qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
@@ -658,13 +658,14 @@ La <a href="https://www.lacentrale.fr/fiche-technique-voiture-citroen-c3-iv+113+
 
 <!-- FIN DE SECTION ------------------------------------------------------------------------------- -->
 
-	<footer>
+<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
     <div style="margin-bottom: 1.5rem;">
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px;">☎️ Numéros Utiles</a>
+        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
+        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
+        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
+        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
     </div>
-    <p>&copy; 2026 Le relais de de Chaumeré - juin 2026 - Tous droits réservés.</p>
+    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - Juin 2026 - Tous droits réservés.</p>
 </footer>
 
     <script>
@@ -690,5 +691,51 @@ La <a href="https://www.lacentrale.fr/fiche-technique-voiture-citroen-c3-iv+113+
             });
         });
     </script>
+	
+	<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
+    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
+        🍪 <strong>Le Relais de Poste 35</strong> utilise des cookies pour analyser l'audience de ce site via Google Tag Manager. Vous pouvez accepter ou refuser ce suivi.
+    </p>
+    <div style="display: flex; gap: 10px; justify-content: flex-end;">
+        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
+        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const banner = document.getElementById("cookie-banner");
+        const acceptBtn = document.getElementById("btn-accept-cookies");
+        const refuseBtn = document.getElementById("btn-refuse-cookies");
+
+        // Vérifie si l'utilisateur a déjà fait un choix
+        const cookieChoice = localStorage.getItem("cookieConsent");
+
+        if (!cookieChoice) {
+            // Si aucun choix, on affiche le bandeau
+            banner.style.display = "block";
+        } else if (cookieChoice === "accepted") {
+            // Si déjà accepté, on peut lancer les fonctions de tracking ici si besoin
+            activerTracking();
+        }
+
+        acceptBtn.addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "accepted");
+            banner.style.display = "none";
+            activerTracking();
+        });
+
+        refuseBtn.addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "refused");
+            banner.style.display = "none";
+            // Optionnel : recharger la page ou bloquer proprement
+        });
+
+        function activerTracking() {
+            console.log("GTM / Analytics Activé par l'utilisateur.");
+            // C'est ici que la magie opère si tu veux lier le consentement à GTM.
+        }
+    });
+</script>
 </body>
 </html>

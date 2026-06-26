@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background-color: #f7fafc; }
+        .legal-container { max-width: 700px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h1 { font-size: 1.8rem; color: #1a202c; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 20px; }
+        h2 { font-size: 1.2rem; color: #2d3748; margin-top: 25px; margin-bottom: 10px; }
+        p, ul { font-size: 0.95rem; color: #4a5568; }
+        .back-link { display: inline-block; margin-top: 30px; color: #0066cc; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="legal-container">
+        <h1>Mentions Légales</h1>
+
+<h2>1. Éditeur du site</h2>
+        <p>
+            Le site Internet <strong>Le Relais de Chaumeré</strong> est édité et géré par : <strong>Le Relais de Poste</strong>,<br> siret <strong>991 629 981 00028</strong><br>
+            <strong>Adresse du gîte :</strong> Chaumeré, 35113 Domagné, France<br>
+            <strong>Contact :</strong> Pour toute demande ou réclamation, vous pouvez nous contacter directement via notre <a href="contact.html" style="color: #0066cc; font-weight: bold;">Formulaire de contact</a>.
+        </p>
+
+        <h2>2. Hébergement du site</h2>
+        <p>
+            Ce site est hébergé gracieusement par la plateforme de développement :<br>
+            <strong>GitHub Inc.</strong><br>
+            Adresse : 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, États-Unis.<br>
+            Site web : <a href="https://pages.github.com" target="_blank" style="color: #666;">pages.github.com</a>
+        </p>
+
+        <h2>3. Propriété intellectuelle</h2>
+        <p>
+            L'ensemble des textes, graphismes et photos (sauf mentions contraires ou images libres de droits) présents sur ce site sont la propriété exclusive de l'éditeur. Toute reproduction ou exploitation non autorisée est interdite.
+        </p>
+
+       <h2>4. Données personnelles & Cookies</h2>
+        <p>
+            Ce site utilise <strong>Google Tag Manager</strong> pour mesurer son audience et analyser les visites afin d'améliorer votre expérience de navigation. 
+        </p>
+        <p>
+            À ce titre, des cookies analytiques ou de suivi peuvent être déposés sur votre navigateur. Conformément à la réglementation européenne (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Vous pouvez à tout moment configurer votre navigateur Internet pour bloquer ou supprimer ces cookies.
+        </p>
+
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+    </div>
+	
+	<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
+    <div style="margin-bottom: 1.5rem;">
+        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
+        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
+        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
+        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
+    </div>
+    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - Juin 2026 - Tous droits réservés.</p>
+</footer>
+
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
+    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
+        🍪 <strong>Le Relais de Poste 35</strong> utilise des cookies pour analyser l'audience de ce site via Google Tag Manager. Vous pouvez accepter ou refuser ce suivi.
+    </p>
+    <div style="display: flex; gap: 10px; justify-content: flex-end;">
+        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
+        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const banner = document.getElementById("cookie-banner");
+        const acceptBtn = document.getElementById("btn-accept-cookies");
+        const refuseBtn = document.getElementById("btn-refuse-cookies");
+
+        // Vérifie si l'utilisateur a déjà fait un choix
+        const cookieChoice = localStorage.getItem("cookieConsent");
+
+        if (!cookieChoice) {
+            // Si aucun choix, on affiche le bandeau
+            banner.style.display = "block";
+        } else if (cookieChoice === "accepted") {
+            // Si déjà accepté, on peut lancer les fonctions de tracking ici si besoin
+            activerTracking();
+        }
+
+        acceptBtn.addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "accepted");
+            banner.style.display = "none";
+            activerTracking();
+        });
+
+        refuseBtn.addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "refused");
+            banner.style.display = "none";
+            // Optionnel : recharger la page ou bloquer proprement
+        });
+
+        function activerTracking() {
+            console.log("GTM / Analytics Activé par l'utilisateur.");
+            // C'est ici que la magie opère si tu veux lier le consentement à GTM.
+        }
+    });
+</script>
+
+</body>
+</html>
