@@ -15,40 +15,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détente, Baignade & Beauté | Le Relais de Chaumeré</title>
+	
+	<link rel="stylesheet" href="style.css">
+	
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
+body {
+            font-family: "Helvetica Neue", Arial, sans-serif !important;
+            font-weight: 400 !important;
+            letter-spacing: -0.01em;
         }
-        
-        header {
-            border-bottom: 1px solid #eaeaea;
-            padding: 20px;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            gap: 20px;
-        }
-        nav a {
-            color: #555;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover { color: #000; }
 
         .container {
             max-width: 800px;
@@ -136,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
                 <li><a href="tarifs.html">Services & Tarifs</a></li>
-                <li><a href="tourisme.html">Tourisme</a></li>
+                <li><a href="tourisme.html"class="active">Tourisme</a></li>
                 <li><a href="propos.html">À Propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog & Actu</a></li>
@@ -152,7 +127,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         🚧 Page en cours de création
     </p>
     <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #718096;">
-        Les photos et les itinéraires précis arrivent très vite ! Pour le moment, les liens de localisation Google Maps sont temporairement désactivés. Merci de votre patience.
+        Les photos et les itinéraires précis arrivent très vite ! Pour le moment, les liens de localisation Google Maps sont temporairement désactivés ou erronés. Merci de votre patience.
     </p>
 </div>
         
@@ -161,25 +136,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="section-title">🏖️ Où se baigner (Lacs & Plages)</div>
 
-        <div class="detente-item">
-            <div class="detente-header">
-                <h3>Plan d'eau de la Traverie - Domalain (~14 km)</h3>
-                <span class="badge badge-baignade">Baignade</span>
-            </div>
-            <p>Le spot de baignade aménagé le plus proche du gîte ! C'est un joli plan d'eau arboré avec une plage de sable fin pour poser sa serviette, l'eau y est régulièrement contrôlée et de très bonne qualité.</p>
-            <div class="meta-info">
-                <strong>🕒 Infos :</strong> Accès libre et gratuit. Idéal pour les familles.<br>
-                <strong>📍 Adresse :</strong> La Croix, 35680 Domalain
-            </div>
-            <a href="https://maps.google.com/?cid=15385430527245529520&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn-map">🗺️ S'y rendre</a>
-        </div>
 
         <div class="detente-item">
             <div class="detente-header">
                 <h3>Base de Loisirs de Haute-Vilaine - Saint-M'Hervé (~20 km)</h3>
                 <span class="badge badge-baignade">Grand Lac & Loisirs</span>
             </div>
-            <p>Un immense lac de 150 hectares. C'est parfait pour passer l'après-midi complète : il y a une belle plage de sable pour se baigner, des aires de pique-nique ombragées, et une base nautique où l'on peut louer des kayaks, des paddles ou des pédalos.</p>
+            <p>Un immense lac de 150 hectares. C'est parfait pour passer l'après-midi complet : il y a une belle plage de sable pour se baigner, des aires de pique-nique ombragées, et une base nautique où l'on peut louer des kayaks, des paddles ou des pédalos.</p>
             <div class="meta-info">
                 <strong>🕒 Infos :</strong> Plage surveillée l'été en après-midi. Jeux pour enfants sur place.<br>
                 <strong>📍 Adresse :</strong> La Ville Cuite, 35500 Saint-M'Hervé
@@ -192,7 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>Centre Aquatique Inoxia - Châteaugiron (~11 km)</h3>
                 <span class="badge badge-baignade">Piscine & Balnéo</span>
             </div>
-            <p>Un super complexe à deux pas du gîte. En plus des bassins sportifs et ludiques, il dispose d'un **Espace Détente** réservé aux adultes avec sauna, hammam et jacuzzi pour buller au chaud.</p>
+            <p>Un super complexe à deux pas du gîte. En plus des bassins sportifs et ludiques, il dispose d'un <strong>Espace Détente</strong> réservé aux adultes avec sauna, hammam et jacuzzi pour buller au chaud.</p>
             <div class="meta-info">
                 <strong>🕒 Le + :</strong> Idéal par tous les temps. Pensez à vérifier les horaires de l'espace bien-être.<br>
                 <strong>📍 Adresse :</strong> Rue du Général de Gaulle, 35410 Châteaugiron
@@ -217,7 +180,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>Le Bocage / L'Aquatis - Vitré (~16 km)</h3>
                 <span class="badge badge-baignade">Piscine & Espace Bien-être</span>
             </div>
-            <p>Le grand centre aquatique de Vitré Communauté. Il offre de superbes prestations pour toute la famille avec de grands bassins, mais surtout un **espace balnéo très qualitatif** complet (saunas, hammam, douches massantes) pour décompresser un maximum.</p>
+            <p>Le grand centre aquatique de Vitré Communauté. Il offre de superbes prestations pour toute la famille avec de grands bassins, mais surtout un <strong>espace balnéo très qualitatif</strong> complet (saunas, hammam, douches massantes) pour décompresser un maximum.</p>
             <div class="meta-info">
                 <strong>📍 Adresse :</strong> 2 Rue Robert Maruelle, 35500 Vitré
             </div>
@@ -255,6 +218,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="section-title">💅 Beauté, Soins & Ongleries</div>
 
+
+<div class="detente-item">
+    <div class="detente-header">
+        <h3>Dans ma Bulle Bio - Ossé (~4 km)</h3>
+        <span class="badge badge-ongle">Institut / Bio & Bien-être</span>
+    </div>
+    <p>Un bel institut de beauté engagé, situé au calme à Ossé. Spécialisé dans les soins bio et naturels, c'est l'adresse parfaite pour s'offrir une parenthèse de douceur respectueuse de la peau et de l'environnement : soins du visage cocon, massages relaxants et manucures soignées.</p>
+    <div class="meta-info">
+        <strong>🕒 Horaires :</strong> Uniquement sur rendez-vous (réservable facilement en ligne sur Planity).<br>
+        <strong>📍 Adresse :</strong> 2 Bis Rue de la Mairie, Ossé, 35410 Châteaugiron
+    </div>
+    <a href="https://maps.google.com/?cid=3545195240217036322" target="_blank" class="btn-map">🗺️ S'y rendre</a>
+</div>
+
+
         <div class="detente-item">
             <div class="detente-header">
                 <h3>Fleur de Peau - Domagné (Sur place !)</h3>
@@ -268,18 +246,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://maps.google.com/?cid=11247590068415058009&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn-map">🗺️ S'y rendre</a>
         </div>
 		
-		<div class="detente-item">
-            <div class="detente-header">
-                <h3>L'Instant pour Soi - Ossé (~4 km)</h3>
-                <span class="badge badge-ongle">Institut / Bien-être</span>
-            </div>
-            <p>Un super petit institut de proximité à Ossé. Idéal pour une pose de vernis, un soin du visage cocooning ou une manucure rapide sans avoir à courir dans les grands centres commerciaux.</p>
-            <div class="meta-info">
-                <strong>🕒 Horaires :</strong> Sur rendez-vous (pensez à vérifier sur Planity ou par téléphone).<br>
-                <strong>📍 Adresse :</strong> Le Bourg, Ossé, 35220 Châteaubourg
-            </div>
-            <a href="https://maps.google.com/?cid=11247590068415058009&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn-map">🗺️ S'y rendre</a>
-        </div>
 		
 		<div class="section-title">🎳 Détente Récréative & Fun (Val d'Orson ~15 km)</div>
 
@@ -311,19 +277,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 	
-	<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem;">
+<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
+    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
+        <a href="offre.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">L'Offre</a> | 
+        <a href="tarifs.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Tarifs</a> | 
+        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidaires</a> | 
         <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
         <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
         <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
         <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 26 Juin 2026 - Tous droits réservés.</p>
+    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 29 Juin 2026 - Tous droits réservés.</p>
 </footer>
 
 <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
     <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Tag Manager. Vous pouvez accepter ou refuser ce suivi.
+        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Tag Manager. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
     </p>
     <div style="display: flex; gap: 10px; justify-content: flex-end;">
         <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>

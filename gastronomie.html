@@ -14,41 +14,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art & Gastronomie - Où manger ? | Le Relais de Chaumeré</title>
+	
+	<link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        
-        header {
-            border-bottom: 1px solid #eaeaea;
-            padding: 20px;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            gap: 20px;
-        }
-        nav a {
-            color: #555;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover { color: #000; }
-
         .container {
             max-width: 800px;
             margin: 40px auto;
@@ -136,7 +104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
                 <li><a href="tarifs.html">Services & Tarifs</a></li>
-                <li><a href="tourisme.html">Tourisme</a></li>
+                <li><a href="tourisme.html"class="active">Tourisme</a></li>
                 <li><a href="propos.html">À Propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog & Actu</a></li>
@@ -166,7 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
         
         <h1>Art & Gastronomie locale</h1>
-        <p class="intro-text">Parce qu'on peut avoir envie d'un grand menu après une rando ou d'un burger devant un film au gîte, voici nos adresses testées et approuvées à Châteaubourg et alentours !</p>
+        <p class="intro-text">Parce qu'on peut avoir envie d'un grand menu après une belle randonnée ou d'un burger bien chaud confortablement installé dans <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre studio tout équipé</a>, voici nos adresses testées et approuvées aux alentours !</p>
 
 
 <!-- CIBLE 4 : CRÊPERIES & TRADITION -->
@@ -175,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- LE RESTAURANT DE DOMAGNÉ -->
 <div class="resto-item">
     <div class="resto-header">
-        <h3>🥩🍛🍷 Le Ricordeau (&lt; 1 km)</h3>
+        <h3>🥩🍛🍷 Le Ricordeau (~8 km)</h3>
         <span class="badge badge-tradition">Traditionnel / Terroir</span>
     </div>
     <p>Le rendez-vous gourmand des Domagnéens, situé à deux pas du gîte ! Cet établissement propose une cuisine traditionnelle et familiale de qualité, généreuse et conviviale. Une adresse parfaite pour un repas de terroir authentique au cœur du village. 🥩🍛🍷</p>
@@ -405,7 +373,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>🚚🍕🌯🥞 Les Camions & Food-Trucks Locaux (&lt; 1 km)</h3>
         <span class="badge badge-fastfood">À emporter / Itinérant</span>
     </div>
-    <p>Pas envie de cuisiner ou de prendre la voiture ? Plusieurs camions gourmands s'installent directement sur les places de nos villages en fin de journée. Une alternative pour un repas chaud et convivial au gîte !</p>
+    <p>Pas envie de cuisiner ou de prendre la voiture ? Plusieurs camions gourmands s'installent directement sur les places de nos villages en fin de journée. Une excellente alternative pour ramener un repas chaud et le déguster en toute tranquillité grâce aux équipements de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre hébergement indépendant</a></p>
     <div class="meta-info">
         <strong>🍕 Les Pizzas :</strong> 
         Le camion pizza s'installe généralement à Domagné ou à Ossé en fin de semaine (suivre les panneaux à l'entrée du bourg). Vous y trouverez des pizzas artisanales cuites au four. <br>
@@ -600,7 +568,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>Marché de producteurs d'Ossé</h3>
         <span class="badge badge-marche">Mercredi soir</span>
     </div>
-    <p>Un petit marché de fin de journée convivial et 100% axé sur la proximité, idéal pour faire ses courses en sortant du travail directement sur la place de l'Église. 🥖🍓</p>
+    <p>Un petit marché de fin de journée convivial et 100% axé sur la proximité, idéal pour faire ses courses directement sur la place de l'Église. Ce soutien direct aux circuits courts fait pleinement écho à nos valeurs, que vous pouvez découvrir sur notre page dédiée à notre <a href="solidaires.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Engagement Solidaire</a>🥖🍓</p>
     <div class="meta-info">
         <strong>🕒 Horaires :</strong> Tous les mercredis (à partir de 17h00)<br>
         <strong>🍎 Sur les étals :</strong> Producteurs locaux, maraîchers (primeurs), boucher-charcutier et d'excellentes galettes et crêpes à emporter.
@@ -683,23 +651,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ⬆️
 </a>
 
-	<footer>
 <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem;">
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
+    <div style="margin-bottom: 1.5rem; font-size: 0.85rem; display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; gap: 8px;">
+        <a href="offre.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">L'Offre</a> | 
+        <a href="tarifs.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">Services & Tarifs</a> | 
+        <a href="solidaires.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">Solidaires</a> | 
+        <a href="propos.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">À Propos</a> | 
+        <a href="blog.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">Blog & Actu</a> | 
+        <a href="numeros.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">☎️ Numéros Utiles</a> |
+        <a href="mentions-legales.html" style="color: #666; text-decoration: none; white-space: nowrap;">Mentions Légales</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 26 Juin 2026 - Tous droits réservés.</p>
-</footer>
-
-    <p>&copy; 2026 Le relais de Chaumeré - juin 2026 - Tous droits réservés.</p>
+    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 29 Juin 2026 - Tous droits réservés.</p>
 </footer>
 
 <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
     <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Tag Manager. Vous pouvez accepter ou refuser ce suivi.
+        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Tag Manager. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
     </p>
     <div style="display: flex; gap: 10px; justify-content: flex-end;">
         <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>

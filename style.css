@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+nav ul li a.active {
+    font-weight: 800; /* Rend le lien de la page actuelle très gras */
+}
+
 
 :root {
     --bg-color: #ffffff;
@@ -322,6 +327,10 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+.services-block p {
+    text-align: justify;
+}
+
 .services-block ul {
     list-style: none;
 }
@@ -507,12 +516,16 @@ footer {
 }
 /* Style pour la zone avec image de fond */
 .about-hero {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('votre-image.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('photos/general/saint-medard-chaumere-XVIIe.jpg');
     background-size: cover;
     background-position: center;
-    padding: 1rem 1rem;
+    padding: 6rem 2rem;       /* On passe de 1rem à 6rem pour écarter le haut et le bas */
+    min-height: 300px;        /* Force la bannière à faire au moins 300px de haut */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centre verticalement le titre et le texte */
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;      /* Donne de l'espace avant d'attaquer la partie "Le Projet" */
 }
 
 /* Force le centrage des textes à l'intérieur */
@@ -528,4 +541,10 @@ html {
     scroll-behavior: smooth;
 }
 
-.badge-marche { background-color: #2e7d32; color: white; }
+.badge-marche { background-color: #e8f5e9; color: #2e7d32; }
+
+.badge-rando { background-color: #fef3c7; color: #d97706; } /* Un joli jaune/orange dynamique */
+
+nav ul li a.active {
+    font-weight: 700; /* Rend le lien de la page actuelle très gras */
+}
