@@ -175,6 +175,10 @@ footer {
         gap: 1rem;
     }
 
+    .logo img {
+        height: 70px !important;
+    }
+
     .hero h1 {
         font-size: 2.2rem;
     }
