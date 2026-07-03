@@ -155,6 +155,21 @@ main {
     font-size: 0.95rem;
 }
 
+.point-photo {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.point-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 footer {
     border-top: 1px solid var(--border-color);
     padding: 3rem 2rem;
