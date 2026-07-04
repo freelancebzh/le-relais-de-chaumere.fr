@@ -567,3 +567,72 @@ html {
 nav ul li a.active {
     font-weight: 700; /* Rend le lien de la page actuelle très gras */
 }
+
+/* Page Plan du Site */
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0 6rem 0;
+}
+
+.sitemap-card {
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.sitemap-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+.sitemap-card h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.sitemap-card ul {
+    list-style: none;
+}
+
+.sitemap-card ul li {
+    margin-bottom: 0.9rem;
+}
+
+.sitemap-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+.sitemap-card ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 0;
+}
+
+.sitemap-card ul li a::before {
+    content: "→";
+    position: absolute;
+    left: -1.1rem;
+    opacity: 0;
+    transition: opacity 0.2s ease, left 0.2s ease;
+}
+
+.sitemap-card ul li a:hover {
+    color: var(--text-color);
+    padding-left: 1rem;
+}
+
+.sitemap-card ul li a:hover::before {
+    opacity: 1;
+    left: 0;
+}
