@@ -74,6 +74,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .escapade-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
         
@@ -97,6 +99,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-top: 10px;
         }
         .btn-map:hover { background-color: #cbd5e0; }
+    
+        .header-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -142,8 +162,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="escapade-item">
             <div class="escapade-header">
-                <h3>L'Étang du Château de Châteaugiron (~11 km)</h3>
-                <span class="badge badge-balade">Petite Balade</span>
+                <h3>L'Étang du Château de Châteaugiron</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-balade">Petite Balade</span>
+                    <span class="distance-chip">📍 ~11 km</span>
+                </div>
             </div>
             <p>Situé juste au pied du célèbre château médiéval, cet étang offre un cadre bucolique et une promenade ombragée très agréable. Le tour de l'eau est entièrement aménagé, jalonné de pontons en bois et d'espaces de détente pour observer les oiseaux. C'est l'endroit parfait pour une sortie relaxante en fin de journée, avant de rentrer recharger vos batteries et vous détendre dans le cadre chaleureux de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre studio tout confort</a>.</p>
             <div class="meta-info">
@@ -156,8 +179,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 <div class="escapade-item">
     <div class="escapade-header">
-        <h3>Le Vallon de la Vilaine et Parc Ar Milin (~6 km)</h3>
-        <span class="badge badge-balade">Petite Balade</span>
+        <h3>Le Vallon de la Vilaine et Parc Ar Milin</h3>
+                <div class="header-tags">
+            <span class="badge badge-balade">Petite Balade</span>
+            <span class="distance-chip">📍 ~6 km</span>
+        </div>
     </div>
     <p>Une promenade très facile et agréable au bord de l'eau à Châteaubourg. On déambule dans le parc paysager à la découverte des sculptures monumentales, puis on peut prolonger le long des passerelles en bois qui longent la Vilaine.</p>
     <div class="meta-info">
@@ -169,8 +195,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="escapade-item">
             <div class="escapade-header">
-                <h3>Le Jardin du Parc à Vitré (~20 km)</h3>
-                <span class="badge badge-balade">Petite Balade</span>
+                <h3>Le Jardin du Parc à Vitré</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-balade">Petite Balade</span>
+                    <span class="distance-chip">📍 ~20 km</span>
+                </div>
             </div>
             <p>Un magnifique jardin public à l'anglaise niché au cœur de la cité médiévale de Vitré. En flânant dans ses allées ombragées, vous découvrirez une volière, l'enclos des daims, des arbres remarquables ainsi qu'une statue de la Marquise de Sévigné. Idéal pour une parenthèse bucolique après avoir visité le château. Avant de partir explorer ces trésors historiques, préparez votre pique-nique en toute liberté dans le coin cuisine de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre studio indépendant</a>.</p>
             <div class="meta-info">
@@ -182,8 +211,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="escapade-item">
             <div class="escapade-header">
-                <h3>Le Parc du Thabor à Rennes (~28 km)</h3>
-                <span class="badge badge-balade">Petite Balade / Incontournable</span>
+                <h3>Le Parc du Thabor à Rennes</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-balade">Petite Balade / Incontournable</span>
+                    <span class="distance-chip">📍 ~28 km</span>
+                </div>
             </div>
             <p>Classé parmi les plus beaux jardins de France, cet ancien domaine des moines de l'abbaye Saint-Melaine s'étend sur 10 hectares en plein centre-ville. Il associe magnifiquement un jardin à la française, un parc à l'anglaise, une roseraie exceptionnelle de 2 000 variétés et un jardin botanique en spirale. C'est le lieu parfait pour s'évader le temps d'un après-midi breton, avant de retrouver le calme absolu et le confort douillet de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre hébergement de standing</a>.</p>
             <div class="meta-info">
@@ -196,8 +228,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="escapade-item">
             <div class="escapade-header">
-                <h3>Le Parc de la Valière et sa Tyrolienne - Domagné (~8 km)</h3>
-                <span class="badge badge-balade">Famille & Loisirs</span>
+                <h3>Le Parc de la Valière et sa Tyrolienne - Domagné</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-balade">Famille & Loisirs</span>
+                    <span class="distance-chip">📍 ~8 km</span>
+                </div>
             </div>
             <p>Un super espace vert de loisirs situé au cœur de Domagné. C'est le rendez-vous idéal pour les familles : le parc propose de superbes structures de jeux en bois, des terrains de sport, un cadre verdoyant pour se promener au calme, et surtout une grande tyrolienne qui fait le bonheur des petits (et des grands !). Après une après-midi bien rythmée à courir et jouer dehors, vous apprécierez retrouver le calme et le confort de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre studio tout équipé</a> pour un repos bien mérité.</p>
             <div class="meta-info">
@@ -209,8 +244,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="escapade-item">
             <div class="escapade-header">
-                <h3>Base de Loisirs de la Haute-Vilaine (~18 km)</h3>
-                <span class="badge badge-foret">Nature & Fun</span>
+                <h3>Base de Loisirs de la Haute-Vilaine</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-foret">Nature & Fun</span>
+                    <span class="distance-chip">📍 ~18 km</span>
+                </div>
             </div>
             <p>Situé au bord d'un immense plan d'eau de 150 hectares, ce site en accès libre est un paradis pour les enfants et les sportifs. On y trouve de grandes structures de jeux, des terrains de beach-volley, des parcours de santé, et de grandes pelouses pour pique-niquer ou taper dans un ballon au bord de l'eau. Une sortie grand air parfaite pour déconnecter à deux pas de Vitré, avant de revenir vous concocter un bon petit plat dans l'ambiance cocooning de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre hébergement indépendant</a>.</p>
             <div class="meta-info">
@@ -224,8 +262,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 <div class="escapade-item">
             <div class="escapade-header">
-                <h3>Boucle des Vergers et de Chaumeré (Sur place !)</h3>
-                <span class="badge badge-rando">Randonnée / VTT</span>
+                <h3>Boucle des Vergers et de Chaumeré</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-rando">Randonnée / VTT</span>
+                    <span class="distance-chip">📍 Sur place !</span>
+                </div>
             </div>
             <p>Une extension exclusive du circuit des pommiers qui passe littéralement au pied de notre structure. Ce parcours typique du bocage vous emmène à travers les plus grands vergers du département (pays de la pomme et de la cidrerie locale). Un itinéraire vallonné et verdoyant, idéal pour partir s'aérer à pied ou à vélo directement depuis <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre studio tout équipé</a>.</p>
             <div class="meta-info">
@@ -237,8 +278,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="escapade-item">
     <div class="escapade-header">
-        <h3>Circuit de la Vallée de la Valière - Domagné (~8 km)</h3>
-        <span class="badge badge-rando">Randonnée</span>
+        <h3>Circuit de la Vallée de la Valière - Domagné</h3>
+                <div class="header-tags">
+            <span class="badge badge-rando">Randonnée</span>
+            <span class="distance-chip">📍 ~8 km</span>
+        </div>
     </div>
     <p>Une belle boucle qui permet de découvrir la campagne vallonnée de Domagné. Le tracé alterne entre petits chemins creux abrités, chemins de terre entre les champs et traversées de charmants hameaux locaux. Une très chouette randonnée à seulement quelques minutes de voiture de notre gîte et pour découvrir comment nous agissons au quotidien pour préserver la beauté de notre environnement local, rendez-vous sur notre page <a href="solidaires.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Engagement Solidaire</a>.</p>
     <div class="meta-info">
@@ -250,8 +294,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="escapade-item">
             <div class="escapade-header">
-                <h3>Le Circuit des Rives de la Vilaine (~6 km)</h3>
-                <span class="badge badge-rando">Randonnée / Vélo</span>
+                <h3>Le Circuit des Rives de la Vilaine</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-rando">Randonnée / Vélo</span>
+                    <span class="distance-chip">📍 ~6 km</span>
+                </div>
             </div>
             <p>Un itinéraire champêtre au départ de Châteaubourg qui suit en partie le tracé de la Vilaine et s'enfonce dans les sentiers boisés environnants. Parfait pour courir ou pour une sortie VTT tranquille.</p>
             <div class="meta-info">
@@ -266,8 +313,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="escapade-item">
             <div class="escapade-header">
-                <h3>La Forêt de la Corbière (~13 km)</h3>
-                <span class="badge badge-foret">Forêt / Nature</span>
+                <h3>La Forêt de la Corbière</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-foret">Forêt / Nature</span>
+                    <span class="distance-chip">📍 ~13 km</span>
+                </div>
             </div>
             <p>Un massif forestier magnifique situé vers Marpiré. C'est le spot idéal pour une vraie sortie nature. La forêt possède un grand étang (l'Étang de la Corbière) avec les ruines d'un ancien moulin. L'ambiance y est très paisible et ressourçante.</p>
             <div class="meta-info">

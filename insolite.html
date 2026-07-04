@@ -105,6 +105,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .insolite-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
         
@@ -128,6 +130,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-top: 10px;
         }
         .btn-map:hover { background-color: #cbd5e0; }
+    
+        .header-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -173,8 +193,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="insolite-item">
             <div class="insolite-header">
-                <h3>Le Jardin des Arts - Parc Ar Milin' (~6 km)</h3>
-                <span class="badge badge-art">Art en plein air</span>
+                <h3>Le Jardin des Arts - Parc Ar Milin'</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-art">Art en plein air</span>
+                    <span class="distance-chip">📍 ~6 km</span>
+                </div>
             </div>
             <p>Une véritable galerie d'art contemporain à ciel ouvert, mais version XXL. Chaque année de mai à novembre, des sculpteurs du monde entier installent des œuvres monumentales et insolites (parfois de plusieurs mètres de haut) au milieu des arbres et des rivières du parc. L'effet de contraste entre la nature tranquille et l'art moderne est saisissant.</p>
             <div class="meta-info">
@@ -189,8 +212,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="insolite-item">
             <div class="insolite-header">
-                <h3>L'aventure "Trésors de Haute-Bretagne" (Partout autour du gîte)</h3>
-                <span class="badge badge-jeu">Géocaching Gratuit</span>
+                <h3>L'aventure "Trésors de Haute-Bretagne"</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-jeu">Géocaching Gratuit</span>
+                    <span class="distance-chip">📍 Partout autour du gîte</span>
+                </div>
             </div>
             <p>Connaissez-vous le géocaching ? La Bretagne possède la plus grande chasse au trésor gratuite sur smartphone de France (via l'application gratuite "Trésors de Haute-Bretagne"). Équipés de votre téléphone, partez résoudre des énigmes en pleine nature ou dans les cités de Châteaugiron et Vitré pour débusquer les "caches" secrètes où se cachent de petits badges de collection (les Korrigans !).</p>
             <div class="meta-info">
@@ -204,8 +230,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="insolite-item">
             <div class="insolite-header">
-                <h3>La Roche aux Fées (~25 km)</h3>
-                <span class="badge badge-magie">Site Mystique Incontournable</span>
+                <h3>La Roche aux Fées</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-magie">Site Mystique Incontournable</span>
+                    <span class="distance-chip">📍 ~25 km</span>
+                </div>
             </div>
             <p>Un peu plus loin (comptez 25 min de route), mais c'est le monument mégalithique le plus impressionnant et légendaire de la région. C'est le plus grand dolmen de France, une allée couverte de pierres gigantesques (certaines pèsent plus de 40 tonnes !). La légende raconte que les fées l'ont construit en une seule nuit en transportant les blocs dans leurs tabliers. Les citadins adorent l'énergie mystérieuse qui se dégage du lieu.</p>
             <div class="meta-info">
@@ -217,8 +246,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="insolite-item">
             <div class="insolite-header">
-                <h3>Parcours "Vitré Lumières" à la nuit tombée (~16 km)</h3>
-                <span class="badge badge-magie">Balade Féérique Nocturne</span>
+                <h3>Parcours "Vitré Lumières" à la nuit tombée</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-magie">Balade Féérique Nocturne</span>
+                    <span class="distance-chip">📍 ~16 km</span>
+                </div>
             </div>
             <p>Dès que la nuit tombe, la cité médiévale de Vitré se transforme. Un parcours lumineux scénographié projette des jeux d'ombres, de couleurs et d'images historiques directement sur les remparts du château fort et les façades en pans de bois des ruelles sombres. C'est poétique, mystérieux et complètement hors du temps.</p>
             <div class="meta-info">

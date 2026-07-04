@@ -73,6 +73,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .resto-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
         
@@ -96,6 +98,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-top: 10px;
         }
         .btn-map:hover { background-color: #cbd5e0; }
+    
+        .header-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -153,8 +173,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- LE RESTAURANT DE DOMAGNÉ -->
 <div class="resto-item">
     <div class="resto-header">
-        <h3>🥩🍛🍷 Le Ricordeau (~8 km)</h3>
-        <span class="badge badge-tradition">Traditionnel / Terroir</span>
+        <h3>🥩🍛🍷 Le Ricordeau</h3>
+                <div class="header-tags">
+            <span class="badge badge-tradition">Traditionnel / Terroir</span>
+            <span class="distance-chip">📍 ~8 km</span>
+        </div>
     </div>
     <p>Le rendez-vous gourmand des Domagnéens, situé à deux pas du gîte ! Cet établissement propose une cuisine traditionnelle et familiale de qualité, généreuse et conviviale. Une adresse parfaite pour un repas de terroir authentique au cœur du village. 🥩🍛🍷</p>
     <div class="meta-info">
@@ -168,8 +191,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="resto-item">
     <div class="resto-header">
-        <h3>🥩🍛🍷 Barbakoa (~6 km)</h3>
-        <span class="badge badge-luxe">Brasero & Grillades</span>
+        <h3>🥩🍛🍷 Barbakoa</h3>
+                <div class="header-tags">
+            <span class="badge badge-luxe">Brasero & Grillades</span>
+            <span class="distance-chip">📍 ~6 km</span>
+        </div>
     </div>
     <p>Le paradis des amateurs de viande et de cuisson au brasero ! Ce restaurant propose une cuisine de caractère, brute et savoureuse, où les belles pièces de viande et les produits de saison sont sublimés par le feu de bois. Une ambiance ultra-conviviale et un cadre soigné. 🥩🔥🍷</p>
     <div class="meta-info">
@@ -183,8 +209,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="resto-item">
     <div class="resto-header">
-        <h3>🍷🧀🥖 Le Cellier (~6 km)</h3>
-        <span class="badge badge-luxe">Cave & Bar à Vins</span>
+        <h3>🍷🧀🥖 Le Cellier</h3>
+                <div class="header-tags">
+            <span class="badge badge-luxe">Cave & Bar à Vins</span>
+            <span class="distance-chip">📍 ~6 km</span>
+        </div>
     </div>
     <p>La superbe adresse de Châteaugiron pour les épicuriens ! À la fois cave fine et bar à vins chaleureux, c'est l'endroit idéal pour partager une planche de charcuteries et de fromages affinés tout en dégustant un bon cru sélectionné avec passion.</p>
     <div class="meta-info">
@@ -199,8 +228,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- CRÊPERIE DU CHÂTEAUbourg - CHÂTEAUGIRON -->
 <div class="resto-item">
     <div class="resto-header">
-        <h3>🥞🍯🥂 Chez Suzette (~x km)</h3>
-        <span class="badge badge-tradition">Galettes & Crêpes</span>
+        <h3>🥞🍯🥂 Chez Suzette</h3>
+                <div class="header-tags">
+            <span class="badge badge-tradition">Galettes & Crêpes</span>
+            <span class="distance-chip">📍 ~x km</span>
+        </div>
     </div>
     <p>à venir</p>
     <div class="meta-info">
@@ -221,8 +253,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 				<div class="resto-item">
     <div class="resto-header">
-        <h3>🍔🏆✨ Le Cella (~4 km)</h3>
-        <span class="badge badge-resto">Bistrot / Terroir</span>
+        <h3>🍔🏆✨ Le Cella</h3>
+                <div class="header-tags">
+            <span class="badge badge-resto">Bistrot / Terroir</span>
+            <span class="distance-chip">📍 ~4 km</span>
+        </div>
     </div>
     <p>Ce <a href="https://www.cella-bistrot.fr/" target="_blank">charmant bistrot de village</a> cultive la convivialité et le goût du partage. Sacré parmi les champions de la Coupe de France du Burger, l'établissement régale avec une cuisine maison, de saison et d'une gourmandise absolue.</p>
     <div class="meta-info">
@@ -246,8 +281,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 		<div class="resto-item">
     <div class="resto-header">
-        <h3>🍽️✨🌱 La Table du Pavail (~6 km)</h3>
-        <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+        <h3>🍽️✨🌱 La Table du Pavail</h3>
+                <div class="header-tags">
+            <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+            <span class="distance-chip">📍 ~6 km</span>
+        </div>
     </div>
     <p>Une magnifique adresse nichée à Saint-Aubin-du-Pavail. Le chef y propose une cuisine bistronomique créative, moderne et raffinée, qui sublime avec passion et finesse les circuits courts et les producteurs du terroir breton.</p>
     <div class="meta-info">
@@ -276,8 +314,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 		<div class="resto-item">
     <div class="resto-header">
-        <h3>Le Château des Pères (~6 km)</h3>
-        <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+        <h3>Le Château des Pères</h3>
+                <div class="header-tags">
+            <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+            <span class="distance-chip">📍 ~6 km</span>
+        </div>
     </div>
     <p>Un <a href="https://www.chateaudesperes.fr/" target="_blank">domaine unique</a> à Piré-Chancé : parc de sculptures monumentales en accès libre, ateliers d'artisans d'art et tables renommées.</p>
     <div class="meta-info">
@@ -305,8 +346,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 		<div class="resto-item">
     <div class="resto-header">
-        <h3>L'Auberge des Tilleuls (~4 km)</h3>
-        <span class="badge badge-resto">Traditionnel / Terroir</span>
+        <h3>L'Auberge des Tilleuls</h3>
+                <div class="header-tags">
+            <span class="badge badge-resto">Traditionnel / Terroir</span>
+            <span class="distance-chip">📍 ~4 km</span>
+        </div>
     </div>
     <p>Une véritable institution locale nichée au cœur du village. Cette charmante auberge propose une cuisine traditionnelle généreuse et soignée, mettant à l'honneur les produits frais de saison dans un cadre chaleureux et convivial. 🍽️🥩✨</p>
     <div class="meta-info">
@@ -333,8 +377,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 	<div class="resto-item">
     <div class="resto-header">
-        <h3>Ar Milin' (~4 km)</h3>
-        <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+        <h3>Ar Milin'</h3>
+                <div class="header-tags">
+            <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+            <span class="distance-chip">📍 ~4 km</span>
+        </div>
     </div>
     <p>Une table incontournable nichée au cœur d'un parc arboré de 5 hectares. Le restaurant propose une cuisine bistronomique de saison, raffinée et inventive, à déguster dans un cadre enchanteur en bordure de rivière. 🌳🍽️🌊</p>
     <div class="meta-info">
@@ -357,8 +404,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="resto-item">
     <div class="resto-header">
-        <h3>Le Cellier (~4 km)</h3>
-        <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+        <h3>Le Cellier</h3>
+                <div class="header-tags">
+            <span class="badge badge-luxe">Gastronomique / Bistrot</span>
+            <span class="distance-chip">📍 ~4 km</span>
+        </div>
     </div>
     <p>Une superbe adresse à Châteaubourg pour les amateurs de bonne cuisine et de bons vins. Le chef y propose une cuisine bistronomique créative, moderne et rythmée par les saisons, accompagnée d'une très belle sélection de crus. Un régal dans une ambiance feutrée et conviviale. 🥩🍷✨</p>
     <div class="meta-info">
@@ -380,8 +430,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="resto-item">
     <div class="resto-header">
-        <h3>🚚🍕🌯🥞 Les Camions & Food-Trucks Locaux (&lt; 1 km)</h3>
-        <span class="badge badge-fastfood">À emporter / Itinérant</span>
+        <h3>🚚🍕🌯🥞 Les Camions & Food-Trucks Locaux</h3>
+                <div class="header-tags">
+            <span class="badge badge-fastfood">À emporter / Itinérant</span>
+            <span class="distance-chip">📍 &lt; 1 km</span>
+        </div>
     </div>
     <p>Pas envie de cuisiner ou de prendre la voiture ? Plusieurs camions gourmands s'installent directement sur les places de nos villages en fin de journée. Une excellente alternative pour ramener un repas chaud et le déguster en toute tranquillité grâce aux équipements de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre hébergement indépendant</a></p>
     <div class="meta-info">
@@ -400,8 +453,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="resto-item">
     <div class="resto-header">
-        <h3>Crescendo Cafétéria (~6 km)</h3>
-        <span class="badge badge-fastfood">Cafétéria / Libre-service</span>
+        <h3>Crescendo Cafétéria</h3>
+                <div class="header-tags">
+            <span class="badge badge-fastfood">Cafétéria / Libre-service</span>
+            <span class="distance-chip">📍 ~6 km</span>
+        </div>
     </div>
     <p>Une formule de restauration rapide, variée et équilibrée juste à côté de l'hypermarché. Avec ses grands buffets d'entrées et de desserts, ses grillades cuites à la minute et ses légumes à volonté, c'est une option simple et efficace qui plaît beaucoup aux enfants. 🥩🥗🍰</p>
     <div class="meta-info">
@@ -418,8 +474,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- KEBAB CHÂTEAUGIRON -->
 <div class="resto-item">
     <div class="resto-header">
-        <h3>Château Kebab (~6 km)</h3>
-        <span class="badge badge-fastfood">Kebab & Sandwiches</span>
+        <h3>Château Kebab</h3>
+                <div class="header-tags">
+            <span class="badge badge-fastfood">Kebab & Sandwiches</span>
+            <span class="distance-chip">📍 ~6 km</span>
+        </div>
     </div>
     <p>Une adresse incontournable du centre-ville pour les amateurs de street-food. Installé à deux pas du château médiéval, ce fast-food propose de généreux kebabs (galettes ou pains), burgers, paninis et frites. Service rapide et accueil très chaleureux ! 🌯🍟🥙</p>
     <div class="meta-info">
@@ -435,8 +494,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- LE KIOSQUE À PIZZAS - CHÂTEAUBOURG & CHÂTEAUGIRON -->
 <div class="resto-item">
     <div class="resto-header">
-        <h3>Le Kiosque à Pizzas (~4 km)</h3>
-        <span class="badge badge-fastfood">Pizzas à emporter</span>
+        <h3>Le Kiosque à Pizzas</h3>
+                <div class="header-tags">
+            <span class="badge badge-fastfood">Pizzas à emporter</span>
+            <span class="distance-chip">📍 ~4 km</span>
+        </div>
     </div>
     <p>Parfait pour une soirée pizza improvisée au gîte. Situé à Châteaubourg, ce kiosque artisanal prépare vos pizzas sous vos yeux avec une pâte fraîche pétrie chaque jour sur place et des ingrédients généreux. 🍕🔥</p>
     <div class="meta-info">
@@ -453,8 +515,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- BURGER KING CHÂTEAUGIRON -->
 <div class="resto-item">
     <div class="resto-header">
-        <h3>Burger King Châteaugiron (~6 km)</h3>
-        <span class="badge badge-fastfood">Burgers grillés à la flamme</span>
+        <h3>Burger King Châteaugiron</h3>
+                <div class="header-tags">
+            <span class="badge badge-fastfood">Burgers grillés à la flamme</span>
+            <span class="distance-chip">📍 ~6 km</span>
+        </div>
     </div>
     <p>Pour les amateurs de burgers grillés à la flamme et du célèbre Whopper. Parfait pour une halte rapide lors de vos sessions shopping dans la zone de Châteaugiron. 👑🍔🍟</p>
     <div class="meta-info">
@@ -468,8 +533,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- BURGER KING JANZÉ -->
 <div class="resto-item">
     <div class="resto-header">
-        <h3>Burger King Janzé (~15 km)</h3>
-        <span class="badge badge-fastfood">Burgers grillés à la flamme</span>
+        <h3>Burger King Janzé</h3>
+                <div class="header-tags">
+            <span class="badge badge-fastfood">Burgers grillés à la flamme</span>
+            <span class="distance-chip">📍 ~15 km</span>
+        </div>
     </div>
     <p>Idéal si vous vous déplacez vers le sud du secteur (axe Rennes-Angers). L'enseigne propose toute sa gamme de menus iconiques avec service Drive pour les plus pressés. 👑🍟</p>
     <div class="meta-info">
@@ -485,8 +553,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- MCDONALD'S SERVON-SUR-VILAINE -->
 <div class="resto-item">
     <div class="resto-header">
-        <h3>McDonald's Servon-sur-Vilaine (~7 km)</h3>
-        <span class="badge badge-fastfood">Fast-Food / Drive</span>
+        <h3>McDonald's Servon-sur-Vilaine</h3>
+                <div class="header-tags">
+            <span class="badge badge-fastfood">Fast-Food / Drive</span>
+            <span class="distance-chip">📍 ~7 km</span>
+        </div>
     </div>
     <p>Situé stratégiquement le long de l'axe Rennes-Paris (N157), ce restaurant est parfait pour une pause gourmande rapide à l'arrivée ou au départ du gîte. 🚗🍦</p>
     <div class="meta-info">
@@ -500,8 +571,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- MCDONALD'S VERN-SUR-SEICHE -->
 <div class="resto-item">
     <div class="resto-header">
-        <h3>McDonald's Vern-sur-Seiche (~15 km)</h3>
-        <span class="badge badge-fastfood">Fast-Food / Drive</span>
+        <h3>McDonald's Vern-sur-Seiche</h3>
+                <div class="header-tags">
+            <span class="badge badge-fastfood">Fast-Food / Drive</span>
+            <span class="distance-chip">📍 ~15 km</span>
+        </div>
     </div>
     <p>Une option pratique si vous revenez d'une balade au sud de Rennes ou de la rocade, situé dans la zone commerciale du Val de Seiche. 🥤🍗</p>
     <div class="meta-info">
@@ -518,8 +592,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="resto-item">
             <div class="resto-header">
-                <h3>Le Kebab Local - Châteaubourg (~6 km)</h3>
-                <span class="badge badge-fast">Kebab / Tacos</span>
+                <h3>Le Kebab Local - Châteaubourg</h3>
+                                <div class="header-tags">
+                    <span class="badge badge-fast">Kebab / Tacos</span>
+                    <span class="distance-chip">📍 ~6 km</span>
+                </div>
             </div>
             <p>Un bon kebab classique, généreux en sauce blanche et frites, idéal pour emporter et manger chaud au gîte.</p>
             <div class="meta-info">
@@ -531,8 +608,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		
 		<div class="resto-item">
     <div class="resto-header">
-        <h3>Roadside Burgers (~4 km)</h3>
-        <span class="badge badge-fastfood">Burgers & Hot-Dogs</span>
+        <h3>Roadside Burgers</h3>
+                <div class="header-tags">
+            <span class="badge badge-fastfood">Burgers & Hot-Dogs</span>
+            <span class="distance-chip">📍 ~4 km</span>
+        </div>
     </div>
     <p>Le célèbre "fast-food à l'américaine" revisité version locale. Les burgers, hot-dogs et frites maison sont préparés à la commande avec de la viande bovine française fraîche et du pain artisanal. Un régal rapide et efficace ! 🍔🍟🥤</p>
     <div class="meta-info">
