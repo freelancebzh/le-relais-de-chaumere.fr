@@ -26,6 +26,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>Que faire à Domagné ? Guide Tourisme | Le Relais de Chaumeré</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+
+
+
+
 <body>
 
 <!-- Google Tag Manager (noscript) -->
@@ -60,6 +65,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </ul>
         </nav>
     </header>
+	
+
 
     <main>
         <section class="page-title">
@@ -73,6 +80,162 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </figure>
             <p>Idéalement situé au calme de la campagne, notre logement vous permet de rayonner facilement entre histoire, art contemporain et escapades maritimes.</p>
         </section>
+		
+			<!-- ===== Widget "Autour de Rennes" — a coller dans tourisme.html ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  .wa-widget { font-family: 'Inter', system-ui, sans-serif; max-width: 900px; margin: 1.5rem auto; }
+  .wa-bandeau {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 0.75rem 1.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem;
+    padding: 1rem 1.5rem; margin-bottom: 0.75rem; box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+  }
+  .wa-date { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+  .wa-jour { font-size: 0.85rem; font-weight: 600; color: #64748b; }
+  .wa-heure { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.15rem; color: #0f172a; }
+  .wa-saint { font-size: 0.82rem; font-weight: 600; color: #f97316; }
+  .wa-air { font-size: 0.85rem; color: #64748b; }
+  .wa-air a { font-weight: 600; color: #047857; text-decoration: none; }
+  .wa-air a:hover { text-decoration: underline; }
+  .wa-grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; }
+  .wa-carte {
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.1rem 1.25rem 1.25rem;
+    box-shadow: 0 1px 2px rgba(15,23,42,0.04); min-height: 100px;
+  }
+  .wa-carte-titre { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin: 0 0 0.55rem; }
+  .wa-carte-forte { font-family: 'Space Grotesk', sans-serif; font-size: 0.98rem; font-weight: 700; margin: 0 0 0.5rem; color: #0f172a; }
+  .wa-carte-contenu { font-size: 0.85rem; color: #64748b; margin: 0; }
+  .wa-liste { list-style: none; margin: 0 0 0.6rem; padding: 0; font-size: 0.85rem; }
+  .wa-liste li { padding: 0.1rem 0; color: #0f172a; }
+  .wa-liste-detail { color: #64748b; font-size: 0.78rem; }
+  .wa-previsions { display: flex; gap: 0.6rem; }
+  .wa-previsions-jour { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; font-size: 0.7rem; color: #64748b; text-transform: capitalize; }
+  .wa-lien { font-size: 0.78rem; font-weight: 700; color: #047857; text-decoration: none; }
+  .wa-lien:hover { text-decoration: underline; }
+  .wa-lien-principal {
+    display: inline-block; margin-top: 0.5rem; background: #047857; color: #fff; font-size: 0.85rem;
+    font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 0.65rem; text-decoration: none;
+  }
+  .wa-lien-principal:hover { background: #036c4d; }
+  .wa-aqi-bon { color: #047857; } .wa-aqi-moyen { color: #f97316; } .wa-aqi-degrade { color: #ea580c; }
+  .wa-aqi-mauvais { color: #dc2626; } .wa-aqi-tres-mauvais { color: #991b1b; }
+</style>
+
+<div class="wa-widget">
+  <div class="wa-bandeau">
+    <div class="wa-date">
+      <span class="wa-jour" id="wa-jour-texte">Chargement…</span>
+      <span class="wa-heure" id="wa-horloge">--:--</span>
+      <span class="wa-saint" id="wa-saint"></span>
+    </div>
+    <div class="wa-air" id="wa-air">Qualité de l'air : chargement…</div>
+  </div>
+
+  <div class="wa-grille">
+    <div class="wa-carte" id="wa-meteo">
+      <p class="wa-carte-titre">Météo à Chaumeré</p>
+      <p class="wa-carte-contenu">Chargement…</p>
+    </div>
+
+    <div class="wa-carte" id="wa-carburants">
+      <p class="wa-carte-titre">Carburants à proximité</p>
+      <p class="wa-carte-contenu">Chargement…</p>
+    </div>
+
+    <div class="wa-carte">
+      <p class="wa-carte-titre">Sorties du coin</p>
+      <p class="wa-carte-contenu">Marchés, food trucks, événements du jour, brocantes…</p>
+      <a href="https://clarteweb35.github.io/autour-de-rennes/agenda/" target="_blank" rel="noopener" class="wa-lien-principal">Voir les activités à jour →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  // Calendrier des saints (extrait complet, statique)
+  var WA_SAINTS = {"01-01":"Jour de l'An","01-02":"Basile","01-03":"Geneviève","01-04":"Odilon","01-05":"Édouard","01-06":"Mélaine","01-07":"Raymond","01-08":"Lucien","01-09":"Alix","01-10":"Guillaume","01-11":"Paulin","01-12":"Tatiana","01-13":"Yvette","01-14":"Nina","01-15":"Rémi","01-16":"Marcel","01-17":"Roseline","01-18":"Prisca","01-19":"Marius","01-20":"Sébastien","01-21":"Agnès","01-22":"Vincent","01-23":"Barnard","01-24":"François de Sales","01-25":"Conversion de Paul","01-26":"Paule","01-27":"Angèle","01-28":"Thomas d'Aquin","01-29":"Gildas","01-30":"Martine","01-31":"Marcelle","02-01":"Ella","02-02":"Présentation","02-03":"Blaise","02-04":"Véronique","02-05":"Agathe","02-06":"Gaston","02-07":"Eugénie","02-08":"Jacqueline","02-09":"Apolline","02-10":"Arnaud","02-11":"Notre-Dame de Lourdes","02-12":"Félix","02-13":"Béatrice","02-14":"Valentin","02-15":"Claude","02-16":"Julienne","02-17":"Alexis","02-18":"Bernadette","02-19":"Gabin","02-20":"Aimée","02-21":"Pierre-Damien","02-22":"Isabelle","02-23":"Lazare","02-24":"Modeste","02-25":"Roméo","02-26":"Nestor","02-27":"Honorine","02-28":"Romain","02-29":"Auguste","03-01":"Aubin","03-02":"Charles le Bon","03-03":"Guénolé","03-04":"Casimir","03-05":"Olive","03-06":"Colette","03-07":"Félicité","03-08":"Jean de Dieu","03-09":"Françoise","03-10":"Vivien","03-11":"Rosine","03-12":"Justine","03-13":"Rodrigue","03-14":"Mathilde","03-15":"Louise de Marillac","03-16":"Bénédicte","03-17":"Patrice","03-18":"Cyrille","03-19":"Joseph","03-20":"Herbert","03-21":"Clémence","03-22":"Léa","03-23":"Victorien","03-24":"Catherine de Suède","03-25":"Annonciation","03-26":"Larissa","03-27":"Habib","03-28":"Gontran","03-29":"Gwladys","03-30":"Amédée","03-31":"Benjamin","04-01":"Hugues","04-02":"Sandrine","04-03":"Richard","04-04":"Isidore","04-05":"Irène","04-06":"Marcellin","04-07":"Jean-Baptiste de la Salle","04-08":"Julie","04-09":"Gautier","04-10":"Fulbert","04-11":"Stanislas","04-12":"Jules","04-13":"Ida","04-14":"Maxime","04-15":"Paterne","04-16":"Benoît-Joseph","04-17":"Anicet","04-18":"Parfait","04-19":"Emma","04-20":"Odette","04-21":"Anselme","04-22":"Alexandre","04-23":"Georges","04-24":"Fidèle","04-25":"Marc","04-26":"Alida","04-27":"Zita","04-28":"Valérie","04-29":"Catherine de Sienne","04-30":"Robert","05-01":"Fête du Travail","05-02":"Boris","05-03":"Philippe","05-04":"Sylvain","05-05":"Judith","05-06":"Prudence","05-07":"Gisèle","05-08":"Victoire 1945","05-09":"Pacôme","05-10":"Solange","05-11":"Estelle","05-12":"Achille","05-13":"Rolande","05-14":"Matthias","05-15":"Denise","05-16":"Honoré","05-17":"Pascal","05-18":"Éric","05-19":"Yves","05-20":"Bernardin","05-21":"Constantin","05-22":"Émile","05-23":"Didier","05-24":"Donatien","05-25":"Sophie","05-26":"Bérenger","05-27":"Augustin de Cantorbéry","05-28":"Germain","05-29":"Aymar","05-30":"Ferdinand","05-31":"Visitation","06-01":"Justin","06-02":"Blandine","06-03":"Kévin","06-04":"Clotilde","06-05":"Igor","06-06":"Norbert","06-07":"Gilbert","06-08":"Médard","06-09":"Diane","06-10":"Landry","06-11":"Barnabé","06-12":"Guy","06-13":"Antoine de Padoue","06-14":"Élisée","06-15":"Germaine","06-16":"Jean-François Régis","06-17":"Hervé","06-18":"Léonce","06-19":"Romuald","06-20":"Silvère","06-21":"Rodolphe","06-22":"Alban","06-23":"Audrey","06-24":"Jean-Baptiste","06-25":"Prosper","06-26":"Anthelme","06-27":"Fernand","06-28":"Irénée","06-29":"Pierre et Paul","06-30":"Martial","07-01":"Thierry","07-02":"Martinien","07-03":"Thomas","07-04":"Florent","07-05":"Antoine-Marie Zaccaria","07-06":"Mariette","07-07":"Raoul","07-08":"Thibault","07-09":"Amandine","07-10":"Ulrich","07-11":"Benoît","07-12":"Olivier","07-13":"Henri, Joël","07-14":"Fête Nationale","07-15":"Donald","07-16":"Notre-Dame du Mont-Carmel","07-17":"Charlotte","07-18":"Frédéric","07-19":"Arsène","07-20":"Marina","07-21":"Victor","07-22":"Marie-Madeleine","07-23":"Brigitte","07-24":"Christine","07-25":"Jacques","07-26":"Anne, Joachim","07-27":"Nathalie","07-28":"Samson","07-29":"Marthe","07-30":"Juliette","07-31":"Ignace de Loyola","08-01":"Alphonse","08-02":"Julien Eymard","08-03":"Lydie","08-04":"Jean-Marie Vianney","08-05":"Abel","08-06":"Transfiguration","08-07":"Gaétan","08-08":"Dominique","08-09":"Amour","08-10":"Laurent","08-11":"Claire","08-12":"Clarisse","08-13":"Hippolyte","08-14":"Évrard","08-15":"Assomption","08-16":"Armel","08-17":"Hyacinthe","08-18":"Hélène","08-19":"Jean-Eudes","08-20":"Bernard","08-21":"Christophe","08-22":"Fabrice","08-23":"Rose de Lima","08-24":"Barthélémy","08-25":"Louis","08-26":"Natacha","08-27":"Monique","08-28":"Augustin","08-29":"Sabine","08-30":"Fiacre","08-31":"Aristide","09-01":"Gilles","09-02":"Ingrid","09-03":"Grégoire","09-04":"Rosalie","09-05":"Raïssa","09-06":"Bertrand","09-07":"Reine","09-08":"Nativité de Marie","09-09":"Alain","09-10":"Inès","09-11":"Adelphe","09-12":"Apollinaire","09-13":"Aimé","09-14":"La Sainte-Croix","09-15":"Roland","09-16":"Édith","09-17":"Renaud","09-18":"Nadège","09-19":"Émilie","09-20":"Davy","09-21":"Matthieu","09-22":"Maurice","09-23":"Constant","09-24":"Thècle","09-25":"Hermann","09-26":"Côme et Damien","09-27":"Vincent de Paul","09-28":"Venceslas","09-29":"Michel, Gabriel, Raphaël","09-30":"Jérôme","10-01":"Thérèse de l'Enfant-Jésus","10-02":"Léger","10-03":"Gérard","10-04":"François d'Assise","10-05":"Fleur","10-06":"Bruno","10-07":"Serge","10-08":"Pélagie","10-09":"Denis","10-10":"Ghislain","10-11":"Firmin","10-12":"Wilfried","10-13":"Géraud","10-14":"Juste","10-15":"Thérèse d'Avila","10-16":"Edwige","10-17":"Baudouin","10-18":"Luc","10-19":"René","10-20":"Adeline","10-21":"Céline","10-22":"Élodie","10-23":"Jean de Capistran","10-24":"Florentin","10-25":"Crépin","10-26":"Dimitri","10-27":"Émeline","10-28":"Simon, Jude","10-29":"Narcisse","10-30":"Bienvenue","10-31":"Quentin","11-01":"Toussaint","11-02":"Défunts","11-03":"Hubert","11-04":"Charles Borromée","11-05":"Sylvie","11-06":"Bertille","11-07":"Carine","11-08":"Geoffroy","11-09":"Théodore","11-10":"Léon","11-11":"Armistice 1918","11-12":"Christian","11-13":"Brice","11-14":"Sidoine","11-15":"Albert","11-16":"Marguerite","11-17":"Élisabeth","11-18":"Aude","11-19":"Tanguy","11-20":"Edmond","11-21":"Présentation de Marie","11-22":"Cécile","11-23":"Clément","11-24":"Flora","11-25":"Catherine","11-26":"Delphine","11-27":"Séverin","11-28":"Jacques de la Marche","11-29":"Saturnin","11-30":"André","12-01":"Florence","12-02":"Viviane","12-03":"Xavier","12-04":"Barbara","12-05":"Gérald","12-06":"Nicolas","12-07":"Ambroise","12-08":"Immaculée Conception","12-09":"Pierre Fourier","12-10":"Romaric","12-11":"Daniel","12-12":"Chantal","12-13":"Lucie","12-14":"Odile","12-15":"Ninon","12-16":"Alice","12-17":"Gaël","12-18":"Gatien","12-19":"Urbain","12-20":"Théophile","12-21":"Pierre Canisius","12-22":"Françoise-Xavière","12-23":"Armand","12-24":"Adèle","12-25":"Noël","12-26":"Étienne","12-27":"Jean","12-28":"Innocents","12-29":"David","12-30":"Roger","12-31":"Sylvestre"};
+
+  var maintenant = new Date();
+  var jourTexte = maintenant.toLocaleDateString('fr-FR', { weekday: 'long' });
+  var dateLongue = maintenant.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+  document.getElementById('wa-jour-texte').textContent = jourTexte.charAt(0).toUpperCase() + jourTexte.slice(1) + ' ' + dateLongue;
+
+  var cle = String(maintenant.getMonth() + 1).padStart(2, '0') + '-' + String(maintenant.getDate()).padStart(2, '0');
+  var saint = WA_SAINTS[cle];
+  if (saint) document.getElementById('wa-saint').textContent = 'Bonne fête aux ' + saint + ' !';
+
+  function majHorloge() {
+    var el = document.getElementById('wa-horloge');
+    if (el) el.textContent = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  }
+  majHorloge();
+  setInterval(majHorloge, 30000);
+
+  var codesMeteo = {0:'☀️ Ciel dégagé',1:'🌤️ Peu nuageux',2:'⛅ Partiellement nuageux',3:'☁️ Couvert',45:'🌫️ Brouillard',48:'🌫️ Brouillard givrant',51:'🌦️ Bruine légère',53:'🌦️ Bruine',55:'🌦️ Bruine forte',61:'🌧️ Pluie légère',63:'🌧️ Pluie',65:'🌧️ Pluie forte',71:'🌨️ Neige légère',73:'🌨️ Neige',75:'🌨️ Neige forte',80:'🌦️ Averses',81:'🌦️ Averses fortes',82:'⛈️ Averses violentes',95:'⛈️ Orage',96:'⛈️ Orage avec grêle',99:'⛈️ Orage violent'};
+
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=48.04114&longitude=-1.423929&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Europe%2FParis&forecast_days=4')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var bloc = document.getElementById('wa-meteo');
+      var temp = Math.round(data.current.temperature_2m);
+      var desc = codesMeteo[data.current.weather_code] || '';
+      var previsions = data.daily.time.slice(1, 4).map(function (date, i) {
+        var jour = new Date(date).toLocaleDateString('fr-FR', { weekday: 'short' }).replace('.', '');
+        var max = Math.round(data.daily.temperature_2m_max[i + 1]);
+        var min = Math.round(data.daily.temperature_2m_min[i + 1]);
+        var emoji = (codesMeteo[data.daily.weather_code[i + 1]] || '').split(' ')[0];
+        return '<div class="wa-previsions-jour"><span>' + jour + '</span><span>' + emoji + '</span><span>' + max + '°/' + min + '°</span></div>';
+      }).join('');
+      bloc.innerHTML = '<p class="wa-carte-titre">Météo à Chaumeré</p><p class="wa-carte-forte">' + desc + ' — ' + temp + '°C</p><div class="wa-previsions">' + previsions + '</div>';
+    })
+    .catch(function () {
+      document.getElementById('wa-meteo').innerHTML = '<p class="wa-carte-titre">Météo à Chaumeré</p><p class="wa-carte-contenu">Indisponible.</p>';
+    });
+
+  fetch("https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/prix-des-carburants-en-france-flux-instantane-v2/records?where=distance(geom,%20geom%27POINT(-1.423929%2048.04114)%27,%2020km)&limit=40")
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var bloc = document.getElementById('wa-carburants');
+      var stations = data.results.filter(function (s) { return s.gazole_prix; })
+        .sort(function (a, b) { return a.gazole_prix - b.gazole_prix; }).slice(0, 2);
+      if (stations.length === 0) {
+        bloc.innerHTML = '<p class="wa-carte-titre">Carburants</p><p class="wa-carte-contenu">Aucune donnée.</p>';
+        return;
+      }
+      var lignes = stations.map(function (s) {
+        return '<li>' + s.ville + ' <span class="wa-liste-detail">— ' + s.gazole_prix.toFixed(3) + ' €</span></li>';
+      }).join('');
+      bloc.innerHTML = '<p class="wa-carte-titre">Gazole le moins cher</p><ul class="wa-liste">' + lignes + '</ul><a href="https://clarteweb35.github.io/autour-de-rennes/carburants/" target="_blank" rel="noopener" class="wa-lien">Voir tous les carburants →</a>';
+    })
+    .catch(function () {
+      document.getElementById('wa-carburants').innerHTML = '<p class="wa-carte-titre">Carburants</p><p class="wa-carte-contenu">Indisponible.</p>';
+    });
+
+  function categorieAQI(v) {
+    if (v <= 20) return { label: 'Bon', classe: 'wa-aqi-bon' };
+    if (v <= 40) return { label: 'Moyen', classe: 'wa-aqi-moyen' };
+    if (v <= 60) return { label: 'Dégradé', classe: 'wa-aqi-degrade' };
+    if (v <= 80) return { label: 'Mauvais', classe: 'wa-aqi-mauvais' };
+    return { label: 'Très mauvais', classe: 'wa-aqi-tres-mauvais' };
+  }
+
+  fetch('https://air-quality-api.open-meteo.com/v1/air-quality?latitude=48.04114&longitude=-1.423929&current=european_aqi')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var aqi = Math.round(data.current.european_aqi);
+      var cat = categorieAQI(aqi);
+      document.getElementById('wa-air').innerHTML = "Qualité de l'air : <strong class=\"" + cat.classe + "\">" + cat.label + '</strong> (indice ' + aqi + ') — <a href="https://clarteweb35.github.io/autour-de-rennes/qualite-air/" target="_blank" rel="noopener">Comparer en Bretagne →</a>';
+    })
+    .catch(function () {
+      document.getElementById('wa-air').textContent = "Qualité de l'air : indisponible.";
+    });
+})();
+</script>
+<!-- ===== Fin widget "Autour de Rennes" ===== -->
+
 
         <section class="tourism-grid">
     <article class="tourism-card">
@@ -629,7 +792,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
 		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 16/17/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 19/07/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 
 <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
