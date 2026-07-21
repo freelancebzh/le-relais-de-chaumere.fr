@@ -157,6 +157,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>Histoire & Patrimoine autour du gîte</h1>
     <p class="intro-text">Découvrez les trésors historiques, édifices et curiosités à visiter dans un rayon de 15 km autour de Domagné. Retrouvez également toutes nos idées d'activités sur notre <a href="tourisme.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">guide touristique complet</a>.</p>
 
+        <div style="background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 24px; margin: 40px 0 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <div style="font-size: 1.4rem;">📅</div>
+            <div style="flex: 1; min-width: 200px;">
+                <p style="margin: 0; font-size: 0.9rem; color: #718096;">Envie de sortir pendant votre séjour ? Consultez également <a href="https://clarteweb35.github.io/autour-de-rennes/agenda/" target="_blank" rel="noopener" style="color: #2b6cb0; font-weight: bold;">l'agenda des événements du coin</a>, mis à jour chaque jour.</p>
+            </div>
+        </div>
+
     <div class="patrimoine-list">
 
 <div class="patrimoine-item">
@@ -230,20 +237,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div style="max-width: 800px; margin: 50px auto 0 auto; padding: 0 20px;">
         <h2 style="font-size: 1.5rem; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #cbd5e0;">🔗 Vous aimerez aussi</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
-            <a href="culture.html" style="display: block; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-                <strong style="color: #1a202c;">🎭 Culture & Divertissement</strong>
-                <p style="margin: 6px 0 0; font-size: 0.9rem; color: #666;">Cinémas, médiathèque et centres culturels.</p>
-            </a>
-            <a href="insolite.html" style="display: block; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-                <strong style="color: #1a202c;">✨ Insolite & Expériences</strong>
-                <p style="margin: 6px 0 0; font-size: 0.9rem; color: #666;">Sculptures géantes, légendes et géocaching.</p>
-            </a>
-            <a href="escapades.html" style="display: block; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-                <strong style="color: #1a202c;">🚶 Escapades & Randonnées</strong>
-                <p style="margin: 6px 0 0; font-size: 0.9rem; color: #666;">Balades et sentiers autour de Domagné.</p>
-            </a>
-        </div>
+        <div id="vous-aimerez-aussi" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;"></div>
+        <script>
+        (function () {
+            var pages = [
+                { href: "patrimoine.html", emoji: "🏰", titre: "Histoire & Patrimoine", desc: "Châteaux et cités de caractère près de Domagné." },
+                { href: "culture.html", emoji: "🎭", titre: "Culture & Divertissement", desc: "Cinémas, médiathèque et centres culturels." },
+                { href: "insolite.html", emoji: "✨", titre: "Insolite & Expériences", desc: "Sculptures géantes, légendes et géocaching." },
+                { href: "escapades.html", emoji: "🚶", titre: "Escapades & Randonnées", desc: "Balades et sentiers autour de Domagné." },
+                { href: "gastronomie.html", emoji: "🍽️", titre: "Gastronomie locale", desc: "Nos bonnes adresses pour se régaler." },
+                { href: "detente.html", emoji: "🧖", titre: "Détente & Bien-être", desc: "Baignade, spa et parenthèse douceur." }
+            ];
+            var pageActuelle = window.location.pathname.split("/").pop();
+            var autres = pages.filter(function (p) { return p.href !== pageActuelle; });
+            for (var i = autres.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tmp = autres[i]; autres[i] = autres[j]; autres[j] = tmp;
+            }
+            var choix = autres.slice(0, 3);
+            var conteneur = document.getElementById("vous-aimerez-aussi");
+            conteneur.innerHTML = choix.map(function (p) {
+                return '<a href="' + p.href + '" style="display: block; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">' +
+                    '<strong style="color: #1a202c;">' + p.emoji + ' ' + p.titre + '</strong>' +
+                    '<p style="margin: 6px 0 0; font-size: 0.9rem; color: #666;">' + p.desc + '</p>' +
+                    '</a>';
+            }).join('');
+        })();
+        </script>
+
+
     </div>
 
 <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
@@ -258,7 +280,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="mentions-legales.html" style="color: #666; text-decoration: none; white-space: nowrap;">Mentions Légales</a> |
 		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 16/17/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 21/07/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 
 <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">

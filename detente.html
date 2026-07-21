@@ -144,6 +144,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1>Détente, Baignade & Bien-être</h1>
         <p class="intro-text">Envie de piquer une tête lors des journées ensoleillées d'été ou de vous accorder une vraie parenthèse douceur ? Voici notre carnet de bonnes adresses fraîcheur et relaxation.</p>
 
+        <div style="background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 24px; margin: 40px 0 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <div style="font-size: 1.6rem;">🔋⛽</div>
+            <div style="flex: 1; min-width: 200px;">
+                <p style="margin: 0 0 4px; font-weight: bold; color: #2d3748;">Avant de partir en balade</p>
+                <p style="margin: 0; font-size: 0.9rem; color: #718096;">Retrouvez le carburant le moins cher et les bornes de recharge électrique à proximité, mis à jour en temps réel.</p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://clarteweb35.github.io/autour-de-rennes/carburants/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">⛽ Carburants</a>
+                <a href="https://clarteweb35.github.io/autour-de-rennes/bornes-recharge/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🔋 Bornes électriques</a>
+            </div>
+        </div>
+
         <div class="section-title">🏖️ Où se baigner (Lacs & Plages)</div>
 
 
@@ -285,6 +297,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://maps.google.com/?cid=12797243058052641978&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="btn-map">🗺️ S'y rendre</a>
         </div>
 
+        <div class="section-title" style="margin-top: 40px;">🔗 Vous aimerez aussi</div>
+        <div id="vous-aimerez-aussi" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;"></div>
+        <script>
+        (function () {
+            var pages = [
+                { href: "patrimoine.html", emoji: "🏰", titre: "Histoire & Patrimoine", desc: "Châteaux et cités de caractère près de Domagné." },
+                { href: "culture.html", emoji: "🎭", titre: "Culture & Divertissement", desc: "Cinémas, médiathèque et centres culturels." },
+                { href: "insolite.html", emoji: "✨", titre: "Insolite & Expériences", desc: "Sculptures géantes, légendes et géocaching." },
+                { href: "escapades.html", emoji: "🚶", titre: "Escapades & Randonnées", desc: "Balades et sentiers autour de Domagné." },
+                { href: "gastronomie.html", emoji: "🍽️", titre: "Gastronomie locale", desc: "Nos bonnes adresses pour se régaler." },
+                { href: "detente.html", emoji: "🧖", titre: "Détente & Bien-être", desc: "Baignade, spa et parenthèse douceur." }
+            ];
+            var pageActuelle = window.location.pathname.split("/").pop();
+            var autres = pages.filter(function (p) { return p.href !== pageActuelle; });
+            for (var i = autres.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tmp = autres[i]; autres[i] = autres[j]; autres[j] = tmp;
+            }
+            var choix = autres.slice(0, 3);
+            var conteneur = document.getElementById("vous-aimerez-aussi");
+            conteneur.innerHTML = choix.map(function (p) {
+                return '<a href="' + p.href + '" style="display: block; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">' +
+                    '<strong style="color: #1a202c;">' + p.emoji + ' ' + p.titre + '</strong>' +
+                    '<p style="margin: 6px 0 0; font-size: 0.9rem; color: #666;">' + p.desc + '</p>' +
+                    '</a>';
+            }).join('');
+        })();
+        </script>
+
+
+
     </div>
 	
 <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
@@ -298,7 +341,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
 		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 16/17/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 21/07/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 
 <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">

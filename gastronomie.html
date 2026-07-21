@@ -437,6 +437,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
     <p>Pas envie de cuisiner ou de prendre la voiture ? Plusieurs camions gourmands s'installent directement sur les places de nos villages en fin de journée. Une excellente alternative pour ramener un repas chaud et le déguster en toute tranquillité grâce aux équipements de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre hébergement indépendant</a></p>
+	
+	        <div style="background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 24px; margin: 40px 0 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <div style="font-size: 1.6rem;">🚚</div>
+            <div style="flex: 1; min-width: 200px;">
+                <p style="margin: 0 0 4px; font-weight: bold; color: #2d3748;">Envie d'un bon petit plat ?</p>
+                <p style="margin: 0; font-size: 0.9rem; color: #718096;">Découvrez les food trucks du secteur, mis à jour chaque semaine.</p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://clarteweb35.github.io/autour-de-rennes/foodtrucks/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🚚 Food trucks</a>
+            </div>
+        </div>
+	
     <div class="meta-info">
         <strong>🍕 Les Pizzas :</strong> 
         Le camion pizza s'installe généralement à Domagné ou à Ossé en fin de semaine (suivre les panneaux à l'entrée du bourg). Vous y trouverez des pizzas artisanales cuites au four. <br>
@@ -639,6 +651,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- TITRE DE LA SECTION MARCHÉS -->
 <div id="section-marches" class="section-title">🍏 Les Marchés Locaux & Terroir</div>
 
+
+        <div style="background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 24px; margin: 40px 0 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <div style="font-size: 1.6rem;">🥕</div>
+            <div style="flex: 1; min-width: 200px;">
+                <p style="margin: 0 0 4px; font-weight: bold; color: #2d3748;">Envie de produits frais  ?</p>
+                <p style="margin: 0; font-size: 0.9rem; color: #718096;">Découvrez les marchés du secteur, mis à jour chaque semaine.</p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://clarteweb35.github.io/autour-de-rennes/marches/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🥕 Marchés</a>
+                
+            </div>
+        </div>
+
 <!-- CHÂTEAUGIRON -->
 <div class="resto-item">
     <div class="resto-header">
@@ -730,6 +755,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
         
+
+
+
+        <div class="section-title" style="margin-top: 40px;">🔗 Vous aimerez aussi</div>
+        <div id="vous-aimerez-aussi" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;"></div>
+        <script>
+        (function () {
+            var pages = [
+                { href: "patrimoine.html", emoji: "🏰", titre: "Histoire & Patrimoine", desc: "Châteaux et cités de caractère près de Domagné." },
+                { href: "culture.html", emoji: "🎭", titre: "Culture & Divertissement", desc: "Cinémas, médiathèque et centres culturels." },
+                { href: "insolite.html", emoji: "✨", titre: "Insolite & Expériences", desc: "Sculptures géantes, légendes et géocaching." },
+                { href: "escapades.html", emoji: "🚶", titre: "Escapades & Randonnées", desc: "Balades et sentiers autour de Domagné." },
+                { href: "gastronomie.html", emoji: "🍽️", titre: "Gastronomie locale", desc: "Nos bonnes adresses pour se régaler." },
+                { href: "detente.html", emoji: "🧖", titre: "Détente & Bien-être", desc: "Baignade, spa et parenthèse douceur." }
+            ];
+            var pageActuelle = window.location.pathname.split("/").pop();
+            var autres = pages.filter(function (p) { return p.href !== pageActuelle; });
+            for (var i = autres.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tmp = autres[i]; autres[i] = autres[j]; autres[j] = tmp;
+            }
+            var choix = autres.slice(0, 3);
+            var conteneur = document.getElementById("vous-aimerez-aussi");
+            conteneur.innerHTML = choix.map(function (p) {
+                return '<a href="' + p.href + '" style="display: block; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">' +
+                    '<strong style="color: #1a202c;">' + p.emoji + ' ' + p.titre + '</strong>' +
+                    '<p style="margin: 6px 0 0; font-size: 0.9rem; color: #666;">' + p.desc + '</p>' +
+                    '</a>';
+            }).join('');
+        })();
+        </script>
 
 
 
