@@ -23,6 +23,13 @@
   </url>
 
   <url>
+    <loc>https://www.le-relais-de-chaumere.fr/campsite.html</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.le-relais-de-chaumere.fr/tarifs.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
