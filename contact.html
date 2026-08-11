@@ -107,6 +107,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: bold; color: var(--text-dark);">Ma demande concerne *</label>
+                <select name="sujet" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; background-color: white;">
+                    <option value="">-- Sélectionnez --</option>
+                    <option value="Gîte">Le gîte</option>
+                    <option value="Camping">Le camping</option>
+                    <option value="Les deux">Les deux (gîte + camping)</option>
+                </select>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
                 <label style="font-weight: bold; color: var(--text-dark);">Votre message / Dates souhaitées *</label>
                 <textarea name="message" rows="6" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; resize: vertical;"></textarea>
             </div>
