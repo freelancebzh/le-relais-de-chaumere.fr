@@ -12,15 +12,7 @@
 
   gtag('config', 'G-MB2MHCQZXY');
 </script>
-
-<!-- Google Tag Manager (GTM) -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MR7QDL6X');</script>
-
-<!-- END Google Analytics 4 (GA4) / Google Tag Manager (GTM) -->
+<!-- END Google Analytics 4 (GA4) -->
 
 
     <meta charset="UTF-8">
@@ -75,11 +67,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR7QDL6X"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 <div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #91d5ff; line-height: 1.6;">
     🚧 <strong>Projet en cours :</strong> Le gîte est actuellement en construction 🚧<br>
     📸 Suivez son avancement sur notre <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> !<br>
@@ -121,6 +108,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			
 			<div class="logement-image">
                     <img src="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.jpg" alt="Studio location - Le Chalet et son jardin au Relais de Chaumeré">
+            </div>
+        </section>
+
+        <!-- Section Suivi des Travaux -->
+        <section style="background-color: #f8fafc; padding: 40px 20px; margin: 40px 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+            <div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+                <div style="flex: 1; min-width: 280px;">
+                    <h2 style="font-size: 1.5rem; color: #1a202c; margin-bottom: 15px;">Du projet virtuel à la réalité</h2>
+                    <p style="color: #4a5568; line-height: 1.6; margin-bottom: 15px; text-align: justify;">
+                        Si la vue ci-dessus présente une projection (souhaitée) réalisée par IA de notre futur gîte, les fondations prennent vie sur le terrain ! Le projet avance concrètement étape par étape.
+                    </p>
+                    <p style="color: #4a5568; line-height: 1.6; margin-bottom: 20px; text-align: justify;">
+                        Pour suivre l'évolution du chantier en direct, découvrir les coulisses et voir le terrain se transformer, rendez-vous sur notre <a href="blog.html" style="color: #0066cc; font-weight: bold; text-decoration: underline;">blog</a>.
+                    </p>
+                    <a href="blog.html" style="display: inline-block; background-color: #0066cc; color: #ffffff; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: 0.2s;">Suivre l'avancement sur le blog</a>
+                </div>
+                <div style="flex: 1; min-width: 280px; text-align: center;">
+                    <img src="photos/blog/actu%20du%20gite/travaux1.jpg" alt="Fondations et avancement des travaux du gîte Le Relais de Chaumeré" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); object-fit: cover; max-height: 300px;">
+                </div>
             </div>
         </section>
 
@@ -322,7 +328,7 @@ Une question ou une demande spécifique ? N'hésitez pas à nous joindre via not
         const cookieChoice = localStorage.getItem("cookieConsent");
 
         if (!cookieChoice) {
-            // Si aucun choix, on affiche le bandeau
+            // Si aucun choix, on affiche le banner
             banner.style.display = "block";
         } else if (cookieChoice === "accepted") {
             // Si déjà accepté, on peut lancer les fonctions de tracking ici si besoin
