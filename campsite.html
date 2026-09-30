@@ -1,24 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 
 
 <!-- Google Analytics 4 (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MB2MHCQZXY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MB2MHCQZXY');
-</script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MB2MHCQZXY');</script>
 
 <!-- Google Tag Manager (GTM) -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MR7QDL6X');</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https:})(window,document,'script','dataLayer','GTM-MR7QDL6X');</script>
 
 <!-- END Google Analytics 4 (GA4) / Google Tag Manager (GTM) -->
 
@@ -42,6 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Campsite near Domagné | Le Relais de Chaumeré</title>
     <link rel="stylesheet" href="style.css">
+    <script src="header-scroll.js" defer></script>
 </head>
 <body>
 
@@ -57,7 +48,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header>
         <nav>
-            <div class="logo"><img src="photos/general/logo1.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+            <div class="logo"><picture>
+                <source srcset="photos/general/logo2.webp" type="image/webp">
+                <img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" loading="lazy" style="height: 220px; width: auto;">
+            </picture></div>
             <ul>
                 <li><a href="english.html">Home</a></li>
                 <li><a href="offre.html">The Studio</a></li>
@@ -142,35 +136,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const banner = document.getElementById("cookie-banner");
-        const acceptBtn = document.getElementById("btn-accept-cookies");
-        const refuseBtn = document.getElementById("btn-refuse-cookies");
-
-        const cookieChoice = localStorage.getItem("cookieConsent");
-
-        if (!cookieChoice) {
-            banner.style.display = "block";
-        } else if (cookieChoice === "accepted") {
-            activerTracking();
-        }
-
-        acceptBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "accepted");
-            banner.style.display = "none";
-            activerTracking();
-        });
-
-        refuseBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "refused");
-            banner.style.display = "none";
-        });
-
-        function activerTracking() {
-            console.log("GTM / Analytics Activé par l'utilisateur.");
-        }
-    });
-</script>
+<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("GTM / Analytics Activé par l'utilisateur.");}});</script>
 </body>
 </html>

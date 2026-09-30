@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Guide du séjour | Le Relais de Chaumeré</title>
+
+    <meta charset="UTF-8">
+    <!-- Page pratique pour les voyageurs sur place : jamais indexée (contient le code wifi) -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="includes/components.css">
+
+    <!-- Google Analytics 4 (GA4) SEUL (GTM supprimé) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MB2MHCQZXY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MB2MHCQZXY');
+    </script>
+
+    <meta name="description" content="Guide pratique du séjour au Relais de Chaumeré : wifi, règlement intérieur, modes d'emploi, numéros utiles et idées locales.">
+</head>
+<body>
+
+<!-- Header minimal : page consultée comme une appli par des voyageurs sur place,
+     pas comme une page du site — pas de menu principal ici, volontairement différent
+     des autres pages (voir GUIDE-SEJOUR-PASSATION.md). -->
+<header class="guide-app-header">
+    <a href="index.html" class="guide-brand" aria-label="Retour au site du Relais de Chaumeré">
+        <img src="photos/general/logo2.png" alt="Logo le relais de Chaumeré" class="guide-brand-logo">
+        <span>Le Relais de Chaumeré</span>
+    </a>
+</header>
+
+<main>
+    <section class="page-title">
+        <h1>Bienvenue au Relais de Chaumeré</h1>
+        <p>Cette page rassemble toutes les informations pratiques utiles pendant votre séjour : wifi, règlement intérieur, modes d'emploi, numéros utiles et idées de sorties à proximité. Gardez ce lien à portée de main (photo de l'écran ou favori du navigateur).</p>
+    </section>
+
+    <nav class="guide-tiles" aria-label="Menu du guide">
+        <a href="#wifi" class="guide-tile">
+            <span class="guide-tile-icon" aria-hidden="true">📶</span>
+            <span class="guide-tile-label">Wifi</span>
+        </a>
+        <a href="#reglement" class="guide-tile">
+            <span class="guide-tile-icon" aria-hidden="true">📋</span>
+            <span class="guide-tile-label">Règlement</span>
+        </a>
+        <a href="#modes-emploi" class="guide-tile">
+            <span class="guide-tile-icon" aria-hidden="true">🔌</span>
+            <span class="guide-tile-label">Modes d'emploi</span>
+        </a>
+        <a href="#numeros-utiles" class="guide-tile">
+            <span class="guide-tile-icon" aria-hidden="true">☎️</span>
+            <span class="guide-tile-label">Numéros utiles</span>
+        </a>
+        <a href="#a-decouvrir" class="guide-tile">
+            <span class="guide-tile-icon" aria-hidden="true">🗺️</span>
+            <span class="guide-tile-label">Sorties</span>
+        </a>
+        <div class="guide-tile guide-tile-soon" aria-disabled="true">
+            <span class="guide-tile-icon" aria-hidden="true">✨</span>
+            <span class="guide-tile-label">À venir</span>
+        </div>
+    </nav>
+
+    <section id="wifi" class="guide-section">
+        <h2><span class="guide-icon" aria-hidden="true">📶</span>Connexion Wifi</h2>
+        <div class="guide-card">
+            <p><strong>Nom du réseau :</strong> <span class="guide-code">[À COMPLÉTER]</span></p>
+            <p><strong>Mot de passe :</strong> <span class="guide-code">[À COMPLÉTER]</span></p>
+            <div class="guide-qr-placeholder">
+                <span aria-hidden="true">📷</span>
+                <p>QR code de connexion — à ajouter une fois le réseau wifi configuré</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reglement" class="guide-section">
+        <h2><span class="guide-icon" aria-hidden="true">📋</span>Règlement intérieur</h2>
+        <div class="guide-card">
+            <p class="guide-disclaimer">Modèle à adapter avant l'ouverture — les horaires et consignes ci-dessous sont des exemples.</p>
+            <ul>
+                <li>Arrivée à partir de [À COMPLÉTER]h, départ avant [À COMPLÉTER]h.</li>
+                <li>Merci de respecter le calme du voisinage entre 22h et 8h.</li>
+                <li>Non-fumeur à l'intérieur du logement.</li>
+                <li>Animaux non acceptés (voir <a href="offre.html">L'Offre</a> pour les détails).</li>
+                <li>Merci de trier les déchets (bacs à [À COMPLÉTER]).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="modes-emploi" class="guide-section">
+        <h2><span class="guide-icon" aria-hidden="true">🔌</span>Modes d'emploi</h2>
+        <p>Cette section s'enrichira au fil du temps, au gré des équipements du logement.</p>
+
+        <!--
+            Pour ajouter un nouveau mode d'emploi : dupliquer un bloc
+            <div class="logement-card"> ci-dessous et modifier le titre + le texte.
+            Pas besoin de toucher au CSS, la mise en page suit automatiquement.
+        -->
+        <div class="logements-grid">
+            <div class="logement-card">
+                <div class="logement-info">
+                    <h2>⚡ Borne de recharge électrique</h2>
+                    <p class="logement-description">[À COMPLÉTER — instructions de branchement et code d'activation]</p>
+                </div>
+            </div>
+
+            <div class="logement-card">
+                <div class="logement-info">
+                    <h2>🌡️ Chauffage</h2>
+                    <p class="logement-description">[À COMPLÉTER — utilisation du thermostat]</p>
+                </div>
+            </div>
+
+            <div class="logement-card">
+                <div class="logement-info">
+                    <h2>🗑️ Gestion des déchets</h2>
+                    <p class="logement-description">[À COMPLÉTER — emplacement des bacs, tri sélectif, jours de collecte]</p>
+                </div>
+            </div>
+
+            <div class="logement-card">
+                <div class="logement-info">
+                    <h2>📺 Télévision</h2>
+                    <p class="logement-description">[À COMPLÉTER — allumage, chaînes, box/streaming]</p>
+                </div>
+            </div>
+
+            <div class="logement-card">
+                <div class="logement-info">
+                    <h2>☕ Machine à café</h2>
+                    <p class="logement-description">[À COMPLÉTER — type de machine, dosettes/capsules, mode d'emploi]</p>
+                </div>
+            </div>
+
+            <div class="logement-card">
+                <div class="logement-info">
+                    <h2>🛏️ Lit escamotable au plafond</h2>
+                    <p class="logement-description">[À COMPLÉTER — manœuvre de descente/remontée, précautions]</p>
+                </div>
+            </div>
+
+            <div class="logement-card">
+                <div class="logement-info">
+                    <h2>🪟 Volets</h2>
+                    <p class="logement-description">[À COMPLÉTER — commande manuelle/électrique]</p>
+                </div>
+            </div>
+
+            <div class="logement-card">
+                <div class="logement-info">
+                    <h2>💦 Brumisateur</h2>
+                    <p class="logement-description">[À COMPLÉTER — mise en marche, réglages]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="numeros-utiles" class="guide-section-cta">
+        <h2>Numéros utiles</h2>
+        <p>Urgences, médecins, artisans à proximité : retrouvez tous les contacts pratiques.</p>
+        <a href="numeros.html" class="btn">☎️ Voir les numéros utiles</a>
+    </section>
+
+    <section id="a-decouvrir" class="guide-section-final">
+        <h2>À découvrir aux alentours</h2>
+        <p>Restaurants, patrimoine, randonnées, activités insolites autour de Domagné.</p>
+        <a href="tourisme.html" class="btn">🗺️ Voir le guide tourisme</a>
+    </section>
+</main>
+
+<!-- Footer minimal : voir header, même logique (page-appli, pas page-site). -->
+<footer class="guide-app-footer" role="contentinfo" aria-label="Pied de page">
+    <p><a href="index.html">← Retour au site</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+    <p>&copy; 2026 Le Relais de Chaumeré</p>
+</footer>
+
+</body>
+</html>

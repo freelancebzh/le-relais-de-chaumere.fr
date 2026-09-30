@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
 
@@ -6,20 +6,10 @@
 
 <!-- Google Analytics 4 (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MB2MHCQZXY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MB2MHCQZXY');
-</script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MB2MHCQZXY');</script>
 
 <!-- Google Tag Manager (GTM) -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MR7QDL6X');</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https:})(window,document,'script','dataLayer','GTM-MR7QDL6X');</script>
 
 <!-- END Google Analytics 4 (GA4) / Google Tag Manager (GTM) -->
 
@@ -33,7 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mentions Légales | Le Relais de Chaumeré">
     <meta property="og:description" content="Mentions légales du site Le Relais de Chaumeré : éditeur, hébergement, propriété intellectuelle et gestion des données personnelles (RGPD).">
-    <meta property="og:image" content="https://www.le-relais-de-chaumere.fr/photos/general/logo1.png">
+    <meta property="og:image" content="https://www.le-relais-de-chaumere.fr/photos/general/logo2.png">
     <meta property="og:url" content="https://www.le-relais-de-chaumere.fr/mentions-legales.html">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
@@ -108,41 +98,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const banner = document.getElementById("cookie-banner");
-        const acceptBtn = document.getElementById("btn-accept-cookies");
-        const refuseBtn = document.getElementById("btn-refuse-cookies");
-
-        // Vérifie si l'utilisateur a déjà fait un choix
-        const cookieChoice = localStorage.getItem("cookieConsent");
-
-        if (!cookieChoice) {
-            // Si aucun choix, on affiche le bandeau
-            banner.style.display = "block";
-        } else if (cookieChoice === "accepted") {
-            // Si déjà accepté, on peut lancer les fonctions de tracking ici si besoin
-            activerTracking();
-        }
-
-        acceptBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "accepted");
-            banner.style.display = "none";
-            activerTracking();
-        });
-
-        refuseBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "refused");
-            banner.style.display = "none";
-            // Optionnel : recharger la page ou bloquer proprement
-        });
-
-        function activerTracking() {
-            console.log("GTM / Analytics Activé par l'utilisateur.");
-            // C'est ici que la magie opère si tu veux lier le consentement à GTM.
-        }
-    });
-</script>
+<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("GTM / Analytics Activé par l'utilisateur.");}});</script>
 
 </body>
 </html>

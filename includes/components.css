@@ -1,0 +1,102 @@
+/* ================================================================================
+   STYLES RÉUTILISABLES GLOBAUX - Centalisés depuis les includes HTML
+   ================================================================================ */
+
+/* === Styles de la bannière d'information === */
+.banner-construction {
+    background-color: #e6f7ff;
+    color: #0050b3;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #91d5ff;
+    line-height: 1.6;
+}
+
+.banner-construction a {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+/* === Styles du header === */
+header {
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 1.5rem 2rem;
+}
+
+nav ul li a[aria-current="page"] {
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: -0.5px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: var(--text-color);
+}
+
+/* === Styles du footer === */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+footer nav a:hover {
+    color: var(--text-color);
+}
+
+/* === Media Queries === */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .logo img {
+        height: 70px !important;
+    }
+}

@@ -1,13 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
 
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MR7QDL6X');</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https:})(window,document,'script','dataLayer','GTM-MR7QDL6X');</script>
 <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
@@ -18,7 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:type" content="website">
     <meta property="og:title" content="Histoire & Patrimoine local | Le Relais de Chaumeré">
     <meta property="og:description" content="Châteaux, collégiale Renaissance et cités de caractère à moins de 15 km de Domagné (35) : notre guide du patrimoine historique en Haute-Bretagne.">
-    <meta property="og:image" content="https://www.le-relais-de-chaumere.fr/photos/general/logo1.png">
+    <meta property="og:image" content="https://www.le-relais-de-chaumere.fr/photos/general/logo2.png">
     <meta property="og:url" content="https://www.le-relais-de-chaumere.fr/patrimoine.html">
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
@@ -103,6 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-top: 2px;
         }
     </style>
+    <script src="header-scroll.js" defer></script>
 </head>
 <body>
 
@@ -122,7 +119,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
     <nav>
         <div class="logo">
-            <img src="photos/general/logo1.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;">
+            <picture>
+                <source srcset="photos/general/logo2.webp" type="image/webp">
+                <img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" loading="lazy" style="height: 220px; width: auto;">
+            </picture>
         </div>
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -134,7 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="blog.html">Blog & Actu</a></li>
             <li>
                 <a href="english.html" style="display: flex; align-items: center; gap: 7px; text-decoration: none;">
-                    <img src="https://flagcdn.com/w20/gb.png" alt="UK Flag" style="width: 20px; height: auto; display: inline-block;"> 
+                    <img src="https://flagcdn.com/w20/gb.png" alt="UK Flag" style="width: 20px; height: auto; display: inline-block;" loading="lazy"> 
                     English
                 </a>
             </li>
@@ -238,32 +238,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div style="max-width: 800px; margin: 50px auto 0 auto; padding: 0 20px;">
         <h2 style="font-size: 1.5rem; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #cbd5e0;">🔗 Vous aimerez aussi</h2>
         <div id="vous-aimerez-aussi" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;"></div>
-        <script>
-        (function () {
-            var pages = [
-                { href: "patrimoine.html", emoji: "🏰", titre: "Histoire & Patrimoine", desc: "Châteaux et cités de caractère près de Domagné." },
-                { href: "culture.html", emoji: "🎭", titre: "Culture & Divertissement", desc: "Cinémas, médiathèque et centres culturels." },
-                { href: "insolite.html", emoji: "✨", titre: "Insolite & Expériences", desc: "Sculptures géantes, légendes et géocaching." },
-                { href: "escapades.html", emoji: "🚶", titre: "Escapades & Randonnées", desc: "Balades et sentiers autour de Domagné." },
-                { href: "gastronomie.html", emoji: "🍽️", titre: "Gastronomie locale", desc: "Nos bonnes adresses pour se régaler." },
-                { href: "detente.html", emoji: "🧖", titre: "Détente & Bien-être", desc: "Baignade, spa et parenthèse douceur." }
-            ];
-            var pageActuelle = window.location.pathname.split("/").pop();
-            var autres = pages.filter(function (p) { return p.href !== pageActuelle; });
-            for (var i = autres.length - 1; i > 0; i--) {
-                var j = Math.floor(Math.random() * (i + 1));
-                var tmp = autres[i]; autres[i] = autres[j]; autres[j] = tmp;
-            }
-            var choix = autres.slice(0, 3);
-            var conteneur = document.getElementById("vous-aimerez-aussi");
-            conteneur.innerHTML = choix.map(function (p) {
-                return '<a href="' + p.href + '" style="display: block; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; text-decoration: none; color: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">' +
-                    '<strong style="color: #1a202c;">' + p.emoji + ' ' + p.titre + '</strong>' +
-                    '<p style="margin: 6px 0 0; font-size: 0.9rem; color: #666;">' + p.desc + '</p>' +
-                    '</a>';
-            }).join('');
-        })();
-        </script>
+        <script>(function(){var pages = [{href:"patrimoine.html",emoji:"🏰",titre:"Histoire & Patrimoine",desc:"Châteaux et cités de caractère près de Domagné."},{href:"culture.html",emoji:"🎭",titre:"Culture & Divertissement",desc:"Cinémas,médiathèque et centres culturels."},{href:"insolite.html",emoji:"✨",titre:"Insolite & Expériences",desc:"Sculptures géantes,légendes et géocaching."},{href:"escapades.html",emoji:"🚶",titre:"Escapades & Randonnées",desc:"Balades et sentiers autour de Domagné."},{href:"gastronomie.html",emoji:"🍽️",titre:"Gastronomie locale",desc:"Nos bonnes adresses pour se régaler."},{href:"detente.html",emoji:"🧖",titre:"Détente & Bien-être",desc:"Baignade,spa et parenthèse douceur."}];var pageActuelle = window.location.pathname.split("/").pop();var autres = pages.filter(function(p){return p.href !== pageActuelle;});for(var i = autres.length - 1;i > 0;i--){var j = Math.floor(Math.random()*(i + 1));var tmp = autres[i];autres[i] = autres[j];autres[j] = tmp;}var choix = autres.slice(0,3);var conteneur = document.getElementById("vous-aimerez-aussi");conteneur.innerHTML = choix.map(function(p){return '<a href="' + p.href + '" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:18px;text-decoration:none;color:inherit;box-shadow:0 2px 4px rgba(0,0,0,0.02);">' + '<strong style="color:#1a202c;">' + p.emoji + ' ' + p.titre + '</strong>' + '<p style="margin:6px 0 0;font-size:0.9rem;color:#666;">' + p.desc + '</p>' + '</a>';}).join('');})();</script>
 
 
     </div>
@@ -293,40 +268,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const banner = document.getElementById("cookie-banner");
-        const acceptBtn = document.getElementById("btn-accept-cookies");
-        const refuseBtn = document.getElementById("btn-refuse-cookies");
-
-        // Vérifie si l'utilisateur a déjà fait un choix
-        const cookieChoice = localStorage.getItem("cookieConsent");
-
-        if (!cookieChoice) {
-            // Si aucun choix, on affiche le bandeau
-            banner.style.display = "block";
-        } else if (cookieChoice === "accepted") {
-            // Si déjà accepté, on peut lancer les fonctions de tracking ici si besoin
-            activerTracking();
-        }
-
-        acceptBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "accepted");
-            banner.style.display = "none";
-            activerTracking();
-        });
-
-        refuseBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "refused");
-            banner.style.display = "none";
-            // Optionnel : recharger la page ou bloquer proprement
-        });
-
-        function activerTracking() {
-            console.log("GTM / Analytics Activé par l'utilisateur.");
-            // C'est ici que la magie opère si tu veux lier le consentement à GTM.
-        }
-    });
-</script>
+<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("GTM / Analytics Activé par l'utilisateur.");}});</script>
 </body>
 </html>

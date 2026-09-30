@@ -1,0 +1,33 @@
+# Fichiers à ignorer
+
+# Images volumineuses (WebP, JFIF)
+*.webp
+*.jfif
+*.jpeg
+
+# Documents PDF (souvent personnels, ne jamais publier)
+*.pdf
+
+# Python
+*.pyc
+__pycache__/
+*.py
+
+# Fichiers temporaires
+*.crdownload
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log
+
+# Vscode
+.vscode/
+*.code-workspace
+
+# Build/Dist
+dist/
+build/
+*.min.js
+*.min.css
