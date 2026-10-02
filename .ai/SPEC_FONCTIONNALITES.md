@@ -66,6 +66,12 @@ Pages thématiques listées dans `tourisme.html` (page hub, 44 liens entrants) :
 ### 3.9 Bandeau réduit au défilement
 - Le bandeau (logo + menu) reste collé en haut de l'écran. Dès qu'on descend de ~80 px, le logo disparaît et seule la ligne du menu reste visible ; le logo revient quand on remonte tout en haut de la page (`header-scroll.js`, chargé par chaque page ayant un bandeau).
 
+### 3.5 Règle : date de mise à jour dans le pied de page
+
+Dès qu'une page HTML est modifiée, la date du jour doit être mise à jour dans son pied de page, au format `JJ/MM/AAAA` :
+
+`© 2026 Le Relais de Chaumeré - JJ/MM/AAAA - Tous droits réservés.` suivi de « Site Réalisé par Clarté Web ».
+
 ## 4. Hors périmètre actuel (connu, non implémenté)
 
 - Pas de moteur de réservation ni de calendrier de disponibilité en temps réel.
