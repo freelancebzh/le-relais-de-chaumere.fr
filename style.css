@@ -835,3 +835,33 @@ header.header-reduit nav {
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
 }
+
+/* Cartes tourisme de l'accueil : liens et images harmonisés */
+.home-tourism .tourism-card figure {
+    margin: 15px 0;
+    max-width: 100%;
+}
+
+.home-tourism .tourism-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.home-tourism .tourism-card p a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+/* Lien vers l'histoire de Chaumeré (site de l'A3PC) */
+.lien-histoire {
+    text-align: center;
+    margin: 0 0 3rem 0;
+}
+
+.lien-histoire a {
+    color: #0066cc;
+    text-decoration: underline;
+    font-weight: bold;
+}
