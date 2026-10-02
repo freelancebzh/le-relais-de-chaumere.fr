@@ -68,9 +68,10 @@ Pages thématiques listées dans `tourisme.html` (page hub, 44 liens entrants) :
 
 ### 3.10 Règle : date de mise à jour dans le pied de page
 
-Dès qu'une page est modifiée, même très légèrement, y compris indirectement via `style.css` ou un autre fichier partagé (dans ce cas, toutes les pages concernées), la date du jour doit être mise à jour dans leur pied de page, au format `JJ/MM/AAAA` :
+Dès qu'une page est modifiée, même très légèrement, y compris indirectement via `style.css` ou un autre fichier partagé (dans ce cas, toutes les pages concernées), la date du jour doit être mise à jour dans leur pied de page. Toutes les pages doivent avoir cette date, au même format, dans la langue de la page :
 
-`© 2026 Le Relais de Chaumeré - JJ/MM/AAAA - Tous droits réservés.` suivi de « Site Réalisé par Clarté Web ».
+- pages françaises : `© 2026 Le Relais de Chaumeré - JJ/MM/AAAA - Tous droits réservés.` suivi de « Site Réalisé par Clarté Web » ;
+- pages anglaises (`english.html`, `campsite.html`, `numbers.html`) : `© 2026 Le Relais de Chaumeré - October 2nd 2026 - All Rights Reserved.` suivi de « Website Realised by Clarté Web » (mois en toutes lettres, jour avec suffixe 1st / 2nd / 3rd / 4th…).
 
 ## 4. Hors périmètre actuel (connu, non implémenté)
 
