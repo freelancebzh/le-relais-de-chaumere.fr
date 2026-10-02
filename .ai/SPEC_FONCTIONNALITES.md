@@ -58,7 +58,7 @@ Pages thématiques listées dans `tourisme.html` (page hub, 44 liens entrants) :
 - Chaque page : title unique, meta description, canonical, Open Graph, Twitter card, `hreflang` (fr/en/x-default).
 - `index.html` porte un balisage `schema.org` `LodgingBusiness` (adresse, téléphone, `priceRange`, équipements) — **téléphone et adresse précise encore à compléter** (placeholders `[À COMPLÉTER]` dans le JSON-LD).
 - `sitemap.xml` (24 URLs) et `robots.txt` à la racine.
-- Suivi analytics via **GA4 uniquement** (`G-MB2MHCQZXY`) — GTM volontairement retiré (voir `CHANGELOG-ARCHITECTURE.md`).
+- Suivi analytics via **GA4 uniquement** (`G-MB2MHCQZXY`), chargé par `analytics.js` seulement après un clic sur « Accepter » dans le bandeau cookies (rien n'est chargé avant ou en cas de refus ; `guide-sejour.html`, sans bandeau, n'est donc pas suivie) — GTM volontairement retiré (voir `CHANGELOG-ARCHITECTURE.md`).
 
 ### 3.8 Accessibilité
 - Conformité visée **WCAG AA** : contrastes retravaillés (`--text-light: #555555`), `role="navigation"`/`role="contentinfo"`, `aria-label` sur les nav, `aria-current="page"` sur le lien actif, focus clavier visible.
