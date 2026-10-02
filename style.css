@@ -82,9 +82,18 @@ nav ul li a:hover {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
+}
+
+/* Bandeau sombre « Une question ou envie de réserver ? » : même largeur que le contenu */
+body > div[style*="#1a202c"] {
+    box-sizing: border-box;
+    width: calc(100% - 6rem);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero {
@@ -189,6 +198,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+    main {
+        padding: 0 1.25rem;
+    }
+
+    body > div[style*="#1a202c"] {
+        width: calc(100% - 2.5rem);
+    }
+
     nav {
         flex-direction: column;
         gap: 1.5rem;
@@ -825,6 +842,12 @@ header nav,
     transition: height 0.4s ease, opacity 0.3s ease, gap 0.4s ease, padding 0.4s ease;
 }
 
+header.header-reduit .logo {
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
 header.header-reduit .logo img {
     height: 0 !important;
     opacity: 0;
@@ -856,8 +879,9 @@ header.header-reduit nav {
 
 /* Lien vers l'histoire de Chaumeré (site de l'A3PC) */
 .lien-histoire {
-    text-align: center;
-    margin: 0 0 3rem 0;
+    max-width: 750px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
 }
 
 .lien-histoire a {

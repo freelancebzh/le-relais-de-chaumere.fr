@@ -75,3 +75,9 @@ Codeur novice. Ne pas être trop technique dans les explications de code.
 ## Remote Git
 
 `origin` est configuré en **SSH** (`git@github.com:clarteweb35/relais.git`), pas en HTTPS — les push HTTPS échouent sur cette machine avec `HTTP 408` (probablement un proxy antivirus d'inspection HTTPS qui interfère avec les gros push). Ne pas repasser le remote en HTTPS.
+
+### Déploiement : le domaine est sur `freelancebzh`
+
+Le site en ligne (le-relais-de-chaumere.fr) est servi par le dépôt `freelancebzh/le-relais-de-chaumere.fr`, remote **`site`** (branche `main`). `origin` (`clarteweb35/relais`, branche `master`) n'est que la sauvegarde de travail : **pousser sur `origin` ne met pas le site en ligne**.
+
+Les deux historiques n'ont aucun ancêtre commun. Ne jamais forcer le push. Pour déployer : créer un commit de déploiement au-dessus de `site/main` (worktree sur `site/main`, `git checkout master -- .`, retirer ce qui ne doit pas partir comme `index09_2026.html`, garder `CNAME`), puis `git push site HEAD:main`.

@@ -31,7 +31,7 @@ Le projet est réalisé par **Clarté Web** (agence, clarte-web.fr), créditée 
 ### 3.4 Guide touristique local (contenu indépendant de la réservation)
 Pages thématiques listées dans `tourisme.html` (page hub, 44 liens entrants) :
 - `culture.html` — Culture & divertissement
-- `patrimoine.html` — Histoire & patrimoine local ; lien « Histoire de Chaumeré » vers a3pc.fr/infos-pratiques/#histoire (aussi en bas de la section tourisme de l'accueil)
+- `patrimoine.html` — Histoire & patrimoine local ; paragraphe de présentation de l'A3PC (~100 mots) avec lien vers a3pc.fr/infos-pratiques/#histoire (« Histoire de Chaumeré »), repris en bas de la section tourisme de l'accueil
 - `insolite.html` — Insolite & expériences uniques
 - `escapades.html` — Escapades & randonnées
 - `detente.html` — Détente, baignade & beauté
