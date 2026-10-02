@@ -12,8 +12,8 @@ SNIPPET A — pour detente.html et escapades.html
         <p style="margin: 0; font-size: 0.9rem; color: #718096;">Retrouvez le carburant le moins cher et les bornes de recharge électrique à proximité, mis à jour en temps réel.</p>
     </div>
     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-        <a href="https://clarteweb35.github.io/autour-de-rennes/carburants/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">⛽ Carburants</a>
-        <a href="https://clarteweb35.github.io/autour-de-rennes/bornes-recharge/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🔋 Bornes électriques</a>
+        <a href="https://clarteweb35.github.io/tro-dro/carburants/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">⛽ Carburants</a>
+        <a href="https://clarteweb35.github.io/tro-dro/bornes-recharge/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🔋 Bornes électriques</a>
     </div>
 </div>
 
@@ -31,8 +31,8 @@ Même emplacement (juste avant le footer)
         <p style="margin: 0; font-size: 0.9rem; color: #718096;">Découvrez les marchés et les food trucks du secteur, mis à jour chaque semaine.</p>
     </div>
     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-        <a href="https://clarteweb35.github.io/autour-de-rennes/marches/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🥕 Marchés</a>
-        <a href="https://clarteweb35.github.io/autour-de-rennes/foodtrucks/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🚚 Food trucks</a>
+        <a href="https://clarteweb35.github.io/tro-dro/marches/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🥕 Marchés</a>
+        <a href="https://clarteweb35.github.io/tro-dro/foodtrucks/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🚚 Food trucks</a>
     </div>
 </div>
 
@@ -46,6 +46,6 @@ Même emplacement (juste avant le footer)
 <div style="background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 24px; margin: 40px 0 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
     <div style="font-size: 1.4rem;">📅</div>
     <div style="flex: 1; min-width: 200px;">
-        <p style="margin: 0; font-size: 0.9rem; color: #718096;">Envie de sortir pendant votre séjour ? Consultez <a href="https://clarteweb35.github.io/autour-de-rennes/agenda/" target="_blank" rel="noopener" style="color: #2b6cb0; font-weight: bold;">l'agenda des événements du coin</a>, mis à jour chaque jour.</p>
+        <p style="margin: 0; font-size: 0.9rem; color: #718096;">Envie de sortir pendant votre séjour ? Consultez <a href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener" style="color: #2b6cb0; font-weight: bold;">l'agenda des événements du coin</a>, mis à jour chaque jour.</p>
     </div>
 </div>
