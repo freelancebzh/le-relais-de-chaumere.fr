@@ -2973,3 +2973,604 @@ html body .astuce-guide {
     margin-top: 25px;
     text-align: center;
 }
+
+/* ===== Classes issues des derniers styles inline (noms st-xxxxxx = générés) ===== */
+html body .st-63b500 {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 0;
+    text-align: center;
+    display: block;
+}
+html body .st-90e61d {
+    font-size: 0.9em;
+    color: #555555;
+    text-align: center;
+    font-style: italic;
+    display: block;
+    margin-top: 12px;
+}
+html body .st-90e7af {
+    background-color: #fff3cd;
+    color: #856404;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #ffeeba;
+    line-height: 1.6;
+}
+html body .st-4e6830 {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+html body .st-8ceadc {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.4rem;
+}
+html body .st-ddbabc {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.7;
+    font-weight: 500;
+}
+html body .st-384c8f {
+    font-size: 0.98rem;
+    color: #4a5568;
+    line-height: 1.7;
+}
+html body .st-9e45d5 {
+    font-size: 1rem;
+    color: #2d3748;
+    line-height: 1.7;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+html body .st-b5f50d {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+html body .st-6640b4 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.4rem;
+}
+html body .st-d25a14 {
+    font-size: 1.05rem;
+    color: #334155;
+    line-height: 1.7;
+    font-weight: 500;
+}
+html body .st-aad937 {
+    font-size: 0.98rem;
+    color: #475569;
+    line-height: 1.7;
+}
+html body .st-4103a8 {
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.7;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+html body .st-56eb2b {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #edf2f7;
+    border-radius: 12px;
+    text-align: center;
+}
+html body .st-72cacb {
+    color: #2d3748;
+    margin-top: 0;
+}
+html body .st-8ffbce {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+html body .st-ba1ac7 {
+    display: inline-block;
+    background-color: #2b6cb0;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+html body .st-6d56db {
+    text-align: center;
+    margin-top: 2rem;
+}
+html body .st-6da955 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+html body .st-5be80b {
+    padding: 10px 15px;
+    background: #d97706;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+html body .st-3e7017 {
+    padding: 10px 15px;
+    background: #c5a880;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+html body .st-3a6433 {
+    padding: 10px 15px;
+    background: #d32f2f;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+html body .st-521be2 {
+    padding: 10px 15px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+html body .st-88a895 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    z-index: 999;
+    transition: transform 0.2s;
+}
+html body .st-d1051c {
+    background-color: #f8fafc;
+    padding: 40px 20px;
+    margin: 40px 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+html body .st-091014 {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+html body .st-b9cd86 {
+    flex: 1;
+    min-width: 280px;
+}
+html body .st-3c79dc {
+    font-size: 1.5rem;
+    color: #1a202c;
+    margin-bottom: 15px;
+}
+html body .st-85c40c {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+html body .st-f2b417 {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+html body .st-938931 {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: underline;
+}
+html body .st-6ab6b3 {
+    display: inline-block;
+    background-color: #0066cc;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+html body .st-02f580 {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+html body .st-cf4814 {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    object-fit: cover;
+    max-height: 300px;
+}
+html body .st-7d2717 {
+    text-align: justify;
+}
+html body .st-a6b857 {
+    background-color: #f9f9f9;
+    border-left: 4px solid #0066cc;
+    padding: 15px;
+    margin-top: 25px;
+    border-radius: 4px;
+    text-align: justify;
+}
+html body .st-e22a10 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.5;
+}
+html body .st-ffb734 {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    color: #555;
+}
+html body .st-46625c {
+    color: #0066cc;
+    font-weight: bold;
+}
+html body .st-169f06 {
+    color: #666;
+}
+html body .st-abda9a {
+    color: #d32f2f;
+    font-weight: bold;
+}
+html body .st-da392c {
+    background-color: #e6f7ff;
+    color: #0050b3;
+    text-align: center;
+    padding: 12px;
+    font-weight: 500;
+    border-bottom: 1px solid #91d5ff;
+    font-family: Arial, sans-serif;
+}
+html body .st-d7e00e {
+    background-color: #fffaf0;
+    border-left: 4px solid #dd6b20;
+    color: #dd6b20;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+html body .st-cac989 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #cbd5e0;
+}
+html body .st-4199f4 {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+html body .st-cdac1a {
+    background-color: #f9f9f9;
+    border-top: 4px solid #0066cc;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+html body .st-5afc73 {
+    font-size: 3rem;
+}
+html body .st-e26237 {
+    margin-top: 15px;
+    color: #333;
+}
+html body .st-c97f49 {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: justify;
+}
+html body .st-683d0d {
+    text-align: left;
+    margin: 25px auto;
+    max-width: 700px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 6px;
+    border-left: 4px solid #3182ce;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+html body .st-8623fa {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #2d3748;
+    line-height: 1.5;
+}
+html body .st-c8166a {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+html body .st-8bf62d {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+html body .st-99025b {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+html body .st-cd0317 {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0066cc;
+    padding: 8px 16px;
+    background: #e6f7ff;
+    border-radius: 4px;
+}
+html body .st-2bd6fc {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2d3748;
+    padding: 8px 16px;
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+/* ===== Styles propres à culture / insolite / mentions légales (déplacés des blocs <style>) ===== */
+/* --- culture.html --- */
+        body.page-culture {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        
+        
+        
+        
+
+        .page-culture .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-culture h1 { font-size: 2rem; margin-bottom: 10px; }
+        .page-culture .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* --- STYLE DES CATÉGORIES --- */
+        .page-culture .section-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .page-culture .badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .page-culture .badge-cinema { background-color: #fff5f5; color: #9b2c2c; }
+        .page-culture .badge-livre { background-color: #feebc8; color: #9c4221; }
+        .page-culture .badge-expo { background-color: #e2e8f0; color: #2d3748; }
+
+        .page-culture .culture-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-culture .culture-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .page-culture .culture-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
+        
+        .page-culture .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 10px;
+            margin: 15px 0 0 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-culture .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .page-culture .btn-map:hover { background-color: #cbd5e0; }
+
+/* --- insolite.html --- */
+        body.page-insolite {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+        
+        
+        
+        
+
+        .page-insolite .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-insolite h1 { font-size: 2rem; margin-bottom: 10px; }
+        .page-insolite .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* --- STYLE DES CATÉGORIES --- */
+        .page-insolite .section-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .page-insolite .badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .page-insolite .badge-art { background-color: #faf5ff; color: #553c9a; }
+        .page-insolite .badge-jeu { background-color: #feebc8; color: #9c4221; }
+        .page-insolite .badge-magie { background-color: #e6fffa; color: #234e52; }
+
+        .page-insolite .insolite-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-insolite .insolite-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-insolite .insolite-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
+        
+        .page-insolite .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 10px;
+            margin: 15px 0 0 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-insolite .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .page-insolite .btn-map:hover { background-color: #cbd5e0; }
+    
+        .page-insolite .header-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .page-insolite .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+/* --- mentions-legales.html --- */
+        body.page-mentions-legales { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background-color: #f7fafc; }
+        .page-mentions-legales .legal-container { max-width: 700px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .page-mentions-legales h1 { font-size: 1.8rem; color: #1a202c; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 20px; }
+        .page-mentions-legales h2 { font-size: 1.2rem; color: #2d3748; margin-top: 25px; margin-bottom: 10px; }
+        .page-mentions-legales p,
+.page-mentions-legales ul { font-size: 0.95rem; color: #4a5568; }
+        .page-mentions-legales .back-link { display: inline-block; margin-top: 30px; color: #0066cc; text-decoration: none; font-weight: bold; }
+        .page-mentions-legales .back-link:hover { text-decoration: underline; }
+
+/* ===== Cartes « Vous aimerez aussi » (guides-lies.js) ===== */
+.carte-guide {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 18px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.carte-guide-titre {
+    color: #1a202c;
+}
+
+.carte-guide-desc {
+    margin: 6px 0 0;
+    font-size: 0.9rem;
+    color: #666;
+}

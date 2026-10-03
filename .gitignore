@@ -1,7 +1,6 @@
 # Fichiers à ignorer
 
-# Images volumineuses (WebP, JFIF)
-*.webp
+# Images (les WebP sont versionnés : ils sont servis par les balises <picture>)
 *.jfif
 *.jpeg
 
@@ -12,6 +11,7 @@
 *.pyc
 __pycache__/
 *.py
+!outils/*.py
 
 # Fichiers temporaires
 *.crdownload

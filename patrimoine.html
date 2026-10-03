@@ -34,7 +34,7 @@
 <!-- /BLOC:bandeau -->
 
 <!-- Bandeau Global de suivi de Chantier (Identique aux autres pages) -->
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 12px; font-weight: 500; border-bottom: 1px solid #91d5ff; font-family: Arial, sans-serif;">
+<div class="st-da392c">
     🚧 <strong>Projet en cours :</strong> Le gîte est actuellement en construction 🚧<br><br>
     📸 suivez son avancement sur le <a class="lien-fort" href="blog.html">blog</a> ! <br>
     📅 Les réservations ouvriront en 2027<br>
@@ -44,7 +44,7 @@
 <!-- BLOC:menu -->
 <header>
     <nav aria-label="Navigation principale">
-        <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
+        <div class="logo"><picture><source srcset="photos/general/logo2.webp" type="image/webp"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></picture></div>
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="offre.html">L'Offre</a></li>
@@ -67,7 +67,7 @@
 <main class="container">
     
     <!-- Ton avertissement spécifique pour cette sous-page -->
-    <div style="background-color: #fffaf0; border-left: 4px solid #dd6b20; color: #dd6b20; padding: 15px; margin-bottom: 30px; border-radius: 4px; box-sizing: border-box;">
+    <div class="st-d7e00e">
         <p class="st-28026b">
             🚧 Page en cours de création
         </p>
@@ -159,9 +159,9 @@
     </main>
 
     <div class="st-acd3d4">
-        <h2 style="font-size: 1.5rem; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #cbd5e0;">🔗 Vous aimerez aussi</h2>
+        <h2 class="st-cac989">🔗 Vous aimerez aussi</h2>
         <div class="st-d7e739" id="vous-aimerez-aussi"></div>
-        <script>(function(){var pages = [{href:"patrimoine.html",emoji:"🏰",titre:"Histoire & Patrimoine",desc:"Châteaux et cités de caractère près de Domagné."},{href:"culture.html",emoji:"🎭",titre:"Culture & Divertissement",desc:"Cinémas,médiathèque et centres culturels."},{href:"insolite.html",emoji:"✨",titre:"Insolite & Expériences",desc:"Sculptures géantes,légendes et géocaching."},{href:"escapades.html",emoji:"🚶",titre:"Escapades & Randonnées",desc:"Balades et sentiers autour de Domagné."},{href:"gastronomie.html",emoji:"🍽️",titre:"Gastronomie locale",desc:"Nos bonnes adresses pour se régaler."},{href:"detente.html",emoji:"🧖",titre:"Détente & Bien-être",desc:"Baignade,spa et parenthèse douceur."}];var pageActuelle = window.location.pathname.split("/").pop();var autres = pages.filter(function(p){return p.href !== pageActuelle;});for(var i = autres.length - 1;i > 0;i--){var j = Math.floor(Math.random()*(i + 1));var tmp = autres[i];autres[i] = autres[j];autres[j] = tmp;}var choix = autres.slice(0,3);var conteneur = document.getElementById("vous-aimerez-aussi");conteneur.innerHTML = choix.map(function(p){return '<a href="' + p.href + '" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:18px;text-decoration:none;color:inherit;box-shadow:0 2px 4px rgba(0,0,0,0.02);">' + '<strong style="color:#1a202c;">' + p.emoji + ' ' + p.titre + '</strong>' + '<p style="margin:6px 0 0;font-size:0.9rem;color:#666;">' + p.desc + '</p>' + '</a>';}).join('');})();</script>
+        <script src="guides-lies.js" defer></script>
 
 
     </div>
