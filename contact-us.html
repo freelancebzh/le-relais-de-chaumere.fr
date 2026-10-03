@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -31,16 +31,16 @@
 </head>
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #91d5ff; line-height: 1.6;">
+<div class="bandeau-chantier">
     🚧 <strong>Project in progress:</strong> The guesthouse is currently under construction 🚧<br>
-    📸 Follow its progress on our <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> (in French)!<br>
+    📸 Follow its progress on our <a class="lien-fort" href="blog.html">blog</a> (in French)!<br>
     📅 <strong>Opening in 2027:</strong> available as a <strong>flexible furnished rental</strong> in early 2027, then for <strong>tourist stays</strong> by the summer.<br>
-    🗺️ Already discover our <a href="tourism.html" style="font-weight: bold; color: #0066cc;">local guides and activities</a>.
+    🗺️ Already discover our <a class="lien-fort" href="tourism.html">local guides and activities</a>.
 </div>
 
     <header>
         <nav aria-label="Main navigation">
-            <div class="logo"><img src="photos/general/logo2.png" alt="Le Relais de Chaumeré logo: our house with a dolmen and an apple above it" style="height: 220px; width: auto;"></div>
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="Le Relais de Chaumeré logo: our house with a dolmen and an apple above it"></div>
             <ul>
                 <li><a href="english.html">Home</a></li>
                 <li><a href="offer.html">The Studio</a></li>
@@ -49,11 +49,11 @@
                 <li><a href="numbers.html">Useful numbers</a></li>
                 <li><a href="contact-us.html" class="active" aria-current="page">Contact</a></li>
                 <li><a href="blog.html">Blog & News</a></li>
-<li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="contact.html" hreflang="fr" lang="fr" title="Français" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="contact-us.html" hreflang="en" lang="en" title="English" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="kontakt.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="neem-contact-op.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+<li class="lang-switch lang-switch-liste">
+    <a class="lang-lien" href="contact.html" hreflang="fr" lang="fr" title="Français"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien-actif" href="contact-us.html" hreflang="en" lang="en" title="English" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="kontakt.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="neem-contact-op.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -67,44 +67,44 @@
         <p>Would you like to book or get more information? Fill in the form below. We can also call you back free of charge via WhatsApp.</p>
     </div>
 	
-	<h3 style="text-align: center; margin-bottom: 10px;">A question about the project?</h3>
+	<h3 class="st-92ff10">A question about the project?</h3>
 
 
     <section class="about-section">
-        <form action="https://api.web3forms.com/submit" method="POST" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+        <form class="st-3f1d65" action="https://api.web3forms.com/submit" method="POST">
             
             <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
             
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="checkbox" name="botcheck" class="hidden st-224b51">
 
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label style="font-weight: bold; color: var(--text-dark);">Full name *</label>
-                <input type="text" name="nom" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            <div class="champ-formulaire">
+                <label class="champ-label">Full name *</label>
+                <input class="champ-saisie" type="text" name="nom" required>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label style="font-weight: bold; color: var(--text-dark);">Your e-mail address *</label>
-                <input type="email" name="email" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            <div class="champ-formulaire">
+                <label class="champ-label">Your e-mail address *</label>
+                <input class="champ-saisie" type="email" name="email" required>
             </div>
 
-            <div class="services-block" style="padding: 1.5rem; margin: 0; background-color: #f9f9f9;">
-                <h3 style="margin-top: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">📞 Would you like a callback?</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">If you prefer to talk by phone, give us your number and when you are available.</p>
+            <div class="services-block st-c0297c">
+                <h3 class="st-60e6af">📞 Would you like a callback?</h3>
+                <p class="st-a7d376">If you prefer to talk by phone, give us your number and when you are available.</p>
                 
-                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
-                    <label style="font-size: 0.95rem;">Phone number</label>
-                    <input type="tel" name="telephone_rappel" placeholder="E.g. +44 7000 000000 or +33 6 00 00 00 00" style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+                <div class="st-93f05b">
+                    <label class="st-6e47c6">Phone number</label>
+                    <input class="champ-saisie" type="tel" name="telephone_rappel" placeholder="E.g. +44 7000 000000 or +33 6 00 00 00 00">
                 </div>
 
-                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                    <label style="font-size: 0.95rem;">Your availability for the callback</label>
-                    <input type="text" name="disponibilites" placeholder="E.g. weekdays after 5 pm, Saturday mornings..." style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+                <div class="champ-formulaire">
+                    <label class="st-6e47c6">Your availability for the callback</label>
+                    <input class="champ-saisie" type="text" name="disponibilites" placeholder="E.g. weekdays after 5 pm, Saturday mornings...">
                 </div>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label style="font-weight: bold; color: var(--text-dark);">My request is about *</label>
-                <select name="sujet" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; background-color: white;">
+            <div class="champ-formulaire">
+                <label class="champ-label">My request is about *</label>
+                <select class="st-f7c132" name="sujet" required>
                     <option value="">-- Select --</option>
                     <option value="Gîte">The guesthouse</option>
                     <option value="Camping">The campsite</option>
@@ -112,49 +112,37 @@
                 </select>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label style="font-weight: bold; color: var(--text-dark);">Your message / Desired dates *</label>
-                <textarea name="message" rows="6" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; resize: vertical;"></textarea>
+            <div class="champ-formulaire">
+                <label class="champ-label">Your message / Desired dates *</label>
+                <textarea class="st-eeb133" name="message" rows="6" required></textarea>
             </div>
 
-            <div style="margin: 10px 0; display: flex; justify-content: center;">
+            <div class="st-b20633">
                 <div class="h-captcha" data-captcha="true"></div>
             </div>
 
-            <button type="submit" class="services-block" style="background-color: var(--text-dark, #333); color: white; border: none; padding: 1rem; font-size: 1.1rem; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.2s;">✉️ Send the request</button>
+            <button type="submit" class="services-block st-f9db53">✉️ Send the request</button>
 
         </form>
     </section>
 
 </main>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offer.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">The Offer</a> |
-        <a href="prices.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Prices</a> |
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidarity</a> |
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">About Us</a> |
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Updates</a> |
-        <a href="numbers.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Useful Numbers</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Legal Notices</a> |
-        <a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Site Map</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offer.html">The Offer</a> |
+        <a class="pied-lien-fort" href="prices.html">Services & Prices</a> |
+        <a class="pied-lien-fort" href="solidaires.html">Solidarity</a> |
+        <a class="pied-lien-fort" href="propos.html">About Us</a> |
+        <a class="pied-lien-fort" href="blog.html">Blog & Updates</a> |
+        <a class="pied-lien-fort" href="numbers.html">☎️ Useful Numbers</a> |
+        <a class="pied-lien" href="mentions-legales.html">Legal Notices</a> |
+        <a class="pied-lien" href="plan-du-site.html">Site Map</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 
 <script src="https://web3forms.com/client/script.js" async defer></script>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> uses cookies to measure the audience of this site with Google Analytics. You can accept or refuse this tracking. To learn more, see our <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Legal Notices</a> (in French).
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuse</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accept all</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});});</script>
 
 </body>
 </html>

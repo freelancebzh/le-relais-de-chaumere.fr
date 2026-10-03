@@ -3,8 +3,8 @@
 <head>
 
 <meta charset="UTF-8">
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 	<meta name="robots" content="index, follow">
     <meta name="description" content="Randonnées, balades et sentiers à explorer à pied ou à vélo autour du gîte en location. Nos meilleures escapades nature sur Domagné.">
     <link rel="canonical" href="https://www.le-relais-de-chaumere.fr/escapades.html">
@@ -20,145 +20,54 @@
     <title>Escapades & Randonnées | Le Relais de Chaumeré</title>
 	
 		<link rel="stylesheet" href="style.css">
-    <style>
-
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        h1 { font-size: 2rem; margin-bottom: 10px; }
-        .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
-
-        /* --- STYLE DES CATÉGORIES --- */
-        .section-title {
-            font-size: 1.5rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #cbd5e0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .badge {
-            font-size: 0.8rem;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .badge-balade { background-color: #e6fffa; color: #234e52; }
-        .badge-rando { background-color: #ebf8ff; color: #2b6cb0; }
-        .badge-foret { background-color: #f0fff4; color: #22543d; }
-
-        .escapade-item {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-        .escapade-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .escapade-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
-        
-        .meta-info {
-            background-color: #f7fafc;
-            border-left: 3px solid #cbd5e0;
-            padding: 10px;
-            margin: 15px 0 0 0;
-            font-size: 0.95rem;
-        }
-        
-        .btn-map {
-            display: inline-block;
-            background-color: #e2e8f0;
-            color: #2d3748;
-            padding: 6px 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.85rem;
-            margin-top: 10px;
-        }
-        .btn-map:hover { background-color: #cbd5e0; }
-    
-        .header-tags {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .distance-chip {
-            display: inline-block;
-            background-color: #edf2f7;
-            color: #4a5568;
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 999px;
-            white-space: nowrap;
-        }
-    </style>
     <script src="header-scroll.js" defer></script>
 </head>
-<body>
+<body class="page-escapades">
 
 <header>
-        <nav>
-            <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+        <nav aria-label="Navigation principale">
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
                 <li><a href="tarifs.html">Services & Tarifs</a></li>
-                <li><a href="tourisme.html"class="active">Tourisme</a></li>
+                <li><a href="tourisme.html"class="active" aria-current="page">Tourisme</a></li>
                 <li><a href="propos.html">À Propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog & Actu</a></li>
-                <li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="escapades.html" hreflang="fr" lang="fr" title="Français" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="english.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="deutsch.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+                <li class="lang-switch lang-switch-liste">
+    <a class="lang-lien-actif" href="escapades.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
+    <main class="container">
 	
-	<div style="background-color: #fffaf0; border-left: 4px solid #dd6b20; color: #dd6b20; padding: 15px; margin: 20px auto 0 auto; max-width: 800px; border-radius: 4px; box-sizing: border-box; font-family: Arial, sans-serif;">
-    <p style="margin: 0; font-weight: bold; display: flex; align-items: center; gap: 8px;">
+	<div class="st-d72e70">
+    <p class="st-28026b">
         🚧 Page en cours de création
     </p>
-    <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #718096;">
+    <p class="st-d1094a">
         Les photos et les itinéraires précis arrivent très vite ! Pour le moment, les liens de localisation Google Maps sont temporairement désactivés. Merci de votre patience.
     </p>
 </div>
         
         <h1>Escapades, Balades & Randonnées</h1>
-        <p class="intro-text">Besoin de prendre l'air ou de vous dégourdir les jambes ? Voici une sélection de chemins, de parcs et de forêts à explorer à pied ou à vélo juste à côté de Domagné. Retrouvez aussi les visites culturelles des environs sur notre <a href="tourisme.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">guide touristique principal</a>.</p>
+        <p class="intro-text">Besoin de prendre l'air ou de vous dégourdir les jambes ? Voici une sélection de chemins, de parcs et de forêts à explorer à pied ou à vélo juste à côté de Domagné. Retrouvez aussi les visites culturelles des environs sur notre <a class="lien-souligne-fort" href="tourisme.html">guide touristique principal</a>.</p>
 
-        <div style="background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 24px; margin: 40px 0 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-            <div style="font-size: 1.6rem;">🔋⛽</div>
-            <div style="flex: 1; min-width: 200px;">
-                <p style="margin: 0 0 4px; font-weight: bold; color: #2d3748;">Avant de partir en balade</p>
-                <p style="margin: 0; font-size: 0.9rem; color: #718096;">Retrouvez le carburant le moins cher et les bornes de recharge électrique à proximité, mis à jour en temps réel.</p>
+        <div class="st-798142">
+            <div class="st-811716">🔋⛽</div>
+            <div class="st-8ea199">
+                <p class="st-622ba7">Avant de partir en balade</p>
+                <p class="st-4eef26">Retrouvez le carburant le moins cher et les bornes de recharge électrique à proximité, mis à jour en temps réel.</p>
             </div>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                <a href="https://clarteweb35.github.io/tro-dro/carburants/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">⛽ Carburants</a>
-                <a href="https://clarteweb35.github.io/tro-dro/bornes-recharge/" target="_blank" rel="noopener" style="display: inline-block; background-color: #e2e8f0; color: #2d3748; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">🔋 Bornes électriques</a>
+            <div class="st-9551b6">
+                <a class="st-47d849" href="https://clarteweb35.github.io/tro-dro/carburants/" target="_blank" rel="noopener">⛽ Carburants</a>
+                <a class="st-47d849" href="https://clarteweb35.github.io/tro-dro/bornes-recharge/" target="_blank" rel="noopener">🔋 Bornes électriques</a>
             </div>
         </div>
 
@@ -172,7 +81,7 @@
                     <span class="distance-chip">📍 ~11 km</span>
                 </div>
             </div>
-            <p>Situé juste au pied du célèbre château médiéval, cet étang offre un cadre bucolique et une promenade ombragée très agréable. Le tour de l'eau est entièrement aménagé, jalonné de pontons en bois et d'espaces de détente pour observer les oiseaux. C'est l'endroit parfait pour une sortie relaxante en fin de journée, avant de rentrer recharger vos batteries et vous détendre dans le cadre chaleureux de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre studio tout confort</a>.</p>
+            <p>Situé juste au pied du célèbre château médiéval, cet étang offre un cadre bucolique et une promenade ombragée très agréable. Le tour de l'eau est entièrement aménagé, jalonné de pontons en bois et d'espaces de détente pour observer les oiseaux. C'est l'endroit parfait pour une sortie relaxante en fin de journée, avant de rentrer recharger vos batteries et vous détendre dans le cadre chaleureux de <a class="lien-souligne-fort" href="offre.html">notre studio tout confort</a>.</p>
             <div class="meta-info">
                 <strong>🚶 Distance / Durée :</strong> Boucle d'environ 1,5 km (30 à 45 min) — Sentier plat et accessible.<br>
                 <strong>📍 Départ :</strong> Parking de l'Étang ou du Château, 35410 Châteaugiron.
@@ -205,7 +114,7 @@
                     <span class="distance-chip">📍 ~20 km</span>
                 </div>
             </div>
-            <p>Un magnifique jardin public à l'anglaise niché au cœur de la cité médiévale de Vitré. En flânant dans ses allées ombragées, vous découvrirez une volière, l'enclos des daims, des arbres remarquables ainsi qu'une statue de la Marquise de Sévigné. Idéal pour une parenthèse bucolique après avoir visité le château. Avant de partir explorer ces trésors historiques, préparez votre pique-nique en toute liberté dans le coin cuisine de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre studio indépendant</a>.</p>
+            <p>Un magnifique jardin public à l'anglaise niché au cœur de la cité médiévale de Vitré. En flânant dans ses allées ombragées, vous découvrirez une volière, l'enclos des daims, des arbres remarquables ainsi qu'une statue de la Marquise de Sévigné. Idéal pour une parenthèse bucolique après avoir visité le château. Avant de partir explorer ces trésors historiques, préparez votre pique-nique en toute liberté dans le coin cuisine de <a class="lien-souligne-fort" href="offre.html">notre studio indépendant</a>.</p>
             <div class="meta-info">
                 <strong>🚶 Distance / Durée :</strong> Circuit d'environ 1,5 km (environ 45 min) — Entièrement gratuit.<br>
                 <strong>📍 Départ :</strong> Boulevard de Châteaubriant ou Place du Champ de Foire, 35500 Vitré.
@@ -221,7 +130,7 @@
                     <span class="distance-chip">📍 ~28 km</span>
                 </div>
             </div>
-            <p>Classé parmi les plus beaux jardins de France, cet ancien domaine des moines de l'abbaye Saint-Melaine s'étend sur 10 hectares en plein centre-ville. Il associe magnifiquement un jardin à la française, un parc à l'anglaise, une roseraie exceptionnelle de 2 000 variétés et un jardin botanique en spirale. C'est le lieu parfait pour s'évader le temps d'un après-midi breton, avant de retrouver le calme absolu et le confort douillet de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre hébergement de standing</a>.</p>
+            <p>Classé parmi les plus beaux jardins de France, cet ancien domaine des moines de l'abbaye Saint-Melaine s'étend sur 10 hectares en plein centre-ville. Il associe magnifiquement un jardin à la française, un parc à l'anglaise, une roseraie exceptionnelle de 2 000 variétés et un jardin botanique en spirale. C'est le lieu parfait pour s'évader le temps d'un après-midi breton, avant de retrouver le calme absolu et le confort douillet de <a class="lien-souligne-fort" href="offre.html">notre hébergement de standing</a>.</p>
             <div class="meta-info">
                 <strong>🚶 Distance / Durée :</strong> À la carte (comptez 1h30 pour en faire le tour) — Entrée gratuite.<br>
                 <strong>📍 Départ :</strong> Place Saint-Melaine ou Rue de Paris, 35000 Rennes.
@@ -238,7 +147,7 @@
                     <span class="distance-chip">📍 ~8 km</span>
                 </div>
             </div>
-            <p>Un super espace vert de loisirs situé au cœur de Domagné. C'est le rendez-vous idéal pour les familles : le parc propose de superbes structures de jeux en bois, des terrains de sport, un cadre verdoyant pour se promener au calme, et surtout une grande tyrolienne qui fait le bonheur des petits (et des grands !). Après une après-midi bien rythmée à courir et jouer dehors, vous apprécierez retrouver le calme et le confort de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre studio tout équipé</a> pour un repos bien mérité.</p>
+            <p>Un super espace vert de loisirs situé au cœur de Domagné. C'est le rendez-vous idéal pour les familles : le parc propose de superbes structures de jeux en bois, des terrains de sport, un cadre verdoyant pour se promener au calme, et surtout une grande tyrolienne qui fait le bonheur des petits (et des grands !). Après une après-midi bien rythmée à courir et jouer dehors, vous apprécierez retrouver le calme et le confort de <a class="lien-souligne-fort" href="offre.html">notre studio tout équipé</a> pour un repos bien mérité.</p>
             <div class="meta-info">
                 <strong>🚶 Distance / Durée :</strong> Idéal pour une pause d'1h ou une après-midi détente — Accès libre et gratuit.<br>
                 <strong>📍 Départ :</strong> Rue de la Valière (près du complexe sportif), 35113 Domagné.
@@ -254,7 +163,7 @@
                     <span class="distance-chip">📍 ~18 km</span>
                 </div>
             </div>
-            <p>Situé au bord d'un immense plan d'eau de 150 hectares, ce site en accès libre est un paradis pour les enfants et les sportifs. On y trouve de grandes structures de jeux, des terrains de beach-volley, des parcours de santé, et de grandes pelouses pour pique-niquer ou taper dans un ballon au bord de l'eau. Une sortie grand air parfaite pour déconnecter à deux pas de Vitré, avant de revenir vous concocter un bon petit plat dans l'ambiance cocooning de <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre hébergement indépendant</a>.</p>
+            <p>Situé au bord d'un immense plan d'eau de 150 hectares, ce site en accès libre est un paradis pour les enfants et les sportifs. On y trouve de grandes structures de jeux, des terrains de beach-volley, des parcours de santé, et de grandes pelouses pour pique-niquer ou taper dans un ballon au bord de l'eau. Une sortie grand air parfaite pour déconnecter à deux pas de Vitré, avant de revenir vous concocter un bon petit plat dans l'ambiance cocooning de <a class="lien-souligne-fort" href="offre.html">notre hébergement indépendant</a>.</p>
             <div class="meta-info">
                 <strong>🚶 Distance / Durée :</strong> Tour du plan d'eau possible (env. 7 km) ou pause jeux à la carte — Entrée et parking gratuits.<br>
                 <strong>📍 Départ :</strong> Base de loisirs de la Haute-Vilaine, 35500 Saint-M'Hervé / Vitré.
@@ -272,7 +181,7 @@
                     <span class="distance-chip">📍 Sur place !</span>
                 </div>
             </div>
-            <p>Une extension exclusive du circuit des pommiers qui passe littéralement au pied de notre structure. Ce parcours typique du bocage vous emmène à travers les plus grands vergers du département (pays de la pomme et de la cidrerie locale). Un itinéraire vallonné et verdoyant, idéal pour partir s'aérer à pied ou à vélo directement depuis <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">notre studio tout équipé</a>.</p>
+            <p>Une extension exclusive du circuit des pommiers qui passe littéralement au pied de notre structure. Ce parcours typique du bocage vous emmène à travers les plus grands vergers du département (pays de la pomme et de la cidrerie locale). Un itinéraire vallonné et verdoyant, idéal pour partir s'aérer à pied ou à vélo directement depuis <a class="lien-souligne-fort" href="offre.html">notre studio tout équipé</a>.</p>
             <div class="meta-info">
                 <strong>🚶 Distance / Durée :</strong> Boucle d'environ 9,5 km — Idéal à pied ou en VTT.<br>
                 <strong>📍 Départ :</strong> Directement depuis Le Relais de Chaumeré, ou place de l'Église à Domagné.
@@ -288,7 +197,7 @@
             <span class="distance-chip">📍 ~8 km</span>
         </div>
     </div>
-    <p>Une belle boucle qui permet de découvrir la campagne vallonnée de Domagné. Le tracé alterne entre petits chemins creux abrités, chemins de terre entre les champs et traversées de charmants hameaux locaux. Une très chouette randonnée à seulement quelques minutes de voiture de notre gîte et pour découvrir comment nous agissons au quotidien pour préserver la beauté de notre environnement local, rendez-vous sur notre page <a href="solidaires.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Engagement Solidaire</a>.</p>
+    <p>Une belle boucle qui permet de découvrir la campagne vallonnée de Domagné. Le tracé alterne entre petits chemins creux abrités, chemins de terre entre les champs et traversées de charmants hameaux locaux. Une très chouette randonnée à seulement quelques minutes de voiture de notre gîte et pour découvrir comment nous agissons au quotidien pour préserver la beauté de notre environnement local, rendez-vous sur notre page <a class="lien-souligne-fort" href="solidaires.html">Engagement Solidaire</a>.</p>
     <div class="meta-info">
         <strong>🚶 Distance / Durée :</strong> Env. 9 km (environ 2h15 de marche) — Balisage Jaune.<br>
         <strong>📍 Départ :</strong> Place de l'Église, Domagné.
@@ -331,39 +240,26 @@
             <a href="https://www.google.com/maps/search/?api=1&query=For%C3%AAt%20de%20la%20Corbi%C3%A8re%2C%2035133%20Marpir%C3%A9" target="_blank" class="btn-map">🗺️ S'y rendre</a>
         </div>
 
-        <div class="section-title" style="margin-top: 40px;">🔗 Vous aimerez aussi</div>
-        <div id="vous-aimerez-aussi" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;"></div>
+        <div class="section-title st-bad75b">🔗 Vous aimerez aussi</div>
+        <div class="st-d7e739" id="vous-aimerez-aussi"></div>
         <script>(function(){var pages = [{href:"patrimoine.html",emoji:"🏰",titre:"Histoire & Patrimoine",desc:"Châteaux et cités de caractère près de Domagné."},{href:"culture.html",emoji:"🎭",titre:"Culture & Divertissement",desc:"Cinémas,médiathèque et centres culturels."},{href:"insolite.html",emoji:"✨",titre:"Insolite & Expériences",desc:"Sculptures géantes,légendes et géocaching."},{href:"escapades.html",emoji:"🚶",titre:"Escapades & Randonnées",desc:"Balades et sentiers autour de Domagné."},{href:"gastronomie.html",emoji:"🍽️",titre:"Gastronomie locale",desc:"Nos bonnes adresses pour se régaler."},{href:"detente.html",emoji:"🧖",titre:"Détente & Bien-être",desc:"Baignade,spa et parenthèse douceur."}];var pageActuelle = window.location.pathname.split("/").pop();var autres = pages.filter(function(p){return p.href !== pageActuelle;});for(var i = autres.length - 1;i > 0;i--){var j = Math.floor(Math.random()*(i + 1));var tmp = autres[i];autres[i] = autres[j];autres[j] = tmp;}var choix = autres.slice(0,3);var conteneur = document.getElementById("vous-aimerez-aussi");conteneur.innerHTML = choix.map(function(p){return '<a href="' + p.href + '" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:18px;text-decoration:none;color:inherit;box-shadow:0 2px 4px rgba(0,0,0,0.02);">' + '<strong style="color:#1a202c;">' + p.emoji + ' ' + p.titre + '</strong>' + '<p style="margin:6px 0 0;font-size:0.9rem;color:#666;">' + p.desc + '</p>' + '</a>';}).join('');})();</script>
 
 
 
-    </div>
+    </main>
 	
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; font-size: 0.85rem; display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; gap: 8px;">
-        <a href="offre.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">L'Offre</a> | 
-        <a href="tarifs.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">Services & Tarifs</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">Solidaires</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">☎️ Numéros Utiles</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; white-space: nowrap;">Mentions Légales</a> |
-		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="st-0d3d7d">
+        <a class="st-166693" href="offre.html">L'Offre</a> | 
+        <a class="st-166693" href="tarifs.html">Services & Tarifs</a> | 
+        <a class="st-166693" href="solidaires.html">Solidaires</a> | 
+        <a class="st-166693" href="propos.html">À Propos</a> | 
+        <a class="st-166693" href="blog.html">Blog & Actu</a> | 
+        <a class="st-166693" href="numeros.html">☎️ Numéros Utiles</a> |
+        <a class="st-eb7aa2" href="mentions-legales.html">Mentions Légales</a> |
+		<a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Analytics. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #63b3ed; text-decoration: underline; font-weight: bold;">Mentions Légales</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("Analytics activé par l'utilisateur.");}});</script>
 </body>
 </html>

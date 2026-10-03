@@ -1,24 +1,28 @@
 <!-- ========================================
      TEMPLATE MINIMAL - Mode d'emploi
+     Point de départ pour toute nouvelle page. Les blocs head / bandeau / menu / pied de page
+     sont à copier (pas d'inclusion automatique) : voir aussi includes/*.html.
      ======================================== -->
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <!-- Remplacez les contenus entre [...] pour chaque page -->
-    
-    <!-- Titre de la page (personnalisé) -->
-    <title>[TITRE DE LA PAGE - Exemple: Accueil | Le Relais de Chaumeré]</title>
-    
-    <!-- Incluez les meta tags génériques du head.html -->
+
+    <!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) : voir cookies.js.
+         La langue du bandeau suit l'attribut lang de <html> (fr, en, de, nl). -->
+    <script src="cookies.js" defer></script>
+
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page (personnalisé) -->
+    <title>[TITRE DE LA PAGE - Exemple: Accueil | Le Relais de Chaumeré]</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="includes/components.css">
-
-    <!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-    <script src="analytics.js" defer></script>
+    <script src="header-scroll.js" defer></script>
 
     <!-- À PERSONNALISER PAR PAGE -->
     <meta name="description" content="[DESCRIPTION COURTE DE LA PAGE - max 160 caractères]">
@@ -32,46 +36,44 @@
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Hreflang multilingue -->
+    <!-- Hreflang : seulement si la page a des traductions (accueil, offre, tarifs, tourisme, contact).
+         Chaque version doit lister les 4 langues, plus x-default (français). -->
     <link rel="alternate" hreflang="fr" href="https://www.le-relais-de-chaumere.fr/[nom-de-la-page].html">
-    <link rel="alternate" hreflang="en" href="https://www.le-relais-de-chaumere.fr/english.html">
+    <link rel="alternate" hreflang="en" href="https://www.le-relais-de-chaumere.fr/[page-en-anglais].html">
+    <link rel="alternate" hreflang="de" href="https://www.le-relais-de-chaumere.fr/[page-en-allemand].html">
+    <link rel="alternate" hreflang="nl" href="https://www.le-relais-de-chaumere.fr/[page-en-neerlandais].html">
     <link rel="alternate" hreflang="x-default" href="https://www.le-relais-de-chaumere.fr/[nom-de-la-page].html">
 
-    <!-- OPTIONNEL : Schema.org si page spécifique (ex: LodgingBusiness sur index.html) -->
-    <script src="header-scroll.js" defer></script>
-    <script src="header-scroll.js" defer></script>
+    <!-- Ne PAS ajouter de bloc <style> ni de style="..." : créer une classe dans style.css
+         (styles propres à une seule page : préfixer par la classe du <body>, ex. body.page-ma-page). -->
 </head>
 <body>
 
-<!-- Bannière de construction (identique sur tous les pages) -->
-<div class="banner-construction">
-    🚧 <strong>Projet validé en mairie le 27 juillet :</strong> Le gîte est actuellement en construction 🚧<br>
-    📸 Suivez son avancement sur notre <a href="blog.html">blog</a> !<br>
+<!-- Bandeau chantier (identique sur toutes les pages ; copier depuis includes/banner.html) -->
+<div class="bandeau-chantier">
+    🚧 <strong>Projet en cours :</strong> Le gîte est actuellement en construction 🚧<br>
+    📸 Suivez son avancement sur notre <a class="lien-fort" href="blog.html">blog</a> !<br>
     📅 <strong>Ouverture en 2027 :</strong> Accessible en <strong>location meublée flexible</strong> début 2027 puis en <strong>séjour touristique</strong> d'ici l'été.<br>
-    🗺️ Découvrez déjà les <a href="tourisme.html">guides et activités locales</a>.
+    🗺️ Découvrez déjà les <a class="lien-fort" href="tourisme.html">guides et activités locales</a>.
 </div>
 
-<!-- Header/Navigation (copier depuis includes/header.html) -->
+<!-- Header / navigation (copier depuis includes/header.html) -->
 <header>
-    <nav role="navigation" aria-label="Navigation principale">
-        <div class="logo">
-            <a href="index.html" aria-label="Accueil - Le Relais de Chaumeré">
-                <img src="photos/general/logo2.png" alt="Logo le relais de Chaumeré">
-            </a>
-        </div>
+    <nav aria-label="Navigation principale">
+        <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="Logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
         <ul>
-            <li><a href="index.html" class="nav-link" aria-current="page">Accueil</a></li>
-            <li><a href="offre.html" class="nav-link">L'Offre</a></li>
-            <li><a href="tarifs.html" class="nav-link">Services & Tarifs</a></li>
-            <li><a href="tourisme.html" class="nav-link">Tourisme</a></li>
-            <li><a href="propos.html" class="nav-link">À Propos</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-            <li><a href="blog.html" class="nav-link">Blog & Actu</a></li>
-            <li>
-                <a href="english.html" class="nav-link" style="display: flex; align-items: center; gap: 7px; text-decoration: none;">
-                    <img src="https://flagcdn.com/w20/gb.png" alt="Drapeau Royaume-Uni" style="width: 20px; height: auto;"> 
-                    English
-                </a>
+            <li><a href="index.html" aria-current="page" class="active">Accueil</a></li>
+            <li><a href="offre.html">L'Offre</a></li>
+            <li><a href="tarifs.html">Services & Tarifs</a></li>
+            <li><a href="tourisme.html">Tourisme</a></li>
+            <li><a href="propos.html">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog & Actu</a></li>
+            <li class="lang-switch lang-switch-liste">
+                <a class="lang-lien-actif" href="index.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+                <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+                <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+                <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
             </li>
         </ul>
     </nav>
@@ -85,47 +87,43 @@
 </main>
 
 <!-- Footer (copier depuis includes/footer.html) -->
-<footer role="contentinfo" aria-label="Pied de page">
-    <nav aria-label="Navigation secondaire">
-        <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-            <a href="offre.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">L'Offre</a> | 
-            <a href="tarifs.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Tarifs</a> | 
-            <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidaires</a> | 
-            <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
-            <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-            <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
-            <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
-        </div>
-    </nav>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offre.html">L'Offre</a> |
+        <a class="pied-lien-fort" href="tarifs.html">Services & Tarifs</a> |
+        <a class="pied-lien-fort" href="solidaires.html">Solidaires</a> |
+        <a class="pied-lien-fort" href="propos.html">À Propos</a> |
+        <a class="pied-lien-fort" href="blog.html">Blog & Actu</a> |
+        <a class="pied-lien-fort" href="numeros.html">☎️ Numéros Utiles</a> |
+        <a class="pied-lien" href="mentions-legales.html">Mentions Légales</a> |
+        <a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
+    </div>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - JJ/MM/AAAA - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 
 </body>
 </html>
 
-<!-- 
+<!--
 ========================================
 INSTRUCTIONS D'UTILISATION :
 ========================================
 
-1. Personnalisation du <title> et meta tags pour CHAQUE page
+1. Personnalisation du <title> et des meta tags pour CHAQUE page.
 
-2. Sur chaque page, changez aria-current="page" sur le lien actif
-   Exemple sur index.html:
-   <a href="index.html" aria-current="page">Accueil</a>
-   
-   Exemple sur contact.html:
-   <a href="contact.html" aria-current="page">Contact</a>
+2. Sur chaque page, mettre aria-current="page" (et class="active") sur le lien actif du menu.
 
-3. Meta personnalisées (description, og:title, og:image, canonical):
-   - Chaque page a sa propre description SEO
-   - Les images OG doivent être 1200x630px
+3. Meta personnalisées (description, og:title, og:image, canonical) : chaque page a sa propre
+   description SEO ; les images OG doivent faire 1200x630px.
 
-4. Inclure le fichier components.css dans le <head> :
-   <link rel="stylesheet" href="includes/components.css">
+4. Bandeau cookies et Google Analytics : rien à copier, cookies.js s'en charge (GA4 uniquement,
+   GTM supprimé définitivement). Le pied de page ne contient plus de bandeau cookies.
 
-5. Google Analytics (GA4) : un seul tracker maintenant
-   GTM a été supprimé (anciennement: GTM-MR7QDL6X)
+5. Date du pied de page : mettre la date du jour (JJ/MM/AAAA) à chaque modification de la page.
 
+6. Nouvelle page : l'ajouter à sitemap.xml et la lier depuis au moins une page hub.
+
+7. Page traduite (en/de/nl) : écrire les 3 versions, relier par hreflang et par le sélecteur
+   de langue, et répercuter à la main toute modification ultérieure dans les 4 versions.
 ========================================
 -->

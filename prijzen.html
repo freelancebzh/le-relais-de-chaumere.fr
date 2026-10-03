@@ -2,8 +2,8 @@
 <html lang="nl">
 <head>
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -31,16 +31,16 @@
 </head>
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #91d5ff; line-height: 1.6;">
+<div class="bandeau-chantier">
     🚧 <strong>Project in uitvoering:</strong> De gîte is momenteel in aanbouw 🚧<br>
-    📸 Volg de vorderingen op onze <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> (in het Frans)!<br>
+    📸 Volg de vorderingen op onze <a class="lien-fort" href="blog.html">blog</a> (in het Frans)!<br>
     📅 <strong>Opening in 2027:</strong> vanaf begin 2027 te huur als <strong>flexibele gemeubileerde verhuur</strong>, en vóór de zomer ook voor <strong>toeristische verblijven</strong>.<br>
-    🗺️ Ontdek nu al onze <a href="toerisme.html" style="font-weight: bold; color: #0066cc;">lokale gidsen en activiteiten</a>.
+    🗺️ Ontdek nu al onze <a class="lien-fort" href="toerisme.html">lokale gidsen en activiteiten</a>.
 </div>
 
     <header>
         <nav aria-label="Hoofdmenu">
-            <div class="logo"><img src="photos/general/logo2.png" alt="Logo van Le Relais de Chaumeré: ons huis met een hunebed en een appel erboven" style="height: 220px; width: auto;"></div>
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="Logo van Le Relais de Chaumeré: ons huis met een hunebed en een appel erboven"></div>
             <ul>
                 <li><a href="nederlands.html">Home</a></li>
                 <li><a href="aanbod.html">De studio</a></li>
@@ -49,11 +49,11 @@
                 <li><a href="numbers.html">Handige nummers</a></li>
                 <li><a href="neem-contact-op.html">Contact</a></li>
                 <li><a href="blog.html">Blog & nieuws</a></li>
-<li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="tarifs.html" hreflang="fr" lang="fr" title="Français" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="prices.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="preise.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="prijzen.html" hreflang="nl" lang="nl" title="Nederlands" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+<li class="lang-switch lang-switch-liste">
+    <a class="lang-lien" href="tarifs.html" hreflang="fr" lang="fr" title="Français"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="prices.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="preise.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien-actif" href="prijzen.html" hreflang="nl" lang="nl" title="Nederlands" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -63,7 +63,7 @@
     <main>
         <section class="page-title">
             <h1>Tarieven & diensten</h1>
-            <p>Transparante prijzen en diensten op maat voor een comfortabel verblijf in onze <a href="aanbod.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">gemeubileerde studio-gîte</a>.</p>
+            <p>Transparante prijzen en diensten op maat voor een comfortabel verblijf in onze <a class="lien-souligne-fort" href="aanbod.html">gemeubileerde studio-gîte</a>.</p>
         </section>
 
         <section class="pricing-section">
@@ -89,8 +89,8 @@
                 </div>
             </div>
 			
-			<div style="max-width: 800px; margin: 30px auto 0 auto; background-color: #f4f9ff; border-left: 4px solid #3182ce; padding: 15px; border-radius: 4px; text-align: center;">
-                <p style="margin: 0; font-size: 0.95rem; color: #2d3748; line-height: 1.5;">💼 Bent u leerling in een duaal traject, in opleiding, stagiair of zakelijk onderweg? Voor regelmatige of langere verblijven bieden we een <strong>aangepast tarief</strong>. Neem hiervoor rechtstreeks <a href="neem-contact-op.html" style="color: #3182ce; font-weight: bold; text-decoration: underline;">contact met ons op</a>.</p>
+			<div class="st-5f906d">
+                <p class="st-4fe485">💼 Bent u leerling in een duaal traject, in opleiding, stagiair of zakelijk onderweg? Voor regelmatige of langere verblijven bieden we een <strong>aangepast tarief</strong>. Neem hiervoor rechtstreeks <a class="st-5d1e65" href="neem-contact-op.html">contact met ons op</a>.</p>
             </div>
 			
         </section>
@@ -112,7 +112,7 @@
     <ul>
         <li>⚡ Opladen van elektrische voertuigen (€ 10 / verblijf)</li>
         <li>🧹 Volledige eindschoonmaak</li>
-        <li>🥫 De mand „Late aankomst” (lokale ambachtelijke potten om op te warmen) (voor één persoon of voor twee, met een flesje lokaal bier of fruitsap). Een exclusieve service om vanaf uw aankomst onze selectie van de <a href="gastronomie.html" style="color: #0066cc; text-decoration: underline;">lokale gastronomie</a> (in het Frans) te proeven.</li>
+        <li>🥫 De mand „Late aankomst” (lokale ambachtelijke potten om op te warmen) (voor één persoon of voor twee, met een flesje lokaal bier of fruitsap). Een exclusieve service om vanaf uw aankomst onze selectie van de <a class="lien-souligne" href="gastronomie.html">lokale gastronomie</a> (in het Frans) te proeven.</li>
         <li>☕ Compleet ontbijt aan huis (verse, lokale, ambachtelijke producten)</li>
         <li>🧺 Wasservice op aanvraag</li>
     </ul>
@@ -120,10 +120,10 @@
 			<div class="services-block eco-features">
     <h2>🌍 Milieubewuste en ethische inzet</h2>
 	
-	<figure style="margin: 15px 0; max-width: 100%;">
+	<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/blog/developpement durable/demarche-eco-responsable.webp" type="image/webp">
-                <img src="photos/blog/developpement durable/demarche-eco-responsable.jpg" alt="Een jonge vrouw die voorzichtig een model van de aarde vasthoudt" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/blog/developpement durable/demarche-eco-responsable.jpg" alt="Een jonge vrouw die voorzichtig een model van de aarde vasthoudt" loading="lazy">
             </picture>
 
 </figure>
@@ -132,61 +132,49 @@
 		<li>🔥 <strong>Zonneboiler (in onderzoek):</strong> we onderzoeken een zonneboiler die sanitair warm water rechtstreeks met zonne-energie opwekt, een natuurlijke en doeltreffende oplossing.</li>
         <li>🌧️ <strong>Regenwaterbeheer:</strong> we hebben opvangtanks die regenwater opslaan, dat vervolgens verantwoord wordt gebruikt voor het besproeien van de tuin en onderhoudswerkzaamheden.</li>
 		<li>🎓 <strong>Solidair en nuttig verblijf:</strong> deze toeristische verhuur staat bij voorrang open voor jongeren in opleiding en duale trajecten, met een eerlijk, aangepast tarief zodat zij tijdens hun sessies ter plaatse een goed dak boven hun hoofd hebben.</li>
-        <li>📖 <strong>Slow tourism:</strong> ons volledig lokale welkomstboekje en materiaal voor zachte mobiliteit (🚲 fietsen beschikbaar) geven u de tijd om rond te slenteren. Plan uw programma op onze pagina <a href="toerisme.html" style="color: #0066cc; text-decoration: underline;">Toerisme</a> of laat u inspireren door onze ideeën voor <a href="detente.html" style="color: #0066cc; text-decoration: underline;">ontspanning en tijd voor uzelf</a> (in het Frans).</li>
+        <li>📖 <strong>Slow tourism:</strong> ons volledig lokale welkomstboekje en materiaal voor zachte mobiliteit (🚲 fietsen beschikbaar) geven u de tijd om rond te slenteren. Plan uw programma op onze pagina <a class="lien-souligne" href="toerisme.html">Toerisme</a> of laat u inspireren door onze ideeën voor <a class="lien-souligne" href="detente.html">ontspanning en tijd voor uzelf</a> (in het Frans).</li>
         <li>♻️ <strong>Doel zero waste:</strong> milieuvriendelijk ontworpen welkomstpakket (boodschappentassen voor de markt, potten voor losse producten, wasbare keukendoeken, afvalscheiding).</li>
         <li>🔑 <strong>Rustige aankomst:</strong> zelfstandig inchecken is mogelijk en gemakkelijk gemaakt, zodat u reist zonder stress over tijdstippen en vertragingen in het vervoer.</li>
-		<li>🎁 <strong>Solidair rechtstreeks boeken:</strong> door <a href="neem-contact-op.html" style="color: #0066cc; text-decoration: underline;">hier</a> (zonder tussenpersoon) te boeken, bespaart u de commissies van de grote platforms, waardoor we de <a href="https://a3pc.fr/" target="_blank" rel="noopener" style="color: #0066cc; text-decoration: underline; font-weight: bold;">A3PC</a> (vereniging voor de promotie van het Pays de Chaumeré) rechtstreeks kunnen steunen. Meer over onze filosofie leest u op onze <a href="solidaires.html" style="color: #0066cc; text-decoration: underline;">speciale pagina</a> en bij „<a href="propos.html" style="color: #0066cc; text-decoration: underline;">over ons</a>” (beide in het Frans).</li>
+		<li>🎁 <strong>Solidair rechtstreeks boeken:</strong> door <a class="lien-souligne" href="neem-contact-op.html">hier</a> (zonder tussenpersoon) te boeken, bespaart u de commissies van de grote platforms, waardoor we de <a class="lien-souligne-fort" href="https://a3pc.fr/" target="_blank" rel="noopener">A3PC</a> (vereniging voor de promotie van het Pays de Chaumeré) rechtstreeks kunnen steunen. Meer over onze filosofie leest u op onze <a class="lien-souligne" href="solidaires.html">speciale pagina</a> en bij „<a class="lien-souligne" href="propos.html">over ons</a>” (beide in het Frans).</li>
     </ul>
 </div>
         </section>
     </main>
 	
 	
-		<div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
-    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">Een vraag of zin om te boeken?</h3>
-    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">We staan voor u klaar om uw volgende verblijf in Boven-Bretagne voor te bereiden.</p>
+		<div class="bloc-cta">
+    <h3 class="cta-titre">Een vraag of zin om te boeken?</h3>
+    <p class="st-31ac01">We staan voor u klaar om uw volgende verblijf in Boven-Bretagne voor te bereiden.</p>
     
     <!-- Uniquement les deux choix de conversion -->
-    <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
+    <div class="cta-actions">
         
         <!-- Action principale : Prix et dispo -->
-        <a href="prijzen.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
-            <span style="margin-right: 6px; display: inline-block;">📅</span>Tarieven & beschikbaarheid bekijken
+        <a class="st-fb0e55" href="prijzen.html">
+            <span class="cta-emoji">📅</span>Tarieven & beschikbaarheid bekijken
         </a>
         
         <!-- Action secondaire : Contact direct -->
-        <a href="neem-contact-op.html" style="display: inline-block; background-color: transparent; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
-            <span style="margin-right: 6px; display: inline-block;">✉️</span>Bericht sturen
+        <a class="st-2a18ef" href="neem-contact-op.html" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
+            <span class="cta-emoji">✉️</span>Bericht sturen
         </a>
         
     </div>
 </div>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="aanbod.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Het aanbod</a> |
-        <a href="prijzen.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Diensten & tarieven</a> |
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidariteit</a> |
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Over ons</a> |
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & nieuws</a> |
-        <a href="numbers.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Handige nummers</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Juridische informatie</a> |
-        <a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Sitemap</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="aanbod.html">Het aanbod</a> |
+        <a class="pied-lien-fort" href="prijzen.html">Diensten & tarieven</a> |
+        <a class="pied-lien-fort" href="solidaires.html">Solidariteit</a> |
+        <a class="pied-lien-fort" href="propos.html">Over ons</a> |
+        <a class="pied-lien-fort" href="blog.html">Blog & nieuws</a> |
+        <a class="pied-lien-fort" href="numbers.html">☎️ Handige nummers</a> |
+        <a class="pied-lien" href="mentions-legales.html">Juridische informatie</a> |
+        <a class="pied-lien" href="plan-du-site.html">Sitemap</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 3 oktober 2026 - Alle rechten voorbehouden.<br>Website gemaakt door <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 3 oktober 2026 - Alle rechten voorbehouden.<br>Website gemaakt door <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> gebruikt cookies om het bezoek aan deze website te meten met Google Analytics. U kunt deze tracking accepteren of weigeren. Meer informatie vindt u in onze <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">juridische informatie</a> (in het Frans).
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Weigeren</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Alles accepteren</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});});</script>
 
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
 
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
 
     <meta charset="UTF-8">
@@ -30,14 +30,14 @@
 </head>
 <body>
 
-<div style="background-color: #eafaf0; color: #1a5c34; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #b7e4c7; line-height: 1.6;">
+<div class="st-7bb8b7">
     🏕️ <strong>Le camping est disponible dès maintenant</strong>, dans notre jardin à Domagné 🏕️<br>
-    🏠 Le <strong>gîte</strong>, lui, ouvrira en 2027 — <a href="offre.html" style="font-weight: bold; color: #0066cc;">en savoir plus</a>.
+    🏠 Le <strong>gîte</strong>, lui, ouvrira en 2027 — <a class="lien-fort" href="offre.html">en savoir plus</a>.
 </div>
 
     <header>
-        <nav>
-            <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+        <nav aria-label="Navigation principale">
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
@@ -46,11 +46,11 @@
                 <li><a href="propos.html">À Propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog & Actu</a></li>
-                <li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="campingoff.html" hreflang="fr" lang="fr" title="Français" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="english.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="deutsch.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+                <li class="lang-switch lang-switch-liste">
+    <a class="lang-lien-actif" href="campingoff.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -62,91 +62,78 @@
             <p>Une offre simple et conviviale à Domagné (35), disponible dès maintenant.</p>
         </section>
 
-        <section class="camping-section" style="max-width: 800px; margin: 2rem auto; padding: 2.5rem; background-color: #f4f9f4; border-radius: 12px; border: 1px solid #dceee0;">
-            <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
-                En attendant l'ouverture <a href="offre.html" style="color: #0066cc; text-decoration: underline;">de notre gîte</a>, nous acceuillons des campeurs dans notre jardin : une offre simple et conviviale, dans l'esprit "camping à la ferme", qui nous permet aussi de nous familiariser avec l'accueil de voyageurs. C'est une offre complémentaire au gîte, avec toute l'authenticité (et la simplicité !) que cela suppose.
+        <section class="camping-section st-db10f9">
+            <p class="st-9ee9c3">
+                En attendant l'ouverture <a class="lien-souligne" href="offre.html">de notre gîte</a>, nous acceuillons des campeurs dans notre jardin : une offre simple et conviviale, dans l'esprit "camping à la ferme", qui nous permet aussi de nous familiariser avec l'accueil de voyageurs. C'est une offre complémentaire au gîte, avec toute l'authenticité (et la simplicité !) que cela suppose.
             </p>
 
-            <ul class="logement-amenities" style="margin-top: 1.5rem;">
+            <ul class="logement-amenities st-185d79">
                 <li>✓ Camping brut, avec possibilité d'eau et d'électricité sur l'emplacement</li>
                 <li>✓ Accès aux sanitaires de la maison (nous vous accueillons chez nous, dans une ambiance simple et conviviale)</li>
                 <li>✓ Réservation via le même calendrier que le gîte</li>
             </ul>
 			
-			<p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
+			<p class="st-9ee9c3">
                 Nous limitons volontairement l'accueil à 2 emplacements maximum afin de garantir un bon accueil. Vous êtes un groupe ? N'hésitez pas à <a href="contact.html">nous en parler</a>.
             </p>
 
-            <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem; margin-bottom: 1.5rem;">
-                <div style="background-color: #ffffff; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #dceee0;">
-                    <p style="margin: 0; font-size: 0.85rem; color: #777;">Emplacement nu</p>
-                    <p style="margin: 0; font-size: 1.4rem; font-weight: bold; color: #2f5233;">8 € / nuit</p>
+            <div class="st-988849">
+                <div class="st-ba385e">
+                    <p class="st-5d8916">Emplacement nu</p>
+                    <p class="st-9eb35e">8 € / nuit</p>
                 </div>
-                <div style="background-color: #ffffff; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid #dceee0;">
-                    <p style="margin: 0; font-size: 0.85rem; color: #777;">Emplacement avec eau & électricité</p>
-                    <p style="margin: 0; font-size: 1.4rem; font-weight: bold; color: #2f5233;">12 € / nuit</p>
+                <div class="st-ba385e">
+                    <p class="st-5d8916">Emplacement avec eau & électricité</p>
+                    <p class="st-9eb35e">12 € / nuit</p>
                 </div>
             </div>
 
-            <p style="font-size: 0.85rem; color: #666666; background-color: #ffffff; padding: 10px; border-left: 3px solid #2f5233; margin-bottom: 1.5rem;">
-                Le jardin est encore en cours d'aménagement : pas de photos pour le moment, mais on vous en montrera bientôt l'évolution sur notre <a href="blog.html" style="color: #0066cc; text-decoration: underline;">blog</a>.
+            <p class="st-6901e5">
+                Le jardin est encore en cours d'aménagement : pas de photos pour le moment, mais on vous en montrera bientôt l'évolution sur notre <a class="lien-souligne" href="blog.html">blog</a>.
             </p>
 
             <a href="contact.html" class="btn">Réserver un emplacement</a>
         </section>
 
-        <section class="camping-nearby" style="max-width: 800px; margin: 2rem auto; padding: 2rem 2.5rem; text-align: center;">
-            <h3 style="color: #2f5233; font-size: 1.2rem;">Profitez de l'environnement et des activités à proximité</h3>
-            <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
-                Vous ne savez pas quoi faire pendant votre séjour ? Découvrez notre <a href="tourisme.html" style="color: #0066cc; text-decoration: underline;">guide tourisme</a> pour tout savoir sur les environs de Domagné, ou consultez <a href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener" style="color: #0066cc; text-decoration: underline;">Autour de Rennes</a>, qui liste les activités à proximité au jour le jour.
+        <section class="camping-nearby st-990c7a">
+            <h3 class="st-b2faf9">Profitez de l'environnement et des activités à proximité</h3>
+            <p class="st-9ee9c3">
+                Vous ne savez pas quoi faire pendant votre séjour ? Découvrez notre <a class="lien-souligne" href="tourisme.html">guide tourisme</a> pour tout savoir sur les environs de Domagné, ou consultez <a class="lien-souligne" href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener">Autour de Rennes</a>, qui liste les activités à proximité au jour le jour.
             </p>
         </section>
     </main>
 	
-	<div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
-    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">Une question ou envie de réserver ?</h3>
-    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">
+	<div class="bloc-cta">
+    <h3 class="cta-titre">Une question ou envie de réserver ?</h3>
+    <p class="st-31ac01">
         Nous sommes à votre écoute pour préparer votre prochain séjour en Haute-Bretagne.
     </p>
     
-    <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
+    <div class="cta-actions">
         
-        <a href="tarifs.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
-            <span style="margin-right: 6px; display: inline-block;">📅</span>Consulter les Tarifs & Dispos
+        <a class="st-fb0e55" href="tarifs.html">
+            <span class="cta-emoji">📅</span>Consulter les Tarifs & Dispos
         </a>
         
-        <a href="contact.html" style="display: inline-block; background-color: transparent; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
-            <span style="margin-right: 6px; display: inline-block;">✉️</span>Envoyer un Message
+        <a class="st-2a18ef" href="contact.html" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
+            <span class="cta-emoji">✉️</span>Envoyer un Message
         </a>
         
     </div>
 </div>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offre.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">L'Offre</a> | 
-        <a href="tarifs.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Tarifs</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidaires</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
-		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offre.html">L'Offre</a> | 
+        <a class="pied-lien-fort" href="tarifs.html">Services & Tarifs</a> | 
+        <a class="pied-lien-fort" href="solidaires.html">Solidaires</a> | 
+        <a class="pied-lien-fort" href="propos.html">À Propos</a> | 
+        <a class="pied-lien-fort" href="blog.html">Blog & Actu</a> | 
+        <a class="pied-lien-fort" href="numeros.html">☎️ Numéros Utiles</a> |
+        <a class="pied-lien" href="mentions-legales.html">Mentions Légales</a> |
+		<a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Analytics. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("Analytics activé par l'utilisateur.");}});</script>
 </body>
 </html>

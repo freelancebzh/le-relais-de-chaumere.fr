@@ -3,8 +3,8 @@
 <head>
 
 <meta charset="UTF-8">
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 	<meta name="robots" content="index, follow">
     <meta name="description" content="Châteaux, collégiale Renaissance et cités de caractère à moins de 15 km de Domagné (35) : notre guide du patrimoine historique en Haute-Bretagne.">
     <link rel="canonical" href="https://www.le-relais-de-chaumere.fr/patrimoine.html">
@@ -20,136 +20,59 @@
     <title>Histoire & Patrimoine local | Le Relais de Chaumeré</title>
 	
 		<link rel="stylesheet" href="style.css">
-    <style>
-        /* Conteneur principal centré pour les articles de patrimoine */
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        h1 { 
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        
-        .intro-text {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        /* Structure type "Numéros utiles" */
-        .patrimoine-item {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-        .patrimoine-item h2 {
-            margin-top: 0;
-            color: #1a202c;
-            font-size: 1.35rem;
-        }
-        .patrimoine-item p {
-            color: #4a5568;
-        }
-        .meta-info {
-            background-color: #f7fafc;
-            border-left: 3px solid #cbd5e0;
-            padding: 12px;
-            margin: 15px 0;
-            font-size: 0.95rem;
-        }
-        
-        .btn-map {
-            display: inline-block;
-            background-color: #e2e8f0;
-            color: #2d3748;
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-top: 5px;
-        }
-        .btn-map:hover { background-color: #cbd5e0; }
-    
-        .patrimoine-header {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .distance-chip {
-            display: inline-block;
-            background-color: #edf2f7;
-            color: #4a5568;
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 999px;
-            white-space: nowrap;
-            margin-top: 2px;
-        }
-    </style>
     <script src="header-scroll.js" defer></script>
 </head>
-<body>
+<body class="page-patrimoine">
 
 <!-- Bandeau Global de suivi de Chantier (Identique aux autres pages) -->
 <div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 12px; font-weight: 500; border-bottom: 1px solid #91d5ff; font-family: Arial, sans-serif;">
     🚧 <strong>Projet en cours :</strong> Le gîte est actuellement en construction 🚧<br><br>
-    📸 suivez son avancement sur le <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> ! <br>
+    📸 suivez son avancement sur le <a class="lien-fort" href="blog.html">blog</a> ! <br>
     📅 Les réservations ouvriront en 2027<br>
-    🗺️ <a href="tourisme.html" style="font-weight: bold; color: #0066cc;">Guides et activités locales</a> à jour
+    🗺️ <a class="lien-fort" href="tourisme.html">Guides et activités locales</a> à jour
 </div>
 
 <header>
-    <nav>
-        <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+    <nav aria-label="Navigation principale">
+        <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="offre.html">L'Offre</a></li>
             <li><a href="tarifs.html">Services & Tarifs</a></li>
-            <li><a href="tourisme.html" class="active">Tourisme</a></li>
+            <li><a href="tourisme.html" class="active" aria-current="page">Tourisme</a></li>
             <li><a href="propos.html">À Propos</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="blog.html">Blog & Actu</a></li>
-            <li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="patrimoine.html" hreflang="fr" lang="fr" title="Français" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="english.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="deutsch.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+            <li class="lang-switch lang-switch-liste">
+    <a class="lang-lien-actif" href="patrimoine.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
         </ul>
     </nav>
 </header>
 
-<div class="container">
+<main class="container">
     
     <!-- Ton avertissement spécifique pour cette sous-page -->
     <div style="background-color: #fffaf0; border-left: 4px solid #dd6b20; color: #dd6b20; padding: 15px; margin-bottom: 30px; border-radius: 4px; box-sizing: border-box;">
-        <p style="margin: 0; font-weight: bold; display: flex; align-items: center; gap: 8px;">
+        <p class="st-28026b">
             🚧 Page en cours de création
         </p>
-        <p style="margin: 5px 0 0 0; font-size: 0.95rem; color: #718096;">
+        <p class="st-d1094a">
             Les photos et les itinéraires précis arrivent très vite ! Pour le moment, les liens de localisation Google Maps sont temporairement désactivés. Merci de votre patience.
         </p>
     </div>
         
     <h1>Histoire & Patrimoine autour du gîte</h1>
-    <p class="intro-text">Découvrez les trésors historiques, édifices et curiosités à visiter dans un rayon de 15 km autour de Domagné. Retrouvez également toutes nos idées d'activités sur notre <a href="tourisme.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">guide touristique complet</a>.</p>
+    <p class="intro-text">Découvrez les trésors historiques, édifices et curiosités à visiter dans un rayon de 15 km autour de Domagné. Retrouvez également toutes nos idées d'activités sur notre <a class="lien-souligne-fort" href="tourisme.html">guide touristique complet</a>.</p>
     <p class="lien-histoire">📜 <strong>L'A3PC, au service du pays de Chaumeré.</strong> L'Association pour la Promotion du Pays de Chaumeré est une toute jeune association de village. Elle veut faire connaître notre territoire aux visiteurs comme aux habitants, organiser des événements pour se retrouver, encourager l'entraide entre voisins et mettre en avant les artisans et commerçants du coin. Une application ouverte à tous est en préparation. Son site propose aussi un récit de l'histoire de Chaumeré, une façon simple de mieux connaître le lieu où vous séjournez. Le gîte la soutient directement grâce aux réservations en direct. <a href="https://a3pc.fr/infos-pratiques/#histoire" target="_blank" rel="noopener">Découvrir l'association et l'histoire de Chaumeré</a></p>
 
-        <div style="background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px 24px; margin: 40px 0 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-            <div style="font-size: 1.4rem;">📅</div>
-            <div style="flex: 1; min-width: 200px;">
-                <p style="margin: 0; font-size: 0.9rem; color: #718096;">Envie de sortir pendant votre séjour ? Consultez également <a href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener" style="color: #2b6cb0; font-weight: bold;">l'agenda des événements du coin</a>, mis à jour chaque jour.</p>
+        <div class="st-b7ecfe">
+            <div class="st-a7f5c1">📅</div>
+            <div class="st-8ea199">
+                <p class="st-4eef26">Envie de sortir pendant votre séjour ? Consultez également <a class="st-4c9da9" href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener">l'agenda des événements du coin</a>, mis à jour chaque jour.</p>
             </div>
         </div>
 
@@ -160,7 +83,7 @@
         <h2>Le Château et la Cité Médiévale de Châteaugiron</h2>
         <span class="distance-chip">📍 ~11 km</span>
     </div>
-    <p>Une des plus belles Petites Cités de Caractère du coin. Le château fort possède encore son imposant donjon du XIIe siècle, ses tours de garde, son logis et une ancienne chapelle transformée en centre d'art (Les 3 Chaumes). Retrouvez les dates des prochaines expositions et les événements à ne pas manquer dans notre rubrique <a href="blog.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Blog & Actualités</a>.</p>
+    <p>Une des plus belles Petites Cités de Caractère du coin. Le château fort possède encore son imposant donjon du XIIe siècle, ses tours de garde, son logis et une ancienne chapelle transformée en centre d'art (Les 3 Chaumes). Retrouvez les dates des prochaines expositions et les événements à ne pas manquer dans notre rubrique <a class="lien-souligne-fort" href="blog.html">Blog & Actualités</a>.</p>
     <div class="meta-info">
         <strong>🕒 Horaires :</strong> Cour du château en accès libre toute la journée. Visites guidées du donjon proposées par l'Office de Tourisme d'avril à octobre.<br>
         <strong>📍 Adresse :</strong> Place de la Gironde, 35410 Châteaugiron
@@ -199,7 +122,7 @@
         <h2>Le Château des Pères à Piré-Chancé</h2>
         <span class="distance-chip">📍 ~11 km</span>
     </div>
-    <p>Ce château du XVIIIe siècle possède un immense parc de 31 hectares parsemé de sculptures géantes. C'est aujourd'hui un lieu d'art, d'artisanat et de gastronomie (avec une architecture futuriste étonnante pour son hôtel). Une superbe idée de sortie à seulement une dizaine de minutes du gîte. Pour planifier votre séjour et vos nuitées à proximité, n'hésitez pas à consulter <a href="tarifs.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">nos tarifs et services</a>.</p>
+    <p>Ce château du XVIIIe siècle possède un immense parc de 31 hectares parsemé de sculptures géantes. C'est aujourd'hui un lieu d'art, d'artisanat et de gastronomie (avec une architecture futuriste étonnante pour son hôtel). Une superbe idée de sortie à seulement une dizaine de minutes du gîte. Pour planifier votre séjour et vos nuitées à proximité, n'hésitez pas à consulter <a class="lien-souligne-fort" href="tarifs.html">nos tarifs et services</a>.</p>
     <div class="meta-info">
         <strong>🕒 Horaires :</strong> Le parc et les jardins de sculptures sont ouverts et gratuits toute l'année, de 9h à 18h (ou 20h l'été).<br>
         <strong>📍 Adresse :</strong> Le Château des Pères, 35150 Piré-Chancé
@@ -222,41 +145,29 @@
 
         </div>
 
-    </div>
+    </main>
 
-    <div style="max-width: 800px; margin: 50px auto 0 auto; padding: 0 20px;">
+    <div class="st-acd3d4">
         <h2 style="font-size: 1.5rem; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #cbd5e0;">🔗 Vous aimerez aussi</h2>
-        <div id="vous-aimerez-aussi" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;"></div>
+        <div class="st-d7e739" id="vous-aimerez-aussi"></div>
         <script>(function(){var pages = [{href:"patrimoine.html",emoji:"🏰",titre:"Histoire & Patrimoine",desc:"Châteaux et cités de caractère près de Domagné."},{href:"culture.html",emoji:"🎭",titre:"Culture & Divertissement",desc:"Cinémas,médiathèque et centres culturels."},{href:"insolite.html",emoji:"✨",titre:"Insolite & Expériences",desc:"Sculptures géantes,légendes et géocaching."},{href:"escapades.html",emoji:"🚶",titre:"Escapades & Randonnées",desc:"Balades et sentiers autour de Domagné."},{href:"gastronomie.html",emoji:"🍽️",titre:"Gastronomie locale",desc:"Nos bonnes adresses pour se régaler."},{href:"detente.html",emoji:"🧖",titre:"Détente & Bien-être",desc:"Baignade,spa et parenthèse douceur."}];var pageActuelle = window.location.pathname.split("/").pop();var autres = pages.filter(function(p){return p.href !== pageActuelle;});for(var i = autres.length - 1;i > 0;i--){var j = Math.floor(Math.random()*(i + 1));var tmp = autres[i];autres[i] = autres[j];autres[j] = tmp;}var choix = autres.slice(0,3);var conteneur = document.getElementById("vous-aimerez-aussi");conteneur.innerHTML = choix.map(function(p){return '<a href="' + p.href + '" style="display:block;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;padding:18px;text-decoration:none;color:inherit;box-shadow:0 2px 4px rgba(0,0,0,0.02);">' + '<strong style="color:#1a202c;">' + p.emoji + ' ' + p.titre + '</strong>' + '<p style="margin:6px 0 0;font-size:0.9rem;color:#666;">' + p.desc + '</p>' + '</a>';}).join('');})();</script>
 
 
     </div>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
+<footer role="contentinfo" class="pied-site">
     <!-- Le style ci-dessous interdit formellement le retour à la ligne de tout le bloc -->
-    <div style="margin-bottom: 1.5rem; font-size: 0.85rem; display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; gap: 8px;">
-        <a href="offre.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">L'Offre</a> | 
-        <a href="tarifs.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">Services & Tarifs</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">Solidaires</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; font-weight: bold; white-space: nowrap;">☎️ Numéros Utiles</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; white-space: nowrap;">Mentions Légales</a> |
-		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+    <div class="st-0d3d7d">
+        <a class="st-166693" href="offre.html">L'Offre</a> | 
+        <a class="st-166693" href="tarifs.html">Services & Tarifs</a> | 
+        <a class="st-166693" href="solidaires.html">Solidaires</a> | 
+        <a class="st-166693" href="propos.html">À Propos</a> | 
+        <a class="st-166693" href="blog.html">Blog & Actu</a> | 
+        <a class="st-166693" href="numeros.html">☎️ Numéros Utiles</a> |
+        <a class="st-eb7aa2" href="mentions-legales.html">Mentions Légales</a> |
+		<a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Analytics. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("Analytics activé par l'utilisateur.");}});</script>
 </body>
 </html>

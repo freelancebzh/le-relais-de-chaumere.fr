@@ -2,8 +2,8 @@
 <html lang="de">
 <head>
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -31,16 +31,16 @@
 </head>
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #91d5ff; line-height: 1.6;">
+<div class="bandeau-chantier">
     🚧 <strong>Projekt im Aufbau:</strong> Das Gîte befindet sich derzeit im Bau 🚧<br>
-    📸 Verfolgen Sie den Baufortschritt auf unserem <a href="blog.html" style="font-weight: bold; color: #0066cc;">Blog</a> (auf Französisch)!<br>
+    📸 Verfolgen Sie den Baufortschritt auf unserem <a class="lien-fort" href="blog.html">Blog</a> (auf Französisch)!<br>
     📅 <strong>Eröffnung 2027:</strong> Ab Anfang 2027 mietbar als <strong>flexible möblierte Unterkunft</strong>, bis zum Sommer dann auch für <strong>Urlaubsaufenthalte</strong>.<br>
-    🗺️ Entdecken Sie schon jetzt unsere <a href="tourismus.html" style="font-weight: bold; color: #0066cc;">lokalen Reiseführer und Aktivitäten</a>.
+    🗺️ Entdecken Sie schon jetzt unsere <a class="lien-fort" href="tourismus.html">lokalen Reiseführer und Aktivitäten</a>.
 </div>
 
     <header>
         <nav aria-label="Hauptnavigation">
-            <div class="logo"><img src="photos/general/logo2.png" alt="Logo von Le Relais de Chaumeré: unser Haus mit einem Dolmen und einem Apfel darüber" style="height: 220px; width: auto;"></div>
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="Logo von Le Relais de Chaumeré: unser Haus mit einem Dolmen und einem Apfel darüber"></div>
             <ul>
                 <li><a href="deutsch.html">Startseite</a></li>
                 <li><a href="angebot.html" class="active" aria-current="page">Das Studio</a></li>
@@ -49,11 +49,11 @@
                 <li><a href="numbers.html">Nützliche Nummern</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="blog.html">Blog & News</a></li>
-<li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="offre.html" hreflang="fr" lang="fr" title="Français" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="offer.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="angebot.html" hreflang="de" lang="de" title="Deutsch" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="aanbod.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+<li class="lang-switch lang-switch-liste">
+    <a class="lang-lien" href="offre.html" hreflang="fr" lang="fr" title="Français"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="offer.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien-actif" href="angebot.html" hreflang="de" lang="de" title="Deutsch" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="aanbod.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -81,15 +81,15 @@
                 <div class="logement-info">
                     <h2>Helles Studio</h2>
                     <p class="logement-meta">2 Gäste • 20 m²</p>
-                    <p class="logement-description">Ein klarer, zeitgemäßer Raum mit 17 m² großer privater Terrasse und hochwertiger Ausstattung. Ideal für einen erholsamen Aufenthalt. Die Einzelheiten zu den inbegriffenen und optionalen Leistungen finden Sie unter <a href="preise.html" style="color: #0066cc; text-decoration: underline;">Leistungen & Saisonpreise</a>.</p>
+                    <p class="logement-description">Ein klarer, zeitgemäßer Raum mit 17 m² großer privater Terrasse und hochwertiger Ausstattung. Ideal für einen erholsamen Aufenthalt. Die Einzelheiten zu den inbegriffenen und optionalen Leistungen finden Sie unter <a class="lien-souligne" href="preise.html">Leistungen & Saisonpreise</a>.</p>
 <ul class="logement-amenities">
-    <li>✓ Glasfaser UND schnelles WLAN für Ihr Homeoffice oder Ihre Momente der <a href="detente.html" style="color: #0066cc; text-decoration: underline;">Entspannung</a> (auf Französisch).</li>
+    <li>✓ Glasfaser UND schnelles WLAN für Ihr Homeoffice oder Ihre Momente der <a class="lien-souligne" href="detente.html">Entspannung</a> (auf Französisch).</li>
     <li>✓ Privater, abgeschlossener und gesicherter Parkplatz.</li>
     <li>✓ Arbeitsbereich, der sich Ihren beruflichen Bedürfnissen anpassen lässt.</li>
-    <li>✓ Voll ausgestattete Küche, um selbst zu kochen oder die <a href="gastronomie.html" style="color: #0066cc; text-decoration: underline;">bretonische Gastronomie</a> in aller Unabhängigkeit auszuprobieren (auf Französisch).</li>
-    <li>✓ Ladestation für Elektroautos – ideal, um Ihre <a href="escapades.html" style="color: #0066cc; text-decoration: underline;">Ausflüge in die Haute-Bretagne</a> zu planen (auf Französisch).</li>
+    <li>✓ Voll ausgestattete Küche, um selbst zu kochen oder die <a class="lien-souligne" href="gastronomie.html">bretonische Gastronomie</a> in aller Unabhängigkeit auszuprobieren (auf Französisch).</li>
+    <li>✓ Ladestation für Elektroautos – ideal, um Ihre <a class="lien-souligne" href="escapades.html">Ausflüge in die Haute-Bretagne</a> zu planen (auf Französisch).</li>
 </ul>
-                    <p style="font-size: 0.9rem; color: #666666; background-color: #f9f9f9; padding: 10px; border-left: 3px solid #0066cc; margin-top: 15px; margin-bottom: 15px; text-align: justify;">Hinweis: Die Unterkunft ist ab <strong>2027</strong> verfügbar. Die Geschichte des Projekts und unser umweltbewusstes Engagement entdecken Sie auf unserer Seite <a href="propos.html" style="font-weight: bold; color: #0066cc;">Über uns</a> (auf Französisch); den Fortschritt der Bauarbeiten verfolgen Sie auf unserem <a href="blog.html" style="font-weight: bold; color: #0066cc;">Blog</a> (auf Französisch).</p>
+                    <p class="st-1d47b8">Hinweis: Die Unterkunft ist ab <strong>2027</strong> verfügbar. Die Geschichte des Projekts und unser umweltbewusstes Engagement entdecken Sie auf unserer Seite <a class="lien-fort" href="propos.html">Über uns</a> (auf Französisch); den Fortschritt der Bauarbeiten verfolgen Sie auf unserem <a class="lien-fort" href="blog.html">Blog</a> (auf Französisch).</p>
 
                     <a href="kontakt.html" class="btn">Verfügbarkeit prüfen</a><br>
                
@@ -103,60 +103,48 @@
         </section>
 
         <!-- Encart teaser : renvoie vers la page dédiée camping.html -->
-        <section class="camping-teaser" style="margin-top: 4rem; padding: 2rem 2.5rem; background-color: #f4f9f4; border-radius: 12px; border: 1px solid #dceee0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+        <section class="camping-teaser st-0ae359">
             <div>
-                <h2 style="margin: 0 0 0.5rem 0; color: #2f5233; font-size: 1.3rem;">🏕️ Lieber campen?</h2>
-                <p style="font-size: 0.95rem; color: #555; margin: 0; max-width: 500px; line-height: 1.5;">Wir empfangen auch Camper in unserem Garten – ab sofort und in einfacher, freundlicher Atmosphäre.</p>
+                <h2 class="st-1af657">🏕️ Lieber campen?</h2>
+                <p class="st-37deb9">Wir empfangen auch Camper in unserem Garten – ab sofort und in einfacher, freundlicher Atmosphäre.</p>
             </div>
-            <a href="campsite.html" class="btn" style="white-space: nowrap;">Campingplatz entdecken</a>
+            <a href="campsite.html" class="btn st-0ca503">Campingplatz entdecken</a>
         </section>
     </main>
 	
-	<div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
-    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">Eine Frage oder Lust zu buchen?</h3>
-    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">Wir sind für Sie da, um Ihren nächsten Aufenthalt in der Haute-Bretagne vorzubereiten.</p>
+	<div class="bloc-cta">
+    <h3 class="cta-titre">Eine Frage oder Lust zu buchen?</h3>
+    <p class="st-31ac01">Wir sind für Sie da, um Ihren nächsten Aufenthalt in der Haute-Bretagne vorzubereiten.</p>
     
     <!-- Uniquement les deux choix de conversion -->
-    <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
+    <div class="cta-actions">
         
         <!-- Action principale : Prix et dispo -->
-        <a href="preise.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
-            <span style="margin-right: 6px; display: inline-block;">📅</span>Preise & Verfügbarkeit ansehen
+        <a class="st-fb0e55" href="preise.html">
+            <span class="cta-emoji">📅</span>Preise & Verfügbarkeit ansehen
         </a>
         
         <!-- Action secondaire : Contact direct -->
-        <a href="kontakt.html" style="display: inline-block; background-color: transparent; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
-            <span style="margin-right: 6px; display: inline-block;">✉️</span>Nachricht senden
+        <a class="st-2a18ef" href="kontakt.html" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
+            <span class="cta-emoji">✉️</span>Nachricht senden
         </a>
         
     </div>
 </div>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="angebot.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Das Angebot</a> |
-        <a href="preise.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Leistungen & Preise</a> |
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidarität</a> |
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Über uns</a> |
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Neuigkeiten</a> |
-        <a href="numbers.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Nützliche Nummern</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Rechtliche Hinweise</a> |
-        <a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Seitenübersicht</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="angebot.html">Das Angebot</a> |
+        <a class="pied-lien-fort" href="preise.html">Leistungen & Preise</a> |
+        <a class="pied-lien-fort" href="solidaires.html">Solidarität</a> |
+        <a class="pied-lien-fort" href="propos.html">Über uns</a> |
+        <a class="pied-lien-fort" href="blog.html">Blog & Neuigkeiten</a> |
+        <a class="pied-lien-fort" href="numbers.html">☎️ Nützliche Nummern</a> |
+        <a class="pied-lien" href="mentions-legales.html">Rechtliche Hinweise</a> |
+        <a class="pied-lien" href="plan-du-site.html">Seitenübersicht</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 3. Oktober 2026 - Alle Rechte vorbehalten.<br>Website erstellt von <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 3. Oktober 2026 - Alle Rechte vorbehalten.<br>Website erstellt von <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> verwendet Cookies, um die Besucherzahlen dieser Website mit Google Analytics zu messen. Sie können dieses Tracking akzeptieren oder ablehnen. Weitere Informationen finden Sie in unseren <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Rechtlichen Hinweisen</a> (auf Französisch).
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Ablehnen</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Alle akzeptieren</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});});</script>
 
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
 
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
 
     <meta charset="UTF-8">
@@ -26,29 +26,29 @@
 </head>
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 12px; font-weight: 500; border-bottom: 1px solid #91d5ff;">
+<div class="bandeau-chantier-court">
     🚧 <strong>Projet en cours :</strong> Le gîte est actuellement en construction 🚧<br><br>
-	📸 suivez son avancement sur le <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> ! <br>
+	📸 suivez son avancement sur le <a class="lien-fort" href="blog.html">blog</a> ! <br>
 	📅 Les réservations ouvriront en 2027<br>
-	🗺️ <a href="tourisme.html" style="font-weight: bold; color: #0066cc;">Guides et activités locales</a> à jour
+	🗺️ <a class="lien-fort" href="tourisme.html">Guides et activités locales</a> à jour
 </div>
 
     <header>
-        <nav>
-            <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+        <nav aria-label="Navigation principale">
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
                 <li><a href="tarifs.html">Services & Tarifs</a></li>
                 <li><a href="tourisme.html">Tourisme</a></li>
-                <li><a href="propos.html"class="active">À Propos</a></li>
+                <li><a href="propos.html"class="active" aria-current="page">À Propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog & Actu</a></li>
-                <li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="propos.html" hreflang="fr" lang="fr" title="Français" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="english.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="deutsch.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+                <li class="lang-switch lang-switch-liste">
+    <a class="lang-lien-actif" href="propos.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -68,12 +68,12 @@
             
 <div class="services-block">
     <h2>🏡 Le Projet</h2>
-    <p>Né d'une volonté de concilier accueil de voyageurs et utilité sociale, ce logement a été entièrement pensé pour offrir un point de chute chaleureux en Ille-et-Vilaine, tout en s'intégrant de manière responsable dans l'économie locale. Découvrez en détail les équipements et l'aménagement de notre <a href="offre.html" style="color: #0066cc; font-weight: 500; text-decoration: underline;">meublé de tourisme</a>.</p>
+    <p>Né d'une volonté de concilier accueil de voyageurs et utilité sociale, ce logement a été entièrement pensé pour offrir un point de chute chaleureux en Ille-et-Vilaine, tout en s'intégrant de manière responsable dans l'économie locale. Découvrez en détail les équipements et l'aménagement de notre <a class="st-af8cb6" href="offre.html">meublé de tourisme</a>.</p>
 </div>
 
 <div class="services-block">
     <h2>🤝 Un Accueil Solidaire</h2>
-    <p>Ce meublé a la particularité de s'ouvrir de manière privilégiée aux jeunes en formation ou en alternance, à un tarif juste et adapté, pour leur garantir un toit de qualité lors de leurs sessions sur place. Le reste du temps, il accueille les voyageurs de passage désireux de découvrir la région. Retrouvez le fonctionnement de nos <a href="solidaires.html" style="color: #0066cc; font-weight: 500; text-decoration: underline;">engagements solidaires</a>.</p>
+    <p>Ce meublé a la particularité de s'ouvrir de manière privilégiée aux jeunes en formation ou en alternance, à un tarif juste et adapté, pour leur garantir un toit de qualité lors de leurs sessions sur place. Le reste du temps, il accueille les voyageurs de passage désireux de découvrir la région. Retrouvez le fonctionnement de nos <a class="st-af8cb6" href="solidaires.html">engagements solidaires</a>.</p>
 </div>
 
             <div class="services-block">
@@ -83,7 +83,7 @@
 
 <div class="services-block">
     <h2>📍 Acteur Local</h2>
-    <p>En choisissant de <a href="contact.html" style="color: #0066cc; text-decoration: underline;">réserver en direct sur notre site</a>, vous participez activement au circuit court. Les marges habituellement captées par les grandes plateformes intermédiaires sont intégralement réinvesties localement. Consultez notre grille de <a href="tarifs.html" style="color: #0066cc; font-weight: 500; text-decoration: underline;">services et tarifs</a> pour bloquer vos dates sans surcoût.</p>
+    <p>En choisissant de <a class="lien-souligne" href="contact.html">réserver en direct sur notre site</a>, vous participez activement au circuit court. Les marges habituellement captées par les grandes plateformes intermédiaires sont intégralement réinvesties localement. Consultez notre grille de <a class="st-af8cb6" href="tarifs.html">services et tarifs</a> pour bloquer vos dates sans surcoût.</p>
 </div>
 			
 <div class="services-block">
@@ -104,50 +104,40 @@
 	
 <!-- === SECTION RECOMMANDATIONS ET MAILLAGE (B + C) === -->
 
-<div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
-    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">Une question ou envie de réserver ?</h3>
-    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">
+<div class="bloc-cta">
+    <h3 class="cta-titre">Une question ou envie de réserver ?</h3>
+    <p class="st-31ac01">
         Nous sommes à votre écoute pour préparer votre prochain séjour en Haute-Bretagne.
     </p>
     
     <!-- Uniquement les deux choix de conversion -->
-    <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
+    <div class="cta-actions">
         
         <!-- Action principale : Prix et dispo -->
-        <a href="tarifs.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
-            <span style="margin-right: 6px; display: inline-block;">📅</span>Consulter les Tarifs & Dispos
+        <a class="st-fb0e55" href="tarifs.html">
+            <span class="cta-emoji">📅</span>Consulter les Tarifs & Dispos
         </a>
         
         <!-- Action secondaire : Contact direct -->
-        <a href="contact.html" style="display: inline-block; background-color: transparent; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
-            <span style="margin-right: 6px; display: inline-block;">✉️</span>Envoyer un Message
+        <a class="st-2a18ef" href="contact.html" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
+            <span class="cta-emoji">✉️</span>Envoyer un Message
         </a>
         
     </div>
 </div>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offre.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">L'Offre</a> | 
-        <a href="tarifs.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Tarifs</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidaires</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
-		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offre.html">L'Offre</a> | 
+        <a class="pied-lien-fort" href="tarifs.html">Services & Tarifs</a> | 
+        <a class="pied-lien-fort" href="solidaires.html">Solidaires</a> | 
+        <a class="pied-lien-fort" href="propos.html">À Propos</a> | 
+        <a class="pied-lien-fort" href="blog.html">Blog & Actu</a> | 
+        <a class="pied-lien-fort" href="numeros.html">☎️ Numéros Utiles</a> |
+        <a class="pied-lien" href="mentions-legales.html">Mentions Légales</a> |
+		<a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Analytics. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
 </body>
 </html>

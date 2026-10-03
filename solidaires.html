@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
 <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -24,16 +24,16 @@
 </head>
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 12px; font-weight: 500; border-bottom: 1px solid #91d5ff;">
+<div class="bandeau-chantier-court">
     🚧 <strong>Projet en cours :</strong> Le gîte est actuellement en construction 🚧<br><br>
-	📸 suivez son avancement sur le <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> ! <br>
+	📸 suivez son avancement sur le <a class="lien-fort" href="blog.html">blog</a> ! <br>
 	📅 Les réservations ouvriront en 2027<br>
-	🗺️ <a href="tourisme.html" style="font-weight: bold; color: #0066cc;">Guides et activités locales</a> à jour
+	🗺️ <a class="lien-fort" href="tourisme.html">Guides et activités locales</a> à jour
 </div>
 
     <header>
-        <nav>
-            <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+        <nav aria-label="Navigation principale">
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
@@ -42,11 +42,11 @@
                 <li><a href="propos.html">À Propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog & Actu</a></li>
-                <li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="solidaires.html" hreflang="fr" lang="fr" title="Français" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="english.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="deutsch.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+                <li class="lang-switch lang-switch-liste">
+    <a class="lang-lien-actif" href="solidaires.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -67,27 +67,27 @@
             Comme vous le savez, <strong>Le Relais de Chaumeré</strong> ouvrira ses portes en 2027. Nous profitons du temps de la construction pour peaufiner notre offre et nos engagements avec les acteurs et l'environnement de Haute-Bretagne. 
         </p>
         
-        <p style="font-size: 1.1rem; color: #555; line-height: 1.6; text-align: justify;">
+        <p class="st-01ca1b">
             Ici, nous faisons le choix de rompre avec le modèle "Airbnb brut" qui capte la richesse locale au profit de paradis fiscaux. Notre démarche éthique s'articule autour de piliers indissociables :
         </p>
 
         <!-- Tes piliers mis en valeur avec maillage interne complet -->
         <div style="text-align: left; margin: 25px auto; max-width: 700px; background: #fff; padding: 25px; border-radius: 6px; border-left: 4px solid #3182ce; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-            <p style="margin: 0 0 18px 0; font-size: 1.05rem; color: #2d3748; line-height: 1.5;">
-                🤝 <strong>Un impact local direct :</strong> En privilégiant la réservation directe sur notre site, vous économisez les commissions des grandes plateformes. Cet engagement financier permet de soutenir directement l'<a href="https://a3pc.fr/" target="_blank" rel="noopener" style="color: #0066cc; text-decoration: underline; font-weight: bold;">A3PC</a> (Association pour la Promotion du Pays de Chaumeré), qui œuvre pour le lien social, l'entraide et les services de proximité. Jetez un œil à <a href="tarifs.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">nos tarifs et services</a> pour comprendre notre politique de transparence.
+            <p class="st-b35b5f">
+                🤝 <strong>Un impact local direct :</strong> En privilégiant la réservation directe sur notre site, vous économisez les commissions des grandes plateformes. Cet engagement financier permet de soutenir directement l'<a class="lien-souligne-fort" href="https://a3pc.fr/" target="_blank" rel="noopener">A3PC</a> (Association pour la Promotion du Pays de Chaumeré), qui œuvre pour le lien social, l'entraide et les services de proximité. Jetez un œil à <a class="lien-souligne-fort" href="tarifs.html">nos tarifs et services</a> pour comprendre notre politique de transparence.
             </p>
-            <p style="margin: 0 0 18px 0; font-size: 1.05rem; color: #2d3748; line-height: 1.5;">
-                🎓 <strong>Le Soutien au logement des jeunes :</strong> Le Relais ne sera pas une machine à tourisme déconnectée du territoire. Nous ouvrons ce meublé de manière privilégiée aux jeunes en formation ou en alternance, avec un tarif juste et adapté. Découvrez la configuration et <a href="offre.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">les équipements de notre studio</a> pensés pour ce confort que vous soyez de passage ou pour une plus longue période.
+            <p class="st-b35b5f">
+                🎓 <strong>Le Soutien au logement des jeunes :</strong> Le Relais ne sera pas une machine à tourisme déconnectée du territoire. Nous ouvrons ce meublé de manière privilégiée aux jeunes en formation ou en alternance, avec un tarif juste et adapté. Découvrez la configuration et <a class="lien-souligne-fort" href="offre.html">les équipements de notre studio</a> pensés pour ce confort que vous soyez de passage ou pour une plus longue période.
             </p>
-            <p style="margin: 0 0 18px 0; font-size: 1.05rem; color: #2d3748; line-height: 1.5;">
-                ☀️ <strong>Une sobriété énergétique poussée :</strong> La solidarité commence par le respect des ressources. Nous avançons pas à pas vers l'autonomie : le bâtiment produit déjà sa propre électricité grâce à des <strong>panneaux photovoltaïques</strong>, et nous étudions un <strong>chauffe-eau solaire</strong> ainsi qu'un <strong>puits provençal</strong> (ou une pompe à chaleur) pour le confort thermique du gîte. Nous détaillons les coulisses techniques de ce chantier éco-responsable sur notre <a href="blog.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Blog & Actu</a>.
+            <p class="st-b35b5f">
+                ☀️ <strong>Une sobriété énergétique poussée :</strong> La solidarité commence par le respect des ressources. Nous avançons pas à pas vers l'autonomie : le bâtiment produit déjà sa propre électricité grâce à des <strong>panneaux photovoltaïques</strong>, et nous étudions un <strong>chauffe-eau solaire</strong> ainsi qu'un <strong>puits provençal</strong> (ou une pompe à chaleur) pour le confort thermique du gîte. Nous détaillons les coulisses techniques de ce chantier éco-responsable sur notre <a class="lien-souligne-fort" href="blog.html">Blog & Actu</a>.
             </p>
             <p style="margin: 0; font-size: 1.05rem; color: #2d3748; line-height: 1.5;">
-                🛒 <strong>La promotion de l'économie circulaire :</strong> Consommer solidaire, c'est aussi faire vivre nos producteurs, artisans et commerçants de quartier. Nous mettons un point d'honneur à guider nos voyageurs loin des circuits touristiques industriels en valorisant le savoir-faire de nos terroirs à travers nos suggestions de <a href="escapades.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">belles escapades</a> et la promotion de la <a href="gastronomie.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">gastronomie locale</a>.
+                🛒 <strong>La promotion de l'économie circulaire :</strong> Consommer solidaire, c'est aussi faire vivre nos producteurs, artisans et commerçants de quartier. Nous mettons un point d'honneur à guider nos voyageurs loin des circuits touristiques industriels en valorisant le savoir-faire de nos terroirs à travers nos suggestions de <a class="lien-souligne-fort" href="escapades.html">belles escapades</a> et la promotion de la <a class="lien-souligne-fort" href="gastronomie.html">gastronomie locale</a>.
             </p>
         </div>
 
-        <p style="font-size: 1.1rem; color: #555; line-height: 1.6; text-align: justify;">
+        <p class="st-01ca1b">
             Toute l'information sur les critères de redistribution, nos indicateurs énergétiques et nos actions de soutien à l'économie locale sera publiée ici très prochainement.
         </p>
 
@@ -107,30 +107,18 @@
 
     </main>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offre.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">L'Offre</a> | 
-        <a href="tarifs.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Tarifs</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidaires</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
-		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offre.html">L'Offre</a> | 
+        <a class="pied-lien-fort" href="tarifs.html">Services & Tarifs</a> | 
+        <a class="pied-lien-fort" href="solidaires.html">Solidaires</a> | 
+        <a class="pied-lien-fort" href="propos.html">À Propos</a> | 
+        <a class="pied-lien-fort" href="blog.html">Blog & Actu</a> | 
+        <a class="pied-lien-fort" href="numeros.html">☎️ Numéros Utiles</a> |
+        <a class="pied-lien" href="mentions-legales.html">Mentions Légales</a> |
+		<a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Analytics. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("Analytics activé par l'utilisateur.");}});</script>
 </body>
 </html>

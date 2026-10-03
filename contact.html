@@ -3,14 +3,24 @@
 <head>
 
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact & Réservation | Le Relais de Chaumeré</title>
+    <meta name="description" content="Contactez Le Relais de Chaumeré pour réserver ou poser une question : studio meublé et camping au jardin à Domagné (35), en Haute-Bretagne. Réponse directe, sans commission.">
+    <link rel="canonical" href="https://www.le-relais-de-chaumere.fr/contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact & Réservation | Le Relais de Chaumeré">
+    <meta property="og:description" content="Réservez en direct ou posez votre question : studio meublé et camping à Domagné (35), sans commission de plateforme.">
+    <meta property="og:image" content="https://www.le-relais-de-chaumere.fr/photos/general/logo2.png">
+    <meta property="og:url" content="https://www.le-relais-de-chaumere.fr/contact.html">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="alternate" hreflang="fr" href="https://www.le-relais-de-chaumere.fr/contact.html">
     <link rel="alternate" hreflang="en" href="https://www.le-relais-de-chaumere.fr/contact-us.html">
@@ -24,28 +34,28 @@
 </head>
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #91d5ff; line-height: 1.6;">
+<div class="bandeau-chantier">
     🚧 <strong>Projet en cours :</strong> Le gîte est actuellement en construction 🚧<br>
-    📸 Suivez son avancement sur notre <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> !<br>
+    📸 Suivez son avancement sur notre <a class="lien-fort" href="blog.html">blog</a> !<br>
     📅 <strong>Ouverture en 2027 :</strong> Accessible en <strong>location meublée flexible</strong> début 2027 puis en <strong>séjour touristique</strong> d'ici l'été.<br>
-    🗺️ Découvrez déjà les <a href="tourisme.html" style="font-weight: bold; color: #0066cc;">guides et activités locales</a>.
+    🗺️ Découvrez déjà les <a class="lien-fort" href="tourisme.html">guides et activités locales</a>.
 </div>
     <header>
-        <nav>
-            <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+        <nav aria-label="Navigation principale">
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
                 <li><a href="tarifs.html">Services & Tarifs</a></li>
                 <li><a href="tourisme.html">Tourisme</a></li>
                 <li><a href="propos.html">À Propos</a></li>
-                <li><a href="contact.html"class="active">Contact</a></li>
+                <li><a href="contact.html"class="active" aria-current="page">Contact</a></li>
                 <li><a href="blog.html" >Blog & Actu</a></li>
-                <li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="contact.html" hreflang="fr" lang="fr" title="Français" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="contact-us.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="kontakt.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="neem-contact-op.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+                <li class="lang-switch lang-switch-liste">
+    <a class="lang-lien-actif" href="contact.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="contact-us.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="kontakt.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="neem-contact-op.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -58,44 +68,44 @@
         <p>Vous souhaitez réserver ou obtenir des informations ? Remplissez le formulaire ci-dessous. Nous pouvons également vous rappeler gratuitement par whatsapp.</p>
     </div>
 	
-	<h3 style="text-align: center; margin-bottom: 10px;">Une question sur le projet ?</h3>
+	<h3 class="st-92ff10">Une question sur le projet ?</h3>
 
 
     <section class="about-section">
-        <form action="https://api.web3forms.com/submit" method="POST" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+        <form class="st-3f1d65" action="https://api.web3forms.com/submit" method="POST">
             
             <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
             
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="checkbox" name="botcheck" class="hidden st-224b51">
 
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label style="font-weight: bold; color: var(--text-dark);">Nom & Prénom *</label>
-                <input type="text" name="nom" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            <div class="champ-formulaire">
+                <label class="champ-label">Nom & Prénom *</label>
+                <input class="champ-saisie" type="text" name="nom" required>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label style="font-weight: bold; color: var(--text-dark);">Votre adresse e-mail *</label>
-                <input type="email" name="email" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            <div class="champ-formulaire">
+                <label class="champ-label">Votre adresse e-mail *</label>
+                <input class="champ-saisie" type="email" name="email" required>
             </div>
 
-            <div class="services-block" style="padding: 1.5rem; margin: 0; background-color: #f9f9f9;">
-                <h3 style="margin-top: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">📞 Souhaitez-vous être rappelé ?</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Si vous préférez un échange téléphonique, indiquez votre numéro et vos disponibilités.</p>
+            <div class="services-block st-c0297c">
+                <h3 class="st-60e6af">📞 Souhaitez-vous être rappelé ?</h3>
+                <p class="st-a7d376">Si vous préférez un échange téléphonique, indiquez votre numéro et vos disponibilités.</p>
                 
-                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
-                    <label style="font-size: 0.95rem;">Numéro de téléphone</label>
-                    <input type="tel" name="telephone_rappel" placeholder="Ex: +357 99 000000 ou 06 00 00 00 00" style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+                <div class="st-93f05b">
+                    <label class="st-6e47c6">Numéro de téléphone</label>
+                    <input class="champ-saisie" type="tel" name="telephone_rappel" placeholder="Ex: +357 99 000000 ou 06 00 00 00 00">
                 </div>
 
-                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                    <label style="font-size: 0.95rem;">Vos disponibilités pour le rappel</label>
-                    <input type="text" name="disponibilites" placeholder="Ex: En semaine après 17h, le samedi matin..." style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+                <div class="champ-formulaire">
+                    <label class="st-6e47c6">Vos disponibilités pour le rappel</label>
+                    <input class="champ-saisie" type="text" name="disponibilites" placeholder="Ex: En semaine après 17h, le samedi matin...">
                 </div>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label style="font-weight: bold; color: var(--text-dark);">Ma demande concerne *</label>
-                <select name="sujet" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; background-color: white;">
+            <div class="champ-formulaire">
+                <label class="champ-label">Ma demande concerne *</label>
+                <select class="st-f7c132" name="sujet" required>
                     <option value="">-- Sélectionnez --</option>
                     <option value="Gîte">Le gîte</option>
                     <option value="Camping">Le camping</option>
@@ -103,16 +113,16 @@
                 </select>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                <label style="font-weight: bold; color: var(--text-dark);">Votre message / Dates souhaitées *</label>
-                <textarea name="message" rows="6" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; resize: vertical;"></textarea>
+            <div class="champ-formulaire">
+                <label class="champ-label">Votre message / Dates souhaitées *</label>
+                <textarea class="st-eeb133" name="message" rows="6" required></textarea>
             </div>
 
-            <div style="margin: 10px 0; display: flex; justify-content: center;">
+            <div class="st-b20633">
                 <div class="h-captcha" data-captcha="true"></div>
             </div>
 
-            <button type="submit" class="services-block" style="background-color: var(--text-dark, #333); color: white; border: none; padding: 1rem; font-size: 1.1rem; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.2s;">
+            <button type="submit" class="services-block st-f9db53">
                 ✉️ Envoyer la demande
             </button>
 
@@ -121,68 +131,20 @@
 
 </main>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offre.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">L'Offre</a> | 
-        <a href="tarifs.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Tarifs</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidaires</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offre.html">L'Offre</a> | 
+        <a class="pied-lien-fort" href="tarifs.html">Services & Tarifs</a> | 
+        <a class="pied-lien-fort" href="solidaires.html">Solidaires</a> | 
+        <a class="pied-lien-fort" href="propos.html">À Propos</a> | 
+        <a class="pied-lien-fort" href="blog.html">Blog & Actu</a> | 
+        <a class="pied-lien-fort" href="numeros.html">☎️ Numéros Utiles</a> |
+        <a class="pied-lien" href="mentions-legales.html">Mentions Légales</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 
 
 <script src="https://web3forms.com/client/script.js" async defer></script>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Analytics. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
-
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const banner = document.getElementById("cookie-banner");
-        const acceptBtn = document.getElementById("btn-accept-cookies");
-        const refuseBtn = document.getElementById("btn-refuse-cookies");
-
-        // Vérifie si l'utilisateur a déjà fait un choix
-        const cookieChoice = localStorage.getItem("cookieConsent");
-
-        if (!cookieChoice) {
-            // Si aucun choix, on affiche le bandeau
-            banner.style.display = "block";
-        } else if (cookieChoice === "accepted") {
-            // Si déjà accepté, on peut lancer les fonctions de tracking ici si besoin
-            activerTracking();
-        }
-
-        acceptBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "accepted");
-            banner.style.display = "none";
-            activerTracking();
-        });
-
-        refuseBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "refused");
-            banner.style.display = "none";
-            // Optionnel : recharger la page ou bloquer proprement
-        });
-
-        function activerTracking() {
-            console.log("Analytics activé par l'utilisateur.");
-            // Ici, on pourrait lier le consentement à Google Analytics.
-        }
-    });
-</script>
 </body>
 </html>

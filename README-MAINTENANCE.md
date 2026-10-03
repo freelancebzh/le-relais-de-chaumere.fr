@@ -9,10 +9,12 @@
 ```
 site/
 ├── index.html, blog.html, contact.html... (Pages HTML)
-├── style.css (CSS global — À privilégier !)
+├── style.css (CSS global : toutes les classes, aucun style inline)
+├── cookies.js (bandeau cookies fr/en/de/nl + Google Analytics 4)
+├── header-scroll.js (menu réduit au défilement)
 ├── photos/ (Images par catégorie)
 ├── includes/ (Composants réutilisables)
-│   ├── head.html (Meta tags + GA4)
+│   ├── head.html (Meta tags + cookies.js)
 │   ├── header.html (Navigation + ARIA)
 │   ├── banner.html (Notification construction)
 │   ├── footer.html (Pied de page + ARIA)
@@ -40,8 +42,8 @@ site/
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="includes/components.css">
     
-    <!-- GA4 (un seul tracker) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MB2MHCQZXY"></script>
+    <!-- Bandeau cookies + GA4 (chargé après consentement) : un seul fichier partagé -->
+    <script src="cookies.js" defer></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -217,7 +219,7 @@ Best Practices: ≥ 90/100
 → C'est intentionnel ! Ajoutez une classe CSS dans style.css à la place
 
 ### Google Analytics ne trackent pas
-→ Vérifiez que vous avez GA4 uniquement (pas de GTM)
+→ Vérifiez que la page charge `cookies.js` (GA4 ne démarre qu'après un clic sur « Accepter » dans le bandeau) et qu'il n'y a pas de GTM
 
 ### Page ne s'affiche pas sur mobile
 → Vérifiez que vous avez `<meta name="viewport">`

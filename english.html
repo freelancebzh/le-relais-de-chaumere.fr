@@ -3,8 +3,8 @@
 <head>
 
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
 
     <meta charset="UTF-8">
@@ -33,28 +33,28 @@
 </head>
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 12px; font-weight: 500; border-bottom: 1px solid #91d5ff;">
+<div class="bandeau-chantier-court">
     🚧 <strong>IN PROCESS</strong> We are now building our gîte 🚧<br><br>
-	📸 Follow our updates on our <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> ! <br>
-	📅 Guesthouse booking open by 2027 — but our <a href="campsite.html" style="font-weight: bold; color: #0066cc;">garden campsite</a> is available right now<br>
-	🗺️ <a href="tourism.html" style="font-weight: bold; color: #0066cc;">tourism</a> updated
+	📸 Follow our updates on our <a class="lien-fort" href="blog.html">blog</a> ! <br>
+	📅 Guesthouse booking open by 2027 — but our <a class="lien-fort" href="campsite.html">garden campsite</a> is available right now<br>
+	🗺️ <a class="lien-fort" href="tourism.html">tourism</a> updated
 </div>
     <header>
-        <nav>
-            <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+        <nav aria-label="Main navigation">
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
             <ul>
-                <li><a href="english.html" class="active">Home</a></li>
+                <li><a href="english.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="offer.html">The Studio</a></li>
                 <li><a href="prices.html">Rates</a></li>
                 <li><a href="tourism.html">Tourism</a></li>
 				<li><a href="numbers.html">Useful numbers</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
 				<li><a href="blog.html">Blog & News</a></li>             
-            <li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="english.html" hreflang="fr" lang="fr" title="Français" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="english.html" hreflang="en" lang="en" title="English" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="deutsch.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+            <li class="lang-switch lang-switch-liste">
+    <a class="lang-lien" href="english.html" hreflang="fr" lang="fr" title="Français"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien-actif" href="english.html" hreflang="en" lang="en" title="English" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -106,11 +106,11 @@
             </div>
         </section>
 
-        <section class="page-header" style="margin-top: 4rem; margin-bottom: 4rem;">
+        <section class="page-header st-f7571c">
             <h2>📅 Rates & Booking</h2>
             <p>We favor direct booking to guarantee the best price, free of third-party platform fees.</p>
-            <p style="margin-top: 1.5rem;">
-                <a href="contact-us.html" class="services-block" style="display: inline-block; padding: 1rem 2rem; text-decoration: none; font-weight: bold;">
+            <p class="st-185d79">
+                <a href="contact-us.html" class="services-block st-6757e9">
                     ✉️ Contact Us / Book Your Stay
                 </a>
             </p>
@@ -118,31 +118,19 @@
 
     </main>
 	
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offer.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">The Offer</a> | 
-        <a href="prices.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Prices</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidarity</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">About Us</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Updates</a> | 
-        <a href="numbers.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Useful Numbers</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Legal Notices</a> |
-		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Site Map</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offer.html">The Offer</a> | 
+        <a class="pied-lien-fort" href="prices.html">Services & Prices</a> | 
+        <a class="pied-lien-fort" href="solidaires.html">Solidarity</a> | 
+        <a class="pied-lien-fort" href="propos.html">About Us</a> | 
+        <a class="pied-lien-fort" href="blog.html">Blog & Updates</a> | 
+        <a class="pied-lien-fort" href="numbers.html">☎️ Useful Numbers</a> |
+        <a class="pied-lien" href="mentions-legales.html">Legal Notices</a> |
+		<a class="pied-lien" href="plan-du-site.html">Site Map</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Analytics. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("Analytics activé par l'utilisateur.");}});</script>
 
 </body>
 </html>

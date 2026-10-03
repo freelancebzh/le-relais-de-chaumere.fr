@@ -3,8 +3,8 @@
 <head>
 
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
 
     <meta charset="UTF-8">
@@ -25,101 +25,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Useful Numbers & Emergencies | Le Relais de Chaumeré</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .utility-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .utility-card {
-            background: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .utility-card h2 {
-            margin-top: 0;
-            font-size: 1.25rem;
-            border-bottom: 2px solid var(--text-dark, #333);
-            padding-bottom: 0.5rem;
-            color: var(--text-dark, #333);
-        }
-
-        .card-urgences {
-            border: 2px solid #ef9a9a;
-            background-color: #fffde7;
-        }
-        .card-urgences h2 {
-            border-bottom: 2px solid #d32f2f;
-            color: #d32f2f;
-        }
-
-        .phone-list {
-            list-style: none;
-            padding: 0;
-            margin: 1rem 0 0 0;
-        }
-
-        .phone-list li {
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .phone-label {
-            font-weight: bold;
-            display: block;
-            color: #555;
-        }
-
-        .phone-number {
-            font-size: 1.15rem;
-            font-weight: bold;
-            color: #2e7d32;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 2px;
-        }
-        
-        .card-urgences .phone-number {
-            color: #d32f2f;
-            font-size: 1.3rem;
-        }
-
-        .phone-number:hover {
-            text-decoration: underline;
-        }
-
-        .phone-desc {
-            font-size: 0.85rem;
-            color: #666;
-            display: block;
-            margin-top: 2px;
-        }
-    </style>
     <script src="header-scroll.js" defer></script>
 </head>
-<body>
+<body class="page-numbers">
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 12px; font-weight: 500; border-bottom: 1px solid #91d5ff;">
+<div class="bandeau-chantier-court">
     🚧 <strong>IN PROCESS</strong> We are now building our gîte 🚧<br><br>
-	📸 Follow our updates on our <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> ! <br>
+	📸 Follow our updates on our <a class="lien-fort" href="blog.html">blog</a> ! <br>
 	📅 Booking open by 2027<br>
-	🗺️ <a href="tourism.html" style="font-weight: bold; color: #0066cc;">tourism</a> updated
+	🗺️ <a class="lien-fort" href="tourism.html">tourism</a> updated
 </div>
 
     <header>
-        <nav>
-            <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré which is our house with a dolmen and an apple on top" style="height: 220px; width: auto;"></div>
+        <nav aria-label="Main navigation">
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré which is our house with a dolmen and an apple on top"></div>
             <ul>
                 <li><a href="english.html">Home</a></li>
                 <li><a href="offer.html">The Studio</a></li>
                 <li><a href="prices.html">Rates</a></li>
                 <li><a href="tourism.html">Tourism</a></li>
-				<li><a href="numbers.html"class="active">Useful numbers</a></li>
+				<li><a href="numbers.html"class="active" aria-current="page">Useful numbers</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
 				<li><a href="blog.html">Blog & News</a></li>             
             </ul>
@@ -177,9 +102,9 @@
     <a href="tel:+33230964854" class="phone-number">02 30 96 48 54</a>
     <span class="phone-desc">
         General practitioners located at 8 rue Hyacinthe Roinson. 
-        <a href="https://maps.google.com/?cid=1617731261861135238&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=1617731261861135238&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Mon-Fri: 9:00 AM - 7:00 PM (Closed on Sat & Sun)
     </span>
 </li>
@@ -188,9 +113,9 @@
     <a href="tel:+33299000400" class="phone-number">02 99 00 04 00</a>
     <span class="phone-desc">
         Located on Church Square (3 Place Caron de la Carrière). 
-        <a href="https://maps.google.com/?cid=6060754919314220042&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=6060754919314220042&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Mon-Fri: 9:00 AM - 12:30 PM, 2:30 PM - 7:30 PM | Sat: 9:00 AM - 12:30 PM (Closed on Sun)
     </span>
 </li>
@@ -206,7 +131,7 @@
     <a href="tel:+33299592222" class="phone-number">02 99 59 22 22</a>
     <span class="phone-desc">
         Emergency medical service for accidental poisoning, toxic ingestion, chemical splashes, or dangerous bites/stings. Available 24/7.
-        <a href="http://googleusercontent.com/maps.google.com/2" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="http://googleusercontent.com/maps.google.com/2" target="_blank">See on Google Maps</a>
     </span>
 </li>
             </ul>
@@ -225,7 +150,7 @@
     <a href="tel:+33299007273" class="phone-number">02 99 00 72 73</a>
     <span class="phone-desc">
         Based nearby in Châteaubourg (10 Rue de Paris). Available for local trips around Domagné, or transfers to train stations and airports.
-        <a href="https://maps.google.com/?cid=7482076719879698859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=7482076719879698859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
 </li>
 
@@ -234,7 +159,7 @@
     <a href="tel:+33299623508" class="phone-number">02 99 62 35 08</a>
     <span class="phone-desc">
         Located in Châteaubourg (11 Rue Joseph Cugnot). Suitable for any distance trips, private bookings, or medical transport.
-        <a href="https://maps.google.com/?cid=1084327706347875357&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=1084327706347875357&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
 </li>
                 <li>
@@ -253,9 +178,9 @@
     <a href="tel:+33299006015" class="phone-number">02 99 00 60 15</a>
     <span class="phone-desc">
         Located at 1 Place de la Mairie. For local administrative services or general inquiries about the village.
-        <a href="https://maps.google.com/?cid=2038812177013615467&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=2038812177013615467&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Mon-Thu: 9:00 AM - 12:00 PM | Fri: 9:00 AM - 12:00 PM, 2:00 PM - 5:00 PM (Closed Sat & Sun)
     </span>
 </li>
@@ -266,7 +191,7 @@
     <span class="phone-desc">
         Great resource for local maps, sightseeing recommendations, and hiking trails in the area.
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Mon: 2:00 PM - 6:00 PM | Tue-Sat: 9:30 AM - 12:30 PM, 2:00 PM - 6:00 PM (Closed Sun)
     </span>
 </li>
@@ -277,7 +202,7 @@
     <span class="phone-desc">
         Emergency helpline to call in case of a general power grid failure or electrical hazard.
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Available 24/7
     </span>
 </li>
@@ -293,9 +218,9 @@
     <a href="tel:+33299000209" class="phone-number">02 99 00 02 09</a>
     <span class="phone-desc">
         Located at 3 Allée Saint-Pierre. Walking distance for everyday groceries. 24/7 self-service gas station available.
-        <a href="https://maps.google.com/?cid=16551086435121998349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=16551086435121998349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Mon-Sat: 8:00 AM - 8:00 PM | Sun: 9:00 AM - 12:30 PM
     </span>
 </li>
@@ -305,7 +230,7 @@
     <a href="tel:+33299000563" class="phone-number">02 99 00 05 63</a>
     <span class="phone-desc">
         Located at 2 Allée Saint-Pierre. Fresh French bread, croissants, and pastries right around the corner.
-        <a href="https://maps.google.com/?cid=11410717584866278888&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=11410717584866278888&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
 </li>
 
@@ -314,9 +239,9 @@
     <a href="tel:+33299003063" class="phone-number">02 99 00 30 63</a>
     <span class="phone-desc">
         Located at La Bretonnière, Châteaubourg. Large and fully stocked supermarket for major shopping, including a drive-up service.
-        <a href="https://maps.google.com/?cid=4903129812084057300&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=4903129812084057300&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Mon-Thu, Sat: 8:30 AM - 7:30 PM | Fri: 8:30 AM - 8:00 PM (Closed Sun)
     </span>
 </li>		
@@ -325,9 +250,9 @@
     <a href="tel:+33299374945" class="phone-number">02 99 37 49 45</a>
     <span class="phone-desc">
         Located at Centre Commercial UNIVER (2 Rue des Comptoirs). The largest hypermarket in the area, perfect for large shopping trips, featuring a local retail mall.
-        <a href="https://maps.google.com/?cid=2032366952051478544&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=2032366952051478544&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Mon-Sat: 8:30 AM - 8:00 PM (Closed Sun)
     </span>
 </li>
@@ -337,9 +262,9 @@
     <a href="tel:+33188247070" class="phone-number">01 88 24 70 70</a>
     <span class="phone-desc">
         Located at 19 Rue de Rennes. Good and convenient option for fast discount grocery shopping.
-        <a href="https://maps.google.com/?cid=9432379672587352257&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=9432379672587352257&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Mon-Sat: 8:30 AM - 8:00 PM (Closed Sun)
     </span>
 </li>
@@ -349,9 +274,9 @@
     <a href="tel:+33299379527" class="phone-number">02 99 37 95 27</a>
     <span class="phone-desc">
         Located at 59 Rue des Comptoirs (UNIVER Area). A lively and modern restaurant/bar known for its homemade food (burgers, daily specials) and a great selection of craft beers and cocktails.
-        <a href="https://maps.google.com/?cid=7525524759901010047&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" style="color: #2e7d32; text-decoration: underline;">See on Google Maps</a>
+        <a class="lien-vert" href="https://maps.google.com/?cid=7525524759901010047&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">See on Google Maps</a>
     </span>
-    <span class="phone-desc" style="color: #888888; display: block; margin-top: 2px;">
+    <span class="phone-desc st-0a951b">
         🕒 Tue-Wed: 11:30 AM-3 PM, 5 PM-11 PM | Thu: 11:30 AM-3 PM, 5 PM-12 AM | Fri-Sat: 11:30 AM-1:00 AM (Closed Sun & Mon)
     </span>
 </li>		
@@ -362,29 +287,19 @@
 
 </main>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offer.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">The Offer</a> | 
-        <a href="prices.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Prices</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidarity</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">About Us</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Updates</a> | 
-        <a href="numbers.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Useful Numbers</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Legal Notices</a> |
-		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Site Map</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offer.html">The Offer</a> | 
+        <a class="pied-lien-fort" href="prices.html">Services & Prices</a> | 
+        <a class="pied-lien-fort" href="solidaires.html">Solidarity</a> | 
+        <a class="pied-lien-fort" href="propos.html">About Us</a> | 
+        <a class="pied-lien-fort" href="blog.html">Blog & Updates</a> | 
+        <a class="pied-lien-fort" href="numbers.html">☎️ Useful Numbers</a> |
+        <a class="pied-lien" href="mentions-legales.html">Legal Notices</a> |
+		<a class="pied-lien" href="plan-du-site.html">Site Map</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> uses cookies to analyze this site's audience via Google Analytics. You can accept or decline this tracking. To learn more, please consult our <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Legal Notices</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
 
 </body>
 </html>

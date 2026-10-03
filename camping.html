@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -30,12 +30,12 @@
 
 <div style="background-color: #fff3cd; color: #856404; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #ffeeba; line-height: 1.6;">
     ⚠️ <strong>Le camping chez l'habitant n'est pas autorisé sur notre terrain</strong> ⚠️<br>
-    🏠 Notre <strong>gîte</strong>, lui, ouvrira ses portes en 2027 — <a href="offre.html" style="font-weight: bold; color: #0066cc;">en savoir plus</a>.
+    🏠 Notre <strong>gîte</strong>, lui, ouvrira ses portes en 2027 — <a class="lien-fort" href="offre.html">en savoir plus</a>.
 </div>
 
     <header>
-        <nav>
-            <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+        <nav aria-label="Navigation principale">
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
@@ -44,11 +44,11 @@
                 <li><a href="propos.html">À Propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog & Actu</a></li>
-                <li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="camping.html" hreflang="fr" lang="fr" title="Français" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="english.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="deutsch.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+                <li class="lang-switch lang-switch-liste">
+    <a class="lang-lien-actif" href="camping.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -62,8 +62,8 @@
 
         <!-- SECTION FRANÇAISE -->
         <section class="camping-section" style="max-width: 800px; margin: 2rem auto; padding: 2.5rem; background-color: #ffffff; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
-                <span style="font-size: 1.5rem;">🇫🇷</span>
+            <div class="st-d2a412">
+                <span class="st-fa415b">🇫🇷</span>
                 <h2 style="margin: 0; color: #2c3e50; font-size: 1.4rem;">Vous pensiez que le camping chez l'habitant était possible ? Nous aussi !</h2>
             </div>
 
@@ -71,8 +71,8 @@
                 Dans un monde où même une nuit en camping dépasse souvent les 20&nbsp;€, nous souhaitions vous offrir une alternative simple, humaine, accessible et locale dans notre jardin.
             </p>
 
-            <div style="background-color: #fff5f5; border-left: 4px solid #e53e3e; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
-                <p style="margin: 0; color: #c53030; font-size: 0.98rem; line-height: 1.6;">
+            <div class="st-8df377">
+                <p class="st-8487c8">
                     <strong>Mais la réglementation nous l'interdit.</strong><br>
                     Réponse de la Communauté de Communes de Vitré Communauté : le Plan Local d'Urbanisme (PLU) interdit strictement le camping chez l'habitant sur notre secteur.
                 </p>
@@ -89,8 +89,8 @@
 
         <!-- SECTION ANGLAISE -->
         <section class="camping-section" style="max-width: 800px; margin: 2rem auto; padding: 2.5rem; background-color: #f8fafc; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem;">
-                <span style="font-size: 1.5rem;">🇬🇧</span>
+            <div class="st-d2a412">
+                <span class="st-fa415b">🇬🇧</span>
                 <h2 style="margin: 0; color: #1e293b; font-size: 1.4rem;">You thought home camping was allowed? So did we!</h2>
             </div>
 
@@ -98,8 +98,8 @@
                 In a world where even standard campsite prices exceed €20 a night, we wanted to offer a simple, friendly, authentic, and affordable alternative right in our garden.
             </p>
 
-            <div style="background-color: #fff5f5; border-left: 4px solid #e53e3e; padding: 1.2rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
-                <p style="margin: 0; color: #c53030; font-size: 0.98rem; line-height: 1.6;">
+            <div class="st-8df377">
+                <p class="st-8487c8">
                     <strong>However, regulations forbid us from doing so.</strong><br>
                     Official reply from the local municipality (Vitré Communauté): local urban planning bylaws (PLU) strictly prohibit private garden camping in our area.
                 </p>
@@ -124,53 +124,41 @@
             <a href="offre.html" class="btn" style="display: inline-block; background-color: #2b6cb0; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px;">Découvrir le projet du gîte / Learn more</a>
         </section>
 
-        <section class="camping-nearby" style="max-width: 800px; margin: 2rem auto; padding: 2rem 2.5rem; text-align: center;">
-            <h3 style="color: #2f5233; font-size: 1.2rem;">Profitez tout de même des environs / Discover the area</h3>
-            <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
-                Consultez notre <a href="tourisme.html" style="color: #0066cc; text-decoration: underline;">guide tourisme</a> pour tout savoir sur Domagné et ses environs, ou consultez <a href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener" style="color: #0066cc; text-decoration: underline;">Autour de Rennes</a>.
+        <section class="camping-nearby st-990c7a">
+            <h3 class="st-b2faf9">Profitez tout de même des environs / Discover the area</h3>
+            <p class="st-9ee9c3">
+                Consultez notre <a class="lien-souligne" href="tourisme.html">guide tourisme</a> pour tout savoir sur Domagné et ses environs, ou consultez <a class="lien-souligne" href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener">Autour de Rennes</a>.
             </p>
         </section>
     </main>
 	
-	<div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
-    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">Une question / Got a question?</h3>
-    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">
+	<div class="bloc-cta">
+    <h3 class="cta-titre">Une question / Got a question?</h3>
+    <p class="st-31ac01">
         N'hésitez pas à nous écrire pour toute précision sur notre futur gîte ou la région.
     </p>
     
-    <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
+    <div class="cta-actions">
         
-        <a href="contact.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
-            <span style="margin-right: 6px; display: inline-block;">✉️</span>Nous contacter / Contact us
+        <a class="st-fb0e55" href="contact.html">
+            <span class="cta-emoji">✉️</span>Nous contacter / Contact us
         </a>
         
     </div>
 </div>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offre.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">L'Offre</a> | 
-        <a href="tarifs.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Tarifs</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidaires</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
-		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offre.html">L'Offre</a> | 
+        <a class="pied-lien-fort" href="tarifs.html">Services & Tarifs</a> | 
+        <a class="pied-lien-fort" href="solidaires.html">Solidaires</a> | 
+        <a class="pied-lien-fort" href="propos.html">À Propos</a> | 
+        <a class="pied-lien-fort" href="blog.html">Blog & Actu</a> | 
+        <a class="pied-lien-fort" href="numeros.html">☎️ Numéros Utiles</a> |
+        <a class="pied-lien" href="mentions-legales.html">Mentions Légales</a> |
+		<a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Analytics. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("Analytics activé par l'utilisateur.");}});</script>
 </body>
 </html>

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -31,16 +31,16 @@
 </head>
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #91d5ff; line-height: 1.6;">
+<div class="bandeau-chantier">
     🚧 <strong>Project in progress:</strong> The guesthouse is currently under construction 🚧<br>
-    📸 Follow its progress on our <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> (in French)!<br>
+    📸 Follow its progress on our <a class="lien-fort" href="blog.html">blog</a> (in French)!<br>
     📅 <strong>Opening in 2027:</strong> available as a <strong>flexible furnished rental</strong> in early 2027, then for <strong>tourist stays</strong> by the summer.<br>
-    🗺️ Already discover our <a href="tourism.html" style="font-weight: bold; color: #0066cc;">local guides and activities</a>.
+    🗺️ Already discover our <a class="lien-fort" href="tourism.html">local guides and activities</a>.
 </div>
 
     <header>
         <nav aria-label="Main navigation">
-            <div class="logo"><img src="photos/general/logo2.png" alt="Le Relais de Chaumeré logo: our house with a dolmen and an apple above it" style="height: 220px; width: auto;"></div>
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="Le Relais de Chaumeré logo: our house with a dolmen and an apple above it"></div>
             <ul>
                 <li><a href="english.html">Home</a></li>
                 <li><a href="offer.html">The Studio</a></li>
@@ -49,11 +49,11 @@
                 <li><a href="numbers.html">Useful numbers</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
                 <li><a href="blog.html">Blog & News</a></li>
-<li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="tarifs.html" hreflang="fr" lang="fr" title="Français" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="prices.html" hreflang="en" lang="en" title="English" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="preise.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="prijzen.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+<li class="lang-switch lang-switch-liste">
+    <a class="lang-lien" href="tarifs.html" hreflang="fr" lang="fr" title="Français"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien-actif" href="prices.html" hreflang="en" lang="en" title="English" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="preise.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="prijzen.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -63,7 +63,7 @@
     <main>
         <section class="page-title">
             <h1>Rates & Services</h1>
-            <p>Transparent pricing and tailor-made services for a comfortable stay in our <a href="offer.html" style="color: #0066cc; text-decoration: underline; font-weight: bold;">furnished studio guesthouse</a>.</p>
+            <p>Transparent pricing and tailor-made services for a comfortable stay in our <a class="lien-souligne-fort" href="offer.html">furnished studio guesthouse</a>.</p>
         </section>
 
         <section class="pricing-section">
@@ -89,8 +89,8 @@
                 </div>
             </div>
 			
-			<div style="max-width: 800px; margin: 30px auto 0 auto; background-color: #f4f9ff; border-left: 4px solid #3182ce; padding: 15px; border-radius: 4px; text-align: center;">
-                <p style="margin: 0; font-size: 0.95rem; color: #2d3748; line-height: 1.5;">💼 Are you a work-study student, a trainee, in training or on a business trip? We offer an <strong>adapted rate</strong> for regular or long stays. To get it, simply <a href="contact-us.html" style="color: #3182ce; font-weight: bold; text-decoration: underline;">get in touch with us</a>.</p>
+			<div class="st-5f906d">
+                <p class="st-4fe485">💼 Are you a work-study student, a trainee, in training or on a business trip? We offer an <strong>adapted rate</strong> for regular or long stays. To get it, simply <a class="st-5d1e65" href="contact-us.html">get in touch with us</a>.</p>
             </div>
 			
         </section>
@@ -112,7 +112,7 @@
     <ul>
         <li>⚡ Electric vehicle charging (€10 / stay)</li>
         <li>🧹 Full end-of-stay cleaning</li>
-        <li>🥫 The "Late Arrival" basket (local artisan jars to reheat) (for one person, or for two with a bottle of local beer or fruit juice included). An exclusive service to enjoy our selection of <a href="gastronomie.html" style="color: #0066cc; text-decoration: underline;">local gastronomy</a> from the moment you arrive.</li>
+        <li>🥫 The "Late Arrival" basket (local artisan jars to reheat) (for one person, or for two with a bottle of local beer or fruit juice included). An exclusive service to enjoy our selection of <a class="lien-souligne" href="gastronomie.html">local gastronomy</a> from the moment you arrive.</li>
         <li>☕ Full breakfast delivered (fresh, local, artisan products)</li>
         <li>🧺 Laundry service on request</li>
     </ul>
@@ -120,10 +120,10 @@
 			<div class="services-block eco-features">
     <h2>🌍 Eco-Responsible and Ethical Commitment</h2>
 	
-	<figure style="margin: 15px 0; max-width: 100%;">
+	<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/blog/developpement durable/demarche-eco-responsable.webp" type="image/webp">
-                <img src="photos/blog/developpement durable/demarche-eco-responsable.jpg" alt="A young woman carefully holding a model of the Earth" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/blog/developpement durable/demarche-eco-responsable.jpg" alt="A young woman carefully holding a model of the Earth" loading="lazy">
             </picture>
 
 </figure>
@@ -132,61 +132,49 @@
 		<li>🔥 <strong>Solar water heater (under study):</strong> we are studying a solar water heater to produce domestic hot water directly from the sun, a natural and efficient solution.</li>
         <li>🌧️ <strong>Rainwater management:</strong> we have storage tanks that collect rainwater, which is then used responsibly to water the garden and for maintenance tasks.</li>
 		<li>🎓 <strong>Supportive and useful housing:</strong> this tourist rental is open as a priority to young people in training and work-study programmes, with a fair, adapted rate to guarantee them a quality roof during their sessions on site.</li>
-        <li>📖 <strong>Slow tourism:</strong> our 100% local welcome booklet and soft-mobility equipment (🚲 bikes available) let you take the time to wander. Plan your programme on our <a href="tourism.html" style="color: #0066cc; text-decoration: underline;">tourism</a> page or get inspired by our ideas for <a href="detente.html" style="color: #0066cc; text-decoration: underline;">relaxation and reconnecting</a> (in French).</li>
+        <li>📖 <strong>Slow tourism:</strong> our 100% local welcome booklet and soft-mobility equipment (🚲 bikes available) let you take the time to wander. Plan your programme on our <a class="lien-souligne" href="tourism.html">tourism</a> page or get inspired by our ideas for <a class="lien-souligne" href="detente.html">relaxation and reconnecting</a> (in French).</li>
         <li>♻️ <strong>Zero-waste goal:</strong> eco-designed welcome kit (tote bags for the market, jars for bulk shopping, washable kitchen towels, sorting bins).</li>
         <li>🔑 <strong>Peaceful arrival:</strong> self check-in is possible and made easy, so you can travel without the stress of schedules and transport delays.</li>
-		<li>🎁 <strong>Supportive direct booking:</strong> by booking <a href="contact-us.html" style="color: #0066cc; text-decoration: underline;">here</a> (no middleman), you save the large platforms' commissions, which lets us directly support the <a href="https://a3pc.fr/" target="_blank" rel="noopener" style="color: #0066cc; text-decoration: underline; font-weight: bold;">A3PC</a> (Association for the Promotion of the Pays de Chaumeré). To learn more about our philosophy, see our <a href="solidaires.html" style="color: #0066cc; text-decoration: underline;">dedicated page</a> and "<a href="propos.html" style="color: #0066cc; text-decoration: underline;">about us</a>" (both in French).</li>
+		<li>🎁 <strong>Supportive direct booking:</strong> by booking <a class="lien-souligne" href="contact-us.html">here</a> (no middleman), you save the large platforms' commissions, which lets us directly support the <a class="lien-souligne-fort" href="https://a3pc.fr/" target="_blank" rel="noopener">A3PC</a> (Association for the Promotion of the Pays de Chaumeré). To learn more about our philosophy, see our <a class="lien-souligne" href="solidaires.html">dedicated page</a> and "<a class="lien-souligne" href="propos.html">about us</a>" (both in French).</li>
     </ul>
 </div>
         </section>
     </main>
 	
 	
-		<div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
-    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">A question or ready to book?</h3>
-    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">We are here to help you prepare your next stay in Upper Brittany.</p>
+		<div class="bloc-cta">
+    <h3 class="cta-titre">A question or ready to book?</h3>
+    <p class="st-31ac01">We are here to help you prepare your next stay in Upper Brittany.</p>
     
     <!-- Uniquement les deux choix de conversion -->
-    <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
+    <div class="cta-actions">
         
         <!-- Action principale : Prix et dispo -->
-        <a href="prices.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
-            <span style="margin-right: 6px; display: inline-block;">📅</span>See Rates & Availability
+        <a class="st-fb0e55" href="prices.html">
+            <span class="cta-emoji">📅</span>See Rates & Availability
         </a>
         
         <!-- Action secondaire : Contact direct -->
-        <a href="contact-us.html" style="display: inline-block; background-color: transparent; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
-            <span style="margin-right: 6px; display: inline-block;">✉️</span>Send a Message
+        <a class="st-2a18ef" href="contact-us.html" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
+            <span class="cta-emoji">✉️</span>Send a Message
         </a>
         
     </div>
 </div>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offer.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">The Offer</a> |
-        <a href="prices.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Prices</a> |
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidarity</a> |
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">About Us</a> |
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Updates</a> |
-        <a href="numbers.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Useful Numbers</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Legal Notices</a> |
-        <a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Site Map</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offer.html">The Offer</a> |
+        <a class="pied-lien-fort" href="prices.html">Services & Prices</a> |
+        <a class="pied-lien-fort" href="solidaires.html">Solidarity</a> |
+        <a class="pied-lien-fort" href="propos.html">About Us</a> |
+        <a class="pied-lien-fort" href="blog.html">Blog & Updates</a> |
+        <a class="pied-lien-fort" href="numbers.html">☎️ Useful Numbers</a> |
+        <a class="pied-lien" href="mentions-legales.html">Legal Notices</a> |
+        <a class="pied-lien" href="plan-du-site.html">Site Map</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> uses cookies to measure the audience of this site with Google Analytics. You can accept or refuse this tracking. To learn more, see our <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Legal Notices</a> (in French).
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuse</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accept all</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});});</script>
 
 </body>
 </html>

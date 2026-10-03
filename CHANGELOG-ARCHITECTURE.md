@@ -131,3 +131,13 @@
 - [ ] Tester formulaire contact après nettoyage GTM
 - [ ] Vérifier slugs d'images après optimisation
 
+---
+
+## 2026-10-03 : consolidation (cookies, styles, i18n, accessibilité)
+
+- `cookies.js` : bandeau cookies injecté (fr/en/de/nl selon `<html lang>`) + GA4 chargé seulement après consentement. Les 37 copies HTML du bandeau et du script ont disparu des pages ; `analytics.js` supprimé.
+- Styles : les blocs `<style>` des pages sont dans `style.css` (règles propres à une page préfixées par `body.page-xxx`), et 114 classes remplacent les `style="..."` répétés (préfixe `html body` pour garder la priorité de l'inline). Vérification par comparaison de captures d'écran avant/après sur les 38 pages.
+- Pages traduites en anglais, allemand et néerlandais (accueil, offre, tarifs, tourisme, contact) avec `hreflang` et sélecteur de langue.
+- Accessibilité : `<main>` sur toutes les pages (y compris culture, détente, escapades, gastronomie, insolite, patrimoine, mentions légales), `aria-label` sur les `<nav>`, `role="contentinfo"` sur les `<footer>`, `aria-current="page"` sur le lien actif.
+- `includes/*.html` et `TEMPLATE-REFERENCE.html` remis à jour ; prompt Gardien et CLAUDE.md mis à jour (38 pages, langues, `cookies.js`, règle de la date du pied de page).
+- Reste à faire : `culture.html`, `insolite.html` et `mentions-legales.html` gardent leur bloc `<style>` ; environ 50 `style="..."` uniques ; le menu, le bandeau et le pied de page restent à recopier à la main dans les 38 pages.

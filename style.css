@@ -88,7 +88,7 @@ main {
 }
 
 /* Bandeau sombre « Une question ou envie de réserver ? » : même largeur que le contenu */
-body > div[style*="#1a202c"] {
+body > .bloc-cta {
     box-sizing: border-box;
     width: calc(100% - 6rem);
     max-width: 1100px;
@@ -202,7 +202,7 @@ footer {
         padding: 0 1.25rem;
     }
 
-    body > div[style*="#1a202c"] {
+    body > .bloc-cta {
         width: calc(100% - 2.5rem);
     }
 
@@ -888,4 +888,2074 @@ header.header-reduit nav {
     color: #0066cc;
     text-decoration: underline;
     font-weight: bold;
+}
+
+/* ===== Bandeau cookies (injecté par cookies.js) ===== */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    background: #1a202c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.cookie-banner p {
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.cookie-banner a {
+    color: #3182ce;
+    text-decoration: underline;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.cookie-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.cookie-btn-refuse {
+    background: transparent;
+    border: 1px solid #718096;
+    color: #a0aec0;
+}
+
+.cookie-btn-accept {
+    background: #3182ce;
+    border: none;
+    color: white;
+}
+
+/* ===== Styles propres à une page (déplacés des blocs <style> ; chaque règle est préfixée par la classe du <body>) ===== */
+/* --- blog.html --- */
+        /* Barre de filtres par thèmes */
+        .page-blog .theme-filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .page-blog .filter-btn {
+            background-color: #ffffff;
+            color: #333333;
+            border: 2px solid #e0e0e0;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .page-blog .filter-btn:hover {
+            border-color: #999;
+            background-color: #f5f5f5;
+        }
+
+        /* États actifs personnalisés pour chaque couleur de thème */
+        .page-blog .filter-btn.active[data-filter="all"] { background-color: #333; color: #fff; border-color: #333; }
+        .page-blog .filter-btn.active[data-filter="gite"] { background-color: #ff9100; color: #fff; border-color: #ff9100; }
+        .page-blog .filter-btn.active[data-filter="local"] { background-color: #0d47a1; color: #fff; border-color: #0d47a1; }
+        .page-blog .filter-btn.active[data-filter="ecolo"] { background-color: #1b5e20; color: #fff; border-color: #1b5e20; }
+
+        /* Conteneur d'articles */
+        .page-blog .blog-grid {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .page-blog .blog-article {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Badges de thèmes */
+        .page-blog .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-right: 0.5rem;
+        }
+        .page-blog .badge-gite { background-color: #fff3e0; color: #e65100; }
+        .page-blog .badge-actu { background-color: #e3f2fd; color: #0d47a1; }
+        .page-blog .badge-ecolo { background-color: #e8f5e9; color: #1b5e20; }
+
+        .page-blog .blog-meta {
+            font-size: 0.85rem;
+            color: #757575;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .page-blog .blog-article h2 { margin: 0.5rem 0; color: #333; }
+        .page-blog .blog-article p { line-height: 1.6; color: #424242; text-align: justify; }
+
+        /* Section Newsletter */
+        .page-blog .newsletter-box {
+            background-color: #f1f8e9;
+            border: 2px dashed #81c784;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .page-blog .newsletter-form { max-width: 500px; margin: 1.5rem auto 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+        .page-blog .newsletter-input { padding: 0.8rem; border: 1px solid #a5d6a7; border-radius: 4px; font-size: 1rem; width: 100%; box-sizing: border-box; }
+        .page-blog .newsletter-btn { background-color: #2e7d32; color: white; border: none; padding: 0.8rem 2rem; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; }
+        .page-blog .newsletter-btn:hover { background-color: #1b5e20; }
+
+/* --- construction.html --- */
+        .page-construction .blog-grid {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .page-construction .blog-article {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .page-construction .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-right: 0.5rem;
+        }
+        .page-construction .badge-gite { background-color: #fff3e0; color: #e65100; }
+
+        .page-construction .blog-meta {
+            font-size: 0.85rem;
+            color: #757575;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .page-construction .blog-article h2 { margin: 0.5rem 0; color: #333; }
+        .page-construction .blog-article p { line-height: 1.6; color: #424242; text-align: justify; }
+
+/* --- detente.html --- */
+body.page-detente {
+            font-family: "Helvetica Neue", Arial, sans-serif !important;
+            font-weight: 400 !important;
+            letter-spacing: -0.01em;
+        }
+
+        .page-detente .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-detente h1 { font-size: 2rem; margin-bottom: 10px; }
+        .page-detente .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* --- STYLE DES CATÉGORIES --- */
+        .page-detente .section-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .page-detente .badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .page-detente .badge-baignade { background-color: #ebf8ff; color: #2b6cb0; }
+        .page-detente .badge-spa { background-color: #faf5ff; color: #553c9a; }
+        .page-detente .badge-ongle { background-color: #fff5f5; color: #9b2c2c; }
+
+        .page-detente .detente-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-detente .detente-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .page-detente .detente-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
+        
+        .page-detente .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 10px;
+            margin: 15px 0 0 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-detente .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .page-detente .btn-map:hover { background-color: #cbd5e0; }
+
+/* --- escapades.html --- */
+        .page-escapades .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-escapades h1 { font-size: 2rem; margin-bottom: 10px; }
+        .page-escapades .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* --- STYLE DES CATÉGORIES --- */
+        .page-escapades .section-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .page-escapades .badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .page-escapades .badge-balade { background-color: #e6fffa; color: #234e52; }
+        .page-escapades .badge-rando { background-color: #ebf8ff; color: #2b6cb0; }
+        .page-escapades .badge-foret { background-color: #f0fff4; color: #22543d; }
+
+        .page-escapades .escapade-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-escapades .escapade-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-escapades .escapade-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
+        
+        .page-escapades .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 10px;
+            margin: 15px 0 0 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-escapades .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .page-escapades .btn-map:hover { background-color: #cbd5e0; }
+    
+        .page-escapades .header-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .page-escapades .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+/* --- gastronomie.html --- */
+        .page-gastronomie .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-gastronomie h1 { font-size: 2rem; margin-bottom: 10px; }
+        .page-gastronomie .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* --- LE STYLE DES CATÉGORIES (CHIADÉ) --- */
+        .page-gastronomie .section-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Badges de couleur pour s'y retrouver */
+        .page-gastronomie .badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .page-gastronomie .badge-fast { background-color: #fed7d7; color: #9b2c2c; }
+        .page-gastronomie .badge-trad { background-color: #feebc8; color: #9c4221; }
+        .page-gastronomie .badge-luxe { background-color: #e2e8f0; color: #2d3748; }
+
+        .page-gastronomie .resto-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-gastronomie .resto-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-gastronomie .resto-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
+        
+        .page-gastronomie .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 10px;
+            margin: 15px 0 0 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-gastronomie .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .page-gastronomie .btn-map:hover { background-color: #cbd5e0; }
+    
+        .page-gastronomie .header-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .page-gastronomie .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+/* --- numbers.html --- */
+        .page-numbers .utility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .page-numbers .utility-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .page-numbers .utility-card h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            border-bottom: 2px solid var(--text-dark, #333);
+            padding-bottom: 0.5rem;
+            color: var(--text-dark, #333);
+        }
+
+        .page-numbers .card-urgences {
+            border: 2px solid #ef9a9a;
+            background-color: #fffde7;
+        }
+        .page-numbers .card-urgences h2 {
+            border-bottom: 2px solid #d32f2f;
+            color: #d32f2f;
+        }
+
+        .page-numbers .phone-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+
+        .page-numbers .phone-list li {
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .page-numbers .phone-label {
+            font-weight: bold;
+            display: block;
+            color: #555;
+        }
+
+        .page-numbers .phone-number {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #2e7d32;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2px;
+        }
+        
+        .page-numbers .card-urgences .phone-number {
+            color: #d32f2f;
+            font-size: 1.3rem;
+        }
+
+        .page-numbers .phone-number:hover {
+            text-decoration: underline;
+        }
+
+        .page-numbers .phone-desc {
+            font-size: 0.85rem;
+            color: #666;
+            display: block;
+            margin-top: 2px;
+        }
+
+/* --- numeros.html --- */
+        .page-numeros .utility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .page-numeros .utility-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .page-numeros .utility-card h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            border-bottom: 2px solid var(--text-dark, #333);
+            padding-bottom: 0.5rem;
+            color: var(--text-dark, #333);
+        }
+
+        /* Style spécifique pour la section Urgences (Rouge) */
+        .page-numeros .card-urgences {
+            border: 2px solid #ef9a9a;
+            background-color: #fffde7; /* Fond légèrement jauni pour attirer l'œil */
+        }
+        .page-numeros .card-urgences h2 {
+            border-bottom: 2px solid #d32f2f;
+            color: #d32f2f;
+        }
+
+        .page-numeros .phone-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+
+        .page-numeros .phone-list li {
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .page-numeros .phone-label {
+            font-weight: bold;
+            display: block;
+            color: #555;
+        }
+
+        .page-numeros .phone-number {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #2e7d32; /* Vert pour inciter au clic */
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2px;
+        }
+        
+        .page-numeros .card-urgences .phone-number {
+            color: #d32f2f; /* Rouge pour les urgences */
+            font-size: 1.3rem;
+        }
+
+        .page-numeros .phone-number:hover {
+            text-decoration: underline;
+        }
+
+        .page-numeros .phone-desc {
+            font-size: 0.85rem;
+            color: #666;
+            display: block;
+            margin-top: 2px;
+        }
+
+/* --- patrimoine.html --- */
+        /* Conteneur principal centré pour les articles de patrimoine */
+        .page-patrimoine .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-patrimoine h1 { 
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .page-patrimoine .intro-text {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Structure type "Numéros utiles" */
+        .page-patrimoine .patrimoine-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-patrimoine .patrimoine-item h2 {
+            margin-top: 0;
+            color: #1a202c;
+            font-size: 1.35rem;
+        }
+        .page-patrimoine .patrimoine-item p {
+            color: #4a5568;
+        }
+        .page-patrimoine .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-patrimoine .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .page-patrimoine .btn-map:hover { background-color: #cbd5e0; }
+    
+        .page-patrimoine .patrimoine-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .page-patrimoine .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+            margin-top: 2px;
+        }
+
+/* --- Widget météo / carburants / qualité de l'air (guides tourisme, toutes langues) --- */
+  .wa-widget { font-family: 'Inter', system-ui, sans-serif; max-width: 900px; margin: 1.5rem auto; }
+  .wa-bandeau {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 0.75rem 1.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem;
+    padding: 1rem 1.5rem; margin-bottom: 0.75rem; box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+  }
+  .wa-date { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+  .wa-jour { font-size: 0.85rem; font-weight: 600; color: #64748b; }
+  .wa-heure { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.15rem; color: #0f172a; }
+  .wa-saint { font-size: 0.82rem; font-weight: 600; color: #f97316; }
+  .wa-air { font-size: 0.85rem; color: #64748b; }
+  .wa-air a { font-weight: 600; color: #047857; text-decoration: none; }
+  .wa-air a:hover { text-decoration: underline; }
+  .wa-grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; }
+  .wa-carte {
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.1rem 1.25rem 1.25rem;
+    box-shadow: 0 1px 2px rgba(15,23,42,0.04); min-height: 100px;
+  }
+  .wa-carte-titre { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin: 0 0 0.55rem; }
+  .wa-carte-forte { font-family: 'Space Grotesk', sans-serif; font-size: 0.98rem; font-weight: 700; margin: 0 0 0.5rem; color: #0f172a; }
+  .wa-carte-contenu { font-size: 0.85rem; color: #64748b; margin: 0; }
+  .wa-liste { list-style: none; margin: 0 0 0.6rem; padding: 0; font-size: 0.85rem; }
+  .wa-liste li { padding: 0.1rem 0; color: #0f172a; }
+  .wa-liste-detail { color: #64748b; font-size: 0.78rem; }
+  .wa-previsions { display: flex; gap: 0.6rem; }
+  .wa-previsions-jour { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; font-size: 0.7rem; color: #64748b; text-transform: capitalize; }
+  .wa-lien { font-size: 0.78rem; font-weight: 700; color: #047857; text-decoration: none; }
+  .wa-lien:hover { text-decoration: underline; }
+  .wa-lien-principal {
+    display: inline-block; margin-top: 0.5rem; background: #047857; color: #fff; font-size: 0.85rem;
+    font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 0.65rem; text-decoration: none;
+  }
+  .wa-lien-principal:hover { background: #036c4d; }
+  .wa-aqi-bon { color: #047857; } .wa-aqi-moyen { color: #f97316; } .wa-aqi-degrade { color: #ea580c; }
+  .wa-aqi-mauvais { color: #dc2626; } .wa-aqi-tres-mauvais { color: #991b1b; }
+
+/* ===== Bandeau cookies (injecté par cookies.js) ===== */
+.cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    background: #1a202c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.cookie-banner p {
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.cookie-banner a {
+    color: #3182ce;
+    text-decoration: underline;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.cookie-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.cookie-btn-refuse {
+    background: transparent;
+    border: 1px solid #718096;
+    color: #a0aec0;
+}
+
+.cookie-btn-accept {
+    background: #3182ce;
+    border: none;
+    color: white;
+}
+
+/* ===== Styles propres à une page (déplacés des blocs <style> ; chaque règle est préfixée par la classe du <body>) ===== */
+/* --- blog.html --- */
+        /* Barre de filtres par thèmes */
+        .page-blog .theme-filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .page-blog .filter-btn {
+            background-color: #ffffff;
+            color: #333333;
+            border: 2px solid #e0e0e0;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .page-blog .filter-btn:hover {
+            border-color: #999;
+            background-color: #f5f5f5;
+        }
+
+        /* États actifs personnalisés pour chaque couleur de thème */
+        .page-blog .filter-btn.active[data-filter="all"] { background-color: #333; color: #fff; border-color: #333; }
+        .page-blog .filter-btn.active[data-filter="gite"] { background-color: #ff9100; color: #fff; border-color: #ff9100; }
+        .page-blog .filter-btn.active[data-filter="local"] { background-color: #0d47a1; color: #fff; border-color: #0d47a1; }
+        .page-blog .filter-btn.active[data-filter="ecolo"] { background-color: #1b5e20; color: #fff; border-color: #1b5e20; }
+
+        /* Conteneur d'articles */
+        .page-blog .blog-grid {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .page-blog .blog-article {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Badges de thèmes */
+        .page-blog .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-right: 0.5rem;
+        }
+        .page-blog .badge-gite { background-color: #fff3e0; color: #e65100; }
+        .page-blog .badge-actu { background-color: #e3f2fd; color: #0d47a1; }
+        .page-blog .badge-ecolo { background-color: #e8f5e9; color: #1b5e20; }
+
+        .page-blog .blog-meta {
+            font-size: 0.85rem;
+            color: #757575;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .page-blog .blog-article h2 { margin: 0.5rem 0; color: #333; }
+        .page-blog .blog-article p { line-height: 1.6; color: #424242; text-align: justify; }
+
+        /* Section Newsletter */
+        .page-blog .newsletter-box {
+            background-color: #f1f8e9;
+            border: 2px dashed #81c784;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .page-blog .newsletter-form { max-width: 500px; margin: 1.5rem auto 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+        .page-blog .newsletter-input { padding: 0.8rem; border: 1px solid #a5d6a7; border-radius: 4px; font-size: 1rem; width: 100%; box-sizing: border-box; }
+        .page-blog .newsletter-btn { background-color: #2e7d32; color: white; border: none; padding: 0.8rem 2rem; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; }
+        .page-blog .newsletter-btn:hover { background-color: #1b5e20; }
+
+/* --- construction.html --- */
+        .page-construction .blog-grid {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .page-construction .blog-article {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .page-construction .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-right: 0.5rem;
+        }
+        .page-construction .badge-gite { background-color: #fff3e0; color: #e65100; }
+
+        .page-construction .blog-meta {
+            font-size: 0.85rem;
+            color: #757575;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .page-construction .blog-article h2 { margin: 0.5rem 0; color: #333; }
+        .page-construction .blog-article p { line-height: 1.6; color: #424242; text-align: justify; }
+
+/* --- detente.html --- */
+body.page-detente {
+            font-family: "Helvetica Neue", Arial, sans-serif !important;
+            font-weight: 400 !important;
+            letter-spacing: -0.01em;
+        }
+
+        .page-detente .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-detente h1 { font-size: 2rem; margin-bottom: 10px; }
+        .page-detente .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* --- STYLE DES CATÉGORIES --- */
+        .page-detente .section-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .page-detente .badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .page-detente .badge-baignade { background-color: #ebf8ff; color: #2b6cb0; }
+        .page-detente .badge-spa { background-color: #faf5ff; color: #553c9a; }
+        .page-detente .badge-ongle { background-color: #fff5f5; color: #9b2c2c; }
+
+        .page-detente .detente-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-detente .detente-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .page-detente .detente-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
+        
+        .page-detente .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 10px;
+            margin: 15px 0 0 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-detente .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .page-detente .btn-map:hover { background-color: #cbd5e0; }
+
+/* --- escapades.html --- */
+        .page-escapades .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-escapades h1 { font-size: 2rem; margin-bottom: 10px; }
+        .page-escapades .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* --- STYLE DES CATÉGORIES --- */
+        .page-escapades .section-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .page-escapades .badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .page-escapades .badge-balade { background-color: #e6fffa; color: #234e52; }
+        .page-escapades .badge-rando { background-color: #ebf8ff; color: #2b6cb0; }
+        .page-escapades .badge-foret { background-color: #f0fff4; color: #22543d; }
+
+        .page-escapades .escapade-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-escapades .escapade-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-escapades .escapade-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
+        
+        .page-escapades .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 10px;
+            margin: 15px 0 0 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-escapades .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .page-escapades .btn-map:hover { background-color: #cbd5e0; }
+    
+        .page-escapades .header-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .page-escapades .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+/* --- gastronomie.html --- */
+        .page-gastronomie .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-gastronomie h1 { font-size: 2rem; margin-bottom: 10px; }
+        .page-gastronomie .intro-text { color: #666; font-size: 1.1rem; margin-bottom: 40px; }
+
+        /* --- LE STYLE DES CATÉGORIES (CHIADÉ) --- */
+        .page-gastronomie .section-title {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #cbd5e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Badges de couleur pour s'y retrouver */
+        .page-gastronomie .badge {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .page-gastronomie .badge-fast { background-color: #fed7d7; color: #9b2c2c; }
+        .page-gastronomie .badge-trad { background-color: #feebc8; color: #9c4221; }
+        .page-gastronomie .badge-luxe { background-color: #e2e8f0; color: #2d3748; }
+
+        .page-gastronomie .resto-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-gastronomie .resto-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .page-gastronomie .resto-item h3 { margin: 0; font-size: 1.25rem; color: #1a202c; }
+        
+        .page-gastronomie .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 10px;
+            margin: 15px 0 0 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-gastronomie .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .page-gastronomie .btn-map:hover { background-color: #cbd5e0; }
+    
+        .page-gastronomie .header-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .page-gastronomie .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+/* --- numbers.html --- */
+        .page-numbers .utility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .page-numbers .utility-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .page-numbers .utility-card h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            border-bottom: 2px solid var(--text-dark, #333);
+            padding-bottom: 0.5rem;
+            color: var(--text-dark, #333);
+        }
+
+        .page-numbers .card-urgences {
+            border: 2px solid #ef9a9a;
+            background-color: #fffde7;
+        }
+        .page-numbers .card-urgences h2 {
+            border-bottom: 2px solid #d32f2f;
+            color: #d32f2f;
+        }
+
+        .page-numbers .phone-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+
+        .page-numbers .phone-list li {
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .page-numbers .phone-label {
+            font-weight: bold;
+            display: block;
+            color: #555;
+        }
+
+        .page-numbers .phone-number {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #2e7d32;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2px;
+        }
+        
+        .page-numbers .card-urgences .phone-number {
+            color: #d32f2f;
+            font-size: 1.3rem;
+        }
+
+        .page-numbers .phone-number:hover {
+            text-decoration: underline;
+        }
+
+        .page-numbers .phone-desc {
+            font-size: 0.85rem;
+            color: #666;
+            display: block;
+            margin-top: 2px;
+        }
+
+/* --- numeros.html --- */
+        .page-numeros .utility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .page-numeros .utility-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .page-numeros .utility-card h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            border-bottom: 2px solid var(--text-dark, #333);
+            padding-bottom: 0.5rem;
+            color: var(--text-dark, #333);
+        }
+
+        /* Style spécifique pour la section Urgences (Rouge) */
+        .page-numeros .card-urgences {
+            border: 2px solid #ef9a9a;
+            background-color: #fffde7; /* Fond légèrement jauni pour attirer l'œil */
+        }
+        .page-numeros .card-urgences h2 {
+            border-bottom: 2px solid #d32f2f;
+            color: #d32f2f;
+        }
+
+        .page-numeros .phone-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+
+        .page-numeros .phone-list li {
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .page-numeros .phone-label {
+            font-weight: bold;
+            display: block;
+            color: #555;
+        }
+
+        .page-numeros .phone-number {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #2e7d32; /* Vert pour inciter au clic */
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2px;
+        }
+        
+        .page-numeros .card-urgences .phone-number {
+            color: #d32f2f; /* Rouge pour les urgences */
+            font-size: 1.3rem;
+        }
+
+        .page-numeros .phone-number:hover {
+            text-decoration: underline;
+        }
+
+        .page-numeros .phone-desc {
+            font-size: 0.85rem;
+            color: #666;
+            display: block;
+            margin-top: 2px;
+        }
+
+/* --- patrimoine.html --- */
+        /* Conteneur principal centré pour les articles de patrimoine */
+        .page-patrimoine .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-patrimoine h1 { 
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .page-patrimoine .intro-text {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Structure type "Numéros utiles" */
+        .page-patrimoine .patrimoine-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .page-patrimoine .patrimoine-item h2 {
+            margin-top: 0;
+            color: #1a202c;
+            font-size: 1.35rem;
+        }
+        .page-patrimoine .patrimoine-item p {
+            color: #4a5568;
+        }
+        .page-patrimoine .meta-info {
+            background-color: #f7fafc;
+            border-left: 3px solid #cbd5e0;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+        
+        .page-patrimoine .btn-map {
+            display: inline-block;
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .page-patrimoine .btn-map:hover { background-color: #cbd5e0; }
+    
+        .page-patrimoine .patrimoine-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .page-patrimoine .distance-chip {
+            display: inline-block;
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            white-space: nowrap;
+            margin-top: 2px;
+        }
+
+/* --- Widget météo / carburants / qualité de l'air (guides tourisme, toutes langues) --- */
+  .wa-widget { font-family: 'Inter', system-ui, sans-serif; max-width: 900px; margin: 1.5rem auto; }
+  .wa-bandeau {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 0.75rem 1.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem;
+    padding: 1rem 1.5rem; margin-bottom: 0.75rem; box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+  }
+  .wa-date { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+  .wa-jour { font-size: 0.85rem; font-weight: 600; color: #64748b; }
+  .wa-heure { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.15rem; color: #0f172a; }
+  .wa-saint { font-size: 0.82rem; font-weight: 600; color: #f97316; }
+  .wa-air { font-size: 0.85rem; color: #64748b; }
+  .wa-air a { font-weight: 600; color: #047857; text-decoration: none; }
+  .wa-air a:hover { text-decoration: underline; }
+  .wa-grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; }
+  .wa-carte {
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.1rem 1.25rem 1.25rem;
+    box-shadow: 0 1px 2px rgba(15,23,42,0.04); min-height: 100px;
+  }
+  .wa-carte-titre { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin: 0 0 0.55rem; }
+  .wa-carte-forte { font-family: 'Space Grotesk', sans-serif; font-size: 0.98rem; font-weight: 700; margin: 0 0 0.5rem; color: #0f172a; }
+  .wa-carte-contenu { font-size: 0.85rem; color: #64748b; margin: 0; }
+  .wa-liste { list-style: none; margin: 0 0 0.6rem; padding: 0; font-size: 0.85rem; }
+  .wa-liste li { padding: 0.1rem 0; color: #0f172a; }
+  .wa-liste-detail { color: #64748b; font-size: 0.78rem; }
+  .wa-previsions { display: flex; gap: 0.6rem; }
+  .wa-previsions-jour { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; font-size: 0.7rem; color: #64748b; text-transform: capitalize; }
+  .wa-lien { font-size: 0.78rem; font-weight: 700; color: #047857; text-decoration: none; }
+  .wa-lien:hover { text-decoration: underline; }
+  .wa-lien-principal {
+    display: inline-block; margin-top: 0.5rem; background: #047857; color: #fff; font-size: 0.85rem;
+    font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 0.65rem; text-decoration: none;
+  }
+  .wa-lien-principal:hover { background: #036c4d; }
+  .wa-aqi-bon { color: #047857; } .wa-aqi-moyen { color: #f97316; } .wa-aqi-degrade { color: #ea580c; }
+  .wa-aqi-mauvais { color: #dc2626; } .wa-aqi-tres-mauvais { color: #991b1b; }
+
+/* ===== Classes issues de la migration des styles inline (noms st-xxxxxx = générés) =====
+   Le préfixe « html body » leur donne la priorité qu'avait le style inline sur les règles génériques. */
+html body .bandeau-chantier {
+    background-color: #e6f7ff;
+    color: #0050b3;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #91d5ff;
+    line-height: 1.6;
+}
+html body .lien-fort {
+    font-weight: bold;
+    color: #0066cc;
+}
+html body .logo-img {
+    height: 220px;
+    width: auto;
+}
+html body .lang-switch-liste {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+html body .lang-lien {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+}
+html body .drapeau {
+    width: 20px;
+    height: auto;
+}
+html body .lang-lien-actif {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+html body .lien-souligne {
+    color: #0066cc;
+    text-decoration: underline;
+}
+html body .st-1d47b8 {
+    font-size: 0.9rem;
+    color: #666666;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-left: 3px solid #0066cc;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+html body .st-0ae359 {
+    margin-top: 4rem;
+    padding: 2rem 2.5rem;
+    background-color: #f4f9f4;
+    border-radius: 12px;
+    border: 1px solid #dceee0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+html body .st-1af657 {
+    margin: 0 0 0.5rem 0;
+    color: #2f5233;
+    font-size: 1.3rem;
+}
+html body .st-37deb9 {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    max-width: 500px;
+    line-height: 1.5;
+}
+html body .st-0ca503 {
+    white-space: nowrap;
+}
+html body .bloc-cta {
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    background-color: #1a202c;
+    color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+html body .cta-titre {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+html body .st-31ac01 {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #a0aec0;
+    max-width: 500px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.5;
+}
+html body .cta-actions {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+html body .st-fb0e55 {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1a202c;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border: 2px solid #ffffff;
+    transition: 0.2s;
+}
+html body .cta-emoji {
+    margin-right: 6px;
+    display: inline-block;
+}
+html body .st-2a18ef {
+    display: inline-block;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border: 2px solid #ffffff;
+    transition: 0.2s;
+}
+html body .pied-site {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid #eaeaea;
+    width: 100%;
+    box-sizing: border-box;
+}
+html body .pied-liens {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+html body .pied-lien-fort {
+    color: #666;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+html body .pied-lien {
+    color: #666;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+}
+html body .pied-copyright {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0;
+}
+html body .st-60c528 {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+html body .st-514e09 {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+html body .st-ff4352 {
+    max-width: 1700px;
+    margin: 25px auto;
+    padding: 0;
+    text-align: center;
+    display: block;
+}
+html body .st-c6869a {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+html body .st-09e547 {
+    font-size: 0.9em;
+    color: #555555;
+    text-align: center;
+    font-style: italic;
+    display: block;
+    margin-top: 12px;
+    clear: both;
+}
+html body .st-f54451 {
+    display: inline-table;
+    width: 45%;
+    vertical-align: middle;
+    margin: 0 2% 10px 2%;
+}
+html body .st-6b56e7 {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+html body .st-3dd629 {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+html body .st-c27b1c {
+    font-size: 0.9em;
+    color: #555555;
+    text-align: center;
+    font-style: italic;
+    display: block;
+    margin-top: 8px;
+}
+html body .st-cf7c3d {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 0;
+    text-align: center;
+    display: block;
+}
+html body .st-17ca42 {
+    width: 50%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+html body .st-2406b6 {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+html body .st-90e996 {
+    max-width: 1700px;
+    margin: 25px auto;
+    text-align: center;
+    display: block;
+}
+html body .st-23293d {
+    font-family: Arial, sans-serif !important;
+    font-size: 0.85rem !important;
+    color: #555555 !important;
+    font-style: italic !important;
+    display: block !important;
+    text-align: center !important;
+    margin-top: 8px !important;
+}
+html body .st-37d173 {
+    max-width: 600px;
+    margin: 25px auto;
+    text-align: center;
+    display: block;
+}
+html body .st-7c1ea6 {
+    width: 33.33%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+html body .st-028462 {
+    width: 25%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+}
+html body .st-224b51 {
+    display: none;
+}
+html body .st-d2a412 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+html body .st-fa415b {
+    font-size: 1.5rem;
+}
+html body .st-8df377 {
+    background-color: #fff5f5;
+    border-left: 4px solid #e53e3e;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+html body .st-8487c8 {
+    margin: 0;
+    color: #c53030;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+html body .st-990c7a {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+    text-align: center;
+}
+html body .st-b2faf9 {
+    color: #2f5233;
+    font-size: 1.2rem;
+}
+html body .st-9ee9c3 {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+html body .st-7bb8b7 {
+    background-color: #eafaf0;
+    color: #1a5c34;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #b7e4c7;
+    line-height: 1.6;
+}
+html body .st-db10f9 {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #f4f9f4;
+    border-radius: 12px;
+    border: 1px solid #dceee0;
+}
+html body .st-185d79 {
+    margin-top: 1.5rem;
+}
+html body .st-988849 {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+html body .st-ba385e {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #dceee0;
+}
+html body .st-5d8916 {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #777;
+}
+html body .st-9eb35e {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2f5233;
+}
+html body .st-6901e5 {
+    font-size: 0.85rem;
+    color: #666666;
+    background-color: #ffffff;
+    padding: 10px;
+    border-left: 3px solid #2f5233;
+    margin-bottom: 1.5rem;
+}
+html body .st-424cce {
+    font-weight: bold;
+}
+html body .st-92ff10 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+html body .st-3f1d65 {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+html body .champ-formulaire {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+html body .champ-label {
+    font-weight: bold;
+    color: var(--text-dark);
+}
+html body .champ-saisie {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+html body .st-c0297c {
+    padding: 1.5rem;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+html body .st-60e6af {
+    margin-top: 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+html body .st-a7d376 {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+html body .st-93f05b {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+html body .st-6e47c6 {
+    font-size: 0.95rem;
+}
+html body .st-f7c132 {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+}
+html body .st-eeb133 {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+}
+html body .st-b20633 {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+html body .st-f9db53 {
+    background-color: var(--text-dark, #333);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s;
+}
+html body .st-d72e70 {
+    background-color: #fffaf0;
+    border-left: 4px solid #dd6b20;
+    color: #dd6b20;
+    padding: 15px;
+    margin: 20px auto 0 auto;
+    max-width: 800px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html body .st-28026b {
+    margin: 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+html body .st-d1094a {
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+    color: #718096;
+}
+html body .st-b7ecfe {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px 24px;
+    margin: 40px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+html body .st-a7f5c1 {
+    font-size: 1.4rem;
+}
+html body .st-8ea199 {
+    flex: 1;
+    min-width: 200px;
+}
+html body .st-4eef26 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #718096;
+}
+html body .st-4c9da9 {
+    color: #2b6cb0;
+    font-weight: bold;
+}
+html body .st-acd3d4 {
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+    padding: 0 20px;
+}
+html body .st-bad75b {
+    margin-top: 40px;
+}
+html body .st-d7e739 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+html body .st-798142 {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 40px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+html body .st-811716 {
+    font-size: 1.6rem;
+}
+html body .st-622ba7 {
+    margin: 0 0 4px;
+    font-weight: bold;
+    color: #2d3748;
+}
+html body .st-9551b6 {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+html body .st-47d849 {
+    display: inline-block;
+    background-color: #e2e8f0;
+    color: #2d3748;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+html body .st-f7571c {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+html body .st-6757e9 {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+html body .bandeau-chantier-court {
+    background-color: #e6f7ff;
+    color: #0050b3;
+    text-align: center;
+    padding: 12px;
+    font-weight: 500;
+    border-bottom: 1px solid #91d5ff;
+}
+html body .lien-souligne-fort {
+    color: #0066cc;
+    text-decoration: underline;
+    font-weight: bold;
+}
+html body .st-0d3d7d {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+html body .st-166693 {
+    color: #666;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+html body .st-eb7aa2 {
+    color: #666;
+    text-decoration: none;
+    white-space: nowrap;
+}
+html body .fig-bloc {
+    margin: 15px 0;
+    max-width: 100%;
+}
+html body .fig-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 300px;
+}
+html body .fig-legende {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+html body .lien-vert {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+html body .st-0a951b {
+    color: #888888;
+    display: block;
+    margin-top: 2px;
+}
+html body .st-5f906d {
+    max-width: 800px;
+    margin: 30px auto 0 auto;
+    background-color: #f4f9ff;
+    border-left: 4px solid #3182ce;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+html body .st-4fe485 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #2d3748;
+    line-height: 1.5;
+}
+html body .st-5d1e65 {
+    color: #3182ce;
+    font-weight: bold;
+    text-decoration: underline;
+}
+html body .st-af8cb6 {
+    color: #0066cc;
+    font-weight: 500;
+    text-decoration: underline;
+}
+html body .st-01ca1b {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+html body .st-b35b5f {
+    margin: 0 0 18px 0;
+    font-size: 1.05rem;
+    color: #2d3748;
+    line-height: 1.5;
+}
+html body .astuce-guide {
+    margin-top: 25px;
+    text-align: center;
 }

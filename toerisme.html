@@ -2,8 +2,8 @@
 <html lang="nl">
 <head>
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -31,16 +31,16 @@
 </head>
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #91d5ff; line-height: 1.6;">
+<div class="bandeau-chantier">
     🚧 <strong>Project in uitvoering:</strong> De gîte is momenteel in aanbouw 🚧<br>
-    📸 Volg de vorderingen op onze <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> (in het Frans)!<br>
+    📸 Volg de vorderingen op onze <a class="lien-fort" href="blog.html">blog</a> (in het Frans)!<br>
     📅 <strong>Opening in 2027:</strong> vanaf begin 2027 te huur als <strong>flexibele gemeubileerde verhuur</strong>, en vóór de zomer ook voor <strong>toeristische verblijven</strong>.<br>
-    🗺️ Ontdek nu al onze <a href="toerisme.html" style="font-weight: bold; color: #0066cc;">lokale gidsen en activiteiten</a>.
+    🗺️ Ontdek nu al onze <a class="lien-fort" href="toerisme.html">lokale gidsen en activiteiten</a>.
 </div>
 
     <header>
         <nav aria-label="Hoofdmenu">
-            <div class="logo"><img src="photos/general/logo2.png" alt="Logo van Le Relais de Chaumeré: ons huis met een hunebed en een appel erboven" style="height: 220px; width: auto;"></div>
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="Logo van Le Relais de Chaumeré: ons huis met een hunebed en een appel erboven"></div>
             <ul>
                 <li><a href="nederlands.html">Home</a></li>
                 <li><a href="aanbod.html">De studio</a></li>
@@ -49,11 +49,11 @@
                 <li><a href="numbers.html">Handige nummers</a></li>
                 <li><a href="neem-contact-op.html">Contact</a></li>
                 <li><a href="blog.html">Blog & nieuws</a></li>
-<li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="tourisme.html" hreflang="fr" lang="fr" title="Français" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="tourism.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="tourismus.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="toerisme.html" hreflang="nl" lang="nl" title="Nederlands" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+<li class="lang-switch lang-switch-liste">
+    <a class="lang-lien" href="tourisme.html" hreflang="fr" lang="fr" title="Français"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="tourism.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="tourismus.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien-actif" href="toerisme.html" hreflang="nl" lang="nl" title="Nederlands" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -66,11 +66,11 @@
         <section class="page-title">
             <h1>Ontdek de regio vanuit uw studio in Chaumeré (Domagné)</h1>
 			
-			<figure style="margin: 15px 0; max-width: 100%;">
+			<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/general/saint-medard-chaumere-XVIIe.webp" type="image/webp">
-                <img src="photos/general/saint-medard-chaumere-XVIIe.jpg" alt="De Saint-Médard-kerk uit de 17e eeuw in Chaumeré, op 50 m van de gîte" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/general/saint-medard-chaumere-XVIIe.jpg" alt="De Saint-Médard-kerk uit de 17e eeuw in Chaumeré, op 50 m van de gîte" loading="lazy" 
+        >
             </picture>
 
 </figure>
@@ -82,43 +82,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<style>
-  .wa-widget { font-family: 'Inter', system-ui, sans-serif; max-width: 900px; margin: 1.5rem auto; }
-  .wa-bandeau {
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-    gap: 0.75rem 1.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem;
-    padding: 1rem 1.5rem; margin-bottom: 0.75rem; box-shadow: 0 1px 2px rgba(15,23,42,0.04);
-  }
-  .wa-date { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
-  .wa-jour { font-size: 0.85rem; font-weight: 600; color: #64748b; }
-  .wa-heure { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.15rem; color: #0f172a; }
-  .wa-saint { font-size: 0.82rem; font-weight: 600; color: #f97316; }
-  .wa-air { font-size: 0.85rem; color: #64748b; }
-  .wa-air a { font-weight: 600; color: #047857; text-decoration: none; }
-  .wa-air a:hover { text-decoration: underline; }
-  .wa-grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; }
-  .wa-carte {
-    background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.1rem 1.25rem 1.25rem;
-    box-shadow: 0 1px 2px rgba(15,23,42,0.04); min-height: 100px;
-  }
-  .wa-carte-titre { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin: 0 0 0.55rem; }
-  .wa-carte-forte { font-family: 'Space Grotesk', sans-serif; font-size: 0.98rem; font-weight: 700; margin: 0 0 0.5rem; color: #0f172a; }
-  .wa-carte-contenu { font-size: 0.85rem; color: #64748b; margin: 0; }
-  .wa-liste { list-style: none; margin: 0 0 0.6rem; padding: 0; font-size: 0.85rem; }
-  .wa-liste li { padding: 0.1rem 0; color: #0f172a; }
-  .wa-liste-detail { color: #64748b; font-size: 0.78rem; }
-  .wa-previsions { display: flex; gap: 0.6rem; }
-  .wa-previsions-jour { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; font-size: 0.7rem; color: #64748b; text-transform: capitalize; }
-  .wa-lien { font-size: 0.78rem; font-weight: 700; color: #047857; text-decoration: none; }
-  .wa-lien:hover { text-decoration: underline; }
-  .wa-lien-principal {
-    display: inline-block; margin-top: 0.5rem; background: #047857; color: #fff; font-size: 0.85rem;
-    font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 0.65rem; text-decoration: none;
-  }
-  .wa-lien-principal:hover { background: #036c4d; }
-  .wa-aqi-bon { color: #047857; } .wa-aqi-moyen { color: #f97316; } .wa-aqi-degrade { color: #ea580c; }
-  .wa-aqi-mauvais { color: #dc2626; } .wa-aqi-tres-mauvais { color: #991b1b; }
-</style>
 
 <div class="wa-widget">
   <div class="wa-bandeau">
@@ -233,13 +196,13 @@
         
         <h4><a href="https://www.google.com/maps/search/?api=1&query=Vitre+35500" target="_blank" rel="noopener">Vitré (23 min. rijden)</a></h4>
 		
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le-chateau-de-vitre.webp" type="image/webp">
-                <img src="photos/tourisme/le-chateau-de-vitre.jpg" alt="Hoofdingang van het middeleeuwse kasteel van Vitré in de zon" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le-chateau-de-vitre.jpg" alt="Hoofdingang van het middeleeuwse kasteel van Vitré in de zon" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Het majestueuze kasteel van Vitré</figcaption>
+    <figcaption class="fig-legende">Het majestueuze kasteel van Vitré</figcaption>
 </figure>
         <p>Een van de mooiste middeleeuwse steden van Bretagne: een burcht uit de 11e eeuw, geplaveide steegjes en vakwerkhuizen.</p>
 		
@@ -247,25 +210,25 @@
 
 
         <h4><a href="https://www.google.com/maps/search/?api=1&query=Chateaugiron+35410" target="_blank" rel="noopener">Châteaugiron</a> (10 min. rijden)</h4>
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/rue-de-la-madeleine-chateaugiron.webp" type="image/webp">
-                <img src="photos/tourisme/rue-de-la-madeleine-chateaugiron.jpg" alt="Rue de la Madeleine, de beroemdste straat van Châteaugiron" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/rue-de-la-madeleine-chateaugiron.jpg" alt="Rue de la Madeleine, de beroemdste straat van Châteaugiron" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">De Rue de la Madeleine in Châteaugiron</figcaption>
+    <figcaption class="fig-legende">De Rue de la Madeleine in Châteaugiron</figcaption>
 </figure>
         <p>Een stralende wachter van de Marches de Bretagne: deze voormalige antiekstad toont een indrukwekkend middeleeuws kasteel. De majestueuze donjon en de verdedigingstorens vertellen eeuwen geschiedenis, in het hart van een charmante „Petite Cité de Caractère”.</p>
 		
 
 		
 		<h4>🏛️🎨🍽️ <a href="https://www.google.com/maps/search/?api=1&query=Parc+ar+milin+Chateaubourg&query_place_id=ChIJKcfSuT3VDkgRukqzXcVHuFs" target="_blank" rel="noopener"> Parc Ar Milin' </a>(Châteaubourg)</h4>
-		<figure style="margin: 15px 0; max-width: 100%;">
+		<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/hotel-ar-milin-chateaubourg.webp" type="image/webp">
-                <img src="photos/tourisme/hotel-ar-milin-chateaubourg.jpg" alt="Zicht op de tuin van Ar-Milin met de molen op de achtergrond" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/hotel-ar-milin-chateaubourg.jpg" alt="Zicht op de tuin van Ar-Milin met de molen op de achtergrond" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Ar-Milin en zijn tuin</figcaption>
+    <figcaption class="fig-legende">Ar-Milin en zijn tuin</figcaption>
 </figure>
 
 <p>Rond een authentieke molen uit de 17e eeuw combineert dit historische park erfgoed en monumentale beelden. In deze setting vindt u een <a href="https://www.armilin.com" target="_blank">driesterrenhotel</a>, een gastronomisch restaurant en een trendy bistro. De perfecte combinatie om te wandelen en te genieten!</p>
@@ -273,12 +236,12 @@
 
 
 	<h4>🏰⚔️🛡️ <a href="https://www.google.com/maps/search/?api=1&query=Chateau+de+Fougeres&query_place_id=ChIJwWvS4HcoC0gRoE0gD6tWBA8" target="_blank" rel="noopener"> Het kasteel van Fougères </a></h4>
-<figure style="margin: 15px 0; max-width: 100%;">
+<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le-chateau-de-fougeres.webp" type="image/webp">
-                <img src="photos/tourisme/le-chateau-de-fougeres.jpg" alt="Het majestueuze kasteel van Fougères" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le-chateau-de-fougeres.jpg" alt="Het majestueuze kasteel van Fougères" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">De grootste vesting van Europa</figcaption>
+    <figcaption class="fig-legende">De grootste vesting van Europa</figcaption>
 </figure>
 
 <p>Bezoek <a href="https://chateau-fougeres.com/" target="_blank">de grootste middeleeuwse vesting van Europa</a>! Deze granieten reus met zijn elf torens torent trots uit boven een stad vol karakter met geplaveide steegjes en vakwerkhuizen en geeft een grandioos beeld van de geschiedenis van de Marches de Bretagne.</P>
@@ -286,18 +249,18 @@
 
 
 	<h4>🏰✍️🌿 <a href="https://www.google.com/maps/search/?api=1&query=Chateau+des+Rochers+Sevigne&query_place_id=ChIJZZJxFfcnCUgRXd5ybfvk3Hk" target="_blank" rel="noopener"> Het kasteel van Madame de Sévigné </a></h4>
-<figure style="margin: 15px 0; max-width: 100%;">
+<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/chateau-mme-de-sévigné.webp" type="image/webp">
-                <img src="photos/tourisme/chateau-mme-de-sévigné.jpg" alt="Luchtfoto van het kasteel van Madame de Sévigné" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/chateau-mme-de-sévigné.jpg" alt="Luchtfoto van het kasteel van Madame de Sévigné" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Het kasteel en zijn tuin</figcaption>
+    <figcaption class="fig-legende">Het kasteel en zijn tuin</figcaption>
 </figure>
 <p>Wandel in de voetsporen van de beroemde briefschrijfster! Dit <a href="https://www.bretagne-vitre.com/patrimoine-culturel/chateau-des-rochers-sevigne/" target="_blank">gotische landhuis uit de 15e eeuw</a>, omgeven door een prachtige Franse tuin ontworpen door Le Nôtre, was de favoriete schrijfplek van Madame de Sévigné.</P>
 
 
 
-<p style="margin-top: 25px; text-align: center;">💡 <em>Wilt u meer weten over de <strong>geschiedenis en het erfgoed van de streek</strong> en alle details van dit onderdeel? Lees dan onze <a href="patrimoine.html" style="font-weight: bold; color: #0066cc;">gids met historische plekken binnen 15 km</a> (in het Frans)!</em></p> 
+<p class="astuce-guide">💡 <em>Wilt u meer weten over de <strong>geschiedenis en het erfgoed van de streek</strong> en alle details van dit onderdeel? Lees dan onze <a class="lien-fort" href="patrimoine.html">gids met historische plekken binnen 15 km</a> (in het Frans)!</em></p> 
 	
 	</article>
 
@@ -307,24 +270,24 @@
         <h4>🍔🏆🍷 <a href="https://www.google.com/maps/search/?api=1&query=Cella+Osse&query_place_id=ChIJp3WNkp8pD0gRn89zG49WGqg" target="_blank" rel="noopener"> Cella (Ossé) </a></h4>
         <p>Dit <a href="https://www.cella-bistrot.fr/" target="_blank">sfeervolle dorpsbistro</a> staat voor gezelligheid en samen delen. De chef-kok, uitgeroepen tot een van de kampioenen van de Franse Burgerbeker, serveert huisgemaakte, seizoensgebonden en onweerstaanbaar lekkere gerechten.</p>
 		
-		<figure style="margin: 15px 0; max-width: 100%;">
+		<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le-cella-osse.webp" type="image/webp">
-                <img src="photos/tourisme/le-cella-osse.jpg" alt="Een van de vele originele, verfijnde burgers op de kaart" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le-cella-osse.jpg" alt="Een van de vele originele, verfijnde burgers op de kaart" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Een originele kaart</figcaption>
+    <figcaption class="fig-legende">Een originele kaart</figcaption>
 </figure>
         
         <h4>🪗<a href="https://www.google.com/maps/search/?api=1&query=La+Java+Bleue+Amanlis" target="_blank" rel="noopener">La Java Bleue (8 min. rijden)</a></h4>
 		
-		<figure style="margin: 15px 0; max-width: 100%;">
+		<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/la-java-bleue-amanlis.webp" type="image/webp">
-                <img src="photos/tourisme/la-java-bleue-amanlis.jpg" alt="Een tafel en stoelen op het terras van La Java Bleue in Amanlis" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/la-java-bleue-amanlis.jpg" alt="Een tafel en stoelen op het terras van La Java Bleue in Amanlis" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Een rustige en zeer goed beoordeelde plek</figcaption>
+    <figcaption class="fig-legende">Een rustige en zeer goed beoordeelde plek</figcaption>
 </figure>
         <p>Een <a href="https://fr-fr.facebook.com/LaJavaBleueRestaurant/" target="_blank">bijzondere guinguette</a> in Amanlis: restaurant en rommelmarkt aan het water, met een tijdloze vintage sfeer en gezellige streekkeuken.</p>
 		
@@ -342,12 +305,12 @@
 		
     
 		<h4>🧺<a href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+La+Guerche+de+Bretagne" target="_blank" rel="noopener">De markt van La Guerche-de-Bretagne (21 min. rijden)</a></h4>
-		<figure style="margin: 15px 0; max-width: 100%;">
+		<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/marche-de-la-guerche.webp" type="image/webp">
-                <img src="photos/tourisme/marche-de-la-guerche.jpg" alt="Marktstraat in La Guerche-de-Bretagne" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/marche-de-la-guerche.jpg" alt="Marktstraat in La Guerche-de-Bretagne" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">De markt</figcaption>
+    <figcaption class="fig-legende">De markt</figcaption>
 </figure>
 
         <p>Sinds 1121 is de dinsdagochtendmarkt in <a href="https://www.laguerchedebretagne.fr/" target="_blank">La Guerche-de-Bretagne</a> een onmisbare instelling. Ze behoort tot de grootste van Ille-et-Vilaine en brengt inwoners van meer dan 40 gemeenten samen. Met de nadruk op korte ketens zet dit gezellige evenement de lokale producenten in de schijnwerpers en geeft het de lokale handel in de hele regio een impuls. Op zaterdagochtend is er een „lichte” versie.</p>
@@ -359,19 +322,19 @@
 <!-- SOUS THEME  ------------------------------------------------------------------------------- -->
 		
 	<h4>🍔🍺 <a href="https://www.google.com/maps/search/?api=1&query=Aupres+de+ma+Blonde+Chateaugiron&query_place_id=ChIJvbXefhcpD0gRf3hOruUIcGg" target="_blank" rel="noopener"> Auprès de ma Blonde (12 min. rijden) </a></h4>
-<figure style="margin: 15px 0; max-width: 100%;">
+<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/aupres-de-ma-blonde-chateaugiron.webp" type="image/webp">
-                <img src="photos/tourisme/aupres-de-ma-blonde-chateaugiron.jpg" alt="De hoofdzaal en de bar van Auprès de Ma Blonde in Châteaugiron" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/aupres-de-ma-blonde-chateaugiron.jpg" alt="De hoofdzaal en de bar van Auprès de Ma Blonde in Châteaugiron" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">De hoofdzaal en de bar</figcaption>
+    <figcaption class="fig-legende">De hoofdzaal en de bar</figcaption>
 </figure>
 <p>Deze <a href="https://www.aupresdemablonde.com/" target="_blank">gezellige brasserie</a> in Châteaugiron bestaat sinds 2015. Ze serveert royale burgers en frisse biertjes in een originele omgeving. De perfecte plek voor een lekkere pauze.</p>
 
 				
 
-<p style="margin-top: 25px; text-align: center;">💡 <em>Wilt u meer weten over <strong>plekken om te eten</strong>? Lees dan onze <a href="gastronomie.html" style="font-weight: bold; color: #0066cc;">gids met eetgelegenheden binnen 15 km</a> (in het Frans)!</em></p> 
+<p class="astuce-guide">💡 <em>Wilt u meer weten over <strong>plekken om te eten</strong>? Lees dan onze <a class="lien-fort" href="gastronomie.html">gids met eetgelegenheden binnen 15 km</a> (in het Frans)!</em></p> 
 	</article>
 	
 
@@ -385,12 +348,12 @@
         <h4>👟<a href="https://www.google.com/maps/search/?api=1&query=Rennes+Centre" target="_blank" rel="noopener">Rennes (35 min. rijden)</a></h4>
         <p>De Bretonse hoofdstad binnen handbereik, met het <a href="https://www.tourisme-rennes.com/sortir/parlement-de-bretagne/" target="_blank">Parlement van Bretagne</a>, het historische centrum, terrassen en de levendige Rue de la Soif.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/Rennes-republique.webp" type="image/webp">
-                <img src="photos/tourisme/Rennes-republique.jpg" alt="Het hoofdpostkantoor van Rennes aan de Place de la République" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/Rennes-republique.jpg" alt="Het hoofdpostkantoor van Rennes aan de Place de la République" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Het oude postkantoor in het centrum</figcaption>
+    <figcaption class="fig-legende">Het oude postkantoor in het centrum</figcaption>
 </figure>
 
 <!-- SOUS THEME  ------------------------------------------------------------------------------- -->
@@ -400,12 +363,12 @@
 
         <p>Je hebt nauwelijks tijd om je koffie in de TGV op te drinken en daar staat de Eiffeltoren al. Parijs wordt een verre buitenwijk van Rennes!</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/tour-eiffel-paris.webp" type="image/webp">
-                <img src="photos/tourisme/tour-eiffel-paris.jpg" alt="De Eiffeltoren gezien vanaf de Seine" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/tour-eiffel-paris.jpg" alt="De Eiffeltoren gezien vanaf de Seine" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Parijs ligt maar 1 u 20 min. van Rennes!</figcaption>
+    <figcaption class="fig-legende">Parijs ligt maar 1 u 20 min. van Rennes!</figcaption>
 </figure>
 
 <!-- SOUS THEME  ------------------------------------------------------------------------------- -->
@@ -414,13 +377,13 @@
 	
 	<p>Vlieg naar Europa! Van Londen tot Marseille verbindt deze <a href="https://www.rennes.aeroport.fr/" target="_blank">luchthaven op menselijke schaal</a> u snel met talrijke bestemmingen, zonder de stress van grote terminals, met Air France, KLM, Lufthansa, easyJet, Volotea, Transavia, Air Corsica en Aer Lingus.</p>
 	
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/Rennes-aeroport.webp" type="image/webp">
-                <img src="photos/tourisme/Rennes-aeroport.jpg" alt="Op het platform voor de luchthaven van Rennes" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/Rennes-aeroport.jpg" alt="Op het platform voor de luchthaven van Rennes" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Rennes is verbonden met Europa</figcaption>
+    <figcaption class="fig-legende">Rennes is verbonden met Europa</figcaption>
 </figure>
 
 <!-- SOUS THEME  ------------------------------------------------------------------------------- -->
@@ -429,17 +392,17 @@
 <h4>🌳✨ <a href="https://www.google.com/maps/search/?api=1&query=Foret+de+Broceliande+Paimpont&query_place_id=ChIJlXRYs-qsD0gRsi6-GOiDyM0" target="_blank" rel="noopener"> Woud van Brocéliande (55 min. rijden) </a></h4>
 <p>Een land vol magie en mysteries: in <a href="https://www.tourismebretagne.com/destinations/les-10-destinations/destination-broceliande/la-foret-de-broceliande/" target="_blank">dit legendarische woud</a> wonen Merlijn en Viviane. Een ideale natuurlijke omgeving voor een verkwikkende wandeling vol verhalen.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/forêt-de-brocéliande.webp" type="image/webp">
-                <img src="photos/tourisme/forêt-de-brocéliande.jpg" alt="Een eeuwenoude eik in het woud van Brocéliande" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/forêt-de-brocéliande.jpg" alt="Een eeuwenoude eik in het woud van Brocéliande" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Een land van legenden</figcaption>
+    <figcaption class="fig-legende">Een land van legenden</figcaption>
 </figure>
 
 <!-- FIN THEME  ------------------------------------------------------------------------------- -->
 
-<p style="margin-top: 25px; text-align: center;">💡 <em>Wilt u meer weten over <strong>uitstapjes</strong>? Lees dan onze <a href="escapades.html" style="font-weight: bold; color: #0066cc;">gids met uitstapjes binnen 15 km</a> (in het Frans)!</em></p> 
+<p class="astuce-guide">💡 <em>Wilt u meer weten over <strong>uitstapjes</strong>? Lees dan onze <a class="lien-fort" href="escapades.html">gids met uitstapjes binnen 15 km</a> (in het Frans)!</em></p> 
 	</article>
 	
 <!-- THEME ---------------VIREES SUR L EAU---------------------------------------------------------------- -->
@@ -452,12 +415,12 @@
         <h4>🦪<a href="https://www.google.com/maps/search/?api=1&query=Saint+Malo" target="_blank" rel="noopener">St-Malo en Cancale (1 u 10 min.)</a></h4>
         <p>Perfect voor een dagtocht: een wandeling over de stadsmuren van de kaperstad, frisse lucht op het strand van Le Sillon en oesters proeven in de haven.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/cancale-et-son-port.webp" type="image/webp">
-                <img src="photos/tourisme/cancale-et-son-port.jpg" alt="Op de weg naar Cancale, met uitzicht over de hele stad" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/cancale-et-son-port.jpg" alt="Op de weg naar Cancale, met uitzicht over de hele stad" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Op de weg bij aankomst in Cancale</figcaption>
+    <figcaption class="fig-legende">Op de weg bij aankomst in Cancale</figcaption>
 </figure>
 
 <!-- SOUS THEME VIREE SUR L EAU ---------------Mt St Michel---------------------------------------------------------------- -->
@@ -465,52 +428,52 @@
         <h4>🏰<a href="https://www.google.com/maps/search/?api=1&query=Mont+Saint+Michel" target="_blank" rel="noopener">Mont-St-Michel (1 u 10 min.)</a></h4>
         <p>Een wereldwonder van het Westen in het hart van de baai: een majestueuze <a href="https://www.abbaye-mont-saint-michel.fr/abbaye" target="_blank">abdij</a> op haar rots, een tijdloos middeleeuws dorp en het unieke schouwspel van de hoogste getijden van Europa. Na de Eiffeltoren is het het meest bezochte monument van Frankrijk.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/mont-st-michel.webp" type="image/webp">
-                <img src="photos/tourisme/mont-st-michel.jpg" alt="De Mont-Saint-Michel in zijn geheel" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/mont-st-michel.jpg" alt="De Mont-Saint-Michel in zijn geheel" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Het achtste wereldwonder</figcaption>
+    <figcaption class="fig-legende">Het achtste wereldwonder</figcaption>
 </figure>
 
 <!-- SOUS THEME VIREE SUR L EAU ---------------GOLFE---------------------------------------------------------------- -->   
    <h4>🏝️⛵ <a href="https://www.google.com/maps/search/?api=1&query=Golfe+du+Morbihan&query_place_id=ChIJg8LGS60EEEgRrLfXKyZFHNQ" target="_blank" rel="noopener"> De Golf van Morbihan </a></h4>
 <p>Een echte binnenzee bezaaid met paradijselijke eilanden. Met zijn microklimaat, boottochten en oesterproeverijen is de <a href="https://morbihan.com/offres/office-de-tourisme-golfe-du-morbihan-vannes-tourisme-vannes-fr-4400242/" target="_blank">Golf</a> een concentraat van het Bretonse goede leven.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le-golfe-du-morbihan.webp" type="image/webp">
-                <img src="photos/tourisme/le-golfe-du-morbihan.jpg" alt="Luchtfoto van de ingang van de Golf van Morbihan" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le-golfe-du-morbihan.jpg" alt="Luchtfoto van de ingang van de Golf van Morbihan" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">De ingang van de Golf</figcaption>
+    <figcaption class="fig-legende">De ingang van de Golf</figcaption>
 </figure>
 
 <!-- SOUS THEME VIREE SUR L EAU ---------------CANTACHE---------------------------------------------------------------- -->
 <h4>🦆 <a href="https://www.google.com/maps/search/?api=1&query=Plan+d+Eau+de+la+Cantache&query_place_id=ChIJNxMmPVkpCUgR_dkKSeKMyKQ" target="_blank" rel="noopener"> Plan d'Eau de la Cantache (27 min. rijden) </a></h4>
         <p>Een <a href="https://www.ille-et-vilaine-tourisme.bzh/partez-a-la-decouverte-de-lille-et-vilaine/nature-et-detente/espaces-naturels-et-sauvages/lac-de-la-cantache-poce-les-bois-fr-2725240/" target="_blank">immens meer</a> midden op het platteland bij Vitré. Ideaal voor een verkwikkende wandeling, om vogels te kijken of kennis te maken met watersport.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/cantache.webp" type="image/webp">
-                <img src="photos/tourisme/cantache.jpg" alt="Het meer van Cantache" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/cantache.jpg" alt="Het meer van Cantache" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Het meer</figcaption>
+    <figcaption class="fig-legende">Het meer</figcaption>
 </figure>
 
 <!-- SOUS THEME VIREE SUR L EAU ---------------VERN---------------------------------------------------------------- -->
 <h4>🛶 <a href="https://www.google.com/maps/search/?api=1&query=Espace+naturel+de+la+vallee+de+la+seiche+Vern+sur+Seiche&query_place_id=ChIJPejlt_AhD0gR0tNV8EYmZFo" target="_blank" rel="noopener"> Recreatiegebied van Vern (19 min. rijden) </a></h4>
         <p>Niet ver van Chaumeré komt dit <a href="https://www.vernsurseiche.fr/accueil/cadre-de-vie/environnement/espace-naturels" target="_blank">groene recreatiegebied</a> bij mooi weer tot leven. Met kanoën en kajakken, bewaakt zwemmen en barbecues is het de onmisbare zomerontmoetingsplek voor gezinnen.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/base-de-vern.webp" type="image/webp">
-                <img src="photos/tourisme/base-de-vern.jpg" alt="Het strand aan de Seiche" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/base-de-vern.jpg" alt="Het strand aan de Seiche" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Het strand aan de Seiche</figcaption>
+    <figcaption class="fig-legende">Het strand aan de Seiche</figcaption>
 </figure>
 
-<p style="margin-top: 25px; text-align: center;">💅 <em>Zin om te ontspannen? Van verborgen zandstranden tot uitzonderlijke spa's en schoonheidsbehandelingen ter plaatse: ontdek onze gids <a href="detente.html" style="font-weight: bold; color: #0066cc;">Ontspanning & wellness rond de gîte</a> (in het Frans)!</em></p>
+<p class="astuce-guide">💅 <em>Zin om te ontspannen? Van verborgen zandstranden tot uitzonderlijke spa's en schoonheidsbehandelingen ter plaatse: ontdek onze gids <a class="lien-fort" href="detente.html">Ontspanning & wellness rond de gîte</a> (in het Frans)!</em></p>
 
    </article>
    
@@ -526,12 +489,12 @@
         <h4>🍷<a href="https://www.google.com/maps/search/?api=1&query=Le+Bacchus+Rennes&query_place_id=ChIJwWvBv7ptCkgR_YOUR_PLACE_ID_FALLBACK" target="_blank" rel="noopener">Le Bacchus (Rennes)</a></h4>
         <p>In het hart van Rennes is <a href="https://www.le-bacchus.com/" target="_blank">Le Bacchus</a> een uniek, gezellig cafétheater. Het combineert komedies, comedyshows en heerlijk eten voor een geslaagde culturele avond.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le bacchus.webp" type="image/webp">
-                <img src="photos/tourisme/le bacchus.jpg" alt="Het cafétheater Le Bacchus" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le bacchus.jpg" alt="Het cafétheater Le Bacchus" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Le Bacchus</figcaption>
+    <figcaption class="fig-legende">Le Bacchus</figcaption>
 </figure>
 
 <!-- SOUS THEME CULTURE ---------------ZEPHYR---------------------------------------------------------------- -->     
@@ -539,12 +502,12 @@
         <h4>🎤<a href="https://www.google.com/maps/search/?api=1&query=Le+Zephyr+Chateaugiron&query_place_id=ChIJV_1oN8xsCkgRp8N_H-C07qE" target="_blank" rel="noopener">Le Zéphyr (10 min. rijden)</a></h4>
         <p>De zaal <a href="https://www.salle-lezephyr.fr/" target="_blank">Le Zéphyr</a> in Châteaugiron is een dynamische culturele ruimte. Ze biedt een gevarieerd programma met concerten, toneelstukken en boeiende shows.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/zéphyr-chateaugiron.webp" type="image/webp">
-                <img src="photos/tourisme/zéphyr-chateaugiron.jpg" alt="De zaal Le Zéphyr in Châteaugiron tijdens een conferentie" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/zéphyr-chateaugiron.jpg" alt="De zaal Le Zéphyr in Châteaugiron tijdens een conferentie" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">De zaal biedt plaats aan 1.000 mensen</figcaption>
+    <figcaption class="fig-legende">De zaal biedt plaats aan 1.000 mensen</figcaption>
 </figure>
 		
 <!-- SOUS THEME CULTURE ---------------MOUSTACHE---------------------------------------------------------------- -->    
@@ -552,12 +515,12 @@
 	<h4>💃🎩 <a href="https://www.google.com/maps/search/?api=1&query=Cabaret+Moustache+Nouvoitou&query_place_id=ChIJUdIDqsgnD0gR-DY62v5zIQg" target="_blank" rel="noopener"> Het Cabaret Moustache (Nouvoitou – 11 min. rijden) </a></h4>
 <p>Op een steenworp afstand van Chaumeré biedt <a href="https://www.cabaret-moustache.fr/" target="_blank">Cabaret Moustache</a> een uniek music-halluniversum met veren, acrobatiek, zang en gastronomische maaltijden voor een onvergetelijk glitterende avond... midden op het platteland!</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/Moustache-nouvoitou.webp" type="image/webp">
-                <img src="photos/tourisme/Moustache-nouvoitou.jpg" alt="Een show van Cabaret Moustache met danseressen in kostuums met ruches en Bretonse hoofdtooi" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/Moustache-nouvoitou.jpg" alt="Een show van Cabaret Moustache met danseressen in kostuums met ruches en Bretonse hoofdtooi" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Regelmatig staat er een nieuwe show op het programma</figcaption>
+    <figcaption class="fig-legende">Regelmatig staat er een nieuwe show op het programma</figcaption>
 </figure>
 	
 
@@ -566,13 +529,13 @@
 	<h4>🎨 <a href="https://www.google.com/maps/search/?api=1&query=Les+3+CHA+Chateaugiron&query_place_id=ChIJG6FvC2soD0gRXRx9hW1keIM" target="_blank" rel="noopener"> Les 3 CHA (Châteaugiron) </a></h4>
 <p>In de kapel van het kasteel vindt u dit <a href="https://www.les3cha.fr/" target="_blank">unieke kunstcentrum</a> met monumentale hedendaagse tentoonstellingen. Een magische dialoog tussen middeleeuws erfgoed en moderne creatie.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/les-3CHA-chateaugiron.webp" type="image/webp">
-                <img src="photos/tourisme/les-3CHA-chateaugiron.jpg" alt="De tentoonstellingsruimte van de 3 CHA in de voormalige kapel van het kasteel van Châteaugiron" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/les-3CHA-chateaugiron.jpg" alt="De tentoonstellingsruimte van de 3 CHA in de voormalige kapel van het kasteel van Châteaugiron" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">De kapel van de 3 CHA</figcaption>
+    <figcaption class="fig-legende">De kapel van de 3 CHA</figcaption>
 </figure>
 
 <!-- SOUS THEME CULTURE ---------------ARTOTHEQUE---------------------------------------------------------------- -->
@@ -581,16 +544,16 @@
 
 <p>Een <a href="https://www.vitrecommunaute.org/lartotheque-de-vitre/" target="_blank">dynamische culturele ruimte</a> gewijd aan de beeldende kunsten. Ontdek gevarieerde tentoonstellingen van prenten en hedendaagse fotografie in het culturele hart van Vitré.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/artothèque-du-Quai-des-arts-Vitré.webp" type="image/webp">
-                <img src="photos/tourisme/artothèque-du-Quai-des-arts-Vitré.jpg" alt="Zaal van de artotheek Quai des arts in Vitré" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/artothèque-du-Quai-des-arts-Vitré.jpg" alt="Zaal van de artotheek Quai des arts in Vitré" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">De artotheek van de Quai des arts in Vitré</figcaption>
+    <figcaption class="fig-legende">De artotheek van de Quai des arts in Vitré</figcaption>
 </figure>
 
-<p style="margin-top: 25px; text-align: center;">🎭 <em>Zin in een uitstapje? Buurtbioscopen, culturele centra en kunsttentoonstellingen: ontdek onze gids <a href="culture.html" style="font-weight: bold; color: #0066cc;">Cultuur & amusement rond Domagné</a> (in het Frans)!</em></p>
+<p class="astuce-guide">🎭 <em>Zin in een uitstapje? Buurtbioscopen, culturele centra en kunsttentoonstellingen: ontdek onze gids <a class="lien-fort" href="culture.html">Cultuur & amusement rond Domagné</a> (in het Frans)!</em></p>
 
 
 
@@ -608,25 +571,25 @@
 		<h4>🔎🏰<a href="https://www.google.com/maps/search/?api=1&query=Un+Monde+de+Miniatures+Domagne&query_place_id=ChIJ81lW5PptCkgRp_tXq0vGscM" target="_blank" rel="noopener">De wandelroute Henri Chesnais (8 min. rijden)</a></h4>
         <p>In Domagné wacht een <a href="https://www.bretagne-vitre.com/les-pepites/les-miniatures-de-domagne/" target="_blank">wereld van miniaturen</a> op u. Dit unieke en originele park onthult een fascinerende miniatuurwereld. Een bijzonder bezoek, ideaal voor gezinnen, om opvallend nauwkeurige reproducties te bewonderen die tijdens zijn pensioen zijn gemaakt door een boer uit het dorp.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/prommenade-henri-chesnais.webp" type="image/webp">
-                <img src="photos/tourisme/prommenade-henri-chesnais.jpg" alt="Zicht op de wandelroute met een miniatuur op de voorgrond" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/prommenade-henri-chesnais.jpg" alt="Zicht op de wandelroute met een miniatuur op de voorgrond" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Talloze miniaturen om te ontdekken</figcaption>
+    <figcaption class="fig-legende">Talloze miniaturen om te ontdekken</figcaption>
 </figure>
 
 <!-- SOUS THEME INSOLITE ---------------ROCHE AUX FEES---------------------------------------------------------------- -->        
         <h4>🪨✨<a href="https://www.google.com/maps/search/?api=1&query=La+Roche+aux+Fees+Esse&query_place_id=ChIJm2V7p_ptCkgR65n6f85XbEE" target="_blank" rel="noopener"> La Roche-aux-Fées (16 min. rijden) </a></h4>
         <p>Dit <a href="https://tourisme.rafcom.bzh/sejourner/que-faire/patrimoine-culturel/la-roche-aux-feesest" target="_blank">legendarische hunebed</a> in Essé, het grootste van Frankrijk, is een magische en mysterieuze plek, perfect voor een wandeling door sprookjes, legenden en Keltische geschiedenis.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/roches-aux-fées.webp" type="image/webp">
-                <img src="photos/tourisme/roches-aux-fées.jpg" alt="Vanuit het hunebed" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/roches-aux-fées.jpg" alt="Vanuit het hunebed" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Het beroemde hunebed</figcaption>
+    <figcaption class="fig-legende">Het beroemde hunebed</figcaption>
 </figure>
 		
 <!-- SOUS THEME INSOLITE ---------------PORTE DES SECRETS---------------------------------------------------------------- -->
@@ -634,13 +597,13 @@
 	<h4>🌀<a href="https://www.google.com/maps/search/?api=1&query=Broceliande+La+Porte+des+Secrets+Paimpont&query_place_id=ChIJvb3jlKmtD0gRavDo42vHVr0" target="_blank" rel="noopener"> Brocéliande, de Poort der Geheimen (55 min. rijden) </a></h4>
 <p>Laat Brocéliande aan u vertellen via een <a href="https://www.broceliande-laportedessecrets.com/" target="_blank">unieke zintuiglijke ervaring</a>. Deze immersieve scenografische bioscoop prikkelt uw zintuigen en wekt de geesten van het magische woud.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/porte-des-secrets.webp" type="image/webp">
-                <img src="photos/tourisme/porte-des-secrets.jpg" alt="Een van de immersieve zalen van de Porte des Secrets" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/porte-des-secrets.jpg" alt="Een van de immersieve zalen van de Porte des Secrets" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Een interessante route</figcaption>
+    <figcaption class="fig-legende">Een interessante route</figcaption>
 </figure>
 
 <!-- SOUS THEME INSOLITE ---------------JARDIN CORNILLE---------------------------------------------------------------- -->
@@ -648,13 +611,13 @@
 	<h4>🖋️<a href="https://www.google.com/maps/search/?api=1&query=Jardin+du+Bois-Cornille+Val-d+Ize" target="_blank" rel="noopener"> De tuin van Bois-Cornillé (Val-d'Izé) </a></h4>
 <p>Een belangrijke halte op de <strong>Route door het land van Madame de Sévigné</strong>: in deze tuin in Val-d'Izé ontdekt u het rijke historische erfgoed van het heggenlandschap rond Vitré. De echte woning van de markiezin, het kasteel Les Rochers-Sévigné, ligt op ongeveer 15 km afstand, vlak bij Vitré (zie hierboven).</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/jardin-bois-cornillé.webp" type="image/webp">
-                <img src="photos/tourisme/jardin-bois-cornillé.jpg" alt="Vanuit het park een vijver met het kasteel op de achtergrond" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/jardin-bois-cornillé.jpg" alt="Vanuit het park een vijver met het kasteel op de achtergrond" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">Een opmerkelijke tuin</figcaption>
+    <figcaption class="fig-legende">Een opmerkelijke tuin</figcaption>
 </figure>
 
 <!-- SOUS THEME CULTURE ---------------St Sulpice---------------------------------------------------------------- -->
@@ -663,16 +626,16 @@
 
 <p>Verscholen aan de rand van het bos verbergt deze <a href="https://www.eglise-saint-sulpice-des-landes.fr" target="_blank"> mysterieuze middeleeuwse kerk</a> op wonderbaarlijke wijze bewaarde fresco's uit de 15e eeuw. Een geheime tijdcapsule, te bezoeken op afspraak of bij uitzonderlijke openstellingen.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/St-sulpice-des-landes.webp" type="image/webp">
-                <img src="photos/tourisme/St-sulpice-des-landes.jpg" alt="Luchtfoto van de middeleeuwse kerk" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/St-sulpice-des-landes.jpg" alt="Luchtfoto van de middeleeuwse kerk" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">De kerk van Saint-Sulpice-des-Landes</figcaption>
+    <figcaption class="fig-legende">De kerk van Saint-Sulpice-des-Landes</figcaption>
 </figure>
 
-<p style="margin-top: 25px; text-align: center;">✨ <em>Zin om de gebaande paden te verlaten? Geheime speurtochten, feeënhunebedden en monumentale kunst: ontdek onze gids <a href="insolite.html" style="font-weight: bold; color: #0066cc;">Bijzonder & unieke ervaringen rond Domagné</a> (in het Frans)!</em></p>
+<p class="astuce-guide">✨ <em>Zin om de gebaande paden te verlaten? Geheime speurtochten, feeënhunebedden en monumentale kunst: ontdek onze gids <a class="lien-fort" href="insolite.html">Bijzonder & unieke ervaringen rond Domagné</a> (in het Frans)!</em></p>
 
 
 	</article>
@@ -683,31 +646,19 @@
 
     </main>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="aanbod.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Het aanbod</a> |
-        <a href="prijzen.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Diensten & tarieven</a> |
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidariteit</a> |
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Over ons</a> |
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & nieuws</a> |
-        <a href="numbers.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Handige nummers</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Juridische informatie</a> |
-        <a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Sitemap</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="aanbod.html">Het aanbod</a> |
+        <a class="pied-lien-fort" href="prijzen.html">Diensten & tarieven</a> |
+        <a class="pied-lien-fort" href="solidaires.html">Solidariteit</a> |
+        <a class="pied-lien-fort" href="propos.html">Over ons</a> |
+        <a class="pied-lien-fort" href="blog.html">Blog & nieuws</a> |
+        <a class="pied-lien-fort" href="numbers.html">☎️ Handige nummers</a> |
+        <a class="pied-lien" href="mentions-legales.html">Juridische informatie</a> |
+        <a class="pied-lien" href="plan-du-site.html">Sitemap</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 3 oktober 2026 - Alle rechten voorbehouden.<br>Website gemaakt door <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 3 oktober 2026 - Alle rechten voorbehouden.<br>Website gemaakt door <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> gebruikt cookies om het bezoek aan deze website te meten met Google Analytics. U kunt deze tracking accepteren of weigeren. Meer informatie vindt u in onze <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">juridische informatie</a> (in het Frans).
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Weigeren</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Alles accepteren</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});});</script>
 
 </body>
 </html>

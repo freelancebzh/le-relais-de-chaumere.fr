@@ -1,9 +1,10 @@
 <!-- ========================================
-     COMPOSANT HEAD - Meta tags + Analytics
+     COMPOSANT HEAD - Meta tags + bandeau cookies / Google Analytics
+     (référence à copier : ce fichier n'est PAS inclus automatiquement)
      ======================================== -->
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) : voir cookies.js -->
+<script src="cookies.js" defer></script>
 
 <meta charset="UTF-8">
 <meta name="robots" content="index, follow">
@@ -24,7 +25,10 @@
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- Hreflang multilingue -->
-<link rel="alternate" hreflang="fr" href="https://www.le-relais-de-chaumere.fr/[à adapter]">
-<link rel="alternate" hreflang="en" href="https://www.le-relais-de-chaumere.fr/english.html">
-<link rel="alternate" hreflang="x-default" href="https://www.le-relais-de-chaumere.fr/[à adapter]">
+<!-- Hreflang : à garder pour les 5 pages traduites (accueil, offre, tarifs, tourisme, contact) ;
+     une page sans traduction n'en a pas besoin. Exemple pour offre.html : -->
+<link rel="alternate" hreflang="fr" href="https://www.le-relais-de-chaumere.fr/offre.html">
+<link rel="alternate" hreflang="en" href="https://www.le-relais-de-chaumere.fr/offer.html">
+<link rel="alternate" hreflang="de" href="https://www.le-relais-de-chaumere.fr/angebot.html">
+<link rel="alternate" hreflang="nl" href="https://www.le-relais-de-chaumere.fr/aanbod.html">
+<link rel="alternate" hreflang="x-default" href="https://www.le-relais-de-chaumere.fr/offre.html">

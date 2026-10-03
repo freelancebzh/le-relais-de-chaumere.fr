@@ -3,8 +3,8 @@
 <head>
 
 
-<!-- Google Analytics 4 (GA4) : chargé après consentement cookies -->
-<script src="analytics.js" defer></script>
+<!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
+<script src="cookies.js" defer></script>
 
 
     <meta charset="UTF-8">
@@ -37,29 +37,29 @@
 
 <body>
 
-<div style="background-color: #e6f7ff; color: #0050b3; text-align: center; padding: 15px; font-weight: 500; border-bottom: 1px solid #91d5ff; line-height: 1.6;">
+<div class="bandeau-chantier">
     🚧 <strong>Projet en cours :</strong> Le gîte est actuellement en construction 🚧<br>
-    📸 Suivez son avancement sur notre <a href="blog.html" style="font-weight: bold; color: #0066cc;">blog</a> !<br>
+    📸 Suivez son avancement sur notre <a class="lien-fort" href="blog.html">blog</a> !<br>
     📅 <strong>Ouverture en 2027 :</strong> Accessible en <strong>location meublée flexible</strong> début 2027 puis en <strong>séjour touristique</strong> d'ici l'été.<br>
-    🗺️ Découvrez déjà les <a href="tourisme.html" style="font-weight: bold; color: #0066cc;">guides et activités locales</a>.
+    🗺️ Découvrez déjà les <a class="lien-fort" href="tourisme.html">guides et activités locales</a>.
 </div>
 
     <header>
-        <nav>
-            <div class="logo"><img src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus" style="height: 220px; width: auto;"></div>
+        <nav aria-label="Navigation principale">
+            <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offre.html">L'Offre</a></li>
                 <li><a href="tarifs.html">Services & Tarifs</a></li>
-                <li><a href="tourisme.html" class="active">Tourisme</a></li>
+                <li><a href="tourisme.html" class="active" aria-current="page">Tourisme</a></li>
                 <li><a href="propos.html">À Propos</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="blog.html">Blog & Actu</a></li>
-                <li class="lang-switch" style="display: flex; align-items: center; gap: 10px;">
-    <a href="tourisme.html" hreflang="fr" lang="fr" title="Français" aria-current="true" style="display: flex; align-items: center; gap: 4px; text-decoration: none; font-weight: bold;"><img src="https://flagcdn.com/w20/fr.png" alt="" style="width: 20px; height: auto;" loading="lazy"> FR</a>
-    <a href="tourism.html" hreflang="en" lang="en" title="English" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/gb.png" alt="" style="width: 20px; height: auto;" loading="lazy"> EN</a>
-    <a href="tourismus.html" hreflang="de" lang="de" title="Deutsch" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/de.png" alt="" style="width: 20px; height: auto;" loading="lazy"> DE</a>
-    <a href="toerisme.html" hreflang="nl" lang="nl" title="Nederlands" style="display: flex; align-items: center; gap: 4px; text-decoration: none;"><img src="https://flagcdn.com/w20/nl.png" alt="" style="width: 20px; height: auto;" loading="lazy"> NL</a>
+                <li class="lang-switch lang-switch-liste">
+    <a class="lang-lien-actif" href="tourisme.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
+    <a class="lang-lien" href="tourism.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
+    <a class="lang-lien" href="tourismus.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
+    <a class="lang-lien" href="toerisme.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
 </li>
             </ul>
         </nav>
@@ -71,11 +71,11 @@
         <section class="page-title">
             <h1>Découvrir la région depuis votre studio à Chaumeré (Domagné)</h1>
 			
-			<figure style="margin: 15px 0; max-width: 100%;">
+			<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/general/saint-medard-chaumere-XVIIe.webp" type="image/webp">
-                <img src="photos/general/saint-medard-chaumere-XVIIe.jpg" alt="l'église St Médard de Chaumeré à 50 m du gîte" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/general/saint-medard-chaumere-XVIIe.jpg" alt="l'église St Médard de Chaumeré à 50 m du gîte" loading="lazy" 
+        >
             </picture>
 
 </figure>
@@ -87,43 +87,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<style>
-  .wa-widget { font-family: 'Inter', system-ui, sans-serif; max-width: 900px; margin: 1.5rem auto; }
-  .wa-bandeau {
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-    gap: 0.75rem 1.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem;
-    padding: 1rem 1.5rem; margin-bottom: 0.75rem; box-shadow: 0 1px 2px rgba(15,23,42,0.04);
-  }
-  .wa-date { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
-  .wa-jour { font-size: 0.85rem; font-weight: 600; color: #64748b; }
-  .wa-heure { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.15rem; color: #0f172a; }
-  .wa-saint { font-size: 0.82rem; font-weight: 600; color: #f97316; }
-  .wa-air { font-size: 0.85rem; color: #64748b; }
-  .wa-air a { font-weight: 600; color: #047857; text-decoration: none; }
-  .wa-air a:hover { text-decoration: underline; }
-  .wa-grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; }
-  .wa-carte {
-    background: #fff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.1rem 1.25rem 1.25rem;
-    box-shadow: 0 1px 2px rgba(15,23,42,0.04); min-height: 100px;
-  }
-  .wa-carte-titre { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; margin: 0 0 0.55rem; }
-  .wa-carte-forte { font-family: 'Space Grotesk', sans-serif; font-size: 0.98rem; font-weight: 700; margin: 0 0 0.5rem; color: #0f172a; }
-  .wa-carte-contenu { font-size: 0.85rem; color: #64748b; margin: 0; }
-  .wa-liste { list-style: none; margin: 0 0 0.6rem; padding: 0; font-size: 0.85rem; }
-  .wa-liste li { padding: 0.1rem 0; color: #0f172a; }
-  .wa-liste-detail { color: #64748b; font-size: 0.78rem; }
-  .wa-previsions { display: flex; gap: 0.6rem; }
-  .wa-previsions-jour { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; font-size: 0.7rem; color: #64748b; text-transform: capitalize; }
-  .wa-lien { font-size: 0.78rem; font-weight: 700; color: #047857; text-decoration: none; }
-  .wa-lien:hover { text-decoration: underline; }
-  .wa-lien-principal {
-    display: inline-block; margin-top: 0.5rem; background: #047857; color: #fff; font-size: 0.85rem;
-    font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 0.65rem; text-decoration: none;
-  }
-  .wa-lien-principal:hover { background: #036c4d; }
-  .wa-aqi-bon { color: #047857; } .wa-aqi-moyen { color: #f97316; } .wa-aqi-degrade { color: #ea580c; }
-  .wa-aqi-mauvais { color: #dc2626; } .wa-aqi-tres-mauvais { color: #991b1b; }
-</style>
 
 <div class="wa-widget">
   <div class="wa-bandeau">
@@ -244,13 +207,13 @@
         
         <h4><a href="https://www.google.com/maps/search/?api=1&query=Vitre+35500" target="_blank" rel="noopener">Vitré (à 23 min)</a></h4>
 		
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le-chateau-de-vitre.webp" type="image/webp">
-                <img src="photos/tourisme/le-chateau-de-vitre.jpg" alt="Vue de l'entrée principale du Château médiéval de Vitré sous le soleil" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le-chateau-de-vitre.jpg" alt="Vue de l'entrée principale du Château médiéval de Vitré sous le soleil" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Le majestueux Château de Vitré
     </figcaption>
 </figure>
@@ -260,12 +223,12 @@
 
 
         <h4><a href="https://www.google.com/maps/search/?api=1&query=Chateaugiron+35410" target="_blank" rel="noopener">Châteaugiron</a> (à 10 min)</h4>
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/rue-de-la-madeleine-chateaugiron.webp" type="image/webp">
-                <img src="photos/tourisme/rue-de-la-madeleine-chateaugiron.jpg" alt="rue de la madeleine à châteaugiron qui est sa rue emblématique" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/rue-de-la-madeleine-chateaugiron.jpg" alt="rue de la madeleine à châteaugiron qui est sa rue emblématique" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         La Rue de la Madeleine à Châteaugiron
     </figcaption>
 </figure>
@@ -276,13 +239,13 @@
 		<h4>🏛️🎨🍽️
     <a href="https://www.google.com/maps/search/?api=1&query=Parc+ar+milin+Chateaubourg&query_place_id=ChIJKcfSuT3VDkgRukqzXcVHuFs" target="_blank" rel="noopener">
         Parc Ar Milin' </a>(Châteaubourg)</h4>
-		<figure style="margin: 15px 0; max-width: 100%;">
+		<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/hotel-ar-milin-chateaubourg.webp" type="image/webp">
-                <img src="photos/tourisme/hotel-ar-milin-chateaubourg.jpg" alt="vue du jardin d'ar-milin avec au fond le moulin" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/hotel-ar-milin-chateaubourg.jpg" alt="vue du jardin d'ar-milin avec au fond le moulin" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Ar-Milin et son jardin
     </figcaption>
 </figure>
@@ -295,12 +258,12 @@
     <a href="https://www.google.com/maps/search/?api=1&query=Chateau+de+Fougeres&query_place_id=ChIJwWvS4HcoC0gRoE0gD6tWBA8" target="_blank" rel="noopener">
         Le Château de Fougères
     </a></h4>
-<figure style="margin: 15px 0; max-width: 100%;">
+<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le-chateau-de-fougeres.webp" type="image/webp">
-                <img src="photos/tourisme/le-chateau-de-fougeres.jpg" alt="le majestueux château de Fougères" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le-chateau-de-fougeres.jpg" alt="le majestueux château de Fougères" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         La plus grande forteresse d'Europe
     </figcaption>
 </figure>
@@ -314,12 +277,12 @@
         Le Château de Madame de Sévigné
     </a>
 </h4>
-<figure style="margin: 15px 0; max-width: 100%;">
+<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/chateau-mme-de-sévigné.webp" type="image/webp">
-                <img src="photos/tourisme/chateau-mme-de-sévigné.jpg" alt="le château de Madame de Sévigné vu par avion" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/chateau-mme-de-sévigné.jpg" alt="le château de Madame de Sévigné vu par avion" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Le Chateau et son jardin
     </figcaption>
 </figure>
@@ -327,8 +290,8 @@
 
 
 
-<p style="margin-top: 25px; text-align: center;">
-    💡 <em>Si vous voulez en savoir plus sur l'<strong>Histoire et le patrimoine du coin</strong> et tous les détails de cette section, consultez notre <a href="patrimoine.html" style="font-weight: bold; color: #0066cc;">guide des lieux historiques à faire à moins de 15 km</a> !</em>
+<p class="astuce-guide">
+    💡 <em>Si vous voulez en savoir plus sur l'<strong>Histoire et le patrimoine du coin</strong> et tous les détails de cette section, consultez notre <a class="lien-fort" href="patrimoine.html">guide des lieux historiques à faire à moins de 15 km</a> !</em>
 </p> 
 	
 	</article>
@@ -343,26 +306,26 @@
 </h4>
         <p>Ce <a href="https://www.cella-bistrot.fr/" target="_blank">charmant bistrot de village</a> cultive la convivialité et le goût du partage. Sacré parmi les champions de la Coupe de France du Burger, la Cheffe régale avec une cuisine maison, de saison et d'une gourmandise absolue.</p>
 		
-		<figure style="margin: 15px 0; max-width: 100%;">
+		<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le-cella-osse.webp" type="image/webp">
-                <img src="photos/tourisme/le-cella-osse.jpg" alt="l'une des nombreux hamburger de la carte qui cultive originalité et rafinement" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le-cella-osse.jpg" alt="l'une des nombreux hamburger de la carte qui cultive originalité et rafinement" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         une carte originale
     </figcaption>
 </figure>
         
         <h4>🪗<a href="https://www.google.com/maps/search/?api=1&query=La+Java+Bleue+Amanlis" target="_blank" rel="noopener">La Java Bleue (à 8 min)</a></h4>
 		
-		<figure style="margin: 15px 0; max-width: 100%;">
+		<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/la-java-bleue-amanlis.webp" type="image/webp">
-                <img src="photos/tourisme/la-java-bleue-amanlis.jpg" alt="depuis la terrasse de la java bleue d'amanlis une table et des chaises" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/la-java-bleue-amanlis.jpg" alt="depuis la terrasse de la java bleue d'amanlis une table et des chaises" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Une endroit calme très bien quoté
     </figcaption>
 </figure>
@@ -382,12 +345,12 @@
 		
     
 		<h4>🧺<a href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+La+Guerche+de+Bretagne" target="_blank" rel="noopener">le marché de La Guerche-de-Bretagne (à 21 min)</a></h4>
-		<figure style="margin: 15px 0; max-width: 100%;">
+		<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/marche-de-la-guerche.webp" type="image/webp">
-                <img src="photos/tourisme/marche-de-la-guerche.jpg" alt="Rue du marché de la Guerche de Bretagne" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/marche-de-la-guerche.jpg" alt="Rue du marché de la Guerche de Bretagne" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Le marché
     </figcaption>
 </figure>
@@ -405,13 +368,13 @@
         Auprès de ma Blonde (à 12 min)
     </a>
 </h4>
-<figure style="margin: 15px 0; max-width: 100%;">
+<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/aupres-de-ma-blonde-chateaugiron.webp" type="image/webp">
-                <img src="photos/tourisme/aupres-de-ma-blonde-chateaugiron.jpg" alt="la salle principale et la bar d'Auprès de Ma Blonde à Châteaugiron" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/aupres-de-ma-blonde-chateaugiron.jpg" alt="la salle principale et la bar d'Auprès de Ma Blonde à Châteaugiron" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         La salle principale et le bar
     </figcaption>
 </figure>
@@ -419,8 +382,8 @@
 
 				
 
-<p style="margin-top: 25px; text-align: center;">
-    💡 <em>Si vous voulez en savoir plus sur les <strong>endroits où l'on peut manger</strong>, consultez notre <a href="gastronomie.html" style="font-weight: bold; color: #0066cc;">guide des endroits où manger à moins de 15 km</a> !</em>
+<p class="astuce-guide">
+    💡 <em>Si vous voulez en savoir plus sur les <strong>endroits où l'on peut manger</strong>, consultez notre <a class="lien-fort" href="gastronomie.html">guide des endroits où manger à moins de 15 km</a> !</em>
 </p> 
 	</article>
 	
@@ -435,12 +398,12 @@
         <h4>👟<a href="https://www.google.com/maps/search/?api=1&query=Rennes+Centre" target="_blank" rel="noopener">Rennes (à 35 min)</a></h4>
         <p>La capitale bretonne à portée de main avec le <a href="https://www.tourisme-rennes.com/sortir/parlement-de-bretagne/" target="_blank">Parlement de Bretagne</a>, le centre historique, les terrasses et la rue de la Soif.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/Rennes-republique.webp" type="image/webp">
-                <img src="photos/tourisme/Rennes-republique.jpg" alt="La grande poste de rennes : République" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/Rennes-republique.jpg" alt="La grande poste de rennes : République" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         L'ancienne Poste dans le centre
     </figcaption>
 </figure>
@@ -456,12 +419,12 @@
 
         <p>À peine le temps de finir votre café dans le TGV et paf : la Tour Eiffel est là. Paris devient la lointaine banlieue rennaise !</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/tour-eiffel-paris.webp" type="image/webp">
-                <img src="photos/tourisme/tour-eiffel-paris.jpg" alt="la tour Eiffel depuis la Seine" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/tour-eiffel-paris.jpg" alt="la tour Eiffel depuis la Seine" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Paris n'est qu'à 1h20 de Rennes !
     </figcaption>
 </figure>
@@ -475,13 +438,13 @@
 	
 	<p>Envolez-vous vers l'Europe ! De Londres à Marseille, cet <a href="https://www.rennes.aeroport.fr/" target="_blank">aéroport à taille humaine</a>  vous connecte rapidement à de multiples destinations sans le stress des grands terminaux via AirFrance, KLM, Lufthansa, Easyjet, Volotea, Transavia, Air Corsica et Aer Lingus</p>
 	
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/Rennes-aeroport.webp" type="image/webp">
-                <img src="photos/tourisme/Rennes-aeroport.jpg" alt="sur le tarmac devant l'aéroport de Rennes" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/Rennes-aeroport.jpg" alt="sur le tarmac devant l'aéroport de Rennes" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Rennes est connecté à l'Europe
     </figcaption>
 </figure>
@@ -496,20 +459,20 @@
 </h4>
 <p>Terre de magies et de mystères, <a href="https://www.tourismebretagne.com/destinations/les-10-destinations/destination-broceliande/la-foret-de-broceliande/" target="_blank">cette forêt légendaire</a>abrite Merlin et Viviane. Un écrin de nature idéal pour une balade ressourçante et contée.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/forêt-de-brocéliande.webp" type="image/webp">
-                <img src="photos/tourisme/forêt-de-brocéliande.jpg" alt="un chêne multi centenaire dans la forêt de brocéliande" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/forêt-de-brocéliande.jpg" alt="un chêne multi centenaire dans la forêt de brocéliande" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Une terre de légendes
     </figcaption>
 </figure>
 
 <!-- FIN THEME  ------------------------------------------------------------------------------- -->
 
-<p style="margin-top: 25px; text-align: center;">
-    💡 <em>Si vous voulez en savoir plus sur les <strong>escapades</strong>, consultez notre <a href="escapades.html" style="font-weight: bold; color: #0066cc;">guides des escapades à faire à moins de 15 km</a> !</em>
+<p class="astuce-guide">
+    💡 <em>Si vous voulez en savoir plus sur les <strong>escapades</strong>, consultez notre <a class="lien-fort" href="escapades.html">guides des escapades à faire à moins de 15 km</a> !</em>
 </p> 
 	</article>
 	
@@ -523,12 +486,12 @@
         <h4>🦪<a href="https://www.google.com/maps/search/?api=1&query=Saint+Malo" target="_blank" rel="noopener">St Malo et Cancale (à 1h10)</a></h4>
         <p>Parfait à la journée : balade sur les remparts de la cité corsaire, grand air sur la plage du Sillon et dégustation d'huîtres au port.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/cancale-et-son-port.webp" type="image/webp">
-                <img src="photos/tourisme/cancale-et-son-port.jpg" alt="sur la route qui mène à Cancale on a une vue sur toute la ville" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/cancale-et-son-port.jpg" alt="sur la route qui mène à Cancale on a une vue sur toute la ville" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Sur la route en arrivant à Cancale
     </figcaption>
 </figure>
@@ -538,12 +501,12 @@
         <h4>🏰<a href="https://www.google.com/maps/search/?api=1&query=Mont+Saint+Michel" target="_blank" rel="noopener">Le Mont St Michel (à 1h10)</a></h4>
         <p>Une merveille de l'Occident au cœur de la baie : une <a href="https://www.abbaye-mont-saint-michel.fr/abbaye" target="_blank">abbaye</a> majestueuse perchée sur son rocher, un village médiéval intemporel et le spectacle unique des plus grandes marées d'Europe. Ce lieu est le deuxime monument le plus visité de France après la Tour Eiffel.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/mont-st-michel.webp" type="image/webp">
-                <img src="photos/tourisme/mont-st-michel.jpg" alt="le mont saint michel dans son ensemble" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/mont-st-michel.jpg" alt="le mont saint michel dans son ensemble" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         la 8ème merveille du monde
     </figcaption>
 </figure>
@@ -556,13 +519,13 @@
 </h4>
 <p>Une véritable mer intérieure parsemée d'îles paradisiaques. Entre microclimat, balades en bateau et dégustations d'huîtres, le <a href="https://morbihan.com/offres/office-de-tourisme-golfe-du-morbihan-vannes-tourisme-vannes-fr-4400242/" target="_blank">Golfe</a> est un concentré de douceur de vivre bretonne.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le-golfe-du-morbihan.webp" type="image/webp">
-                <img src="photos/tourisme/le-golfe-du-morbihan.jpg" alt="l'entrée du golfe vue aérienne" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le-golfe-du-morbihan.jpg" alt="l'entrée du golfe vue aérienne" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         l'entrée du Golfe
     </figcaption>
 </figure>
@@ -575,12 +538,12 @@
 </h4>
         <p>Un <a href="https://www.ille-et-vilaine-tourisme.bzh/partez-a-la-decouverte-de-lille-et-vilaine/nature-et-detente/espaces-naturels-et-sauvages/lac-de-la-cantache-poce-les-bois-fr-2725240/" target="_blank">immense lac</a> niché dans la campagne près de Vitré. Idéal pour une randonnée ressourçante, observer les oiseaux ou s'initier aux sports nautiques.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/cantache.webp" type="image/webp">
-                <img src="photos/tourisme/cantache.jpg" alt="le lac de la cantache" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/cantache.jpg" alt="le lac de la cantache" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Le lac
     </figcaption>
 </figure>
@@ -593,18 +556,18 @@
 </h4>
         <p>Pas très loin de Chaumeré, cette <a href="https://www.vernsurseiche.fr/accueil/cadre-de-vie/environnement/espace-naturels" target="_blank">base verdoyante</a> s’anime aux beaux jours. Entre canoë-kayak, baignade surveillée et barbecues, c'est le rendez-vous estival incontournable des familles.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/base-de-vern.webp" type="image/webp">
-                <img src="photos/tourisme/base-de-vern.jpg" alt="la plage sur la Seiche" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/base-de-vern.jpg" alt="la plage sur la Seiche" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         La plage sur la Seiche
     </figcaption>
 </figure>
 
-<p style="margin-top: 25px; text-align: center;">
-    💅 <em>Besoin de décompresser ? Entre plages de sable fin secrètes, spas d'exception et soins beauté sur place, découvrez notre guide <a href="detente.html" style="font-weight: bold; color: #0066cc;">Détente & Bien-être autour du gîte</a> !</em>
+<p class="astuce-guide">
+    💅 <em>Besoin de décompresser ? Entre plages de sable fin secrètes, spas d'exception et soins beauté sur place, découvrez notre guide <a class="lien-fort" href="detente.html">Détente & Bien-être autour du gîte</a> !</em>
 </p>
 
    </article>
@@ -621,12 +584,12 @@
         <h4>🍷<a href="https://www.google.com/maps/search/?api=1&query=Le+Bacchus+Rennes&query_place_id=ChIJwWvBv7ptCkgR_YOUR_PLACE_ID_FALLBACK" target="_blank" rel="noopener">Le Bacchus (Rennes)</a></h4>
         <p>Au cœur de Rennes,<a href="https://www.le-bacchus.com/" target="_blank">Le Bacchus</a> est un café-théâtre convivial unique. Il combine idéalement comédies, spectacles d'humour et restauration savoureuse pour une soirée culturelle réussie.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/le bacchus.webp" type="image/webp">
-                <img src="photos/tourisme/le bacchus.jpg" alt="le bacchus" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/le bacchus.jpg" alt="le bacchus" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         le bacchus
     </figcaption>
 </figure>
@@ -636,12 +599,12 @@
         <h4>🎤<a href="https://www.google.com/maps/search/?api=1&query=Le+Zephyr+Chateaugiron&query_place_id=ChIJV_1oN8xsCkgRp8N_H-C07qE" target="_blank" rel="noopener">Le Zéphyr (à 10 min)</a></h4>
         <p>Située à Châteaugiron, la salle <a href="https://www.salle-lezephyr.fr/" target="_blank">Le Zéphyr</a> est un espace culturel dynamique. Elle propose une programmation variée entre concerts, pièces de théâtre et spectacles captivants.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/zéphyr-chateaugiron.webp" type="image/webp">
-                <img src="photos/tourisme/zéphyr-chateaugiron.jpg" alt="la salle du Zéphyr à Châteaugiron pendant une conférence" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/zéphyr-chateaugiron.jpg" alt="la salle du Zéphyr à Châteaugiron pendant une conférence" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         la salle peut acceuillir 1000 personnes
     </figcaption>
 </figure>
@@ -655,12 +618,12 @@
 </h4>
 <p>A deux pas de Chaumeré le <a href="https://www.cabaret-moustache.fr/" target="_blank">Cabaret Moustache</a> offre un univers de music-hall unique alliant plunes, acrobaties, chants et repas gastronomiques pour une soirée pailletée mémorable...en plein campagne !</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/Moustache-nouvoitou.webp" type="image/webp">
-                <img src="photos/tourisme/Moustache-nouvoitou.jpg" alt="revue de moustache avec danseuses en froufrou et coiffe de bigoudenne" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/Moustache-nouvoitou.jpg" alt="revue de moustache avec danseuses en froufrou et coiffe de bigoudenne" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Un nouveau spéctacle est proposé régulièrement
     </figcaption>
 </figure>
@@ -675,13 +638,13 @@
 </h4>
 <p>Niché dans la chapelle du château, ce <a href="https://www.les3cha.fr/" target="_blank">centre d'art unique</a> accueille des expositions contemporaines monumentales. Un dialogue magique entre patrimoine médiéval et création moderne</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/les-3CHA-chateaugiron.webp" type="image/webp">
-                <img src="photos/tourisme/les-3CHA-chateaugiron.jpg" alt="la salle des 3CHA qui est dans l'ancienne chapelle du chateau de Châteaugiron" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/les-3CHA-chateaugiron.jpg" alt="la salle des 3CHA qui est dans l'ancienne chapelle du chateau de Châteaugiron" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         La chapelle des 3 CHA
     </figcaption>
 </figure>
@@ -695,19 +658,19 @@
 
 <p>Un <a href="https://www.vitrecommunaute.org/lartotheque-de-vitre/" target="_blank">espace culturel dynamique</a> dédié aux arts visuels. Découvrez des expositions éclectiques d’estampes et de photographies contemporaines au cœur du pôle culturel de Vitré.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/artothèque-du-Quai-des-arts-Vitré.webp" type="image/webp">
-                <img src="photos/tourisme/artothèque-du-Quai-des-arts-Vitré.jpg" alt="Salle de l'artothèque du Quai des arts Vitré" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/artothèque-du-Quai-des-arts-Vitré.jpg" alt="Salle de l'artothèque du Quai des arts Vitré" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         L'artothèque du Quai des arts Vitré
     </figcaption>
 </figure>
 
-<p style="margin-top: 25px; text-align: center;">
-    🎭 <em>Envie d'une sortie ? Cinéma de quartier, centres culturels et expos d'art, découvrez notre guide <a href="culture.html" style="font-weight: bold; color: #0066cc;">Culture & Divertissement autour de Domagné</a> !</em>
+<p class="astuce-guide">
+    🎭 <em>Envie d'une sortie ? Cinéma de quartier, centres culturels et expos d'art, découvrez notre guide <a class="lien-fort" href="culture.html">Culture & Divertissement autour de Domagné</a> !</em>
 </p>
 
 
@@ -726,12 +689,12 @@
 		<h4>🔎🏰<a href="https://www.google.com/maps/search/?api=1&query=Un+Monde+de+Miniatures+Domagne&query_place_id=ChIJ81lW5PptCkgRp_tXq0vGscM" target="_blank" rel="noopener">La promenade Henri Chesnais (à 8 min)</a></h4>
         <p>Un <a href="https://www.bretagne-vitre.com/les-pepites/les-miniatures-de-domagne/" target="_blank">monde de Miniatures</a> est à découvrie à Domagné. Ce parc unique et original dévoile un monde miniature fascinant. Une visite insolite idéale en famille pour admirer des reproductions d'une précision remarquable réalisées pendant la retraite d'une agriculteur de la ville.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/prommenade-henri-chesnais.webp" type="image/webp">
-                <img src="photos/tourisme/prommenade-henri-chesnais.jpg" alt="vue sur la promenade avec une mignature au 1er plan" loading="lazy" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/prommenade-henri-chesnais.jpg" alt="vue sur la promenade avec une mignature au 1er plan" loading="lazy">
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         De très nombreuses mignatures sont à découvrir
     </figcaption>
 </figure>
@@ -744,13 +707,13 @@
 </h4>
         <p>Situé à Essé, ce <a href="https://tourisme.rafcom.bzh/sejourner/que-faire/patrimoine-culturel/la-roche-aux-feesest" target="_blank">dolmen légendaire</a> le plus grand de France est un site magique et mystérieux, parfait pour une balade au cœur des contes, des légendes et de l'Histoire Celte.</p>
 		
-						<figure style="margin: 15px 0; max-width: 100%;">
+						<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/roches-aux-fées.webp" type="image/webp">
-                <img src="photos/tourisme/roches-aux-fées.jpg" alt="depuis l'intérieur du dolmen" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/roches-aux-fées.jpg" alt="depuis l'intérieur du dolmen" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Le fameux Dolmen
     </figcaption>
 </figure>
@@ -763,13 +726,13 @@
 </h4>
 <p>Laissez-vous conter Brocéliande à travers une<a href="https://www.broceliande-laportedessecrets.com/" target="_blank"> expérience sensorielle unique</a>. Ce cinéma scénographique immersif bouscule vos sens et réveille les esprits de la forêt magique.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/porte-des-secrets.webp" type="image/webp">
-                <img src="photos/tourisme/porte-des-secrets.jpg" alt="l'une des salles immersive de la porte des secrets" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/porte-des-secrets.jpg" alt="l'une des salles immersive de la porte des secrets" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         un parcours intéressant
     </figcaption>
 </figure>
@@ -782,13 +745,13 @@
 </h4>
 <p>Étape phare de la <strong>Route au Pays de Madame de Sévigné</strong>, ce jardin de Val-d'Izé fait découvrir le riche patrimoine historique du bocage vitréen. La véritable demeure de la marquise, le château des Rochers-Sévigné, se trouve à environ 15 km, juste à côté de Vitré (voir plus haut).</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/jardin-bois-cornillé.webp" type="image/webp">
-                <img src="photos/tourisme/jardin-bois-cornillé.jpg" alt="depuis le parc un plan d'eau et le chateau en arrière plan" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/jardin-bois-cornillé.jpg" alt="depuis le parc un plan d'eau et le chateau en arrière plan" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         Un jardin remarquable
     </figcaption>
 </figure>
@@ -799,19 +762,19 @@
 
 <p>Perdue en lisière de forêt, cette  <a href="https://www.eglise-saint-sulpice-des-landes.fr" target="_blank"> mystérieuse église médiévale</a> cache des fresques du XVe siècle miraculeusement conservées. Une capsule temporelle secrète, à découvrir sur réservation ou lors d’ouvertures exceptionnelles.</p>
 
-				<figure style="margin: 15px 0; max-width: 100%;">
+				<figure class="fig-bloc">
     <picture>
                 <source srcset="photos/tourisme/St-sulpice-des-landes.webp" type="image/webp">
-                <img src="photos/tourisme/St-sulpice-des-landes.jpg" alt="vue aérienne de l'église du moyen age" loading="lazy" 
-         style="width: 100%; height: auto; border-radius: 8px; object-fit: cover; max-height: 300px;">
+                <img class="fig-img" src="photos/tourisme/St-sulpice-des-landes.jpg" alt="vue aérienne de l'église du moyen age" loading="lazy" 
+        >
             </picture>
-    <figcaption style="font-size: 0.85em; color: #666; margin-top: 5px; font-style: italic;">
+    <figcaption class="fig-legende">
         l'église Saint Sulpice des Landes
     </figcaption>
 </figure>
 
-<p style="margin-top: 25px; text-align: center;">
-    ✨ <em>Envie de sortir des sentiers battus ? Chasse aux trésors secrète, dolmen de fées et art monumental, découvrez notre guide <a href="insolite.html" style="font-weight: bold; color: #0066cc;">Insolite & Expériences uniques autour de Domagné</a> !</em>
+<p class="astuce-guide">
+    ✨ <em>Envie de sortir des sentiers battus ? Chasse aux trésors secrète, dolmen de fées et art monumental, découvrez notre guide <a class="lien-fort" href="insolite.html">Insolite & Expériences uniques autour de Domagné</a> !</em>
 </p>
 
 
@@ -823,30 +786,18 @@
 
     </main>
 
-<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box;">
-    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-        <a href="offre.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">L'Offre</a> | 
-        <a href="tarifs.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Services & Tarifs</a> | 
-        <a href="solidaires.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Solidaires</a> | 
-        <a href="propos.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">À Propos</a> | 
-        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-        <a href="numeros.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">☎️ Numéros Utiles</a> |
-        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
-		<a href="plan-du-site.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+<footer role="contentinfo" class="pied-site">
+    <div class="pied-liens">
+        <a class="pied-lien-fort" href="offre.html">L'Offre</a> | 
+        <a class="pied-lien-fort" href="tarifs.html">Services & Tarifs</a> | 
+        <a class="pied-lien-fort" href="solidaires.html">Solidaires</a> | 
+        <a class="pied-lien-fort" href="propos.html">À Propos</a> | 
+        <a class="pied-lien-fort" href="blog.html">Blog & Actu</a> | 
+        <a class="pied-lien-fort" href="numeros.html">☎️ Numéros Utiles</a> |
+        <a class="pied-lien" href="mentions-legales.html">Mentions Légales</a> |
+		<a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
     </div>
-    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
-
-<div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #1a202c; color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 9999; font-family: Arial, sans-serif; box-sizing: border-box;">
-    <p style="margin: 0 0 15px 0; font-size: 0.95rem; line-height: 1.4; text-align: left;">
-        🍪 <strong>Le Relais de Chaumeré</strong> utilise des cookies pour analyser l'audience de ce site via Google Analytics. Vous pouvez accepter ou refuser ce suivi. Pour en savoir plus, consultez nos <a href="mentions-legales.html" style="color: #3182ce; text-decoration: underline;">Mentions Légales</a>.
-    </p>
-    <div style="display: flex; gap: 10px; justify-content: flex-end;">
-        <button id="btn-refuse-cookies" style="background: transparent; border: 1px solid #718096; color: #a0aec0; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Refuser</button>
-        <button id="btn-accept-cookies" style="background: #3182ce; border: none; color: white; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold; transition: 0.2s;">Accepter tout</button>
-    </div>
-</div>
-
-<script>document.addEventListener("DOMContentLoaded",function(){const banner = document.getElementById("cookie-banner");const acceptBtn = document.getElementById("btn-accept-cookies");const refuseBtn = document.getElementById("btn-refuse-cookies");const cookieChoice = localStorage.getItem("cookieConsent");if(!cookieChoice){banner.style.display = "block";}else if(cookieChoice === "accepted"){activerTracking();}acceptBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","accepted");banner.style.display = "none";activerTracking();});refuseBtn.addEventListener("click",function(){localStorage.setItem("cookieConsent","refused");banner.style.display = "none";});function activerTracking(){console.log("Analytics activé par l'utilisateur.");}});</script>
 </body>
 </html>
