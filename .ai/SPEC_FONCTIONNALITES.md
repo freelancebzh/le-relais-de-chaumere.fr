@@ -36,9 +36,8 @@ Pages thématiques listées dans `tourisme.html` (page hub, 44 liens entrants) :
 - `escapades.html` — Escapades & randonnées
 - `detente.html` — Détente, baignade & beauté
 - `gastronomie.html` — Art & gastronomie, où manger
-- `camping.html` — Camping chez l'habitant à Domagné
-- `campingoff.html` — Camping à la ferme à Domagné (page identifiée comme orpheline dans `RAPPORT_MAILLAGE_INTERNE.md`, à relier)
-- `campsite.html` / `numbers.html` — équivalents anglais de camping / numéros utiles
+- `camping.html` — Camping chez l'habitant à Domagné : page d'information (bilingue FR/EN) expliquant que le PLU de Vitré Communauté interdit le camping chez l'habitant, donc **aucun camping n'est proposé** ; renvoie vers le gîte (ouverture 2027)
+- `campsite.html` / `numbers.html` — équivalents anglais de camping / numéros utiles (`campsite.html` explique en anglais pourquoi il n'y a pas de camping). L'ancienne page `campingoff.html` (« camping à la ferme ») a été supprimée : le camping n'est pas autorisé.
 - `numeros.html` — numéros utiles & urgences
 
 ### 3.5 Guide du séjour (page voyageur)
@@ -68,8 +67,8 @@ Pages thématiques listées dans `tourisme.html` (page hub, 44 liens entrants) :
 
 ### 3.9 bis Bandeau chantier, menu et pied de page communs
 
-- Le bandeau chantier (« Projet en cours… Ouverture en 2027 »), le menu et le pied de page sont identiques sur toutes les pages d'une même langue, sauf `camping.html`, `campingoff.html`, `campsite.html` (bandeau propre), `mentions-legales.html` (pas de menu) et `guide-sejour.html` (page appli).
-- Le menu porte un sélecteur de langue FR / EN / DE / NL : les drapeaux s'affichent sous le menu quand le logo est grand, puis dans la ligne du menu une fois la page défilée. Le menu anglais comporte le lien « Campsite ».
+- Le bandeau chantier (« Projet en cours… Ouverture en 2027 »), le menu et le pied de page sont identiques sur toutes les pages d'une même langue, sauf `camping.html` (bandeau propre : camping non autorisé), `mentions-legales.html` (pas de menu) et `guide-sejour.html` (page appli).
+- Le menu porte un sélecteur de langue FR / EN / DE / NL : les drapeaux s'affichent sous le menu quand le logo est grand, puis dans la ligne du menu une fois la page défilée.
 - Ces blocs sont écrits par `generer_blocs.py` (voir CLAUDE.md).
 
 ### 3.10 Règle : date de mise à jour dans le pied de page
@@ -88,7 +87,7 @@ Dès qu'une page est modifiée, même très légèrement, y compris indirectemen
 - Pas de back-office / CMS — toutes les pages sont éditées en HTML statique à la main.
 - Migration des styles inline vers `style.css` incomplète (chantier en cours, voir `CHANGELOG-ARCHITECTURE.md` § À FAIRE).
 - Optimisation images (WebP, `srcset`, lazy loading) partiellement outillée (`optimize_images.py`, `update_html_images.py`) mais pas systématiquement appliquée à toutes les pages.
-- Maillage interne à renforcer sur certaines pages (`campingoff.html` orpheline, `patrimoine.html`/`culture.html` sous-liées) — voir `RAPPORT_MAILLAGE_INTERNE.md`.
+- Maillage interne à renforcer sur certaines pages (`patrimoine.html`/`culture.html` sous-liées) — voir `RAPPORT_MAILLAGE_INTERNE.md`.
 
 ## 5. Documents de référence associés
 

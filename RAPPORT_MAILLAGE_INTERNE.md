@@ -115,3 +115,5 @@ Après implémentation:
 
 **Statut:** À implémenter
 **Impact SEO:** ⭐⭐⭐⭐ Très important
+
+> Mise à jour 2026-10-03 : `campingoff.html` (page orpheline) a été supprimée, le camping chez l'habitant n'étant pas autorisé ; les actions qui la concernent sont sans objet.
