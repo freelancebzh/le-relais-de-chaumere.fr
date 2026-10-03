@@ -6,7 +6,7 @@ Ce fichier fournit des instructions à Claude Code (claude.ai/code) pour travail
 
 Tout le code (commentaires, scripts Python), toute la documentation (`.md`), tous les messages de commit et toute communication avec l'utilisateur doivent être en **français**.
 
-**Exception unique** : le contenu des pages destinées aux touristes anglophones — `english.html`, `campsite.html`, `numbers.html` — reste en anglais. Ne jamais les traduire en français, et ne jamais écrire de nouvelle page en anglais hors de ce périmètre sans demande explicite.
+**Exception unique** : le contenu des pages destinées aux touristes étrangers reste dans leur langue : `english.html`, `campsite.html`, `numbers.html` (anglais) et les pages traduites en anglais, allemand et néerlandais (accueil `english.html` / `deutsch.html` / `nederlands.html`, logement `offer.html` / `angebot.html` / `aanbod.html`, tarifs `prices.html` / `preise.html` / `prijzen.html`, tourisme `tourism.html` / `tourismus.html` / `toerisme.html`, contact `contact-us.html` / `kontakt.html` / `neem-contact-op.html`). Ne jamais les traduire en français, et ne jamais écrire de nouvelle page dans une autre langue hors de ce périmètre sans demande explicite.
 
 ## Projet
 
@@ -42,7 +42,7 @@ Pour valider une modification, ouvrir les fichiers HTML directement dans un navi
 
 **Modèle de réservation** : pas de moteur de réservation ni de paiement en ligne. Les demandes passent par un formulaire de contact (`contact.html`), qui poste vers `https://api.web3forms.com/submit` — le différenciateur du site est la réservation directe (sans commission plateforme), l'équivalent de la commission étant reversé à des associations locales (voir `solidaires.html`).
 
-**i18n** : une seule page anglaise (`english.html`) est une traduction maintenue à la main du contenu de l'accueil — pas de framework i18n ; tout nouveau contenu traduit est une page parallèle écrite à la main et reliée via `hreflang`.
+**i18n** : pas de framework i18n. Les pages traduites (en/de/nl) sont des copies écrites une fois pour toutes des pages françaises correspondantes, reliées par `hreflang` et par un sélecteur de langue (drapeaux) dans le menu : toute modification d'une page française de ces cinq groupes (accueil, offre, tarifs, tourisme, contact) doit être répercutée à la main dans ses trois traductions.
 
 ## Conventions (issues de README-MAINTENANCE.md)
 

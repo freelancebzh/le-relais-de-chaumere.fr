@@ -52,7 +52,7 @@ Pages thématiques listées dans `tourisme.html` (page hub, 44 liens entrants) :
 - `solidaires.html` — détail de l'engagement solidaire (reversement des commissions)
 - `mentions-legales.html` — mentions légales
 - `plan-du-site.html` — plan du site
-- `english.html` — traduction anglaise de la page d'accueil (seule page traduite ; le reste du guide tourisme reste en français, sauf `campsite.html`/`numbers.html`)
+- Versions étrangères (anglais, allemand, néerlandais) des 5 pages clés : accueil (`english.html`, `deutsch.html`, `nederlands.html`), logement (`offer.html`, `angebot.html`, `aanbod.html`), tarifs (`prices.html`, `preise.html`, `prijzen.html`), guide tourisme (`tourism.html`, `tourismus.html`, `toerisme.html`) et contact avec formulaire (`contact-us.html`, `kontakt.html`, `neem-contact-op.html`). Chaque page est reliée à ses versions par `hreflang` et par un sélecteur de langue (drapeaux FR/EN/DE/NL) dans le menu de toutes les pages ; bandeau cookies, pied de page et widget météo/carburants/qualité de l'air sont traduits. Les guides détaillés, le blog et les mentions légales restent en français (signalé « in French » dans les pages traduites) ; `campsite.html` et `numbers.html` restent en anglais seulement.
 
 ### 3.7 SEO & données structurées
 - Chaque page : title unique, meta description, canonical, Open Graph, Twitter card, `hreflang` (fr/en/x-default).
@@ -71,7 +71,9 @@ Pages thématiques listées dans `tourisme.html` (page hub, 44 liens entrants) :
 Dès qu'une page est modifiée, même très légèrement, y compris indirectement via `style.css` ou un autre fichier partagé (dans ce cas, toutes les pages concernées), la date du jour doit être mise à jour dans leur pied de page. Toutes les pages doivent avoir cette date, au même format, dans la langue de la page :
 
 - pages françaises : `© 2026 Le Relais de Chaumeré - JJ/MM/AAAA - Tous droits réservés.` suivi de « Site Réalisé par Clarté Web » ;
-- pages anglaises (`english.html`, `campsite.html`, `numbers.html`) : `© 2026 Le Relais de Chaumeré - October 2nd 2026 - All Rights Reserved.` suivi de « Website Realised by Clarté Web » (mois en toutes lettres, jour avec suffixe 1st / 2nd / 3rd / 4th…).
+- pages anglaises (`english.html`, `campsite.html`, `numbers.html`, `offer.html`, `prices.html`, `tourism.html`, `contact-us.html`) : `© 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.` suivi de « Website Realised by Clarté Web » (mois en toutes lettres, jour avec suffixe 1st / 2nd / 3rd / 4th…) ;
+- pages allemandes : `© 2026 Le Relais de Chaumeré - 3. Oktober 2026 - Alle Rechte vorbehalten.` suivi de « Website erstellt von Clarté Web » ;
+- pages néerlandaises : `© 2026 Le Relais de Chaumeré - 3 oktober 2026 - Alle rechten voorbehouden.` suivi de « Website gemaakt door Clarté Web ».
 
 ## 4. Hors périmètre actuel (connu, non implémenté)
 
