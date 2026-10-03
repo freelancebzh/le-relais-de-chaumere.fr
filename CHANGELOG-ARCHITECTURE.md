@@ -141,3 +141,10 @@
 - Accessibilité : `<main>` sur toutes les pages (y compris culture, détente, escapades, gastronomie, insolite, patrimoine, mentions légales), `aria-label` sur les `<nav>`, `role="contentinfo"` sur les `<footer>`, `aria-current="page"` sur le lien actif.
 - `includes/*.html` et `TEMPLATE-REFERENCE.html` remis à jour ; prompt Gardien et CLAUDE.md mis à jour (38 pages, langues, `cookies.js`, règle de la date du pied de page).
 - Reste à faire : `culture.html`, `insolite.html` et `mentions-legales.html` gardent leur bloc `<style>` ; environ 50 `style="..."` uniques ; le menu, le bandeau et le pied de page restent à recopier à la main dans les 38 pages.
+
+### Blocs communs générés (2026-10-03)
+
+- `generer_blocs.py` : écrit le bandeau chantier, le menu (avec sélecteur de langue, drapeaux sous le menu tant que le logo est grand) et le pied de page de 37 pages, en 4 langues, entre des marqueurs `<!-- BLOC:… -->`. Option `--verifier` pour lister les pages en retard.
+- `includes/header.html`, `banner.html` et `footer.html` supprimés (remplacés par le script) ; `includes/head.html` et `components.css` restent.
+- Unification : le bandeau chantier figure maintenant sur culture, détente, escapades, gastronomie, insolite, patrimoine ; blog, propos, solidaires, english, numbers reprennent le texte standard ; le menu anglais gagne le lien « Campsite » ; le pied de page de toutes les pages a les mêmes 8 liens (dont Plan du site).
+- À trancher : `camping.html` dit que le camping chez l'habitant n'est pas autorisé, alors que `campsite.html`, `campingoff.html` et les bandeaux EN/DE/NL disent que le camping est disponible.

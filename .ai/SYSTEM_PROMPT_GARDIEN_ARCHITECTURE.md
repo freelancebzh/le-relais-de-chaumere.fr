@@ -15,8 +15,8 @@ Empêcher la dérive architecturale d'un site HTML statique multi-pages (38 page
 ## Principes fondamentaux
 
 ### 1. SSOT (Source Unique de Vérité)
-- Le site est du HTML statique sans mécanisme d'inclusion réel : `includes/head.html`, `header.html`, `banner.html`, `footer.html` ne sont **pas** chargés dynamiquement. Ce sont des références copiées-collées manuellement dans les 38 pages. Seuls `style.css`, `includes/components.css`, `cookies.js` et `header-scroll.js` sont réellement partagés (le bandeau cookies et GA4 vivent dans `cookies.js`, pas dans les pages).
-- Comme la SSOT technique n'existe pas pour ces blocs, `includes/*.html` doit rester la **SSOT documentaire** : toute évolution du header, du footer ou du bandeau se fait d'abord dans `includes/`, puis se reporte à l'identique sur toutes les pages — jamais l'inverse.
+- Le site est du HTML statique. Le bandeau chantier, le menu (avec sélecteur de langue) et le pied de page des 37 pages sont générés par `generer_blocs.py`, qui en est la **seule source** (marqueurs `<!-- BLOC:… -->` dans les pages) : toute évolution de ces blocs se fait dans le script, puis `python3 generer_blocs.py` ; jamais à la main dans une page. Seuls `style.css`, `includes/components.css`, `cookies.js` et `header-scroll.js` sont par ailleurs réellement partagés (le bandeau cookies et GA4 vivent dans `cookies.js`).
+- Le `<head>` (title, description, canonical, Open Graph, hreflang) reste propre à chaque page ; `includes/head.html` en est le modèle documentaire. Avant de lancer le script, vérifier `python3 generer_blocs.py --verifier` : il liste les pages dont les blocs sont en retard.
 - `style.css` et `includes/components.css` sont la seule vraie SSOT technique (fichiers réellement chargés par toutes les pages). Toute règle CSS dupliquée en inline dans une page est une violation à corriger, pas un pattern à reproduire ailleurs.
 - Avant de modifier une donnée présente à plusieurs endroits (tarif, mention légale, coordonnée, numéro de téléphone, texte du bandeau chantier), vérifier par recherche (`grep`) toutes ses occurrences et les répercuter à l'identique. Une modification n'est terminée que lorsque toutes les occurrences sont alignées.
 
@@ -27,7 +27,7 @@ Empêcher la dérive architecturale d'un site HTML statique multi-pages (38 page
 
 ### 3. KISS
 - Pas de framework, pas de bundler, pas de dépendance JS ajoutée sans nécessité avérée : le site est volontairement statique et simple.
-- Ne jamais proposer d'introduire de son propre chef un système de build ou de templating, même si la duplication observée le justifierait techniquement. Le signaler comme recommandation à l'utilisateur, ne pas l'implémenter sans demande explicite.
+- `generer_blocs.py` est le seul outil de génération autorisé (choix de l'utilisateur du 2026-10-03). Ne jamais en proposer ni en introduire d'autre (bundler, moteur de templating, injection JavaScript du menu) sans demande explicite de l'utilisateur.
 
 ### 4. YAGNI
 - Ne pas construire de fonctionnalité anticipée (moteur de réservation, back-office, i18n généralisée) tant qu'elle n'est pas demandée. Le site est volontairement en phase pré-ouverture et reste simple par choix.
@@ -49,7 +49,7 @@ Tout le code (noms, commentaires dans les scripts Python), toute la documentatio
 ## Process de revue (avant de valider une modification)
 
 1. La modification introduit-elle une donnée dupliquée qui existe déjà ailleurs (tarif, texte, lien, meta) ? → vérifier toutes les occurrences par recherche.
-2. La modification touche-t-elle le header, le footer, le bandeau ou le `<head>` commun ? → doit être reportée sur les 38 pages **et** sur `includes/*.html` (et pour le menu, dans les versions en/de/nl).
+2. La modification touche-t-elle le menu, le pied de page ou le bandeau chantier ? → la faire dans `generer_blocs.py` puis relancer le script (il couvre fr/en/de/nl). Le `<head>` commun, lui, se reporte à la main sur les pages concernées et dans `includes/head.html`.
 3. La modification ajoute-t-elle un style inline alors qu'une classe existe (ou devrait exister) dans `style.css` ? → préférer la classe.
 4. La modification crée-t-elle une page ? → doit suivre `TEMPLATE-REFERENCE.html`, être ajoutée à `sitemap.xml`, et liée depuis au moins une page hub pertinente (voir `RAPPORT_MAILLAGE_INTERNE.md` pour éviter une page orpheline).
 5. Le texte produit respecte-t-il la règle de langue (français, sauf pages EN listées ci-dessus) ?

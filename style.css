@@ -859,6 +859,20 @@ header.header-reduit nav {
     padding-bottom: 0.6rem;
 }
 
+/* Drapeaux de langue : sous le menu quand le logo est grand, dans la ligne du menu une fois le bandeau réduit */
+@media (min-width: 769px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 0.4rem;
+    }
+
+    header:not(.header-reduit) nav ul li.lang-switch {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+}
+
 /* Cartes tourisme de l'accueil : liens et images harmonisés */
 .home-tourism .tourism-card figure {
     margin: 15px 0;

@@ -66,9 +66,15 @@ Pages thématiques listées dans `tourisme.html` (page hub, 44 liens entrants) :
 ### 3.9 Bandeau réduit au défilement
 - Le bandeau (logo + menu) reste collé en haut de l'écran. Dès qu'on descend de ~80 px, le logo disparaît et seule la ligne du menu reste visible ; le logo revient quand on remonte tout en haut de la page (`header-scroll.js`, chargé par chaque page ayant un bandeau).
 
+### 3.9 bis Bandeau chantier, menu et pied de page communs
+
+- Le bandeau chantier (« Projet en cours… Ouverture en 2027 »), le menu et le pied de page sont identiques sur toutes les pages d'une même langue, sauf `camping.html`, `campingoff.html`, `campsite.html` (bandeau propre), `mentions-legales.html` (pas de menu) et `guide-sejour.html` (page appli).
+- Le menu porte un sélecteur de langue FR / EN / DE / NL : les drapeaux s'affichent sous le menu quand le logo est grand, puis dans la ligne du menu une fois la page défilée. Le menu anglais comporte le lien « Campsite ».
+- Ces blocs sont écrits par `generer_blocs.py` (voir CLAUDE.md).
+
 ### 3.10 Règle : date de mise à jour dans le pied de page
 
-Dès qu'une page est modifiée, même très légèrement, y compris indirectement via `style.css` ou un autre fichier partagé (dans ce cas, toutes les pages concernées), la date du jour doit être mise à jour dans leur pied de page. Toutes les pages doivent avoir cette date, au même format, dans la langue de la page :
+Dès qu'une page est modifiée, même très légèrement, y compris indirectement via `style.css` ou un autre fichier partagé (dans ce cas, toutes les pages concernées), la date du jour doit être mise à jour dans leur pied de page. Toutes les pages doivent avoir cette date, au même format, dans la langue de la page. Le script `generer_blocs.py` l'écrit et ne la change que pour les pages dont le menu, le bandeau ou le pied de page a changé ; pour une modification de contenu, la mettre à la main :
 
 - pages françaises : `© 2026 Le Relais de Chaumeré - JJ/MM/AAAA - Tous droits réservés.` suivi de « Site Réalisé par Clarté Web » ;
 - pages anglaises (`english.html`, `campsite.html`, `numbers.html`, `offer.html`, `prices.html`, `tourism.html`, `contact-us.html`) : `© 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.` suivi de « Website Realised by Clarté Web » (mois en toutes lettres, jour avec suffixe 1st / 2nd / 3rd / 4th…) ;

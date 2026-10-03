@@ -1,7 +1,7 @@
 <!-- ========================================
      TEMPLATE MINIMAL - Mode d'emploi
      Point de départ pour toute nouvelle page. Les blocs head / bandeau / menu / pied de page
-     sont à copier (pas d'inclusion automatique) : voir aussi includes/*.html.
+     (bandeau, menu, pied de page) sont remplis par generer_blocs.py ; le <head> est à adapter à la main (modèle : includes/head.html).
      ======================================== -->
 
 <!DOCTYPE html>
@@ -49,35 +49,12 @@
 </head>
 <body>
 
-<!-- Bandeau chantier (identique sur toutes les pages ; copier depuis includes/banner.html) -->
-<div class="bandeau-chantier">
-    🚧 <strong>Projet en cours :</strong> Le gîte est actuellement en construction 🚧<br>
-    📸 Suivez son avancement sur notre <a class="lien-fort" href="blog.html">blog</a> !<br>
-    📅 <strong>Ouverture en 2027 :</strong> Accessible en <strong>location meublée flexible</strong> début 2027 puis en <strong>séjour touristique</strong> d'ici l'été.<br>
-    🗺️ Découvrez déjà les <a class="lien-fort" href="tourisme.html">guides et activités locales</a>.
-</div>
+<!-- Bandeau chantier et menu : ne rien écrire ici, `python3 generer_blocs.py` remplit les blocs entre marqueurs. -->
+<!-- BLOC:bandeau -->
+<!-- /BLOC:bandeau -->
 
-<!-- Header / navigation (copier depuis includes/header.html) -->
-<header>
-    <nav aria-label="Navigation principale">
-        <div class="logo"><img class="logo-img" src="photos/general/logo2.png" alt="Logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></div>
-        <ul>
-            <li><a href="index.html" aria-current="page" class="active">Accueil</a></li>
-            <li><a href="offre.html">L'Offre</a></li>
-            <li><a href="tarifs.html">Services & Tarifs</a></li>
-            <li><a href="tourisme.html">Tourisme</a></li>
-            <li><a href="propos.html">À Propos</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blog.html">Blog & Actu</a></li>
-            <li class="lang-switch lang-switch-liste">
-                <a class="lang-lien-actif" href="index.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="https://flagcdn.com/w20/fr.png" alt="" loading="lazy"> FR</a>
-                <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="https://flagcdn.com/w20/gb.png" alt="" loading="lazy"> EN</a>
-                <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="https://flagcdn.com/w20/de.png" alt="" loading="lazy"> DE</a>
-                <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="https://flagcdn.com/w20/nl.png" alt="" loading="lazy"> NL</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+<!-- BLOC:menu -->
+<!-- /BLOC:menu -->
 
 <!-- Contenu principal -->
 <main>
@@ -86,20 +63,9 @@
     <p>Contenu spécifique...</p>
 </main>
 
-<!-- Footer (copier depuis includes/footer.html) -->
-<footer role="contentinfo" class="pied-site">
-    <div class="pied-liens">
-        <a class="pied-lien-fort" href="offre.html">L'Offre</a> |
-        <a class="pied-lien-fort" href="tarifs.html">Services & Tarifs</a> |
-        <a class="pied-lien-fort" href="solidaires.html">Solidaires</a> |
-        <a class="pied-lien-fort" href="propos.html">À Propos</a> |
-        <a class="pied-lien-fort" href="blog.html">Blog & Actu</a> |
-        <a class="pied-lien-fort" href="numeros.html">☎️ Numéros Utiles</a> |
-        <a class="pied-lien" href="mentions-legales.html">Mentions Légales</a> |
-        <a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
-    </div>
-    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - JJ/MM/AAAA - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
-</footer>
+<!-- Pied de page : rempli par generer_blocs.py (date du jour comprise) -->
+<!-- BLOC:pied -->
+<!-- /BLOC:pied -->
 
 </body>
 </html>
@@ -111,7 +77,7 @@ INSTRUCTIONS D'UTILISATION :
 
 1. Personnalisation du <title> et des meta tags pour CHAQUE page.
 
-2. Sur chaque page, mettre aria-current="page" (et class="active") sur le lien actif du menu.
+2. Bandeau, menu (avec sélecteur de langue) et pied de page : garder les marqueurs BLOC ci-dessus puis lancer `python3 generer_blocs.py` depuis la racine. Pour qu'un lien du menu soit actif sur la nouvelle page, l'ajouter dans la table du script (ou mettre à la main aria-current="page" et class="active" avant le premier lancement).
 
 3. Meta personnalisées (description, og:title, og:image, canonical) : chaque page a sa propre
    description SEO ; les images OG doivent faire 1200x630px.
@@ -119,7 +85,7 @@ INSTRUCTIONS D'UTILISATION :
 4. Bandeau cookies et Google Analytics : rien à copier, cookies.js s'en charge (GA4 uniquement,
    GTM supprimé définitivement). Le pied de page ne contient plus de bandeau cookies.
 
-5. Date du pied de page : mettre la date du jour (JJ/MM/AAAA) à chaque modification de la page.
+5. Date du pied de page : générée par le script ; elle ne change que pour les pages dont un bloc a changé. Pour une modification de contenu, relancer `python3 generer_blocs.py` ne suffit pas : mettre la date du jour à la main (JJ/MM/AAAA).
 
 6. Nouvelle page : l'ajouter à sitemap.xml et la lier depuis au moins une page hub.
 
