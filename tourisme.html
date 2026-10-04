@@ -118,7 +118,7 @@
     <div class="wa-carte">
       <p class="wa-carte-titre">Sorties du coin</p>
       <p class="wa-carte-contenu">Marchés, food trucks, événements du jour, brocantes…</p>
-      <a href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener" class="wa-lien-principal">Voir les activités à jour →</a>
+      <a href="https://tro-dro.fr/agenda/" target="_blank" rel="noopener" class="wa-lien-principal">Voir les activités à jour →</a>
     </div>
   </div>
 </div>
@@ -178,7 +178,7 @@
       var lignes = stations.map(function (s) {
         return '<li>' + s.ville + ' <span class="wa-liste-detail">— ' + s.gazole_prix.toFixed(3) + ' €</span></li>';
       }).join('');
-      bloc.innerHTML = '<p class="wa-carte-titre">Gazole le moins cher</p><ul class="wa-liste">' + lignes + '</ul><a href="https://clarteweb35.github.io/tro-dro/carburants/" target="_blank" rel="noopener" class="wa-lien">Voir tous les carburants →</a>';
+      bloc.innerHTML = '<p class="wa-carte-titre">Gazole le moins cher</p><ul class="wa-liste">' + lignes + '</ul><a href="https://tro-dro.fr/carburants/" target="_blank" rel="noopener" class="wa-lien">Voir tous les carburants →</a>';
     })
     .catch(function () {
       document.getElementById('wa-carburants').innerHTML = '<p class="wa-carte-titre">Carburants</p><p class="wa-carte-contenu">Indisponible.</p>';
@@ -197,7 +197,7 @@
     .then(function (data) {
       var aqi = Math.round(data.current.european_aqi);
       var cat = categorieAQI(aqi);
-      document.getElementById('wa-air').innerHTML = "Qualité de l'air : <strong class=\"" + cat.classe + "\">" + cat.label + '</strong> (indice ' + aqi + ') — <a href="https://clarteweb35.github.io/tro-dro/qualite-air/" target="_blank" rel="noopener">Comparer en Bretagne →</a>';
+      document.getElementById('wa-air').innerHTML = "Qualité de l'air : <strong class=\"" + cat.classe + "\">" + cat.label + '</strong> (indice ' + aqi + ') — <a href="https://tro-dro.fr/qualite-air/" target="_blank" rel="noopener">Comparer en Bretagne →</a>';
     })
     .catch(function () {
       document.getElementById('wa-air').textContent = "Qualité de l'air : indisponible.";
@@ -804,7 +804,7 @@
         <a class="pied-lien" href="mentions-legales.html">Mentions Légales</a> |
         <a class="pied-lien" href="plan-du-site.html">Plan du Site</a>
     </div>
-    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 04/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 <!-- /BLOC:pied -->
 </body>

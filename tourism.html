@@ -112,7 +112,7 @@
     <div class="wa-carte">
       <p class="wa-carte-titre">Things to do nearby</p>
       <p class="wa-carte-contenu">Markets, food trucks, today's events, flea markets…</p>
-      <a href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener" class="wa-lien-principal">See up-to-date activities →</a>
+      <a href="https://tro-dro.fr/en/agenda/" target="_blank" rel="noopener" class="wa-lien-principal">See up-to-date activities →</a>
     </div>
   </div>
 </div>
@@ -167,7 +167,7 @@
       var lignes = stations.map(function (s) {
         return '<li>' + s.ville + ' <span class="wa-liste-detail">— ' + s.gazole_prix.toFixed(3) + ' €</span></li>';
       }).join('');
-      bloc.innerHTML = '<p class="wa-carte-titre">Cheapest diesel</p><ul class="wa-liste">' + lignes + '</ul><a href="https://clarteweb35.github.io/tro-dro/carburants/" target="_blank" rel="noopener" class="wa-lien">See all fuel prices →</a>';
+      bloc.innerHTML = '<p class="wa-carte-titre">Cheapest diesel</p><ul class="wa-liste">' + lignes + '</ul><a href="https://tro-dro.fr/en/carburants/" target="_blank" rel="noopener" class="wa-lien">See all fuel prices →</a>';
     })
     .catch(function () {
       document.getElementById('wa-carburants').innerHTML = '<p class="wa-carte-titre">Fuel</p><p class="wa-carte-contenu">Unavailable.</p>';
@@ -186,7 +186,7 @@
     .then(function (data) {
       var aqi = Math.round(data.current.european_aqi);
       var cat = categorieAQI(aqi);
-      document.getElementById('wa-air').innerHTML = "Air quality: <strong class=\"" + cat.classe + "\">" + cat.label + '</strong> (index ' + aqi + ') — <a href="https://clarteweb35.github.io/tro-dro/qualite-air/" target="_blank" rel="noopener">Compare across Brittany →</a>';
+      document.getElementById('wa-air').innerHTML = "Air quality: <strong class=\"" + cat.classe + "\">" + cat.label + '</strong> (index ' + aqi + ') — <a href="https://tro-dro.fr/en/qualite-air/" target="_blank" rel="noopener">Compare across Brittany →</a>';
     })
     .catch(function () {
       document.getElementById('wa-air').textContent = "Air quality: unavailable.";
@@ -664,7 +664,7 @@
         <a class="pied-lien" href="mentions-legales.html">Legal Notices</a> |
         <a class="pied-lien" href="plan-du-site.html">Site Map</a>
     </div>
-    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - October 3rd 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - October 4th 2026 - All Rights Reserved.<br>Website Realised by <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 <!-- /BLOC:pied -->
 

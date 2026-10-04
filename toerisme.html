@@ -112,7 +112,7 @@
     <div class="wa-carte">
       <p class="wa-carte-titre">Uitstapjes in de buurt</p>
       <p class="wa-carte-contenu">Markten, foodtrucks, evenementen van de dag, rommelmarkten…</p>
-      <a href="https://clarteweb35.github.io/tro-dro/agenda/" target="_blank" rel="noopener" class="wa-lien-principal">Actuele activiteiten bekijken →</a>
+      <a href="https://tro-dro.fr/nl/agenda/" target="_blank" rel="noopener" class="wa-lien-principal">Actuele activiteiten bekijken →</a>
     </div>
   </div>
 </div>
@@ -167,7 +167,7 @@
       var lignes = stations.map(function (s) {
         return '<li>' + s.ville + ' <span class="wa-liste-detail">— ' + s.gazole_prix.toFixed(3) + ' €</span></li>';
       }).join('');
-      bloc.innerHTML = '<p class="wa-carte-titre">Goedkoopste diesel</p><ul class="wa-liste">' + lignes + '</ul><a href="https://clarteweb35.github.io/tro-dro/carburants/" target="_blank" rel="noopener" class="wa-lien">Alle brandstofprijzen bekijken →</a>';
+      bloc.innerHTML = '<p class="wa-carte-titre">Goedkoopste diesel</p><ul class="wa-liste">' + lignes + '</ul><a href="https://tro-dro.fr/nl/carburants/" target="_blank" rel="noopener" class="wa-lien">Alle brandstofprijzen bekijken →</a>';
     })
     .catch(function () {
       document.getElementById('wa-carburants').innerHTML = '<p class="wa-carte-titre">Brandstof</p><p class="wa-carte-contenu">Niet beschikbaar.</p>';
@@ -186,7 +186,7 @@
     .then(function (data) {
       var aqi = Math.round(data.current.european_aqi);
       var cat = categorieAQI(aqi);
-      document.getElementById('wa-air').innerHTML = "Luchtkwaliteit: <strong class=\"" + cat.classe + "\">" + cat.label + '</strong> (index ' + aqi + ') — <a href="https://clarteweb35.github.io/tro-dro/qualite-air/" target="_blank" rel="noopener">Vergelijken in Bretagne →</a>';
+      document.getElementById('wa-air').innerHTML = "Luchtkwaliteit: <strong class=\"" + cat.classe + "\">" + cat.label + '</strong> (index ' + aqi + ') — <a href="https://tro-dro.fr/nl/qualite-air/" target="_blank" rel="noopener">Vergelijken in Bretagne →</a>';
     })
     .catch(function () {
       document.getElementById('wa-air').textContent = "Luchtkwaliteit: niet beschikbaar.";
@@ -664,7 +664,7 @@
         <a class="pied-lien" href="mentions-legales.html">Juridische informatie</a> |
         <a class="pied-lien" href="plan-du-site.html">Sitemap</a>
     </div>
-    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 3 oktober 2026 - Alle rechten voorbehouden.<br>Website gemaakt door <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 4 oktober 2026 - Alle rechten voorbehouden.<br>Website gemaakt door <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 <!-- /BLOC:pied -->
 
