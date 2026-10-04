@@ -4,7 +4,7 @@
     <title>Guide du séjour | Le Relais de Chaumeré</title>
 
     <meta charset="UTF-8">
-    <!-- Page pratique pour les voyageurs sur place : jamais indexée (contient le code wifi) -->
+    <!-- Page pratique pour les voyageurs sur place : jamais indexée ; ne contient PAS le mot de passe wifi (dépôt public, voir l'avertissement de la section #wifi) -->
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -57,14 +57,17 @@
         </div>
     </nav>
 
+    <!-- ATTENTION : le dépôt GitHub de ce site est PUBLIC et cette page est lisible par quiconque connaît son adresse
+         (noindex ne la protège pas). NE JAMAIS écrire ici le mot de passe du wifi, ni un QR code de connexion
+         (il contient le mot de passe). Le mot de passe et le QR code figurent uniquement sur la carte imprimée posée dans le gîte. -->
     <section id="wifi" class="guide-section">
         <h2><span class="guide-icon" aria-hidden="true">📶</span>Connexion Wifi</h2>
         <div class="guide-card">
             <p><strong>Nom du réseau :</strong> <span class="guide-code">[À COMPLÉTER]</span></p>
-            <p><strong>Mot de passe :</strong> <span class="guide-code">[À COMPLÉTER]</span></p>
+            <p><strong>Mot de passe :</strong> indiqué sur la carte posée dans le gîte</p>
             <div class="guide-qr-placeholder">
                 <span aria-hidden="true">📷</span>
-                <p>QR code de connexion — à ajouter une fois le réseau wifi configuré</p>
+                <p>Le QR code de connexion se trouve sur la carte posée dans le gîte</p>
             </div>
         </div>
     </section>
@@ -167,7 +170,7 @@
 <!-- Footer minimal : voir header, même logique (page-appli, pas page-site). -->
 <footer class="guide-app-footer" role="contentinfo" aria-label="Pied de page">
     <p><a href="index.html">← Retour au site</a> · <a href="mentions-legales.html">Mentions légales</a></p>
-    <p>&copy; 2026 Le Relais de Chaumeré - 03/10/2026 - Tous droits réservés.</p>
+    <p>&copy; 2026 Le Relais de Chaumeré - 04/10/2026 - Tous droits réservés.</p>
 </footer>
 
 </body>
