@@ -2472,6 +2472,19 @@ html body .pied-lien {
     margin: 0 15px;
     font-size: 0.9rem;
 }
+html body .pied-ecolabels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 1.5rem;
+}
+html body .pied-ecolabels img {
+    display: block;
+    height: 32px;
+    width: auto;
+}
 html body .pied-copyright {
     color: #999;
     font-size: 0.9rem;
