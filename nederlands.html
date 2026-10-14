@@ -29,51 +29,59 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="stylesheet" href="style.css">
-    <script src="header-scroll.js" defer></script>
 </head>
-<body>
+<body class="page-accueil">
 
 <!-- BLOC:bandeau -->
 <div class="bandeau-chantier">
-    🚧 <strong>Project in uitvoering</strong> (de gîte is momenteel in aanbouw): vloerbalken geplaatst! 🚧<br>
-    📸 Volg de vorderingen op onze <a class="lien-fort" href="blog.html">blog</a> (in het Frans)!<br>
-    📅 <strong>Opening in 2027:</strong> vanaf begin 2027 te huur als <strong>flexibele gemeubileerde verhuur</strong>, en vóór de zomer ook voor <strong>toeristische verblijven</strong>.<br>
-    🗺️ Ontdek nu al onze <a class="lien-fort" href="toerisme.html">lokale gidsen en activiteiten</a>.
+    🚧 In aanbouw — laatste stap: <strong>isolatie van de vloer</strong>. Opening in 2027. <a class="lien-fort" href="blog.html">Volg de vorderingen (in het Frans) →</a>
 </div>
 <!-- /BLOC:bandeau -->
 
     <!-- BLOC:menu -->
 <header>
     <nav aria-label="Hoofdmenu">
-        <div class="logo"><picture><source srcset="photos/general/logo2.webp" type="image/webp"><img class="logo-img" src="photos/general/logo2.png" alt="Logo van Le Relais de Chaumeré: ons huis met een hunebed en een appel erboven"></picture></div>
+        <a class="marque" href="nederlands.html"><picture><source srcset="photos/general/logo2.webp" type="image/webp"><img class="logo-img" src="photos/general/logo2.png" alt="" width="44" height="44"></picture><span>Le Relais de Chaumeré</span></a>
         <ul>
-            <li><a href="nederlands.html" class="active" aria-current="page">Home</a></li>
             <li><a href="aanbod.html">De studio</a></li>
             <li><a href="prijzen.html">Tarieven</a></li>
             <li><a href="toerisme.html">Toerisme</a></li>
-            <li><a href="numbers.html">Handige nummers</a></li>
-            <li><a href="neem-contact-op.html">Contact</a></li>
-            <li><a href="blog.html">Blog & nieuws</a></li>
-            <li class="lang-switch lang-switch-liste">
-                <a class="lang-lien" href="index.html" hreflang="fr" lang="fr" title="Français"><img class="drapeau" src="photos/general/drapeaux/fr.png" alt="" loading="lazy"> FR</a>
-                <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="photos/general/drapeaux/gb.png" alt="" loading="lazy"> EN</a>
-                <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="photos/general/drapeaux/de.png" alt="" loading="lazy"> DE</a>
-                <a class="lang-lien-actif" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands" aria-current="true"><img class="drapeau" src="photos/general/drapeaux/nl.png" alt="" loading="lazy"> NL</a>
+            <li><a href="blog.html">Ons verhaal</a></li>
+            <li class="lang-switch">
+                <details class="lang-select">
+                    <summary title="Français / English / Deutsch / Nederlands"><img class="drapeau" src="photos/general/drapeaux/nl.png" alt="" loading="lazy"> NL</summary>
+                    <div class="lang-liste">
+                    <a class="lang-lien" href="index.html" hreflang="fr" lang="fr"><img class="drapeau" src="photos/general/drapeaux/fr.png" alt="" loading="lazy"> Français</a>
+                    <a class="lang-lien" href="english.html" hreflang="en" lang="en"><img class="drapeau" src="photos/general/drapeaux/gb.png" alt="" loading="lazy"> English</a>
+                    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de"><img class="drapeau" src="photos/general/drapeaux/de.png" alt="" loading="lazy"> Deutsch</a>
+                    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" aria-current="true"><img class="drapeau" src="photos/general/drapeaux/nl.png" alt="" loading="lazy"> Nederlands</a>
+                    </div>
+                </details>
             </li>
+            <li><a class="btn btn-nav" href="neem-contact-op.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 <!-- /BLOC:menu -->
 
 
-<main class="container">
+<main>
 
-        <div class="about-hero page-header">
-            <h1>Welkom in onze gîte in Bretagne</h1>
-            <p>Geniet van een <a href="aanbod.html">rustig verblijf</a> in Domagné, ideaal gelegen om <a href="https://www.google.com/maps/search/?api=1&query=Rennes&query_place_id=ChIJhZDWpy_eDkgRMKvkNs2lDAQ" target="_blank" rel="noopener">Rennes</a>, <a href="https://www.google.com/maps/search/?api=1&query=Chateau+de+Vitre&query_place_id=ChIJA9OEJOUoCUgRbwC4oFes6qU" target="_blank" rel="noopener">Vitré</a> en de prachtige <a href="https://en.wikipedia.org/wiki/C%C3%B4te_d%27%C3%89meraude" target="_blank">Côte d'Émeraude</a> te verkennen. Maar niet alleen dat: <a href="toerisme.html">ontdek nog veel meer!</a></p>
-        </div>
+        <section class="hero-photo">
+            <picture><source srcset="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.webp" type="image/webp"><img src="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.jpg" alt="Artist impression van de studio en de tuin bij Le Relais de Chaumeré (door AI gemaakt)" fetchpriority="high" decoding="async"></picture>
+            <div class="conteneur">
+                <span class="hero-pastille">📍 Domagné · Bretagne · nabij Rennes</span>
+                <h1>Welkom in onze gîte in Bretagne</h1>
+                <p>Geniet van een <a href="aanbod.html">rustig verblijf</a> in Domagné, ideaal gelegen om <a href="https://www.google.com/maps/search/?api=1&query=Rennes&query_place_id=ChIJhZDWpy_eDkgRMKvkNs2lDAQ" target="_blank" rel="noopener">Rennes</a>, <a href="https://www.google.com/maps/search/?api=1&query=Chateau+de+Vitre&query_place_id=ChIJA9OEJOUoCUgRbwC4oFes6qU" target="_blank" rel="noopener">Vitré</a> en de prachtige <a href="https://en.wikipedia.org/wiki/C%C3%B4te_d%27%C3%89meraude" target="_blank">Côte d'Émeraude</a> te verkennen. Maar niet alleen dat: <a href="toerisme.html">ontdek nog veel meer!</a></p>
+                <div class="hero-actions">
+                    <a href="aanbod.html" class="btn">Ontdek de studio</a>
+                    <a href="neem-contact-op.html" class="btn btn-clair">Neem contact op</a>
+                </div>
+            </div>
+            <span class="hero-legende">Artist impression, gemaakt door AI</span>
+        </section>
 
-        <section class="about-section">
+        <section class="section about-section"><div class="conteneur">
             <div class="about-grid">
                 
                 <div class="services-block">
@@ -103,13 +111,14 @@
 		Bekijk ook onze pagina <a href="toerisme.html">Toerisme</a> om de verborgen parels in de omgeving te ontdekken.</p></div>
 
             </div>
+        </div>
         </section>
 
-        <section class="page-header st-f7571c">
+        <section class="section section-vert reservation-accueil"><div class="conteneur conteneur-etroit">
             <h2>📅 Tarieven & reserveren</h2>
             <p>Wij geven de voorkeur aan rechtstreeks boeken, zodat u de beste prijs krijgt zonder kosten van boekingsplatforms.</p>
-            <p class="st-185d79"><a href="neem-contact-op.html" class="services-block st-6757e9"> ✉️ Contact / Boek uw verblijf </a></p>
-        </section>
+            <p class="centre"><a href="neem-contact-op.html" class="btn">✉️ Contact / Boek uw verblijf</a></p>
+        </div></section>
 
     </main>
 
@@ -129,7 +138,7 @@
         <a href="https://www.websitecarbon.com/website/le-relais-de-chaumere-fr/" target="_blank" rel="noopener"><img src="photos/general/badge-website-carbon.svg" alt="Website Carbon-score van deze website: bekijk het resultaat" width="150" height="32" loading="lazy"></a>
         <a href="https://www.ecoindex.fr/resultat/?id=ee0bc5fa-1b4a-42e4-b27b-42ecd396179c" target="_blank" rel="noopener"><img src="photos/general/badge-ecoindex.svg" alt="Ecoindex-score van deze website: bekijk het resultaat" width="108" height="32" loading="lazy"></a>
     </div>
-    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 12 oktober 2026 - Alle rechten voorbehouden.<br>Website gemaakt door <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 14 oktober 2026 - Alle rechten voorbehouden.<br>Website gemaakt door <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 <!-- /BLOC:pied -->
 

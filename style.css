@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@300;400;500;600;800&display=swap');
 
 /* === Accessibilité WCAG AA === */
 /* Active link styling (using aria-current for better semantics) */
@@ -9,18 +9,25 @@ nav a[aria-current="page"] {
 
 /* Keyboard focus visible (WCAG 2.1 Level AA) */
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-    outline: 2px solid #0066cc;
+    outline: 2px solid #2f5d46;
     outline-offset: 2px;
 }
 
 
 :root {
-    --bg-color: #ffffff;
-    --text-color: #111111;
-    --text-light: #555555;
-    --border-color: #eaeaea;
-    --accent-color: #000000;
-    --accent-hover: #333333;
+    --bg-color: #faf7f2;
+    --text-color: #26302b;
+    --text-light: #5d6862;
+    --border-color: #e9e4da;
+    --accent-color: #c8742e;
+    --accent-hover: #a65d20;
+    --papier: #ffffff;
+    --pierre: #e9e4da;
+    --vert: #2f5d46;
+    --vert-fonce: #214636;
+    --rayon: 14px;
+    --ombre: 0 6px 24px rgba(38, 48, 43, 0.10);
+    --police-titre: 'Fraunces', Georgia, serif;
 }
 
 * {
@@ -41,44 +48,50 @@ header {
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(250, 247, 242, 0.94);
     backdrop-filter: blur(10px);
     z-index: 100;
 }
 
-/* === BLOC MIS À JOUR POUR CENTRER LE LOGO ET LE MENU === */
 nav {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    justify-content: center; /* Ramène le logo et le menu vers le centre */
+    justify-content: space-between;
     align-items: center;
-    gap: 5rem;              /* Crée un espace fixe et propre entre le logo et le menu */
-    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    padding: 0.7rem 20px;
 }
 
-.logo {
+.marque {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+    color: var(--vert);
+    font-family: var(--police-titre);
     font-weight: 600;
-    font-size: 1.25rem;
-    letter-spacing: -0.5px;
+    font-size: 1.2rem;
+    letter-spacing: -0.01em;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.6rem;
+    align-items: center;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--text-color);
-    font-size: 0.9rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-weight: 500;
     transition: color 0.2s ease;
 }
 
 nav ul li a:hover {
-    color: var(--text-color);
-    font-weight: 600;
+    color: var(--vert);
 }
 
 main {
@@ -121,14 +134,17 @@ body > .bloc-cta {
     background-color: var(--accent-color);
     color: #ffffff;
     text-decoration: none;
-    padding: 0.8rem 2rem;
-    font-size: 0.9rem;
-    font-weight: 400;
-    transition: background-color 0.2s ease;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(200, 116, 46, 0.35);
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
     background-color: var(--accent-hover);
+    transform: translateY(-2px);
 }
 
 .presentation {
@@ -206,20 +222,6 @@ footer {
         width: calc(100% - 2.5rem);
     }
 
-    nav {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .logo img {
-        height: 70px !important;
-    }
 
     .hero h1 {
         font-size: 2.2rem;
@@ -836,43 +838,6 @@ nav ul li a.active {
     font-size: 1.05rem;
     letter-spacing: 0.5px;
 }
-/* === Bandeau réduit au défilement : seul le menu reste visible === */
-header nav,
-.logo img {
-    transition: height 0.4s ease, opacity 0.3s ease, gap 0.4s ease, padding 0.4s ease;
-}
-
-header.header-reduit .logo {
-    height: 0;
-    line-height: 0;
-    overflow: hidden;
-}
-
-header.header-reduit .logo img {
-    height: 0 !important;
-    opacity: 0;
-}
-
-header.header-reduit nav {
-    gap: 0;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
-}
-
-/* Drapeaux de langue : sous le menu quand le logo est grand, dans la ligne du menu une fois le bandeau réduit */
-@media (min-width: 769px) {
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        row-gap: 0.4rem;
-    }
-
-    header:not(.header-reduit) nav ul li.lang-switch {
-        flex-basis: 100%;
-        justify-content: center;
-    }
-}
-
 /* Cartes tourisme de l'accueil : liens et images harmonisés */
 .home-tourism .tourism-card figure {
     margin: 15px 0;
@@ -887,7 +852,7 @@ header.header-reduit nav {
 }
 
 .home-tourism .tourism-card p a {
-    color: #0066cc;
+    color: #2f5d46;
     text-decoration: underline;
 }
 
@@ -913,7 +878,7 @@ header.header-reduit nav {
 }
 
 .lien-histoire a {
-    color: #0066cc;
+    color: #2f5d46;
     text-decoration: underline;
     font-weight: bold;
 }
@@ -944,7 +909,7 @@ header.header-reduit nav {
 }
 
 .cookie-banner a {
-    color: #3182ce;
+    color: #2f5d46;
     text-decoration: underline;
 }
 
@@ -970,7 +935,7 @@ header.header-reduit nav {
 }
 
 .cookie-btn-accept {
-    background: #3182ce;
+    background: #2f5d46;
     border: none;
     color: white;
 }
@@ -1647,7 +1612,7 @@ body.page-detente {
 }
 
 .cookie-banner a {
-    color: #3182ce;
+    color: #2f5d46;
     text-decoration: underline;
 }
 
@@ -1673,7 +1638,7 @@ body.page-detente {
 }
 
 .cookie-btn-accept {
-    background: #3182ce;
+    background: #2f5d46;
     border: none;
     color: white;
 }
@@ -2327,46 +2292,80 @@ body.page-detente {
 /* ===== Classes issues de la migration des styles inline (noms st-xxxxxx = générés) =====
    Le préfixe « html body » leur donne la priorité qu'avait le style inline sur les règles génériques. */
 html body .bandeau-chantier {
-    background-color: #e6f7ff;
-    color: #0050b3;
+    background-color: var(--vert-fonce);
+    color: #ffffff;
     text-align: center;
-    padding: 15px;
-    font-weight: 500;
-    border-bottom: 1px solid #91d5ff;
-    line-height: 1.6;
+    padding: 0.5rem 1rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
 }
 html body .lien-fort {
-    font-weight: bold;
-    color: #0066cc;
+    font-weight: 600;
+    color: var(--accent-hover);
+}
+html body .bandeau-chantier .lien-fort {
+    color: #ffd9b0;
 }
 html body .logo-img {
-    height: 220px;
-    width: auto;
+    height: 44px;
+    width: 44px;
+    display: block;
 }
-html body .lang-switch-liste {
+html body .lang-switch {
+    position: relative;
+}
+html body .lang-select summary {
+    list-style: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.25rem 0.8rem;
+    background: var(--papier);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-light);
 }
-html body .lang-lien {
+html body .lang-select summary::-webkit-details-marker {
+    display: none;
+}
+html body .lang-select summary::after {
+    content: "▾";
+    font-size: 0.75rem;
+}
+html body .lang-liste {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    background: var(--papier);
+    border-radius: 10px;
+    box-shadow: var(--ombre);
+    padding: 0.4rem;
+    min-width: 11rem;
+    z-index: 200;
+}
+html body .lang-liste .lang-lien {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     text-decoration: none;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+html body .lang-liste .lang-lien:hover,
+html body .lang-liste .lang-lien[aria-current="true"] {
+    background: var(--bg-color);
+    color: var(--vert);
 }
 html body .drapeau {
     width: 20px;
     height: auto;
 }
-html body .lang-lien-actif {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    text-decoration: none;
-    font-weight: bold;
-}
 html body .lien-souligne {
-    color: #0066cc;
+    color: #2f5d46;
     text-decoration: underline;
 }
 html body .st-1d47b8 {
@@ -2374,7 +2373,7 @@ html body .st-1d47b8 {
     color: #666666;
     background-color: #f9f9f9;
     padding: 10px;
-    border-left: 3px solid #0066cc;
+    border-left: 3px solid #2f5d46;
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: justify;
@@ -2409,9 +2408,9 @@ html body .st-0ca503 {
 html body .bloc-cta {
     margin-top: 5rem;
     padding: 4rem 2rem;
-    background-color: #1a202c;
+    background-color: var(--vert);
     color: #ffffff;
-    border-radius: 12px;
+    border-radius: var(--rayon);
     text-align: center;
     font-family: 'Inter', sans-serif;
 }
@@ -2464,9 +2463,9 @@ html body .st-2a18ef {
 }
 html body .pied-site {
     text-align: center;
-    padding: 40px 20px;
-    margin-top: 60px;
-    border-top: 1px solid #eaeaea;
+    padding: 2.5rem 20px;
+    margin-top: 4rem;
+    background: var(--text-color);
     width: 100%;
     box-sizing: border-box;
 }
@@ -2475,15 +2474,15 @@ html body .pied-liens {
     line-height: 1.8;
 }
 html body .pied-lien-fort {
-    color: #666;
+    color: #ffffff;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    margin: 0 12px;
+    font-weight: 600;
 }
 html body .pied-lien {
-    color: #666;
+    color: #cfd6d1;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 12px;
     font-size: 0.9rem;
 }
 html body .pied-ecolabels {
@@ -2500,9 +2499,12 @@ html body .pied-ecolabels img {
     width: auto;
 }
 html body .pied-copyright {
-    color: #999;
+    color: #cfd6d1;
     font-size: 0.9rem;
     margin: 0;
+}
+html body .pied-copyright a {
+    color: #ffd9b0;
 }
 html body .st-60c528 {
     width: 100%;
@@ -2901,15 +2903,14 @@ html body .st-6757e9 {
     font-weight: bold;
 }
 html body .bandeau-chantier-court {
-    background-color: #e6f7ff;
-    color: #0050b3;
+    background-color: var(--vert-fonce);
+    color: #ffffff;
     text-align: center;
-    padding: 12px;
-    font-weight: 500;
-    border-bottom: 1px solid #91d5ff;
+    padding: 0.5rem 1rem;
+    font-size: 0.88rem;
 }
 html body .lien-souligne-fort {
-    color: #0066cc;
+    color: #2f5d46;
     text-decoration: underline;
     font-weight: bold;
 }
@@ -2963,7 +2964,7 @@ html body .st-5f906d {
     max-width: 800px;
     margin: 30px auto 0 auto;
     background-color: #f4f9ff;
-    border-left: 4px solid #3182ce;
+    border-left: 4px solid #2f5d46;
     padding: 15px;
     border-radius: 4px;
     text-align: center;
@@ -2975,12 +2976,12 @@ html body .st-4fe485 {
     line-height: 1.5;
 }
 html body .st-5d1e65 {
-    color: #3182ce;
+    color: #2f5d46;
     font-weight: bold;
     text-decoration: underline;
 }
 html body .st-af8cb6 {
-    color: #0066cc;
+    color: #2f5d46;
     font-weight: 500;
     text-decoration: underline;
 }
@@ -3214,13 +3215,13 @@ html body .st-f2b417 {
     text-align: justify;
 }
 html body .st-938931 {
-    color: #0066cc;
+    color: #2f5d46;
     font-weight: bold;
     text-decoration: underline;
 }
 html body .st-6ab6b3 {
     display: inline-block;
-    background-color: #0066cc;
+    background-color: #2f5d46;
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 6px;
@@ -3246,7 +3247,7 @@ html body .st-7d2717 {
 }
 html body .st-a6b857 {
     background-color: #f9f9f9;
-    border-left: 4px solid #0066cc;
+    border-left: 4px solid #2f5d46;
     padding: 15px;
     margin-top: 25px;
     border-radius: 4px;
@@ -3265,7 +3266,7 @@ html body .st-ffb734 {
     color: #555;
 }
 html body .st-46625c {
-    color: #0066cc;
+    color: #2f5d46;
     font-weight: bold;
 }
 html body .st-169f06 {
@@ -3276,12 +3277,12 @@ html body .st-abda9a {
     font-weight: bold;
 }
 html body .st-da392c {
-    background-color: #e6f7ff;
-    color: #0050b3;
+    background-color: #eaf1ec;
+    color: #214636;
     text-align: center;
     padding: 12px;
     font-weight: 500;
-    border-bottom: 1px solid #91d5ff;
+    border-bottom: 1px solid #cfe0d5;
     font-family: Arial, sans-serif;
 }
 html body .st-d7e00e {
@@ -3307,7 +3308,7 @@ html body .st-4199f4 {
 }
 html body .st-cdac1a {
     background-color: #f9f9f9;
-    border-top: 4px solid #0066cc;
+    border-top: 4px solid #2f5d46;
     padding: 40px 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -3333,7 +3334,7 @@ html body .st-683d0d {
     background: #fff;
     padding: 25px;
     border-radius: 6px;
-    border-left: 4px solid #3182ce;
+    border-left: 4px solid #2f5d46;
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 html body .st-8623fa {
@@ -3366,9 +3367,9 @@ html body .st-cd0317 {
     display: inline-block;
     text-decoration: none;
     font-weight: bold;
-    color: #0066cc;
+    color: #2f5d46;
     padding: 8px 16px;
-    background: #e6f7ff;
+    background: #eaf1ec;
     border-radius: 4px;
 }
 html body .st-2bd6fc {
@@ -3577,7 +3578,7 @@ html body .st-2bd6fc {
         .page-mentions-legales h2 { font-size: 1.2rem; color: #2d3748; margin-top: 25px; margin-bottom: 10px; }
         .page-mentions-legales p,
 .page-mentions-legales ul { font-size: 0.95rem; color: #4a5568; }
-        .page-mentions-legales .back-link { display: inline-block; margin-top: 30px; color: #0066cc; text-decoration: none; font-weight: bold; }
+        .page-mentions-legales .back-link { display: inline-block; margin-top: 30px; color: #2f5d46; text-decoration: none; font-weight: bold; }
         .page-mentions-legales .back-link:hover { text-decoration: underline; }
 
 /* ===== Cartes « Vous aimerez aussi » (guides-lies.js) ===== */
@@ -3600,4 +3601,575 @@ html body .st-2bd6fc {
     margin: 6px 0 0;
     font-size: 0.9rem;
     color: #666;
+}
+
+/* ===== Refonte 2026 : identité visuelle commune à toutes les pages ===== */
+h1, h2, h3 {
+    font-family: var(--police-titre);
+    letter-spacing: -0.01em;
+}
+
+.btn-nav {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.9rem;
+    box-shadow: none;
+    color: #ffffff !important;
+}
+
+html body .btn-nav:hover {
+    color: #ffffff;
+}
+
+nav a[aria-current="page"] {
+    color: var(--vert);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0.6rem 12px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1rem;
+    }
+
+    .marque {
+        font-size: 1.05rem;
+    }
+
+    html body .lang-liste {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* ===== Composants communs de la refonte (réutilisés page par page) ===== */
+.conteneur {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.conteneur-etroit {
+    max-width: 760px;
+}
+
+.section {
+    padding: 4.5rem 0;
+}
+
+.section-pierre {
+    background: var(--pierre);
+}
+
+.section-vert {
+    background: var(--vert);
+    color: #ffffff;
+}
+
+.section-vert h2,
+.section-vert h3 {
+    color: #ffffff;
+}
+
+.titre-section {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.titre-section h2 {
+    font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+    margin-bottom: 0.6rem;
+}
+
+.titre-section p {
+    color: var(--text-light);
+    max-width: 62ch;
+    margin: 0 auto;
+}
+
+.section-vert .titre-section p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.centre {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-clair {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    box-shadow: none;
+}
+
+.btn-clair:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.btn-contour {
+    background: transparent;
+    color: var(--vert);
+    border: 2px solid var(--vert);
+    box-shadow: none;
+}
+
+.btn-contour:hover {
+    background: var(--vert);
+    color: #ffffff;
+}
+
+/* Frise des étapes du chantier */
+.frise {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+}
+
+.etape {
+    background: var(--papier);
+    border-radius: var(--rayon);
+    overflow: hidden;
+    box-shadow: var(--ombre);
+    transition: transform 0.2s ease;
+}
+
+.etape:hover {
+    transform: translateY(-4px);
+}
+
+.etape img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.etape .corps {
+    padding: 1.1rem 1.3rem 1.4rem;
+}
+
+.etape time {
+    font-size: 0.8rem;
+    color: var(--accent-hover);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.etape h3 {
+    font-size: 1.1rem;
+    margin: 0.2rem 0 0.3rem;
+}
+
+.etape p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+}
+
+/* ===== Page d'accueil ===== */
+body.page-accueil main {
+    max-width: none;
+    padding: 0;
+}
+
+.hero-photo {
+    position: relative;
+    min-height: min(78vh, 720px);
+    display: flex;
+    align-items: flex-end;
+    color: #ffffff;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.hero-photo picture,
+.hero-photo > picture img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20, 30, 25, 0.15) 0%, rgba(20, 30, 25, 0.75) 100%);
+    z-index: 1;
+}
+
+.hero-photo .conteneur {
+    position: relative;
+    z-index: 2;
+    padding-top: 6rem;
+    padding-bottom: 4.5rem;
+}
+
+.hero-pastille {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(6px);
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.hero-photo h1 {
+    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+    max-width: 16ch;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.hero-photo p {
+    max-width: 52ch;
+    font-size: 1.1rem;
+    margin: 0 0 1.8rem;
+    color: #ffffff;
+}
+
+html body .hero-photo p a {
+    color: #ffd9b0;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.hero-legende {
+    position: absolute;
+    right: 16px;
+    bottom: 10px;
+    z-index: 2;
+    font-size: 0.72rem;
+    opacity: 0.8;
+}
+
+.points-forts.conteneur {
+    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+}
+
+.points-forts .point {
+    background: var(--papier);
+    border-radius: var(--rayon);
+    padding: 1.4rem;
+    box-shadow: var(--ombre);
+}
+
+.points-forts .point-photo {
+    height: 190px;
+    border-radius: 10px;
+}
+
+.presentation {
+    padding: 4.5rem 0;
+    max-width: none;
+    margin: 0;
+    text-align: left;
+    border-bottom: 0;
+}
+
+.presentation h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.presentation p {
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+.note-importante {
+    margin-top: 2rem;
+    background: var(--papier);
+    border-left: 5px solid var(--accent-color);
+    border-radius: 0 var(--rayon) var(--rayon) 0;
+    padding: 1.2rem 1.5rem;
+    box-shadow: var(--ombre);
+}
+
+.note-importante p {
+    font-size: 0.97rem;
+    margin: 0;
+}
+
+body.page-accueil .home-engagement {
+    margin-top: 0;
+    padding: 4.5rem 0;
+    border-top: 0;
+}
+
+.section-vert .engagement-grid {
+    gap: 1.4rem;
+}
+
+.section-vert .engagement-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--rayon);
+    padding: 1.5rem;
+}
+
+.section-vert .engagement-card p {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.section-vert .engagement-card .engagement-accroche {
+    color: #ffd9b0;
+}
+
+.section-vert .engagement-card a {
+    color: #ffd9b0;
+}
+
+.section-vert .engagement-photo {
+    border-radius: 10px;
+}
+
+.home-tourism .tourism-grid {
+    padding: 0;
+    gap: 1.4rem;
+}
+
+.home-tourism .tourism-card {
+    background: var(--papier);
+    border: 0;
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+    padding: 1.5rem;
+}
+
+.home-tourism .tourism-card h3 {
+    margin-bottom: 0.6rem;
+}
+
+html body .appel-testeurs {
+    max-width: 750px;
+    margin: 4rem auto;
+    padding: 2rem 1.5rem;
+    background: var(--papier);
+    border: 0;
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+}
+
+html body .lien-histoire {
+    max-width: none;
+    margin: 2.5rem 0 0;
+    background: var(--papier);
+    border-radius: var(--rayon);
+    padding: 1.2rem 1.5rem;
+}
+
+html body .cta-titre {
+    font-family: var(--police-titre);
+    color: #ffffff;
+}
+
+.bloc-cta p {
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+main p a:not(.btn):not(.lien-fort):not([class*="st-"]),
+main li a:not(.btn):not([class*="st-"]),
+.note-importante a {
+    color: var(--vert);
+}
+
+html body .logo-img {
+    border-radius: 50%;
+}
+
+/* ===== Refonte 2026 : harmonisation des pages intérieures ===== */
+.page-header,
+.page-title {
+    padding: 4rem 0 2rem;
+}
+
+.page-header h1,
+.page-title h1 {
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+    margin-bottom: 1rem;
+}
+
+.logement-card,
+.price-card,
+.tourism-card,
+.engagement-card {
+    border-radius: var(--rayon);
+}
+
+.logement-card,
+.price-card {
+    border: 0;
+    background: var(--papier);
+    box-shadow: var(--ombre);
+    overflow: hidden;
+}
+
+.price-card.highlight {
+    border: 2px solid var(--accent-color);
+}
+
+.logement-card .logement-image img {
+    border-radius: 0;
+}
+
+html body .st-f9db53 {
+    background-color: var(--accent-color);
+    border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(200, 116, 46, 0.35);
+}
+
+html body .st-f9db53:hover {
+    background-color: var(--accent-hover);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--vert);
+    outline-offset: 1px;
+}
+
+html body .cookie-banner a {
+    color: #ffd9b0;
+}
+
+.hero-photo .conteneur {
+    width: 100%;
+}
+
+/* Accueil des pages traduites (en, de, nl) */
+body.page-accueil .about-section {
+    max-width: none;
+    margin: 0;
+    padding: 4.5rem 0;
+    text-align: left;
+}
+
+body.page-accueil .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.4rem;
+}
+
+body.page-accueil .services-block {
+    background: var(--papier);
+    border: 0;
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+    padding: 1.6rem;
+}
+
+body.page-accueil .services-block h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+}
+
+.reservation-accueil {
+    text-align: center;
+}
+
+.reservation-accueil h2 {
+    margin-bottom: 0.8rem;
+}
+
+.reservation-accueil p {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+html body main .hero-photo.hero-photo p a:not(.btn):not(.lien-fort):not([class*="st-"]) {
+    color: #ffd9b0;
+}
+
+body.page-accueil .services-block p {
+    text-align: left;
+}
+
+html body.page-accueil .pied-site {
+    margin-top: 0;
+}
+
+/* Page tourisme : en-tête photo, tableau du jour, cartes de lieux */
+.hero-page {
+    min-height: min(52vh, 440px);
+}
+
+.hero-page h1 {
+    max-width: 20ch;
+}
+
+body.page-tourisme main {
+    max-width: none;
+    padding: 0;
+}
+
+body.page-tourisme .wa-widget {
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: -2.2rem auto 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+body.page-tourisme .wa-bandeau,
+body.page-tourisme .wa-carte {
+    border: 0;
+    box-shadow: var(--ombre);
+}
+
+body.page-tourisme .tourism-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 20px 4rem;
+    gap: 1.4rem;
+}
+
+body.page-tourisme .tourism-card {
+    background: var(--papier);
+    border: 0;
+    box-shadow: var(--ombre);
+    padding: 1.6rem;
+}
+
+body.page-tourisme .tourism-card h3 {
+    color: var(--vert);
+}
+
+body.page-tourisme .tourism-card h4 {
+    font-family: var(--police-titre);
+}
+
+body.page-tourisme .tourism-card h4 a {
+    color: var(--vert);
 }

@@ -60,16 +60,12 @@
       "numberOfRooms": 1
     }
     </script>
-    <script src="header-scroll.js" defer></script>
 </head>
-<body>
+<body class="page-accueil">
 
 <!-- BLOC:bandeau -->
 <div class="bandeau-chantier">
-    🚧 <strong>Projet en cours</strong> (Le gîte est actuellement en construction) : solives du plancher posées ! 🚧<br>
-    📸 Suivez son avancement sur notre <a class="lien-fort" href="blog.html">blog</a> !<br>
-    📅 <strong>Ouverture en 2027 :</strong> Accessible en <strong>location meublée flexible</strong> début 2027 puis en <strong>séjour touristique</strong> d'ici l'été.<br>
-    🗺️ Découvrez déjà les <a class="lien-fort" href="tourisme.html">guides et activités locales</a>.
+    🚧 Chantier en cours — dernière étape : <strong>isolation du plancher</strong>. Ouverture en 2027. <a class="lien-fort" href="blog.html">Suivre l'avancement →</a>
 </div>
 <!-- /BLOC:bandeau -->
 
@@ -77,21 +73,24 @@
     <!-- BLOC:menu -->
 <header>
     <nav aria-label="Navigation principale">
-        <div class="logo"><picture><source srcset="photos/general/logo2.webp" type="image/webp"><img class="logo-img" src="photos/general/logo2.png" alt="logo le relais de Chaumeré qui est notre maison avec un dolmen et une pomme au dessus"></picture></div>
+        <a class="marque" href="index.html"><picture><source srcset="photos/general/logo2.webp" type="image/webp"><img class="logo-img" src="photos/general/logo2.png" alt="" width="44" height="44"></picture><span>Le Relais de Chaumeré</span></a>
         <ul>
-            <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
-            <li><a href="offre.html">L'Offre</a></li>
-            <li><a href="tarifs.html">Services & Tarifs</a></li>
+            <li><a href="offre.html">Le gîte</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
             <li><a href="tourisme.html">Tourisme</a></li>
-            <li><a href="propos.html">À Propos</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blog.html">Blog & Actu</a></li>
-            <li class="lang-switch lang-switch-liste">
-                <a class="lang-lien-actif" href="index.html" hreflang="fr" lang="fr" title="Français" aria-current="true"><img class="drapeau" src="photos/general/drapeaux/fr.png" alt="" loading="lazy"> FR</a>
-                <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="photos/general/drapeaux/gb.png" alt="" loading="lazy"> EN</a>
-                <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" title="Deutsch"><img class="drapeau" src="photos/general/drapeaux/de.png" alt="" loading="lazy"> DE</a>
-                <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="photos/general/drapeaux/nl.png" alt="" loading="lazy"> NL</a>
+            <li><a href="blog.html">Notre histoire</a></li>
+            <li class="lang-switch">
+                <details class="lang-select">
+                    <summary title="Français / English / Deutsch / Nederlands"><img class="drapeau" src="photos/general/drapeaux/fr.png" alt="" loading="lazy"> FR</summary>
+                    <div class="lang-liste">
+                    <a class="lang-lien" href="index.html" hreflang="fr" lang="fr" aria-current="true"><img class="drapeau" src="photos/general/drapeaux/fr.png" alt="" loading="lazy"> Français</a>
+                    <a class="lang-lien" href="english.html" hreflang="en" lang="en"><img class="drapeau" src="photos/general/drapeaux/gb.png" alt="" loading="lazy"> English</a>
+                    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de"><img class="drapeau" src="photos/general/drapeaux/de.png" alt="" loading="lazy"> Deutsch</a>
+                    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl"><img class="drapeau" src="photos/general/drapeaux/nl.png" alt="" loading="lazy"> Nederlands</a>
+                    </div>
+                </details>
             </li>
+            <li><a class="btn btn-nav" href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -99,62 +98,27 @@
 
     <!-- Section Principale (Hero) -->
     <main>
-        <section class="hero">
-            <div class="hero-content">
+        <!-- Hero -->
+        <section class="hero-photo">
+            <picture><source srcset="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.webp" type="image/webp"><img src="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.jpg" alt="Studio location - Le Chalet et son jardin au Relais de Chaumeré (vue d'artiste réalisée par IA)" fetchpriority="high" decoding="async"></picture>
+            <div class="conteneur">
+                <span class="hero-pastille">📍 Domagné · Haute-Bretagne · près de Rennes</span>
                 <h1>Gîte studio meublé à Domagné</h1>
-                <p>Découvrez un gîte indépendant agencé en studio au design épuré et moderne,
-				conçu pour votre confort par Emilie Leparoux d'<a href="https://www.ambiance-maison.com/." target="_blank">Ambiance Maison</a>.</p>
-                <a href="offre.html" class="btn">Découvrir le logement en location</a>
-            </div>
-			
-			<div class="logement-image">
-                    <picture><source srcset="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.webp" type="image/webp"><img src="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.jpg" alt="Studio location - Le Chalet et son jardin au Relais de Chaumeré" loading="lazy" decoding="async"></picture>
-            </div>
-        </section>
-
-        <!-- Section Suivi des Travaux -->
-        <section class="st-d1051c">
-            <div class="st-091014">
-                <div class="st-b9cd86">
-                    <h2 class="st-3c79dc">Du projet virtuel à la réalité</h2>
-                    <p class="st-85c40c">
-                        Si la vue ci-dessus présente une projection (souhaitée) réalisée par IA de notre futur gîte, le plancher prend forme sur le terrain ! Le projet avance concrètement étape par étape.
-                    </p>
-                    <p class="st-f2b417">
-                        Pour suivre l'évolution du chantier en direct, découvrir les coulisses et voir le terrain se transformer, rendez-vous sur notre <a class="st-938931" href="blog.html">blog</a>.
-                    </p>
-                    <a class="st-6ab6b3" href="blog.html">Suivre l'avancement sur le blog</a>
-                </div>
-                <div class="st-02f580">
-                    <picture><source srcset="photos/blog/actu%20du%20gite/ossature-plancher.webp" type="image/webp"><img class="st-cf4814" src="photos/blog/actu%20du%20gite/ossature-plancher.jpg" alt="ossature en bois du plancher posée sur la dalle du gîte Le Relais de Chaumeré" loading="lazy" decoding="async"></picture>
+                <p>Découvrez un gîte indépendant agencé en studio au design épuré et moderne, conçu pour votre confort par Emilie Leparoux d'<a href="https://www.ambiance-maison.com/" target="_blank" rel="noopener">Ambiance Maison</a>.</p>
+                <div class="hero-actions">
+                    <a href="offre.html" class="btn">Découvrir le logement en location</a>
+                    <a href="contact.html" class="btn btn-clair">Demander les disponibilités</a>
                 </div>
             </div>
+            <span class="hero-legende">Vue d'artiste réalisée par IA</span>
         </section>
 
-
-
-        <!-- Section Présentation -->
-<section class="presentation">
-            <h2>Votre séjour en gîte au "Relais de Chaumeré"</h2>
-            
-			<p class="st-7d2717">Ce <a class="lien-souligne" href="offre.html">studio en location</a> à la nuit, pour quelques jours ou plus est entièrement indépendant et est situé dans notre jardin.<br><br>
-Il a été entièrement pensé pour maximiser l'espace et le confort de ses occupants quelque soit la durée de leur(s) séjour(s). Agencé de manière optimale sous la forme d'un studio tout équipé, ce <strong>gîte de charme</strong> met à votre disposition une literie de qualité supérieure telle qu'on la trouve dans un hotel de qualité, une cuisine astucieuse et équipé pour préparer vos repas en toute liberté, ainsi qu'une connexion internet haut débit indispensable pour le télétravail ou vos loisirs.<br><br>
-Chaque détail décoratif a été soigneusement sélectionné avec l'aide d'une décoratrice d'intérieur, Emilie Leparoux d'<a class="lien-souligne" href="https://www.ambiance-maison.com/" target="_blank">Ambiance Maison</a>, pour créer une atmosphère douce et accueillante.<br><br>
-Pour planifier vos sorties, découvrez nos recommandations dans notre section <a class="lien-souligne" href="tourisme.html">tourisme en Haute-Bretagne</a> ou consultez les derniers articles de notre <a class="lien-souligne" href="blog.html">blog local</a>.<br><br>
-Une question ou une demande spécifique ? N'hésitez pas à nous joindre via notre page de <a class="lien-souligne" href="contact.html">contact</a> pour préparer au mieux votre séjour.</p>
-			
-			
-<div class="st-a6b857">
-    <p class="st-e22a10">
-        <strong>Information importante :</strong> Le site internet et l'hébergement sont actuellement en cours de finalisation. La location de ce gîte studio ne sera accessible qu'à partir de <strong>2027</strong>. Consultez notre grille de <a class="lien-souligne" href="tarifs.html">services & tarifs</a> pour anticiper votre budget. Les réservations s'ouvriront d'abord sous la formule d'une <strong>location meublée flexible</strong>, idéale pour les actifs ou étudiants (pensez à vérifier nos <a class="lien-souligne" href="numeros.html">numéros utiles</a> pour vos démarches), avant de proposer une offre touristique. Pour toute question, notre page de <a class="lien-souligne" href="contact.html">contact</a> reste ouverte.
-    </p>
-</div>
-        </section>
-		
-		
-
-        <!-- Section Points Forts -->
-        <section class="points-forts">
+        <!-- Points forts -->
+        <section class="section">
+            <div class="titre-section">
+                <h2>Petit par la taille, grand par le confort</h2>
+            </div>
+<div class="conteneur points-forts">
             <div class="point">
                 <h3>✨ Confort Moderne</h3>
 				
@@ -181,18 +145,34 @@ Une question ou une demande spécifique ? N'hésitez pas à nous joindre via not
 				
                 <p>Un environnement calme à la campagne pour vous ressourcer pleinement. Profitez de votre séjour pour vous offrir une parenthèse de <a class="lien-souligne" href="detente.html">détente et bien-être</a> ou tester des activités <a class="lien-souligne" href="insolite.html">insolites dans le coin</a>.</p>
             </div>
+        </div>
         </section>
-        
-		<section class="home-engagement">
-        <h2>Notre démarche éco-responsable et solidaire</h2>
-		<figure class="fig-bloc">
-    <picture><source srcset="photos/blog/developpement durable/demarche-eco-responsable.webp" type="image/webp"><img class="fig-img" src="photos/blog/developpement durable/demarche-eco-responsable.jpg" 
-         alt="une jeune femme portant avec soin une réprésentation de la terre" loading="lazy" decoding="async"></picture>
 
-</figure>		
-		
-        <p class="st-ffb734">Louer notre hébergement, c'est aussi soutenir une vision d'accueil éthique, ancrée dans son territoire et respectueuse de l'environnement.</p>
-        <div class="engagement-grid">
+        <!-- Présentation -->
+        <section class="section section-pierre presentation">
+            <div class="conteneur conteneur-etroit">
+                <h2>Votre séjour en gîte au "Relais de Chaumeré"</h2>
+                <p>Ce <a class="lien-souligne" href="offre.html">studio en location</a> à la nuit, pour quelques jours ou plus est entièrement indépendant et est situé dans notre jardin.<br><br>
+Il a été entièrement pensé pour maximiser l'espace et le confort de ses occupants quelque soit la durée de leur(s) séjour(s). Agencé de manière optimale sous la forme d'un studio tout équipé, ce <strong>gîte de charme</strong> met à votre disposition une literie de qualité supérieure telle qu'on la trouve dans un hotel de qualité, une cuisine astucieuse et équipé pour préparer vos repas en toute liberté, ainsi qu'une connexion internet haut débit indispensable pour le télétravail ou vos loisirs.<br><br>
+Chaque détail décoratif a été soigneusement sélectionné avec l'aide d'une décoratrice d'intérieur, Emilie Leparoux d'<a class="lien-souligne" href="https://www.ambiance-maison.com/" target="_blank">Ambiance Maison</a>, pour créer une atmosphère douce et accueillante.<br><br>
+Pour planifier vos sorties, découvrez nos recommandations dans notre section <a class="lien-souligne" href="tourisme.html">tourisme en Haute-Bretagne</a> ou consultez les derniers articles de notre <a class="lien-souligne" href="blog.html">blog local</a>.<br><br>
+Une question ou une demande spécifique ? N'hésitez pas à nous joindre via notre page de <a class="lien-souligne" href="contact.html">contact</a> pour préparer au mieux votre séjour.</p>
+                <aside class="note-importante">
+                    <p>
+        <strong>Information importante :</strong> Le site internet et l'hébergement sont actuellement en cours de finalisation. La location de ce gîte studio ne sera accessible qu'à partir de <strong>2027</strong>. Consultez notre grille de <a class="lien-souligne" href="tarifs.html">services & tarifs</a> pour anticiper votre budget. Les réservations s'ouvriront d'abord sous la formule d'une <strong>location meublée flexible</strong>, idéale pour les actifs ou étudiants (pensez à vérifier nos <a class="lien-souligne" href="numeros.html">numéros utiles</a> pour vos démarches), avant de proposer une offre touristique. Pour toute question, notre page de <a class="lien-souligne" href="contact.html">contact</a> reste ouverte.
+    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Engagement éco-responsable et solidaire -->
+        <section class="section section-vert home-engagement">
+            <div class="conteneur">
+                <div class="titre-section">
+                    <h2>Notre démarche éco-responsable et solidaire</h2>
+                    <p>Louer notre hébergement, c'est aussi soutenir une vision d'accueil éthique, ancrée dans son territoire et respectueuse de l'environnement.</p>
+                </div>
+                <div class="engagement-grid">
             <div class="engagement-card">
                 <h3>🤝 Économie locale & Engagement associatif</h3>
 				<figure class="engagement-figure">
@@ -225,21 +205,34 @@ Une question ou une demande spécifique ? N'hésitez pas à nous joindre via not
                 <p>Pour aller plus loin, nous étudions ou concevons des solutions complémentaires : un chauffe-eau solaire performant pour l'eau chaude sanitaire, ainsi qu'un système de rafraîchissement par puits provençal (ou une pompe à chaleur selon l'évolution technique) pour le confort thermique du studio. Chaque brique de ce projet vise à réduire notre empreinte environnementale.</p>
             </div>
         </div>
-    </section>
+            </div>
+        </section>
 
-    <section class="appel-testeurs" aria-labelledby="titre-testeurs">
-        <h2 id="titre-testeurs">📍 Tro-Dro cherche des testeurs !</h2>
-        <p><a class="lien-souligne-fort" href="https://tro-dro.fr/" target="_blank" rel="noopener">Tro-Dro</a> rassemble l'essentiel de l'actualité locale : carburants, marchés, pharmacies de garde, foodtrucks, sorties… Le site est en cours de développement et j'ai besoin de vos retours pour l'améliorer.</p>
-        <p><strong>Il couvre l'essentiel autour du village, mais pas seulement :</strong> Châteaugiron, Domloup, Vern-sur-Seiche, Vitré, Domagné, et bien d'autres communes encore !</p>
-        <a href="contact.html" class="btn">Je veux tester</a>
-    </section>
+        <!-- Chantier -->
+        <section class="section chantier-accueil">
+            <div class="conteneur">
+                <div class="titre-section">
+                    <h2>Du projet virtuel à la réalité</h2>
+                    <p>La vue ci-dessus est une projection (souhaitée) réalisée par IA de notre futur gîte. Sur le terrain, le sol s'isole et se referme : le projet avance concrètement, étape par étape.</p>
+                </div>
+                <div class="frise">
+                    <article class="etape"><a href="blog.html"><picture><source srcset="photos/blog/actu%20du%20gite/isolation-plancher.webp" type="image/webp"><img src="photos/blog/actu%20du%20gite/isolation-plancher.jpg" alt="plancher en cours de construction : isolation entre les solives et premiers panneaux de bois" loading="lazy" decoding="async"></picture></a><div class="corps"><time datetime="2026-10-14">14 octobre 2026</time><h3>Le sol s'isole et se referme</h3><p>Laine de roche et laine de mouton, premiers panneaux OSB.</p></div></article>
+                    <article class="etape"><a href="blog.html"><picture><source srcset="photos/blog/actu%20du%20gite/ossature-plancher.webp" type="image/webp"><img src="photos/blog/actu%20du%20gite/ossature-plancher.jpg" alt="ossature en bois du plancher posée sur la dalle du gîte Le Relais de Chaumeré" loading="lazy" decoding="async"></picture></a><div class="corps"><time datetime="2026-10-12">12 octobre 2026</time><h3>Le plancher prend forme</h3><p>Les solives sont posées sur la dalle.</p></div></article>
+                    <article class="etape"><a href="blog.html"><picture><source srcset="photos/blog/actu%20du%20gite/dalle-coulee.webp" type="image/webp"><img src="photos/blog/actu%20du%20gite/dalle-coulee.jpg" alt="la dalle du futur gîte venant d'être coulée" loading="lazy" decoding="async"></picture></a><div class="corps"><time datetime="2026-09">Septembre 2026</time><h3>La dalle est en place</h3><p>La base du futur studio est coulée.</p></div></article>
+                </div>
+                <p class="centre"><a class="btn btn-contour" href="construction.html">Suivre l'histoire du chantier</a></p>
+            </div>
+        </section>
 
-	<section class="home-tourism">
-    <h2>Idéalement situé en Ille-et-Vilaine</h2>
-    <p class="tourism-intro">En choisissant la <strong>location de notre gîte</strong> à Domagné, vous profitez d'un point de départ calme, central et stratégique pour découvrir les richesses de la Haute-Bretagne et faciliter vos déplacements, mais aussi pour explorer de petites pépites locales. Retrouvez toutes nos suggestions dans notre guide dédié au <a class="lien-souligne-fort" href="tourisme.html">tourisme à Domagné et ses alentours</a>.<br>
+        <!-- Tourisme -->
+        <section class="section section-pierre home-tourism">
+            <div class="conteneur">
+                <div class="titre-section">
+                    <h2>Idéalement situé en Ille-et-Vilaine</h2>
+                    <p>En choisissant la <strong>location de notre gîte</strong> à Domagné, vous profitez d'un point de départ calme, central et stratégique pour découvrir les richesses de la Haute-Bretagne et faciliter vos déplacements, mais aussi pour explorer de petites pépites locales. Retrouvez toutes nos suggestions dans notre guide dédié au <a class="lien-souligne-fort" href="tourisme.html">tourisme à Domagné et ses alentours</a>.<br>
 	Voici notre selection réduite :</p>
-    
-    <div class="tourism-grid">
+                </div>
+                <div class="tourism-grid">
         <div class="tourism-card">
             <h3>🏰 Vitré <br>(à 15 min)</h3>
 			<figure>
@@ -272,29 +265,25 @@ Une question ou une demande spécifique ? N'hésitez pas à nous joindre via not
             <p>Un <a href="https://www.bretagne-vitre.com/les-pepites/les-miniatures-de-domagne/" target="_blank" rel="noopener">monde de Miniatures</a> est à découvrir juste à coté du <a href="offre.html">gîte</a> ; ce parc unique et original dévoile un monde miniature fascinant. Une visite insolite idéale en famille pour admirer des reproductions d'une précision remarquable réalisées pendant la retraite d'une agriculteur de la ville.<br>Consultez nos autres suggestions sur la page <a href="insolite.html">insolite</a>.</p>
         </div>
     </div>
-    <p class="lien-histoire">📜 <strong>L'A3PC, au service du pays de Chaumeré.</strong> L'Association pour la Promotion du Pays de Chaumeré est une toute jeune association de village. Elle veut faire connaître notre territoire aux visiteurs comme aux habitants, organiser des événements pour se retrouver, encourager l'entraide entre voisins et mettre en avant les artisans et commerçants du coin. Une application ouverte à tous est en préparation. Son site propose aussi un récit de l'histoire de Chaumeré, une façon simple de mieux connaître le lieu où vous séjournez. Le gîte la soutient directement grâce aux réservations en direct. <a href="https://a3pc.fr/infos-pratiques/#histoire" target="_blank" rel="noopener">Découvrir l'association et l'histoire de Chaumeré</a></p>
-</section>
+                <p class="lien-histoire">📜 <strong>L'A3PC, au service du pays de Chaumeré.</strong> L'Association pour la Promotion du Pays de Chaumeré est une toute jeune association de village. Elle veut faire connaître notre territoire aux visiteurs comme aux habitants, organiser des événements pour se retrouver, encourager l'entraide entre voisins et mettre en avant les artisans et commerçants du coin. Une application ouverte à tous est en préparation. Son site propose aussi un récit de l'histoire de Chaumeré, une façon simple de mieux connaître le lieu où vous séjournez. Le gîte la soutient directement grâce aux réservations en direct. <a href="https://a3pc.fr/infos-pratiques/#histoire" target="_blank" rel="noopener">Découvrir l'association et l'histoire de Chaumeré</a></p>
+            </div>
+        </section>
+
+        <!-- Tro-Dro -->
+        <section class="appel-testeurs" aria-labelledby="titre-testeurs">
+        <h2 id="titre-testeurs">📍 Tro-Dro cherche des testeurs !</h2>
+        <p><a class="lien-souligne-fort" href="https://tro-dro.fr/" target="_blank" rel="noopener">Tro-Dro</a> rassemble l'essentiel de l'actualité locale : carburants, marchés, pharmacies de garde, foodtrucks, sorties… Le site est en cours de développement et j'ai besoin de vos retours pour l'améliorer.</p>
+        <p><strong>Il couvre l'essentiel autour du village, mais pas seulement :</strong> Châteaugiron, Domloup, Vern-sur-Seiche, Vitré, Domagné, et bien d'autres communes encore !</p>
+        <a href="contact.html" class="btn">Je veux tester</a>
+    </section>
     </main>
-	
+
 <div class="bloc-cta">
-    <h3 class="cta-titre">Une question ou envie de réserver ?</h3>
-    <p class="st-31ac01">
-        Nous sommes à votre écoute pour préparer votre prochain séjour en Haute-Bretagne.
-    </p>
-    
-    <!-- Uniquement les deux choix de conversion -->
+    <h2 class="cta-titre">Une question ou envie de réserver ?</h2>
+    <p>Nous sommes à votre écoute pour préparer votre prochain séjour en Haute-Bretagne.</p>
     <div class="cta-actions">
-        
-        <!-- Action principale : Prix et dispo -->
-        <a class="st-fb0e55" href="tarifs.html">
-            <span class="cta-emoji">📅</span>Consulter les Tarifs & Dispos
-        </a>
-        
-        <!-- Action secondaire : Contact direct -->
-        <a class="st-2a18ef" href="contact.html" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
-            <span class="cta-emoji">✉️</span>Envoyer un Message
-        </a>
-        
+        <a class="btn" href="tarifs.html">📅 Consulter les tarifs &amp; dispos</a>
+        <a class="btn btn-clair" href="contact.html">✉️ Envoyer un message</a>
     </div>
 </div>
     <!-- Pied de page -->
@@ -314,7 +303,7 @@ Une question ou une demande spécifique ? N'hésitez pas à nous joindre via not
         <a href="https://www.websitecarbon.com/website/le-relais-de-chaumere-fr/" target="_blank" rel="noopener"><img src="photos/general/badge-website-carbon.svg" alt="Note Website Carbon de ce site : voir le résultat" width="150" height="32" loading="lazy"></a>
         <a href="https://www.ecoindex.fr/resultat/?id=ee0bc5fa-1b4a-42e4-b27b-42ecd396179c" target="_blank" rel="noopener"><img src="photos/general/badge-ecoindex.svg" alt="Note Ecoindex de ce site : voir le résultat" width="108" height="32" loading="lazy"></a>
     </div>
-    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 12/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 14/10/2026 - Tous droits réservés.<br>Site Réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 <!-- /BLOC:pied -->
 </body>

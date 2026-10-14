@@ -29,51 +29,59 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="stylesheet" href="style.css">
-    <script src="header-scroll.js" defer></script>
 </head>
-<body>
+<body class="page-accueil">
 
 <!-- BLOC:bandeau -->
 <div class="bandeau-chantier">
-    🚧 <strong>Projekt im Aufbau</strong> (das Gîte befindet sich derzeit im Bau): Bodenbalken verlegt! 🚧<br>
-    📸 Verfolgen Sie den Baufortschritt auf unserem <a class="lien-fort" href="blog.html">Blog</a> (auf Französisch)!<br>
-    📅 <strong>Eröffnung 2027:</strong> Ab Anfang 2027 mietbar als <strong>flexible möblierte Unterkunft</strong>, bis zum Sommer dann auch für <strong>Urlaubsaufenthalte</strong>.<br>
-    🗺️ Entdecken Sie schon jetzt unsere <a class="lien-fort" href="tourismus.html">lokalen Reiseführer und Aktivitäten</a>.
+    🚧 Im Bau — letzter Schritt: <strong>Dämmung des Bodens</strong>. Eröffnung 2027. <a class="lien-fort" href="blog.html">Baufortschritt verfolgen (auf Französisch) →</a>
 </div>
 <!-- /BLOC:bandeau -->
 
     <!-- BLOC:menu -->
 <header>
     <nav aria-label="Hauptnavigation">
-        <div class="logo"><picture><source srcset="photos/general/logo2.webp" type="image/webp"><img class="logo-img" src="photos/general/logo2.png" alt="Logo von Le Relais de Chaumeré: unser Haus mit einem Dolmen und einem Apfel darüber"></picture></div>
+        <a class="marque" href="deutsch.html"><picture><source srcset="photos/general/logo2.webp" type="image/webp"><img class="logo-img" src="photos/general/logo2.png" alt="" width="44" height="44"></picture><span>Le Relais de Chaumeré</span></a>
         <ul>
-            <li><a href="deutsch.html" class="active" aria-current="page">Startseite</a></li>
             <li><a href="angebot.html">Das Studio</a></li>
             <li><a href="preise.html">Preise</a></li>
             <li><a href="tourismus.html">Tourismus</a></li>
-            <li><a href="numbers.html">Nützliche Nummern</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="blog.html">Blog & News</a></li>
-            <li class="lang-switch lang-switch-liste">
-                <a class="lang-lien" href="index.html" hreflang="fr" lang="fr" title="Français"><img class="drapeau" src="photos/general/drapeaux/fr.png" alt="" loading="lazy"> FR</a>
-                <a class="lang-lien" href="english.html" hreflang="en" lang="en" title="English"><img class="drapeau" src="photos/general/drapeaux/gb.png" alt="" loading="lazy"> EN</a>
-                <a class="lang-lien-actif" href="deutsch.html" hreflang="de" lang="de" title="Deutsch" aria-current="true"><img class="drapeau" src="photos/general/drapeaux/de.png" alt="" loading="lazy"> DE</a>
-                <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl" title="Nederlands"><img class="drapeau" src="photos/general/drapeaux/nl.png" alt="" loading="lazy"> NL</a>
+            <li><a href="blog.html">Unsere Geschichte</a></li>
+            <li class="lang-switch">
+                <details class="lang-select">
+                    <summary title="Français / English / Deutsch / Nederlands"><img class="drapeau" src="photos/general/drapeaux/de.png" alt="" loading="lazy"> DE</summary>
+                    <div class="lang-liste">
+                    <a class="lang-lien" href="index.html" hreflang="fr" lang="fr"><img class="drapeau" src="photos/general/drapeaux/fr.png" alt="" loading="lazy"> Français</a>
+                    <a class="lang-lien" href="english.html" hreflang="en" lang="en"><img class="drapeau" src="photos/general/drapeaux/gb.png" alt="" loading="lazy"> English</a>
+                    <a class="lang-lien" href="deutsch.html" hreflang="de" lang="de" aria-current="true"><img class="drapeau" src="photos/general/drapeaux/de.png" alt="" loading="lazy"> Deutsch</a>
+                    <a class="lang-lien" href="nederlands.html" hreflang="nl" lang="nl"><img class="drapeau" src="photos/general/drapeaux/nl.png" alt="" loading="lazy"> Nederlands</a>
+                    </div>
+                </details>
             </li>
+            <li><a class="btn btn-nav" href="kontakt.html">Kontakt</a></li>
         </ul>
     </nav>
 </header>
 <!-- /BLOC:menu -->
 
 
-<main class="container">
+<main>
 
-        <div class="about-hero page-header">
-            <h1>Willkommen in unserem Gîte in der Bretagne</h1>
-            <p>Genießen Sie einen <a href="angebot.html">ruhigen Aufenthalt</a> in Domagné – ideal gelegen, um <a href="https://www.google.com/maps/search/?api=1&query=Rennes&query_place_id=ChIJhZDWpy_eDkgRMKvkNs2lDAQ" target="_blank" rel="noopener">Rennes</a>, <a href="https://www.google.com/maps/search/?api=1&query=Chateau+de+Vitre&query_place_id=ChIJA9OEJOUoCUgRbwC4oFes6qU" target="_blank" rel="noopener">Vitré</a> und die schöne <a href="https://en.wikipedia.org/wiki/C%C3%B4te_d%27%C3%89meraude" target="_blank">Smaragdküste</a> zu erkunden. Aber nicht nur das: <a href="tourismus.html">entdecken Sie noch mehr!</a></p>
-        </div>
+        <section class="hero-photo">
+            <picture><source srcset="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.webp" type="image/webp"><img src="photos/blog/actu du gite/le-chalet-et-son-jardin-vu-par-ia.jpg" alt="Künstlerische Darstellung des Studios und seines Gartens im Relais de Chaumeré (KI-generiert)" fetchpriority="high" decoding="async"></picture>
+            <div class="conteneur">
+                <span class="hero-pastille">📍 Domagné · Bretagne · bei Rennes</span>
+                <h1>Willkommen in unserem Gîte in der Bretagne</h1>
+                <p>Genießen Sie einen <a href="angebot.html">ruhigen Aufenthalt</a> in Domagné – ideal gelegen, um <a href="https://www.google.com/maps/search/?api=1&query=Rennes&query_place_id=ChIJhZDWpy_eDkgRMKvkNs2lDAQ" target="_blank" rel="noopener">Rennes</a>, <a href="https://www.google.com/maps/search/?api=1&query=Chateau+de+Vitre&query_place_id=ChIJA9OEJOUoCUgRbwC4oFes6qU" target="_blank" rel="noopener">Vitré</a> und die schöne <a href="https://en.wikipedia.org/wiki/C%C3%B4te_d%27%C3%89meraude" target="_blank">Smaragdküste</a> zu erkunden. Aber nicht nur das: <a href="tourismus.html">entdecken Sie noch mehr!</a></p>
+                <div class="hero-actions">
+                    <a href="angebot.html" class="btn">Das Studio entdecken</a>
+                    <a href="kontakt.html" class="btn btn-clair">Kontakt aufnehmen</a>
+                </div>
+            </div>
+            <span class="hero-legende">Künstlerische Darstellung, von KI erstellt</span>
+        </section>
 
-        <section class="about-section">
+        <section class="section about-section"><div class="conteneur">
             <div class="about-grid">
                 
                 <div class="services-block">
@@ -103,13 +111,14 @@
 		Sehen Sie sich auch unsere Seite <a href="tourismus.html">Tourismus</a> an, um die verborgenen Schätze der Umgebung zu entdecken.</p></div>
 
             </div>
+        </div>
         </section>
 
-        <section class="page-header st-f7571c">
+        <section class="section section-vert reservation-accueil"><div class="conteneur conteneur-etroit">
             <h2>📅 Preise & Buchung</h2>
             <p>Wir bevorzugen die Direktbuchung, um Ihnen den besten Preis ohne Gebühren von Vermittlungsplattformen zu garantieren.</p>
-            <p class="st-185d79"><a href="kontakt.html" class="services-block st-6757e9"> ✉️ Kontakt / Aufenthalt buchen </a></p>
-        </section>
+            <p class="centre"><a href="kontakt.html" class="btn">✉️ Kontakt / Aufenthalt buchen</a></p>
+        </div></section>
 
     </main>
 
@@ -129,7 +138,7 @@
         <a href="https://www.websitecarbon.com/website/le-relais-de-chaumere-fr/" target="_blank" rel="noopener"><img src="photos/general/badge-website-carbon.svg" alt="Website-Carbon-Bewertung dieser Website: Ergebnis ansehen" width="150" height="32" loading="lazy"></a>
         <a href="https://www.ecoindex.fr/resultat/?id=ee0bc5fa-1b4a-42e4-b27b-42ecd396179c" target="_blank" rel="noopener"><img src="photos/general/badge-ecoindex.svg" alt="Ecoindex-Bewertung dieser Website: Ergebnis ansehen" width="108" height="32" loading="lazy"></a>
     </div>
-    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 12. Oktober 2026 - Alle Rechte vorbehalten.<br>Website erstellt von <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    <p class="pied-copyright">&copy; 2026 Le Relais de Chaumeré - 14. Oktober 2026 - Alle Rechte vorbehalten.<br>Website erstellt von <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
 </footer>
 <!-- /BLOC:pied -->
 
