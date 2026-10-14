@@ -4321,3 +4321,27 @@ body.page-tourisme .wa-carte {
     font-size: 0.88rem;
     opacity: 0.9;
 }
+
+/* Menu masqué quand on descend, ré-affiché quand on remonte (header-scroll.js) */
+header {
+    transition: transform 0.3s ease;
+}
+
+header.header-cache {
+    transform: translateY(-100%);
+}
+
+.filtres {
+    transition: top 0.3s ease;
+}
+
+body.menu-cache .filtres {
+    top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    header,
+    .filtres {
+        transition: none;
+    }
+}
