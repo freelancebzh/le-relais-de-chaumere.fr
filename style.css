@@ -4148,28 +4148,176 @@ body.page-tourisme .wa-carte {
     box-shadow: var(--ombre);
 }
 
-body.page-tourisme .tourism-grid {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2.5rem 20px 4rem;
-    gap: 1.4rem;
+
+/* Page tourisme : filtres et cartes de lieux */
+.filtres {
+    position: sticky;
+    top: 66px;
+    z-index: 50;
+    background: rgba(250, 247, 242, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--pierre);
 }
 
-body.page-tourisme .tourism-card {
-    background: var(--papier);
+.puces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+}
+
+.filtres button {
+    font: inherit;
+    font-weight: 500;
     border: 0;
+    background: var(--papier);
+    color: var(--text-color);
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.2s ease;
+}
+
+.filtres button:hover {
+    background: var(--pierre);
+}
+
+.filtres button.actif {
+    background: var(--vert);
+    color: #ffffff;
+}
+
+.lieux {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 1.4rem;
+    align-items: start;
+}
+
+.lieu {
+    background: var(--papier);
+    border-radius: var(--rayon);
+    overflow: hidden;
     box-shadow: var(--ombre);
-    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
 }
 
-body.page-tourisme .tourism-card h3 {
+.lieu:hover {
+    transform: translateY(-4px);
+}
+
+.lieu[hidden] {
+    display: none;
+}
+
+.lieu .photo {
+    position: relative;
+    height: 210px;
+    margin: 0;
+    background: var(--pierre);
+}
+
+.lieu .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.lieu .temps {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
     color: var(--vert);
 }
 
-body.page-tourisme .tourism-card h4 {
+.lieu .legende {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.6rem 0.9rem 0.5rem;
+    background: linear-gradient(180deg, transparent, rgba(20, 30, 25, 0.7));
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.lieu .corps {
+    padding: 1.2rem 1.4rem 1.5rem;
+}
+
+.lieu .cat {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-hover);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.lieu h3 {
+    font-size: 1.2rem;
+    margin: 0.2rem 0 0.1rem;
+}
+
+.lieu h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.lieu h3 a:hover {
+    color: var(--vert);
+    text-decoration: underline;
+}
+
+.lieu .ou {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 0.6rem;
+}
+
+.lieu p {
+    font-size: 0.93rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+.guides {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+}
+
+.guide {
+    background: var(--vert);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: var(--rayon);
+    padding: 1.4rem;
+    transition: background-color 0.2s ease;
+}
+
+.guide:hover {
+    background: var(--vert-fonce);
+}
+
+.guide strong {
     font-family: var(--police-titre);
+    font-size: 1.15rem;
+    display: block;
+    margin-bottom: 0.2rem;
 }
 
-body.page-tourisme .tourism-card h4 a {
-    color: var(--vert);
+.guide span {
+    font-size: 0.88rem;
+    opacity: 0.9;
 }
