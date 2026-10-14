@@ -4379,3 +4379,29 @@ body.menu-cache .filtres {
     margin-top: 0.4rem;
     line-height: 1.5;
 }
+
+/* Vue d'artiste (IA) dans la section chantier de l'accueil */
+.projection-ia {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+}
+
+.projection-ia img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+    display: block;
+}
+
+.projection-ia figcaption {
+    text-align: center;
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin-top: 0.6rem;
+}
+
+.hero-photo > picture img {
+    object-position: center 60%;
+}
