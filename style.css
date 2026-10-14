@@ -4345,3 +4345,37 @@ body.menu-cache .filtres {
         transition: none;
     }
 }
+
+/* Soutien facultatif à l'A3PC (page Solidaires et formulaires de contact) */
+.soutien-a3pc {
+    text-align: left;
+    max-width: 800px;
+    margin: 2.5rem auto;
+    background: var(--papier);
+    border-left: 5px solid var(--accent-color);
+    border-radius: 0 var(--rayon) var(--rayon) 0;
+    box-shadow: var(--ombre);
+    padding: 1.6rem 1.8rem;
+}
+
+.soutien-a3pc h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.soutien-a3pc p,
+.soutien-a3pc li {
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+}
+
+.soutien-a3pc ol {
+    margin: 0.5rem 0 1rem 1.3rem;
+}
+
+.aide-champ {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.4rem;
+    line-height: 1.5;
+}
