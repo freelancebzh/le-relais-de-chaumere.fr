@@ -4405,3 +4405,28 @@ body.menu-cache .filtres {
 .hero-photo > picture img {
     object-position: center 60%;
 }
+
+/* Carte « Économie locale » de l'accueil : logo de l'A3PC centré sur fond blanc, liens lisibles sur le vert */
+.engagement-figure-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.engagement-logo {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+html body main .section-vert .engagement-card p a.lien-souligne-fort {
+    color: #ffd9b0;
+}
