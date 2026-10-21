@@ -4460,3 +4460,42 @@ html body main .section-vert .engagement-card p a.lien-souligne-fort {
     line-height: 1.6;
     color: #424242;
 }
+
+/* Newsletter du blog : consentement et informations RGPD */
+.page-blog .newsletter-form {
+    text-align: left;
+}
+
+.page-blog .newsletter-label {
+    font-weight: 600;
+}
+
+.page-blog .newsletter-consentement {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.page-blog .newsletter-consentement input {
+    flex: 0 0 auto;
+    margin-top: 0.3rem;
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.page-blog .newsletter-btn:disabled,
+.page-blog .newsletter-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.page-blog .newsletter-infos {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    text-align: left;
+    color: #555;
+}

@@ -1328,15 +1328,21 @@ La <a href="https://www.lacentrale.fr/fiche-technique-voiture-citroen-c3-iv+113+
 <!-- FIN DE SECTION ------------------------------------------------------------------------------- -->
 
 
-    <section class="newsletter-box">
-        <h3>🌱 Restez informé !</h3>
-        <p>Inscrivez-vous à notre newsletter pour recevoir les prochains événements locaux et nos conseils écoresponsables.</p>
-        <form action="https://api.web3forms.com/submit" method="POST" class="newsletter-form">
-            <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
-            <input type="hidden" name="subject" value="Nouvelle inscription à la Newsletter du Blog !">
-            <input class="st-224b51" type="checkbox" name="botcheck">
-            <input type="email" name="email_newsletter" class="newsletter-input" placeholder="Votre adresse e-mail principale..." required>
-            <button type="submit" class="newsletter-btn">S'abonner à la newsletter</button>
+    <section class="newsletter-box" aria-labelledby="titre-newsletter">
+        <h3 id="titre-newsletter">🌱 Restez informé !</h3>
+        <p>La newsletter de l'A3PC (Association pour la Promotion du Pays de Chaumeré) vous donnera les prochains événements locaux et des conseils écoresponsables. <strong>Les inscriptions ouvriront bientôt.</strong></p>
+        <!-- Formulaire volontairement inactif : pas d'action, champs désactivés. À activer quand le service d'envoi de l'A3PC sera prêt (action + retrait des « disabled »). -->
+        <form class="newsletter-form" aria-describedby="infos-newsletter">
+            <label for="email-newsletter" class="newsletter-label">Votre adresse e-mail</label>
+            <input type="email" id="email-newsletter" name="email" class="newsletter-input" placeholder="prenom@exemple.fr" autocomplete="email" required disabled>
+            <label class="newsletter-consentement" for="consentement-newsletter">
+                <input type="checkbox" id="consentement-newsletter" name="consentement" required disabled>
+                <span>J'accepte de recevoir la newsletter de l'A3PC par e-mail. Je peux me désinscrire à tout moment grâce au lien présent dans chaque message.</span>
+            </label>
+            <button type="submit" class="newsletter-btn" disabled>Inscriptions bientôt ouvertes</button>
+            <p class="newsletter-infos" id="infos-newsletter">
+                Seule votre adresse e-mail est collectée. Elle sert uniquement à vous envoyer la newsletter de l'A3PC (responsable du traitement) et n'est ni vendue ni cédée. Vous recevrez d'abord un e-mail de confirmation. Elle est conservée tant que vous restez abonné, puis supprimée après 3 ans sans interaction avec nos messages. Vous pouvez demander l'accès, la rectification ou la suppression de vos données auprès de l'association via <a href="https://a3pc.fr/" target="_blank" rel="noopener">a3pc.fr</a>, ou saisir la <a href="https://www.cnil.fr/" target="_blank" rel="noopener">CNIL</a>. Voir aussi les <a href="mentions-legales.html#donnees-newsletter">mentions légales</a>.
+            </p>
         </form>
     </section>
 <!-- FIN DE SECTION ------------------------------------------------------------------------------- -->
