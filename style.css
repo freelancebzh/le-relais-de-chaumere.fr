@@ -4729,7 +4729,47 @@ html:has(.visionneuse[open]) {
     }
 }
 
-/* Galerie courte (version simple du site) : 5 photos en 3 colonnes */
+/* Galerie courte (version simple du site) : 3 photos en haut, 2 en bas, sur toute la largeur */
+.amenagement-court {
+    margin-top: 4.5rem;
+}
+
+.amenagement-court > p {
+    margin-bottom: 2.8rem;
+}
+
 .amenagement-court .amenagement-grille {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.amenagement-court .amenagement-photo {
+    grid-column: span 2;
+}
+
+.amenagement-court .amenagement-photo:nth-child(n+4) {
+    grid-column: span 3;
+}
+
+.amenagement-court .amenagement-photo:nth-child(n+4) img {
+    height: 280px;
+}
+
+@media (max-width: 700px) {
+    .amenagement-court .amenagement-grille {
+        grid-template-columns: 1fr;
+    }
+
+    .amenagement-court .amenagement-photo,
+    .amenagement-court .amenagement-photo:nth-child(n+4) {
+        grid-column: auto;
+    }
+
+    .amenagement-court .amenagement-photo:nth-child(n+4) img {
+        height: 200px;
+    }
+}
+
+/* Espace avant le bouton « Nous contacter » de la version simple */
+body.page-essentiel .essentiel-bloc .btn {
+    margin-top: 0.8rem;
 }
