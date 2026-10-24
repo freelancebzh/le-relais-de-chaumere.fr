@@ -4728,3 +4728,8 @@ html:has(.visionneuse[open]) {
         transform: none;
     }
 }
+
+/* Galerie courte (version simple du site) : 5 photos en 3 colonnes */
+.amenagement-court .amenagement-grille {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
