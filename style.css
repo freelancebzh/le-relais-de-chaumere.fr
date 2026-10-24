@@ -2291,7 +2291,8 @@ body.page-detente {
 
 /* ===== Classes issues de la migration des styles inline (noms st-xxxxxx = générés) =====
    Le préfixe « html body » leur donne la priorité qu'avait le style inline sur les règles génériques. */
-html body .bandeau-chantier {
+html body .bandeau-chantier,
+html body .bandeau-simple {
     background-color: var(--vert-fonce);
     color: #ffffff;
     text-align: center;
@@ -2303,7 +2304,8 @@ html body .lien-fort {
     font-weight: 600;
     color: var(--accent-hover);
 }
-html body .bandeau-chantier .lien-fort {
+html body .bandeau-chantier .lien-fort,
+html body .bandeau-simple .lien-fort {
     color: #ffd9b0;
 }
 html body .logo-img {
@@ -4498,4 +4500,60 @@ html body main .section-vert .engagement-card p a.lien-souligne-fort {
     line-height: 1.55;
     text-align: left;
     color: #555;
+}
+
+/* ===== Version simple du site (dossiers essentiel/) ===== */
+body.page-essentiel .essentiel-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+    font-size: 1.1rem;
+}
+
+body.page-essentiel .essentiel-liste li {
+    padding-left: 1.6rem;
+    position: relative;
+}
+
+body.page-essentiel .essentiel-liste li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+body.page-essentiel .essentiel-photo {
+    margin: 0 0 2rem;
+}
+
+body.page-essentiel .essentiel-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+body.page-essentiel .essentiel-titre {
+    margin-bottom: 1rem;
+}
+
+body.page-essentiel .essentiel-bloc {
+    margin-bottom: 2.2rem;
+}
+
+/* ===== Phrase vers la version simple (accueil du site complet) ===== */
+body.page-accueil .lien-simple {
+    margin: 0;
+    padding: 0.6rem 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    background: var(--pierre);
+}
+
+body.page-accueil .lien-simple a {
+    font-weight: 600;
+    color: var(--accent-hover);
 }
