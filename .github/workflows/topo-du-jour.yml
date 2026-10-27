@@ -3,8 +3,10 @@
 name: Topo du jour
 
 on:
-  schedule:
-    - cron: '30 5 * * *'   # 5 h 30 UTC, soit 6 h 30 ou 7 h 30 en France
+  # Lancement quotidien désactivé tant que le topo n'est pas affiché sur le site (et le secret créé).
+  # Pour le réactiver, retirer les # des deux lignes suivantes :
+  # schedule:
+  #   - cron: '30 5 * * *'   # 5 h 30 UTC, soit 6 h 30 ou 7 h 30 en France
   workflow_dispatch:       # lancement manuel possible depuis l'onglet Actions
 
 permissions:
