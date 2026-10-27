@@ -4773,3 +4773,201 @@ html:has(.visionneuse[open]) {
 body.page-essentiel .essentiel-bloc .btn {
     margin-top: 0.8rem;
 }
+
+/* ===== Menu mobile : barre du bas (l'essentiel) + bouton à 3 traits (tout le menu) ===== */
+.menu-detail,
+.menu-bas {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header,
+    header.header-cache {
+        transform: none;
+    }
+
+    nav {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0.5rem 14px;
+    }
+
+    nav > ul {
+        display: none;
+    }
+
+    .menu-detail {
+        display: block;
+    }
+
+    .menu-detail summary {
+        list-style: none;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-detail summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .menu-detail .trait,
+    .menu-detail .trait::before,
+    .menu-detail .trait::after {
+        display: block;
+        width: 24px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--vert);
+        transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .menu-detail .trait {
+        position: relative;
+    }
+
+    .menu-detail .trait::before,
+    .menu-detail .trait::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .menu-detail .trait::before {
+        top: -7px;
+    }
+
+    .menu-detail .trait::after {
+        top: 7px;
+    }
+
+    .menu-detail[open] .trait {
+        background: transparent;
+    }
+
+    .menu-detail[open] .trait::before {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-detail[open] .trait::after {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .menu-panneau {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: calc(100vh - 150px);
+        overflow-y: auto;
+        background: var(--papier);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--ombre);
+        padding: 1rem 20px 1.5rem;
+    }
+
+    .menu-panneau .menu-version {
+        display: block;
+        text-align: center;
+        background: var(--vert);
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.8rem 1rem;
+        border-radius: var(--rayon);
+        margin-bottom: 1rem;
+    }
+
+    .menu-panneau ul {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-panneau ul li a {
+        display: block;
+        padding: 0.85rem 0.2rem;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 1.05rem;
+    }
+
+    .menu-panneau .menu-titre {
+        margin: 1.2rem 0 0.4rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-light);
+    }
+
+    .menu-langues {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .menu-langues .lang-lien {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        text-decoration: none;
+        color: var(--text-light);
+        border: 1px solid var(--border-color);
+        border-radius: 999px;
+        padding: 0.4rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .menu-langues .lang-lien[aria-current="true"] {
+        background: var(--bg-color);
+        color: var(--vert);
+        font-weight: 600;
+    }
+
+    .menu-bas {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 150;
+        background: rgba(255, 255, 255, 0.97);
+        border-top: 1px solid var(--border-color);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .menu-bas a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        padding: 0.45rem 2px 0.4rem;
+        text-decoration: none;
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: var(--text-light);
+    }
+
+    .menu-bas a[aria-current="page"] {
+        color: var(--vert);
+        font-weight: 700;
+    }
+
+    .menu-bas-icone {
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    body {
+        padding-bottom: 64px;
+    }
+
+    .cookie-banner {
+        bottom: 76px;
+    }
+}
