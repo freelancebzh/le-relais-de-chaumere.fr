@@ -4971,3 +4971,16 @@ body.page-essentiel .essentiel-bloc .btn {
         bottom: 76px;
     }
 }
+
+/* Topo du jour (article de blog rédigé chaque matin par l'IA : topo-du-jour.js) */
+body.page-blog .topo-du-jour .topo-meteo {
+    font-weight: 600;
+    color: var(--vert);
+    text-align: left;
+}
+
+body.page-blog .topo-du-jour .topo-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-align: left;
+}

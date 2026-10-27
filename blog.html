@@ -6,6 +6,7 @@
 <!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
 <script src="cookies.js" defer></script>
 <script src="header-scroll.js" defer></script>
+<script src="topo-du-jour.js" defer></script>
 
 
 
@@ -115,6 +116,18 @@
 
     <div class="blog-grid">
 <!-- ÉTAPE FUTURE : Pour ajouter un article copier-coller le bloc <article> ci-dessus juste ici -->
+
+<!-- topo du jour : texte réécrit chaque matin par topo-du-jour.js (données : data/topo-du-jour.json) -->
+        <article class="blog-article" data-theme="local">
+            <span class="blog-meta">
+                <span class="badge badge-actu">Actu Locale</span> Mis à jour chaque matin
+            </span>
+
+    <h2>Le topo du jour à Domagné</h2>
+    <div id="topo-du-jour" class="topo-du-jour" aria-live="polite">
+        <p>Chaque matin, ce petit texte rédigé par une intelligence artificielle fait le point sur la météo et propose des idées de sorties autour de Domagné. Revenez demain matin !</p>
+    </div>
+        </article>
 
 <!-- article suivant ------------------------------------------------------------------------------- -->
 <!-- article suivant ------------------------------------------------------------------------------- -->

@@ -1,0 +1,5 @@
+{
+  "date": "2000-01-01",
+  "meteo": {"ciel": "", "mini": 0, "maxi": 0, "pluie": 0, "vent": 0},
+  "texte": "Exemple : ce fichier est remplacé chaque matin par la tâche automatique."
+}

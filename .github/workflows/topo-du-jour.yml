@@ -1,0 +1,30 @@
+# Génère chaque matin le « topo du jour » (météo + idées de sorties) avec l'API Gemini.
+# Nécessite le secret GitHub GEMINI_API_KEY (Settings > Secrets and variables > Actions).
+name: Topo du jour
+
+on:
+  schedule:
+    - cron: '30 5 * * *'   # 5 h 30 UTC, soit 6 h 30 ou 7 h 30 en France
+  workflow_dispatch:       # lancement manuel possible depuis l'onglet Actions
+
+permissions:
+  contents: write
+
+jobs:
+  topo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Générer le topo
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python outils/generer_topo.py
+      - name: Publier si le topo a changé
+        run: |
+          git config user.name "topo-du-jour"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/topo-du-jour.json
+          git diff --staged --quiet || (git commit -m "topo du jour" && git push)
