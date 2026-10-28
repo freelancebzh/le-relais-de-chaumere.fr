@@ -20,7 +20,7 @@ from zoneinfo import ZoneInfo
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SORTIE = os.path.join(RACINE, 'data', 'topo-du-jour.json')
 LATITUDE, LONGITUDE = 48.146, -1.372  # Domagné
-MODELE = os.environ.get('GEMINI_MODEL', 'gemini-3.8-flash')
+MODELE = os.environ.get('GEMINI_MODEL', 'gemini-3.5-flash-lite')
 
 # Codes météo WMO (Open-Meteo) regroupés
 CIEL = [(0, 'ciel dégagé'), (3, 'ciel peu nuageux à nuageux'), (48, 'brouillard'), (57, 'bruine'),
@@ -31,9 +31,11 @@ def lire_json(url, entetes=None, corps=None):
     requete = urllib.request.Request(url, data=corps, headers=entetes or {})
     for essai in range(3):
         try:
-            with urllib.request.urlopen(requete, timeout=120) as reponse:
+            with urllib.request.urlopen(requete, timeout=60) as reponse:
                 return json.load(reponse)
         except (TimeoutError, urllib.error.HTTPError) as erreur:
+            if isinstance(erreur, urllib.error.HTTPError):
+                print('Réponse du serveur (%d) : %s' % (erreur.code, erreur.read().decode('utf-8', 'replace')[:500]))
             erreur_serveur = isinstance(erreur, TimeoutError) or erreur.code >= 500
             if essai == 2 or not erreur_serveur:
                 raise
