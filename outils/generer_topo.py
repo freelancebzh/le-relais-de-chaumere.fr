@@ -10,6 +10,8 @@ import json
 import os
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime
@@ -27,8 +29,15 @@ CIEL = [(0, 'ciel dégagé'), (3, 'ciel peu nuageux à nuageux'), (48, 'brouilla
 
 def lire_json(url, entetes=None, corps=None):
     requete = urllib.request.Request(url, data=corps, headers=entetes or {})
-    with urllib.request.urlopen(requete, timeout=30) as reponse:
-        return json.load(reponse)
+    for essai in range(3):
+        try:
+            with urllib.request.urlopen(requete, timeout=120) as reponse:
+                return json.load(reponse)
+        except (TimeoutError, urllib.error.HTTPError) as erreur:
+            erreur_serveur = isinstance(erreur, TimeoutError) or erreur.code >= 500
+            if essai == 2 or not erreur_serveur:
+                raise
+            time.sleep(10)
 
 
 def meteo():
