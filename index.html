@@ -6,6 +6,7 @@
 <!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
 <script src="cookies.js" defer></script>
 <script src="header-scroll.js" defer></script>
+<script src="topo-du-jour.js" defer></script>
 
 
     <meta charset="UTF-8">
@@ -260,6 +261,16 @@ Une question ou une demande spécifique ? N'hésitez pas à nous joindre via not
                     <article class="etape"><a href="blog.html"><picture><source srcset="photos/blog/actu%20du%20gite/ossature-plancher.webp" type="image/webp"><img src="photos/blog/actu%20du%20gite/ossature-plancher.jpg" alt="ossature en bois du plancher posée sur la dalle du gîte Le Relais de Chaumeré" loading="lazy" decoding="async"></picture></a><div class="corps"><time datetime="2026-10-12">12 octobre 2026</time><h3>Le plancher prend forme</h3><p>Les solives sont posées sur la dalle.</p></div></article>
                 </div>
                 <p class="centre"><a class="btn btn-contour" href="construction.html">Suivre l'histoire du chantier</a></p>
+            </div>
+        </section>
+
+        <!-- Topo du jour (caché tant que topo-du-jour.js n'a pas de texte récent) -->
+        <section class="section topo-du-jour-section" aria-labelledby="titre-topo" hidden>
+            <div class="conteneur">
+                <div class="titre-section">
+                    <h2 id="titre-topo">Le topo du jour</h2>
+                </div>
+                <div id="topo-du-jour" class="topo-du-jour"></div>
             </div>
         </section>
 

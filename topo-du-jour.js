@@ -1,5 +1,5 @@
 // Affiche le « topo du jour » (data/topo-du-jour.json, écrit chaque matin par outils/generer_topo.py).
-// Si le fichier manque ou date de plus de 2 jours, le texte de secours déjà dans la page reste affiché.
+// Si le fichier manque ou date de plus de 2 jours, la section (cachée par défaut) reste cachée.
 (function () {
     var zone = document.getElementById('topo-du-jour');
     if (!zone) return;
@@ -28,6 +28,7 @@
             note.className = 'topo-note';
             note.textContent = 'Texte rédigé chaque matin par une intelligence artificielle (Gemini), d’après la météo du jour. Météo : Open-Meteo.';
             zone.appendChild(note);
+            zone.closest('section').hidden = false;
         })
         .catch(function () {});
 })();
