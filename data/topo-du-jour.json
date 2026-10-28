@@ -1,5 +1,11 @@
 {
-  "date": "2000-01-01",
-  "meteo": {"ciel": "", "mini": 0, "maxi": 0, "pluie": 0, "vent": 0},
-  "texte": "Exemple : ce fichier est remplacé chaque matin par la tâche automatique."
+  "date": "2026-10-28",
+  "meteo": {
+    "ciel": "ciel peu nuageux à nuageux",
+    "mini": 5,
+    "maxi": 14,
+    "pluie": 0,
+    "vent": 5
+  },
+  "texte": "Bonjour depuis Domagné ! C'est une belle journée calme qui s'annonce avec un ciel partagé entre nuages et belles éclaircies, des températures douces allant de 5 à 14 degrés et une absence totale de pluie. Avec un vent très discret, les conditions sont idéales pour profiter de notre belle région en toute tranquillité.\n\nPour en profiter, nous vous conseillons une agréable promenade au Jardin du Bois-Cornillé ou une escapade culturelle pour découvrir le patrimoine de Vitré. Vous pouvez aussi flâner dans les rues pittoresques de Châteaugiron et faire une halte gourmande au Bacchus pour terminer la journée en douceur."
 }
