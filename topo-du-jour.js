@@ -1,5 +1,5 @@
 // Affiche le « topo du jour » (data/topo-du-jour.json, écrit chaque matin par outils/generer_topo.py).
-// Si le fichier manque ou date de plus de 2 jours, la section (cachée par défaut) reste cachée.
+// Si le fichier manque ou n'est pas daté d'aujourd'hui (heure de Paris), la section (cachée par défaut) reste cachée.
 (function () {
     var zone = document.getElementById('topo-du-jour');
     if (!zone) return;
@@ -8,8 +8,9 @@
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (t) {
             if (!t || !t.texte || !t.date) return;
+            var aujourdhui = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Paris' });
+            if (t.date !== aujourdhui) return;
             var date = new Date(t.date + 'T12:00:00');
-            if ((Date.now() - date.getTime()) / 86400000 > 2) return;
 
             var m = t.meteo;
             var meta = document.createElement('p');
