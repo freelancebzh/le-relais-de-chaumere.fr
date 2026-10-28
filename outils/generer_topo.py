@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SORTIE = os.path.join(RACINE, 'data', 'topo-du-jour.json')
 LATITUDE, LONGITUDE = 48.146, -1.372  # Domagné
-MODELE = os.environ.get('GEMINI_MODEL', 'gemini-2.5-flash')
+MODELE = os.environ.get('GEMINI_MODEL', 'gemini-3.8-flash')
 
 # Codes météo WMO (Open-Meteo) regroupés
 CIEL = [(0, 'ciel dégagé'), (3, 'ciel peu nuageux à nuageux'), (48, 'brouillard'), (57, 'bruine'),
