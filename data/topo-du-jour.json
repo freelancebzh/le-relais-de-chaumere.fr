@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "meteo": {
-    "ciel": "brouillard",
-    "mini": 6,
+    "ciel": "ciel dégagé",
+    "mini": 5,
     "maxi": 14,
     "pluie": 0,
-    "vent": 17
+    "vent": 14
   },
-  "texte": "Bonjour depuis notre gîte à Domagné ! Ce matin, un voile de brouillard enveloppe la campagne bretonne, mais rassurez-vous, la journée s'annonce calme avec des températures oscillant entre 6 et 14 degrés et un vent très discret.\n\nProfitez de cette belle fraîcheur automnale pour flâner à pied sur la promenade Henri Chesnais ou explorer le magnifique Jardin du Bois-Cornillé, parfaits pour une belle balade au grand air. Si vous préférez flâner à l'abri, prenez la direction de Châteaugiron pour découvrir les superbes expositions des 3 CHA."
+  "texte": "Bonjour de Domagné où nous profitons aujourd'hui d'un magnifique ciel dégagé. Le thermomètre affiche entre 5 et 14 degrés, avec un vent très discret et aucun risque de pluie à l'horizon pour vos balades en Ille-et-Vilaine.\n\nProfitez de cette belle météo pour flâner à Vitré ou pour explorer les superbes allées du Jardin du Bois-Cornillé. Vous pouvez également opter pour une escapade vivifiante autour du Plan d'Eau de la Cantache avant de savourer la soirée au calme dans notre gîte."
 }
