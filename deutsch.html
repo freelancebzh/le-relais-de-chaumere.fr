@@ -5,6 +5,7 @@
 <!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
 <script src="cookies.js" defer></script>
 <script src="header-scroll.js" defer></script>
+<script src="topo-du-jour.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -100,6 +101,17 @@
 
 
 <main>
+
+        <!-- Topo du jour (post-it flottant sur la photo ; caché tant que topo-du-jour.js n'a pas de texte récent) -->
+        <section class="section topo-du-jour-section" aria-labelledby="titre-topo" hidden>
+            <div class="conteneur">
+                <div class="post-it" id="post-it-topo">
+                    <h2 id="titre-topo">Tipp des Tages</h2>
+                    <div id="topo-du-jour" class="topo-du-jour"></div>
+                </div>
+                <p class="post-it-remettre" hidden><button type="button" class="post-it-bouton">Haftnotiz wieder anbringen</button></p>
+            </div>
+        </section>
 
         <section class="hero-photo">
             <picture><source srcset="photos/blog/actu%20du%20gite/plafond-solives.webp" type="image/webp"><img src="photos/blog/actu%20du%20gite/plafond-solives.jpg" alt="Die Baustelle des Gîtes im Oktober 2026: Innenraum des Studios mit OSB-Wänden und befestigten Deckenbalken" fetchpriority="high" decoding="async"></picture>
