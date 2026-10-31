@@ -134,6 +134,16 @@
     <main>
         <p class="lien-simple">Envie d'aller à l'essentiel ? <a href="essentiel/index.html">Découvrez la version simple du site →</a></p>
 
+        <!-- Topo du jour (en haut de page ; caché tant que topo-du-jour.js n'a pas de texte récent) -->
+        <section class="section topo-du-jour-section" aria-labelledby="titre-topo" hidden>
+            <div class="conteneur">
+                <div class="titre-section">
+                    <h2 id="titre-topo">Le topo du jour</h2>
+                </div>
+                <div id="topo-du-jour" class="topo-du-jour"></div>
+            </div>
+        </section>
+
         <!-- Hero -->
         <section class="hero-photo">
             <picture><source srcset="photos/blog/actu%20du%20gite/fenetre-posee.webp" type="image/webp"><img src="photos/blog/actu%20du%20gite/fenetre-posee.jpg" alt="Le chantier du gîte en octobre 2026 : la façade du studio recouverte de membrane noire, avec la fenêtre posée" fetchpriority="high" decoding="async"></picture>
@@ -147,16 +157,6 @@
                 </div>
             </div>
             <span class="hero-legende">Photo du chantier, octobre 2026</span>
-        </section>
-
-        <!-- Topo du jour (caché tant que topo-du-jour.js n'a pas de texte récent) -->
-        <section class="section topo-du-jour-section" aria-labelledby="titre-topo" hidden>
-            <div class="conteneur">
-                <div class="titre-section">
-                    <h2 id="titre-topo">Le topo du jour</h2>
-                </div>
-                <div id="topo-du-jour" class="topo-du-jour"></div>
-            </div>
         </section>
 
         <!-- Points forts -->

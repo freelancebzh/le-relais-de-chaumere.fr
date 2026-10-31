@@ -4979,6 +4979,9 @@ body.page-essentiel .essentiel-bloc .btn {
     text-align: left;
 }
 
+.topo-du-jour .topo-suite a { text-decoration: underline; }
+.topo-du-jour p a { color: var(--accent-color); }
+
 .topo-du-jour .topo-note {
     font-size: 0.8rem;
     color: var(--text-light);
