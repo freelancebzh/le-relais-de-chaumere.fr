@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diensten & tarieven | Le Relais de Chaumeré</title>
-    <meta name="description" content="Seizoenstarieven en inbegrepen diensten van onze gemeubileerde studio in Domagné (Bretagne): van € 54,27 tot € 68,55 per nacht, beddengoed inbegrepen, glasvezelwifi en opties op maat.">
+    <meta name="description" content="Seizoenstarieven en inbegrepen diensten van onze gemeubileerde studio in Domagné (Bretagne): vertel ons wat een eerlijke prijs is, beddengoed inbegrepen, glasvezelwifi en opties op maat.">
     <link rel="canonical" href="https://www.le-relais-de-chaumere.fr/prijzen.html">
 
     <!-- BLOC:hreflang -->
@@ -23,7 +23,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Diensten & tarieven | Le Relais de Chaumeré">
-    <meta property="og:description" content="Seizoenstarieven en diensten van onze gemeubileerde studio in Domagné (Bretagne): tussen € 50 en € 70 per nacht, beddengoed inbegrepen, glasvezelwifi en opties op maat.">
+    <meta property="og:description" content="Seizoenstarieven en diensten van onze gemeubileerde studio in Domagné (Bretagne): enquête over de eerlijke prijs, beddengoed inbegrepen, glasvezelwifi en opties op maat.">
     <meta property="og:image" content="https://www.le-relais-de-chaumere.fr/photos/blog/developpement%20durable/demarche-eco-responsable.jpg">
     <meta property="og:url" content="https://www.le-relais-de-chaumere.fr/prijzen.html">
     <meta property="og:locale" content="nl_NL">
@@ -106,27 +106,34 @@
         </section>
 
         <section class="pricing-section">
-            <h2>Onze seizoenstarieven</h2>
-            <div class="pricing-table">
-                <div class="price-card">
-                    <h3>Laagseizoen</h3>
-                    <p class="period">November tot en met maart</p>
-                    <p class="price">€ 54,27 <span>/ nacht</span></p>
-                    <p class="note">Minimaal 1 nacht</p>
+            <h2>Onze tarieven: uw mening telt</h2>
+            <p class="sondage-intro">We hebben onze prijzen nog niet vastgesteld. In plaats van een bedrag op te leggen, vragen we u wat u <strong>eerlijk</strong> vindt voor een nacht in onze studio. De enquête is anoniem en duurt een minuut.</p>
+            <form class="sondage-tarifs" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
+                <input type="hidden" name="subject" value="Tarievenenquête: eerlijke prijs">
+                <input type="checkbox" name="botcheck" class="hidden st-224b51">
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-basse">Laagseizoen (november tot en met maart)</label>
+                    <input class="champ-saisie" type="number" id="prix-basse" name="prix_juste_basse_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Bijv. 60" aria-describedby="aide-prix">
                 </div>
-                <div class="price-card highlight">
-                    <h3>Tussenseizoen</h3>
-                    <p class="period">April, mei, september, oktober</p>
-                    <p class="price">€ 64,13 <span>/ nacht</span></p>
-                    <p class="note">Minimaal 1 nacht</p>
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-moyenne">Tussenseizoen (april, mei, september, oktober)</label>
+                    <input class="champ-saisie" type="number" id="prix-moyenne" name="prix_juste_moyenne_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Bijv. 60" aria-describedby="aide-prix">
                 </div>
-                <div class="price-card">
-                    <h3>Hoogseizoen</h3>
-                    <p class="period">Juni tot en met augustus / feestdagen</p>
-                    <p class="price">€ 68,55 <span>/ nacht</span></p>
-                    <p class="note">Minimaal 2 nachten</p>
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-haute">Hoogseizoen (juni tot en met augustus, feestdagen)</label>
+                    <input class="champ-saisie" type="number" id="prix-haute" name="prix_juste_haute_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Bijv. 60" aria-describedby="aide-prix">
                 </div>
-            </div>
+                <p class="aide-champ" id="aide-prix">Minimaal verblijf: 1 nacht, 2 nachten in het hoogseizoen.</p>
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-commentaire">Een opmerking? (optioneel)</label>
+                    <textarea class="champ-saisie" id="prix-commentaire" name="commentaire" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn">📊 Mijn mening versturen</button>
+            </form>
 			
 			<div class="st-5f906d">
                 <p class="st-4fe485">💼 Bent u leerling in een duaal traject, in opleiding, stagiair of zakelijk onderweg? Voor regelmatige of langere verblijven bieden we een <strong>aangepast tarief</strong>. Neem hiervoor rechtstreeks <a class="st-5d1e65" href="neem-contact-op.html">contact met ons op</a>.</p>

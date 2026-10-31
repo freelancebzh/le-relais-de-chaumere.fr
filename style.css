@@ -4984,3 +4984,21 @@ body.page-essentiel .essentiel-bloc .btn {
     color: var(--text-light);
     text-align: left;
 }
+
+/* Sondage « prix juste » de la page tarifs (remplace les prix fixes) */
+.sondage-intro {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+.sondage-tarifs {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.sondage-tarifs .btn {
+    align-self: center;
+    cursor: pointer;
+}

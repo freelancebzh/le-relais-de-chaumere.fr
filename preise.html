@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leistungen & Preise | Le Relais de Chaumeré</title>
-    <meta name="description" content="Saisonpreise und inbegriffene Leistungen unseres möblierten Studios in Domagné (Bretagne): von 54,27 € bis 68,55 € pro Nacht, Bettwäsche inklusive, Glasfaser-WLAN und individuelle Optionen.">
+    <meta name="description" content="Saisonpreise und inbegriffene Leistungen unseres möblierten Studios in Domagné (Bretagne): sagen Sie uns, was ein fairer Preis ist, Bettwäsche inklusive, Glasfaser-WLAN und individuelle Optionen.">
     <link rel="canonical" href="https://www.le-relais-de-chaumere.fr/preise.html">
 
     <!-- BLOC:hreflang -->
@@ -23,7 +23,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Leistungen & Preise | Le Relais de Chaumeré">
-    <meta property="og:description" content="Saisonpreise und Leistungen unseres möblierten Studios in Domagné (Bretagne): zwischen 50 € und 70 € pro Nacht, Bettwäsche inklusive, Glasfaser-WLAN und individuelle Optionen.">
+    <meta property="og:description" content="Saisonpreise und Leistungen unseres möblierten Studios in Domagné (Bretagne): Umfrage zum fairen Preis, Bettwäsche inklusive, Glasfaser-WLAN und individuelle Optionen.">
     <meta property="og:image" content="https://www.le-relais-de-chaumere.fr/photos/blog/developpement%20durable/demarche-eco-responsable.jpg">
     <meta property="og:url" content="https://www.le-relais-de-chaumere.fr/preise.html">
     <meta property="og:locale" content="de_DE">
@@ -106,27 +106,34 @@
         </section>
 
         <section class="pricing-section">
-            <h2>Unsere Saisonpreise</h2>
-            <div class="pricing-table">
-                <div class="price-card">
-                    <h3>Nebensaison</h3>
-                    <p class="period">November bis März</p>
-                    <p class="price">54,27 € <span>/ Nacht</span></p>
-                    <p class="note">Mindestens 1 Nacht</p>
+            <h2>Unsere Preise: Ihre Meinung zählt</h2>
+            <p class="sondage-intro">Wir haben unsere Preise noch nicht festgelegt. Statt eine Zahl vorzugeben, möchten wir wissen, was Sie für eine Nacht in unserem Studio <strong>fair</strong> finden. Die Umfrage ist anonym und dauert eine Minute.</p>
+            <form class="sondage-tarifs" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
+                <input type="hidden" name="subject" value="Preisumfrage: fairer Preis">
+                <input type="checkbox" name="botcheck" class="hidden st-224b51">
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-basse">Nebensaison (November bis März)</label>
+                    <input class="champ-saisie" type="number" id="prix-basse" name="prix_juste_basse_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Z. B. 60" aria-describedby="aide-prix">
                 </div>
-                <div class="price-card highlight">
-                    <h3>Zwischensaison</h3>
-                    <p class="period">April, Mai, September, Oktober</p>
-                    <p class="price">64,13 € <span>/ Nacht</span></p>
-                    <p class="note">Mindestens 1 Nacht</p>
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-moyenne">Zwischensaison (April, Mai, September, Oktober)</label>
+                    <input class="champ-saisie" type="number" id="prix-moyenne" name="prix_juste_moyenne_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Z. B. 60" aria-describedby="aide-prix">
                 </div>
-                <div class="price-card">
-                    <h3>Hauptsaison</h3>
-                    <p class="period">Juni bis August / Feiertage</p>
-                    <p class="price">68,55 € <span>/ Nacht</span></p>
-                    <p class="note">Mindestens 2 Nächte</p>
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-haute">Hauptsaison (Juni bis August, Feiertage)</label>
+                    <input class="champ-saisie" type="number" id="prix-haute" name="prix_juste_haute_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Z. B. 60" aria-describedby="aide-prix">
                 </div>
-            </div>
+                <p class="aide-champ" id="aide-prix">Mindestaufenthalt: 1 Nacht, 2 Nächte in der Hauptsaison.</p>
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-commentaire">Ein Kommentar? (optional)</label>
+                    <textarea class="champ-saisie" id="prix-commentaire" name="commentaire" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn">📊 Meine Meinung senden</button>
+            </form>
 			
 			<div class="st-5f906d">
                 <p class="st-4fe485">💼 Sind Sie Auszubildende(r) im dualen System, in Weiterbildung, Praktikant(in) oder geschäftlich unterwegs? Für regelmäßige oder längere Aufenthalte bieten wir einen <strong>angepassten Preis</strong>. Nehmen Sie dafür einfach <a class="st-5d1e65" href="kontakt.html">Kontakt mit uns auf</a>.</p>

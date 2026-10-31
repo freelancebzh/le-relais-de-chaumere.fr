@@ -9,7 +9,7 @@
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Tarifs saisonniers et services inclus de notre studio meublé à Domagné (35) : de 54,27€ à 68,55€/nuit, linge fourni, wifi fibre et options sur-mesure.">
+    <meta name="description" content="Tarifs saisonniers et services inclus de notre studio meublé à Domagné (35) : donnez votre avis sur le prix juste, linge fourni, wifi fibre et options sur-mesure.">
     <link rel="canonical" href="https://www.le-relais-de-chaumere.fr/tarifs.html">
 
     <!-- BLOC:hreflang -->
@@ -22,7 +22,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Services & Tarifs | Le Relais de Chaumeré">
-    <meta property="og:description" content="Tarifs saisonniers et services de notre studio meublé à Domagné (35) : entre 50€ et 70€/nuit, linge fourni, wifi fibre et options sur-mesure.">
+    <meta property="og:description" content="Tarifs saisonniers et services de notre studio meublé à Domagné (35) : sondage sur le prix juste, linge fourni, wifi fibre et options sur-mesure.">
     <meta property="og:image" content="https://www.le-relais-de-chaumere.fr/photos/blog/developpement%20durable/demarche-eco-responsable.jpg">
     <meta property="og:url" content="https://www.le-relais-de-chaumere.fr/tarifs.html">
     <meta property="og:locale" content="fr_FR">
@@ -104,27 +104,34 @@
         </section>
 
         <section class="pricing-section">
-            <h2>Nos Tarifs Saisonniers</h2>
-            <div class="pricing-table">
-                <div class="price-card">
-                    <h3>Basse Saison</h3>
-                    <p class="period">Novembre à Mars</p>
-                    <p class="price">54,27€ <span>/ nuit</span></p>
-                    <p class="note">Minimum 1 nuit</p>
+            <h2>Nos Tarifs : votre avis compte</h2>
+            <p class="sondage-intro">Nous n'avons pas encore fixé nos prix. Plutôt que d'imposer un chiffre, nous vous demandons ce qui vous semble <strong>juste</strong> pour une nuit dans notre studio. Le sondage est anonyme et prend une minute.</p>
+            <form class="sondage-tarifs" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
+                <input type="hidden" name="subject" value="Sondage tarifs : prix juste">
+                <input type="checkbox" name="botcheck" class="hidden st-224b51">
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-basse">Basse saison (novembre à mars)</label>
+                    <input class="champ-saisie" type="number" id="prix-basse" name="prix_juste_basse_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Ex : 60" aria-describedby="aide-prix">
                 </div>
-                <div class="price-card highlight">
-                    <h3>Moyenne Saison</h3>
-                    <p class="period">Avril, Mai, Septembre, Octobre</p>
-                    <p class="price">64,13€ <span>/ nuit</span></p>
-                    <p class="note">Minimum 1 nuit</p>
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-moyenne">Moyenne saison (avril, mai, septembre, octobre)</label>
+                    <input class="champ-saisie" type="number" id="prix-moyenne" name="prix_juste_moyenne_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Ex : 60" aria-describedby="aide-prix">
                 </div>
-                <div class="price-card">
-                    <h3>Haute Saison</h3>
-                    <p class="period">Juin à Août / Fêtes</p>
-                    <p class="price">68,55€ <span>/ nuit</span></p>
-                    <p class="note">Minimum 2 nuits</p>
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-haute">Haute saison (juin à août, fêtes)</label>
+                    <input class="champ-saisie" type="number" id="prix-haute" name="prix_juste_haute_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Ex : 60" aria-describedby="aide-prix">
                 </div>
-            </div>
+                <p class="aide-champ" id="aide-prix">Séjour minimum : 1 nuit, 2 nuits en haute saison.</p>
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-commentaire">Un commentaire ? (facultatif)</label>
+                    <textarea class="champ-saisie" id="prix-commentaire" name="commentaire" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn">📊 Envoyer mon avis</button>
+            </form>
 			
 			<div class="st-5f906d">
                 <p class="st-4fe485">

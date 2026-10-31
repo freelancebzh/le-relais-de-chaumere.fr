@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services & Rates | Le Relais de Chaumeré</title>
-    <meta name="description" content="Seasonal rates and included services of our furnished studio in Domagné (Brittany): from €54.27 to €68.55 per night, linen provided, fibre wifi and tailor-made options.">
+    <meta name="description" content="Seasonal rates and included services of our furnished studio in Domagné (Brittany): tell us what a fair price is, linen provided, fibre wifi and tailor-made options.">
     <link rel="canonical" href="https://www.le-relais-de-chaumere.fr/prices.html">
 
     <!-- BLOC:hreflang -->
@@ -23,7 +23,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Services & Rates | Le Relais de Chaumeré">
-    <meta property="og:description" content="Seasonal rates and services of our furnished studio in Domagné (Brittany): between €50 and €70 per night, linen provided, fibre wifi and tailor-made options.">
+    <meta property="og:description" content="Seasonal rates and services of our furnished studio in Domagné (Brittany): fair-price survey, linen provided, fibre wifi and tailor-made options.">
     <meta property="og:image" content="https://www.le-relais-de-chaumere.fr/photos/blog/developpement%20durable/demarche-eco-responsable.jpg">
     <meta property="og:url" content="https://www.le-relais-de-chaumere.fr/prices.html">
     <meta property="og:locale" content="en_GB">
@@ -106,27 +106,34 @@
         </section>
 
         <section class="pricing-section">
-            <h2>Our Seasonal Rates</h2>
-            <div class="pricing-table">
-                <div class="price-card">
-                    <h3>Low Season</h3>
-                    <p class="period">November to March</p>
-                    <p class="price">€54.27 <span>/ night</span></p>
-                    <p class="note">Minimum 1 night</p>
+            <h2>Our Rates: Your Opinion Counts</h2>
+            <p class="sondage-intro">We haven't set our prices yet. Rather than impose a figure, we'd like to know what feels <strong>fair</strong> to you for one night in our studio. The survey is anonymous and takes a minute.</p>
+            <form class="sondage-tarifs" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
+                <input type="hidden" name="subject" value="Rates survey: fair price">
+                <input type="checkbox" name="botcheck" class="hidden st-224b51">
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-basse">Low season (November to March)</label>
+                    <input class="champ-saisie" type="number" id="prix-basse" name="prix_juste_basse_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="E.g. 60" aria-describedby="aide-prix">
                 </div>
-                <div class="price-card highlight">
-                    <h3>Mid Season</h3>
-                    <p class="period">April, May, September, October</p>
-                    <p class="price">€64.13 <span>/ night</span></p>
-                    <p class="note">Minimum 1 night</p>
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-moyenne">Mid season (April, May, September, October)</label>
+                    <input class="champ-saisie" type="number" id="prix-moyenne" name="prix_juste_moyenne_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="E.g. 60" aria-describedby="aide-prix">
                 </div>
-                <div class="price-card">
-                    <h3>High Season</h3>
-                    <p class="period">June to August / Holidays</p>
-                    <p class="price">€68.55 <span>/ night</span></p>
-                    <p class="note">Minimum 2 nights</p>
+
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-haute">High season (June to August, holidays)</label>
+                    <input class="champ-saisie" type="number" id="prix-haute" name="prix_juste_haute_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="E.g. 60" aria-describedby="aide-prix">
                 </div>
-            </div>
+                <p class="aide-champ" id="aide-prix">Minimum stay: 1 night, 2 nights in high season.</p>
+                <div class="champ-formulaire">
+                    <label class="champ-label" for="prix-commentaire">Any comment? (optional)</label>
+                    <textarea class="champ-saisie" id="prix-commentaire" name="commentaire" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn">📊 Send my opinion</button>
+            </form>
 			
 			<div class="st-5f906d">
                 <p class="st-4fe485">💼 Are you a work-study student, a trainee, in training or on a business trip? We offer an <strong>adapted rate</strong> for regular or long stays. To get it, simply <a class="st-5d1e65" href="contact-us.html">get in touch with us</a>.</p>
