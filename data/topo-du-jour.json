@@ -1,11 +1,12 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "meteo": {
     "ciel": "ciel dégagé",
-    "mini": 5,
-    "maxi": 14,
+    "mini": 4,
+    "maxi": 13,
     "pluie": 0,
     "vent": 14
   },
-  "texte": "Bonjour de Domagné où nous profitons aujourd'hui d'un magnifique ciel dégagé. Le thermomètre affiche entre 5 et 14 degrés, avec un vent très discret et aucun risque de pluie à l'horizon pour vos balades en Ille-et-Vilaine.\n\nProfitez de cette belle météo pour flâner à Vitré ou pour explorer les superbes allées du Jardin du Bois-Cornillé. Vous pouvez également opter pour une escapade vivifiante autour du Plan d'Eau de la Cantache avant de savourer la soirée au calme dans notre gîte."
+  "texte": "Bonjour depuis Domagné ! Le ciel est parfaitement dégagé aujourd'hui avec des températures allant de 4 à 13 degrés et un petit vent léger. Pas une seule goutte de pluie en vue pour profiter pleinement de notre belle région.\n\nPour cette belle journée, nous vous conseillons de flâner à Vitré ou de découvrir le magnifique Jardin du Bois-Cornillé. Vous pouvez également opter pour une agréable promenade vers la Roche-aux-Fées. Passez une excellente journée parmi nous et profitez bien de votre séjour au gîte.",
+  "traductions": {}
 }
