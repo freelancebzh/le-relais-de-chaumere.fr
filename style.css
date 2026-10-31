@@ -4973,6 +4973,57 @@ body.page-essentiel .essentiel-bloc .btn {
 }
 
 /* Topo du jour (section de l'accueil rédigée chaque matin par l'IA : topo-du-jour.js) */
+.post-it {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 2.5rem 3.5rem;
+    background: #f3e7a4 url("photos/general/post-it-jaune.webp") center / cover no-repeat;
+    color: var(--text-color);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+    transform: rotate(-1.5deg);
+    transform-origin: 90% 95%;
+}
+
+.post-it[hidden] { display: none; }
+
+.post-it h2 {
+    margin-top: 0;
+    text-align: left;
+}
+
+.post-it-detache {
+    animation: post-it-decolle 1.2s ease-in forwards;
+}
+
+@keyframes post-it-decolle {
+    0% { transform: rotate(-1.5deg); opacity: 1; }
+    30% { transform: rotate(-4deg) translate(0, -6px); opacity: 1; }
+    100% { transform: rotate(14deg) translate(60px, 260px); opacity: 0; }
+}
+
+.post-it-remettre {
+    text-align: center;
+    margin: 0;
+}
+
+.post-it-bouton {
+    background: none;
+    border: 0;
+    padding: 0.5rem;
+    font: inherit;
+    color: var(--vert);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .post-it-detache { animation: none; opacity: 0; }
+}
+
+@media (max-width: 600px) {
+    .post-it { padding: 1.5rem 1.25rem 2.5rem; }
+}
+
 .topo-du-jour .topo-meteo {
     font-weight: 600;
     color: var(--vert);
@@ -4980,7 +5031,7 @@ body.page-essentiel .essentiel-bloc .btn {
 }
 
 .topo-du-jour .topo-suite a { text-decoration: underline; }
-.topo-du-jour p a { color: var(--accent-color); }
+.topo-du-jour p a { color: var(--vert); }
 
 .topo-du-jour .topo-note {
     font-size: 0.8rem;

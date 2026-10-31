@@ -137,10 +137,11 @@
         <!-- Topo du jour (en haut de page ; caché tant que topo-du-jour.js n'a pas de texte récent) -->
         <section class="section topo-du-jour-section" aria-labelledby="titre-topo" hidden>
             <div class="conteneur">
-                <div class="titre-section">
+                <div class="post-it" id="post-it-topo">
                     <h2 id="titre-topo">Le topo du jour</h2>
+                    <div id="topo-du-jour" class="topo-du-jour"></div>
                 </div>
-                <div id="topo-du-jour" class="topo-du-jour"></div>
+                <p class="post-it-remettre" hidden><button type="button" class="post-it-bouton">Remettre le post-it</button></p>
             </div>
         </section>
 

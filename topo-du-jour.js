@@ -37,6 +37,37 @@
         });
     }
 
+    // Le post-it se détache au bout de 20 s ; un lien permet de le remettre (pour 20 s de plus).
+    function gererPostIt() {
+        var postIt = document.getElementById('post-it-topo');
+        var remettre = document.querySelector('.post-it-remettre');
+        var minuteur;
+
+        function retirer() {
+            postIt.classList.add('post-it-detache');
+            var fini = false;
+            function masquer() {
+                if (fini) return;
+                fini = true;
+                postIt.hidden = true;
+                remettre.hidden = false;
+            }
+            postIt.addEventListener('animationend', masquer, { once: true });
+            setTimeout(masquer, 1500); // si l'animation est désactivée
+        }
+
+        function afficher() {
+            remettre.hidden = true;
+            postIt.classList.remove('post-it-detache');
+            postIt.hidden = false;
+            clearTimeout(minuteur);
+            minuteur = setTimeout(retirer, 20000);
+        }
+
+        remettre.querySelector('button').addEventListener('click', afficher);
+        afficher();
+    }
+
     var zone = document.getElementById('topo-du-jour');
     if (!zone) return;
 
@@ -73,6 +104,7 @@
             note.textContent = 'Texte rédigé chaque matin par une intelligence artificielle (Gemini), d’après la météo du jour. Météo : Open-Meteo.';
             zone.appendChild(note);
             zone.closest('section').hidden = false;
+            gererPostIt();
         })
         .catch(function () {});
 })();
