@@ -4973,21 +4973,40 @@ body.page-essentiel .essentiel-bloc .btn {
 }
 
 /* Topo du jour (section de l'accueil rédigée chaque matin par l'IA : topo-du-jour.js) */
+/* La section ne prend aucune place : le post-it flotte par-dessus le haut de la photo d'accueil */
+.topo-du-jour-section {
+    position: relative;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 20;
+}
+
+.topo-du-jour-section .conteneur {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+}
+
 .post-it {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 2.5rem 2.5rem 3.5rem;
-    background: #f3e7a4 url("photos/general/post-it-jaune.webp") center / cover no-repeat;
+    width: min(100%, 480px);
+    aspect-ratio: 647 / 464;
+    margin: 0 0 0 auto;
+    padding: 2rem 2.25rem 3rem;
+    font-size: 0.85rem;
+    background: #f3e7a4 url("photos/general/post-it-jaune.webp") center / 100% 100% no-repeat;
     color: var(--text-color);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
-    transform: rotate(-1.5deg);
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.3));
+    transform: rotate(-4deg);
     transform-origin: 90% 95%;
 }
 
 .post-it[hidden] { display: none; }
 
 .post-it h2 {
-    margin-top: 0;
+    margin: 0 0 0.4rem;
+    font-size: 1.2rem;
     text-align: left;
 }
 
@@ -4996,20 +5015,22 @@ body.page-essentiel .essentiel-bloc .btn {
 }
 
 @keyframes post-it-decolle {
-    0% { transform: rotate(-1.5deg); opacity: 1; }
-    30% { transform: rotate(-4deg) translate(0, -6px); opacity: 1; }
-    100% { transform: rotate(14deg) translate(60px, 260px); opacity: 0; }
+    0% { transform: rotate(-4deg); }
+    20% { transform: rotate(-7deg) translate(0, -8px); }
+    100% { transform: rotate(12deg) translate(40px, 110vh); }
 }
 
 .post-it-remettre {
-    text-align: center;
+    text-align: right;
     margin: 0;
 }
 
 .post-it-bouton {
-    background: none;
+    background: var(--bg-color);
     border: 0;
-    padding: 0.5rem;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem 1rem;
     font: inherit;
     color: var(--vert);
     text-decoration: underline;
@@ -5021,7 +5042,24 @@ body.page-essentiel .essentiel-bloc .btn {
 }
 
 @media (max-width: 600px) {
-    .post-it { padding: 1.5rem 1.25rem 2.5rem; }
+    .post-it { padding: 1.25rem 1.25rem 2.25rem; margin: 0 auto; }
+}
+
+@media (min-width: 900px) {
+    /* Hors de la colonne centrale : le post-it est centré dans l'espace libre entre le texte de la photo et le bord droit */
+    .topo-du-jour-section .conteneur {
+        max-width: none;
+        padding: 0 2.5rem 0 44%;
+    }
+
+    .post-it {
+        margin: 0 auto;
+        width: 580px;
+        padding: 2.5rem 2.75rem 3.5rem;
+        font-size: 1rem;
+    }
+
+    .post-it h2 { font-size: 1.4rem; }
 }
 
 .topo-du-jour .topo-meteo {
