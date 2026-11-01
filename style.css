@@ -5201,3 +5201,8 @@ body.page-pistes .budget tfoot td {
     font-weight: 700;
     border-top: 2px solid var(--vert);
 }
+
+body.page-pistes .budget-source {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
