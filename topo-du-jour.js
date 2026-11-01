@@ -64,7 +64,7 @@
         });
     }
 
-    // Le post-it se détache au bout de 20 s ; un lien permet de le remettre (pour 20 s de plus).
+    // Le post-it se détache au bout de 10 s ; un lien permet de le remettre (pour 10 s de plus).
     function gererPostIt() {
         var postIt = document.getElementById('post-it-topo');
         var remettre = document.querySelector('.post-it-remettre');
@@ -88,7 +88,7 @@
             postIt.classList.remove('post-it-detache');
             postIt.hidden = false;
             clearTimeout(minuteur);
-            minuteur = setTimeout(retirer, 20000);
+            minuteur = setTimeout(retirer, 10000);
         }
 
         remettre.querySelector('button').addEventListener('click', afficher);
