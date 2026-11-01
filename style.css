@@ -5170,3 +5170,34 @@ body.page-pistes .piste-note {
         align-items: start;
     }
 }
+
+body.page-pistes .piste-image-portrait img {
+    max-width: 420px;
+    margin: 0 auto;
+    display: block;
+}
+
+body.page-pistes .budget {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+body.page-pistes .budget caption {
+    text-align: left;
+    padding: 0.5rem 0;
+    color: var(--text-light);
+}
+
+body.page-pistes .budget th,
+body.page-pistes .budget td {
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    vertical-align: top;
+}
+
+body.page-pistes .budget tfoot th,
+body.page-pistes .budget tfoot td {
+    font-weight: 700;
+    border-top: 2px solid var(--vert);
+}
