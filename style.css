@@ -5111,27 +5111,48 @@ body.page-essentiel .essentiel-bloc .btn {
     cursor: pointer;
 }
 
-/* Page de travail « pistes d'amélioration » (une image d'Emilie + la liste des idées repérées) */
-body.page-pistes .piste {
-    display: grid;
-    gap: 1.5rem;
-    margin: 0 0 3rem;
+/* Page de travail « pistes d'amélioration » : un bloc par pièce (galerie de photos, pistes, budget) */
+body.page-pistes .piece {
+    margin: 0 0 4rem;
 }
 
-body.page-pistes .piste-image img {
+body.page-pistes .piece h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+body.page-pistes .galerie-piece {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0 0 2rem;
+}
+
+body.page-pistes .galerie-piece figure,
+body.page-pistes .plan-studio figure {
+    margin: 0;
+}
+
+body.page-pistes .galerie-piece img,
+body.page-pistes .plan-studio img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-body.page-pistes .piste-image figcaption {
-    margin-top: 0.5rem;
+body.page-pistes .galerie-piece figcaption,
+body.page-pistes .plan-studio figcaption {
+    margin-top: 0.4rem;
     font-size: 0.85rem;
     color: var(--text-light);
 }
 
-body.page-pistes .piste-texte h2 {
-    margin-top: 0;
+body.page-pistes .plan-studio {
+    max-width: 320px;
+    margin: 1.5rem auto 0;
+}
+
+body.page-pistes .piece-texte h3 {
+    margin: 1.75rem 0 0.5rem;
     text-align: left;
 }
 
@@ -5164,12 +5185,6 @@ body.page-pistes .piste-note {
     text-align: left;
 }
 
-body.page-pistes .piste-image-portrait img {
-    max-width: 560px;
-    margin: 0 auto;
-    display: block;
-}
-
 body.page-pistes .budget {
     width: 100%;
     border-collapse: collapse;
@@ -5198,4 +5213,11 @@ body.page-pistes .budget tfoot td {
 body.page-pistes .budget-source {
     font-size: 0.8rem;
     color: var(--text-light);
+}
+
+@media (min-width: 800px) {
+    body.page-pistes .galerie-piece {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
 }
