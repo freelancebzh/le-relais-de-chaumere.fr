@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "meteo": {
     "ciel": "ciel peu nuageux à nuageux",
-    "mini": 3,
-    "maxi": 13,
-    "pluie": 0,
-    "vent": 14
+    "mini": 5,
+    "maxi": 12,
+    "pluie": 35,
+    "vent": 22
   },
-  "texte": "Bonjour depuis Domagné ! Côté météo, le ciel hésite aujourd'hui entre nuages et belles éclaircies, avec des températures douces allant de 3 à 13 degrés et un vent très discret, idéal pour une belle journée de découverte sans risquer la moindre goutte de pluie.\n\nPour profiter de cette belle météo bretonne, nous vous conseillons de flâner dans les rues historiques de Vitré ou de faire une charmante balade au Jardin du Bois-Cornillé, avant de vous détendre lors d'une promenade revigorante autour du Plan d'Eau de la Cantache, à deux pas du gîte.",
+  "texte": "Bonjour depuis Domagné ! Côté météo, le ciel hésite aujourd'hui entre nuages et belles éclaircies avec des températures comprises entre 5 et 12 degrés, et même si un petit vent souffle et qu'une légère averse reste possible, la journée s'annonce plutôt agréable pour partir à la découverte de notre belle région.\n\nPour profiter de cette belle atmosphère bretonne, nous vous conseillons une charmante balade le long de la promenade Henri Chesnais à Châteaugiron, puis une visite enrichissante du château de Vitré. Si vous préférez une parenthèse nature et artistique, le jardin du Bois-Cornillé ou le parc Ar Milin' vous offriront de superbes moments de détente à deux pas du gîte.",
   "traductions": {}
 }
