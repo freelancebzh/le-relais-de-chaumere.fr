@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "meteo": {
-    "ciel": "averses",
+    "ciel": "ciel peu nuageux à nuageux",
     "mini": 5,
-    "maxi": 12,
-    "pluie": 5,
+    "maxi": 9,
+    "pluie": 3,
     "vent": 20
   },
-  "texte": "Bonjour depuis Domagné ! Côté météo, prévoyez quelques averses aujourd'hui sous des températures comprises entre 5 et 12 degrés, avec un vent soufflant jusqu'à 20 kilomètres par heure et un très faible risque de pluie.\n\nPour profiter de cette journée malgré le temps changeant, nous vous conseillons une belle promenade au Jardin du Bois-Cornillé ou une visite culturelle aux 3 CHA. Vous pouvez aussi flâner tranquillement dans les rues de Vitré.",
+  "texte": "Bonjour depuis Domagné ! Le ciel est aujourd'hui peu nuageux à nuageux, avec des températures douces oscillant entre 5 et 9 °C et un petit vent n'excédant pas 20 km/h. Le risque de pluie est quasi inexistant avec seulement 3 pour cent, ce qui offre une belle opportunité pour partir à la découverte des environs.\n\nProfitez de cette météo clémente pour flâner dans les rues de Vitré ou découvrir le charmant Parc Ar Milin'. Vous pouvez aussi opter pour une agréable balade au Jardin du Bois-Cornillé, l'occasion idéale de respirer l'air frais de notre belle région d'Ille-et-Vilaine depuis notre gîte. Passez une excellente journée parmi nous !",
   "traductions": {}
 }
