@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-06",
   "meteo": {
-    "ciel": "ciel peu nuageux à nuageux",
+    "ciel": "brouillard",
     "mini": 5,
-    "maxi": 9,
+    "maxi": 12,
     "pluie": 3,
-    "vent": 20
+    "vent": 11
   },
-  "texte": "Bonjour depuis Domagné ! Le ciel est aujourd'hui peu nuageux à nuageux, avec des températures douces oscillant entre 5 et 9 °C et un petit vent n'excédant pas 20 km/h. Le risque de pluie est quasi inexistant avec seulement 3 pour cent, ce qui offre une belle opportunité pour partir à la découverte des environs.\n\nProfitez de cette météo clémente pour flâner dans les rues de Vitré ou découvrir le charmant Parc Ar Milin'. Vous pouvez aussi opter pour une agréable balade au Jardin du Bois-Cornillé, l'occasion idéale de respirer l'air frais de notre belle région d'Ille-et-Vilaine depuis notre gîte. Passez une excellente journée parmi nous !",
+  "texte": "Bonjour depuis Domagné ! Ce matin, un beau brouillard enveloppe notre campagne bretonne avec des températures douces allant de 5 à 12 degrés, sans risque notable de pluie et un vent très discret. C est une ambiance mystérieuse et feutrée qui invite à la flânerie tranquille autour du gîte.\n\nPour profiter de cette douce journée aux ambiances d automne, nous vous conseillons une belle promenade revigorante au Jardin du Bois-Cornillé ou une escapade culturelle au cœur de la ville voisine en découvrant Châteaugiron. Vous pourrez aussi pousser jusqu à Vitré pour flâner dans ses ruelles historiques et admirer son patrimoine remarquable avant de revenir vous réchauffer bien au chaud près de notre cheminée.",
   "traductions": {}
 }
