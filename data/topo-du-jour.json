@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "meteo": {
-    "ciel": "brouillard",
-    "mini": 3,
-    "maxi": 11,
+    "ciel": "averses",
+    "mini": 4,
+    "maxi": 8,
     "pluie": 0,
-    "vent": 8
+    "vent": 14
   },
-  "texte": "Bonjour depuis Domagné ! Ce matin, la brume enveloppe doucement notre belle campagne bretonne avec des températures comprises entre 3 et 11 degrés et un vent très discret. Même si le soleil se fait un peu désirer sous ce ciel couvert, c'est une météo idéale pour profiter d'une ambiance feutrée et mystérieuse dans notre belle région.\n\nPour occuper votre journée au chaud ou à l'abri, nous vous conseillons de découvrir la richesse artistique de L'artothèque du Quai des arts, ou de flâner tranquillement dans les salles du Château de Madame de Sévigné. Si le cœur vous en dit, vous pouvez aussi partir à la découverte des superbes collections des 3 CHA pour une belle escapade culturelle à deux pas de notre gîte. Passez une excellente journée en Ille-et-Vilaine !",
+  "texte": "Bonjour depuis Domagné ! C'est une journée atypique qui s'annonce avec des averses sous une fraîcheur comprise entre 4 et 8 degrés, un vent discret soufflant jusqu'à 14 km/h et, fait surprenant avec cette météo humide, un risque de pluie annoncé à zéro pour cent.\n\nPour profiter de cette ambiance bretonne sans craindre les gouttes, nous vous conseillons une belle flânerie au Jardin du Bois-Cornillé ou une escapade culturelle aux 3 CHA. Vous pouvez également opter pour une visite captivante au Château de Madame de Sévigné ou flâner tranquillement à Châteaugiron. Passez un merveilleux séjour chez nous !",
   "traductions": {}
 }
