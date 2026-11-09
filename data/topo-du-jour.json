@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "meteo": {
-    "ciel": "averses",
-    "mini": 4,
-    "maxi": 8,
-    "pluie": 0,
-    "vent": 14
+    "ciel": "pluie",
+    "mini": 6,
+    "maxi": 12,
+    "pluie": 68,
+    "vent": 22
   },
-  "texte": "Bonjour depuis Domagné ! C'est une journée atypique qui s'annonce avec des averses sous une fraîcheur comprise entre 4 et 8 degrés, un vent discret soufflant jusqu'à 14 km/h et, fait surprenant avec cette météo humide, un risque de pluie annoncé à zéro pour cent.\n\nPour profiter de cette ambiance bretonne sans craindre les gouttes, nous vous conseillons une belle flânerie au Jardin du Bois-Cornillé ou une escapade culturelle aux 3 CHA. Vous pouvez également opter pour une visite captivante au Château de Madame de Sévigné ou flâner tranquillement à Châteaugiron. Passez un merveilleux séjour chez nous !",
+  "texte": "Bonjour depuis Domagné ! Le temps est à la pluie aujourd'hui, avec des températures fraîches oscillant entre 6 et 12 degrés et un petit vent bien breton. \n\nPour profiter de cette journée humide bien au sec, nous vous conseillons de flâner à l'abri au Jardin du Bois-Cornillé ou de partir explorer les trésors culturels en visitant Les 3 CHA.",
   "traductions": {}
 }
