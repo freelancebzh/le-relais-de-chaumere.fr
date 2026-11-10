@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "meteo": {
     "ciel": "pluie",
-    "mini": 6,
-    "maxi": 12,
-    "pluie": 68,
-    "vent": 22
+    "mini": 11,
+    "maxi": 16,
+    "pluie": 65,
+    "vent": 16
   },
-  "texte": "Bonjour depuis Domagné ! Le temps est à la pluie aujourd'hui, avec des températures fraîches oscillant entre 6 et 12 degrés et un petit vent bien breton. \n\nPour profiter de cette journée humide bien au sec, nous vous conseillons de flâner à l'abri au Jardin du Bois-Cornillé ou de partir explorer les trésors culturels en visitant Les 3 CHA.",
+  "texte": "Bonjour depuis notre gîte à Domagné ! C'est une journée bien arrosée qui nous attend avec de la pluie et des températures comprises entre 11 et 16 degrés, sous un vent qui pourra souffler jusqu'à 16 kilomètres par heure.\n\nMalgré cette météo capricieuse avec 65 pourcent de risque de pluie, c'est l'occasion idéale pour partir à la découverte de notre patrimoine en visitant le Château de Fougères ou en profitant des espaces culturels comme Les 3 CHA.",
   "traductions": {}
 }
