@@ -5,6 +5,7 @@
 <!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
 <script src="cookies.js" defer></script>
 <script src="header-scroll.js" defer></script>
+<script src="sondage-formules.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -128,27 +129,72 @@
                 </div>
             </div>
 
-            <p class="sondage-intro">We haven't set our prices yet. Rather than impose a figure, we'd like to know what feels <strong>fair</strong> to you for one night in our studio. The survey is anonymous and takes 15 seconds.</p>
+            <p class="sondage-intro">We haven't set our prices yet. Rather than impose a figure, we'd like to know what feels <strong>fair</strong> to you for each of our stay options. Use the arrows to browse them and answer the ones that interest you. The survey is anonymous.</p>
             <form class="sondage-tarifs" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
-                <input type="hidden" name="subject" value="Rates survey: fair price">
+                <input type="hidden" name="subject" value="Rates survey: fair price by stay option">
                 <input type="checkbox" name="botcheck" class="hidden st-224b51">
 
-                <div class="champ-formulaire">
-                    <label class="champ-label" for="prix-basse">Low season (November to March)</label>
-                    <input class="champ-saisie" type="number" id="prix-basse" name="prix_juste_basse_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="E.g. 60" aria-describedby="aide-prix">
+                <div class="sondage-carrousel" role="group" aria-roledescription="carousel" aria-label="Survey by stay option">
+                    <div class="sondage-piste">
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="1 / 4">
+                        <legend>Self check-in stay</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="autonomie-basse">Low season (November to March) — € per night</label>
+                            <input class="champ-saisie" type="number" id="autonomie-basse" name="autonomie_basse" min="0" max="1000" step="1" inputmode="numeric" placeholder="E.g. 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="autonomie-moyenne">Mid season (April, May, September, October) — € per night</label>
+                            <input class="champ-saisie" type="number" id="autonomie-moyenne" name="autonomie_moyenne" min="0" max="1000" step="1" inputmode="numeric" placeholder="E.g. 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="autonomie-haute">High season (June to August, holidays) — € per night</label>
+                            <input class="champ-saisie" type="number" id="autonomie-haute" name="autonomie_haute" min="0" max="1000" step="1" inputmode="numeric" placeholder="E.g. 60">
+                        </div>
+                        <p class="aide-champ">Minimum stay: 1 night, 2 nights in high season.</p>
+                    </fieldset>
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="2 / 4">
+                        <legend>Bed & breakfast (breakfast included)</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="chambre_hotes-basse">Low season (November to March) — € per night</label>
+                            <input class="champ-saisie" type="number" id="chambre_hotes-basse" name="chambre_hotes_basse" min="0" max="1000" step="1" inputmode="numeric" placeholder="E.g. 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="chambre_hotes-moyenne">Mid season (April, May, September, October) — € per night</label>
+                            <input class="champ-saisie" type="number" id="chambre_hotes-moyenne" name="chambre_hotes_moyenne" min="0" max="1000" step="1" inputmode="numeric" placeholder="E.g. 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="chambre_hotes-haute">High season (June to August, holidays) — € per night</label>
+                            <input class="champ-saisie" type="number" id="chambre_hotes-haute" name="chambre_hotes_haute" min="0" max="1000" step="1" inputmode="numeric" placeholder="E.g. 60">
+                        </div>
+                        <p class="aide-champ">Minimum stay: 1 night, 2 nights in high season.</p>
+                    </fieldset>
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="3 / 4">
+                        <legend>Afternoon (11 am – 4 pm)</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="apres_midi-seance">Price for the afternoon (€ per session)</label>
+                            <input class="champ-saisie" type="number" id="apres_midi-seance" name="apres_midi_seance" min="0" max="1000" step="1" inputmode="numeric">
+                        </div>
+                    </fieldset>
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="4 / 4">
+                        <legend>Work-study and long stays</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="alternance-semaine">Price per week (€)</label>
+                            <input class="champ-saisie" type="number" id="alternance-semaine" name="alternance_semaine" min="0" max="1000" step="1" inputmode="numeric">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="alternance-mois">Price per month (€)</label>
+                            <input class="champ-saisie" type="number" id="alternance-mois" name="alternance_mois" min="0" max="1000" step="1" inputmode="numeric">
+                        </div>
+                    </fieldset>
+                    </div>
+                    <div class="sondage-nav">
+                        <button type="button" class="sondage-prec" aria-label="Previous option">←</button>
+                        <span class="sondage-compteur" data-modele="Option {n} of {total}" aria-live="polite"></span>
+                        <button type="button" class="sondage-suiv" aria-label="Next option">→</button>
+                    </div>
                 </div>
 
-                <div class="champ-formulaire">
-                    <label class="champ-label" for="prix-moyenne">Mid season (April, May, September, October)</label>
-                    <input class="champ-saisie" type="number" id="prix-moyenne" name="prix_juste_moyenne_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="E.g. 60" aria-describedby="aide-prix">
-                </div>
-
-                <div class="champ-formulaire">
-                    <label class="champ-label" for="prix-haute">High season (June to August, holidays)</label>
-                    <input class="champ-saisie" type="number" id="prix-haute" name="prix_juste_haute_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="E.g. 60" aria-describedby="aide-prix">
-                </div>
-                <p class="aide-champ" id="aide-prix">Minimum stay: 1 night, 2 nights in high season.</p>
                 <div class="champ-formulaire">
                     <label class="champ-label" for="prix-commentaire">Any comment? (optional)</label>
                     <textarea class="champ-saisie" id="prix-commentaire" name="commentaire" rows="4"></textarea>

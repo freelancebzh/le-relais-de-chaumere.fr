@@ -5,6 +5,7 @@
 <!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
 <script src="cookies.js" defer></script>
 <script src="header-scroll.js" defer></script>
+<script src="sondage-formules.js" defer></script>
 
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
@@ -128,32 +129,77 @@
                 </div>
             </div>
 
-            <p class="sondage-intro">We hebben onze prijzen nog niet vastgesteld. In plaats van een bedrag op te leggen, vragen we u wat u <strong>eerlijk</strong> vindt voor een nacht in onze studio. De enquête is anoniem en duurt 15 seconden.</p>
+            <p class="sondage-intro">We hebben onze prijzen nog niet vastgesteld. In plaats van een bedrag op te leggen, vragen we u wat u <strong>eerlijk</strong> vindt voor elk van onze verblijfsformules. Blader met de pijlen en beantwoord de formules die u interesseren. De enquête is anoniem.</p>
             <form class="sondage-tarifs" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
-                <input type="hidden" name="subject" value="Tarievenenquête: eerlijke prijs">
+                <input type="hidden" name="subject" value="Tarievenenquête: eerlijke prijs per verblijfsformule">
                 <input type="checkbox" name="botcheck" class="hidden st-224b51">
 
-                <div class="champ-formulaire">
-                    <label class="champ-label" for="prix-basse">Laagseizoen (november tot en met maart)</label>
-                    <input class="champ-saisie" type="number" id="prix-basse" name="prix_juste_basse_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Bijv. 60" aria-describedby="aide-prix">
+                <div class="sondage-carrousel" role="group" aria-roledescription="carousel" aria-label="Enquête per verblijfsformule">
+                    <div class="sondage-piste">
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="1 / 4">
+                        <legend>Verblijf in zelfstandigheid</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="autonomie-basse">Laagseizoen (november tot en met maart) — € per nacht</label>
+                            <input class="champ-saisie" type="number" id="autonomie-basse" name="autonomie_basse" min="0" max="1000" step="1" inputmode="numeric" placeholder="Bijv. 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="autonomie-moyenne">Tussenseizoen (april, mei, september, oktober) — € per nacht</label>
+                            <input class="champ-saisie" type="number" id="autonomie-moyenne" name="autonomie_moyenne" min="0" max="1000" step="1" inputmode="numeric" placeholder="Bijv. 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="autonomie-haute">Hoogseizoen (juni tot en met augustus, feestdagen) — € per nacht</label>
+                            <input class="champ-saisie" type="number" id="autonomie-haute" name="autonomie_haute" min="0" max="1000" step="1" inputmode="numeric" placeholder="Bijv. 60">
+                        </div>
+                        <p class="aide-champ">Minimaal verblijf: 1 nacht, 2 nachten in het hoogseizoen.</p>
+                    </fieldset>
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="2 / 4">
+                        <legend>Bed & breakfast (ontbijt inbegrepen)</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="chambre_hotes-basse">Laagseizoen (november tot en met maart) — € per nacht</label>
+                            <input class="champ-saisie" type="number" id="chambre_hotes-basse" name="chambre_hotes_basse" min="0" max="1000" step="1" inputmode="numeric" placeholder="Bijv. 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="chambre_hotes-moyenne">Tussenseizoen (april, mei, september, oktober) — € per nacht</label>
+                            <input class="champ-saisie" type="number" id="chambre_hotes-moyenne" name="chambre_hotes_moyenne" min="0" max="1000" step="1" inputmode="numeric" placeholder="Bijv. 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="chambre_hotes-haute">Hoogseizoen (juni tot en met augustus, feestdagen) — € per nacht</label>
+                            <input class="champ-saisie" type="number" id="chambre_hotes-haute" name="chambre_hotes_haute" min="0" max="1000" step="1" inputmode="numeric" placeholder="Bijv. 60">
+                        </div>
+                        <p class="aide-champ">Minimaal verblijf: 1 nacht, 2 nachten in het hoogseizoen.</p>
+                    </fieldset>
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="3 / 4">
+                        <legend>Namiddag (11.00 – 16.00 uur)</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="apres_midi-seance">Prijs voor de namiddag (€ per sessie)</label>
+                            <input class="champ-saisie" type="number" id="apres_midi-seance" name="apres_midi_seance" min="0" max="1000" step="1" inputmode="numeric">
+                        </div>
+                    </fieldset>
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="4 / 4">
+                        <legend>Alternance (werkstudie) en lange verblijven</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="alternance-semaine">Prijs per week (€)</label>
+                            <input class="champ-saisie" type="number" id="alternance-semaine" name="alternance_semaine" min="0" max="1000" step="1" inputmode="numeric">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="alternance-mois">Prijs per maand (€)</label>
+                            <input class="champ-saisie" type="number" id="alternance-mois" name="alternance_mois" min="0" max="1000" step="1" inputmode="numeric">
+                        </div>
+                    </fieldset>
+                    </div>
+                    <div class="sondage-nav">
+                        <button type="button" class="sondage-prec" aria-label="Vorige formule">←</button>
+                        <span class="sondage-compteur" data-modele="Formule {n} van {total}" aria-live="polite"></span>
+                        <button type="button" class="sondage-suiv" aria-label="Volgende formule">→</button>
+                    </div>
                 </div>
 
-                <div class="champ-formulaire">
-                    <label class="champ-label" for="prix-moyenne">Tussenseizoen (april, mei, september, oktober)</label>
-                    <input class="champ-saisie" type="number" id="prix-moyenne" name="prix_juste_moyenne_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Bijv. 60" aria-describedby="aide-prix">
-                </div>
-
-                <div class="champ-formulaire">
-                    <label class="champ-label" for="prix-haute">Hoogseizoen (juni tot en met augustus, feestdagen)</label>
-                    <input class="champ-saisie" type="number" id="prix-haute" name="prix_juste_haute_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Bijv. 60" aria-describedby="aide-prix">
-                </div>
-                <p class="aide-champ" id="aide-prix">Minimaal verblijf: 1 nacht, 2 nachten in het hoogseizoen.</p>
                 <div class="champ-formulaire">
                     <label class="champ-label" for="prix-commentaire">Een opmerking? (optioneel)</label>
                     <textarea class="champ-saisie" id="prix-commentaire" name="commentaire" rows="4"></textarea>
                 </div>
-                <button type="submit" class="btn">📊 Mijn mening versturen</button>
+                <button type="submit" class="btn">📊 Mijn mening sturen</button>
             </form>
 			
 			<div class="st-5f906d">

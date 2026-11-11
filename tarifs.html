@@ -5,6 +5,7 @@
 <!-- Bandeau cookies + Google Analytics 4 (chargé seulement après consentement) -->
 <script src="cookies.js" defer></script>
 <script src="header-scroll.js" defer></script>
+<script src="sondage-formules.js" defer></script>
 
 
     <meta charset="UTF-8">
@@ -130,28 +131,72 @@
                 </div>
             </div>
 
-            <p class="sondage-intro">Les prix concernent chacune de <a class="lien-souligne-fort" href="formules.html">nos formules de séjour</a> (autonomie, chambre d'hôtes, après-midi, alternance).</p>
-            <p class="sondage-intro">Nous n'avons pas encore fixé nos prix. Plutôt que d'imposer un chiffre, nous vous demandons ce qui vous semble <strong>juste</strong> pour une nuit dans notre studio. Le sondage est anonyme et prend 15 secondes.</p>
+            <p class="sondage-intro">Nous n'avons pas encore fixé nos prix. Plutôt que d'imposer un chiffre, nous vous demandons ce qui vous semble <strong>juste</strong> pour chacune de <a class="lien-souligne-fort" href="formules.html">nos formules de séjour</a>. Faites défiler les formules avec les flèches et répondez à celles qui vous intéressent. Le sondage est anonyme.</p>
             <form class="sondage-tarifs" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
-                <input type="hidden" name="subject" value="Sondage tarifs : prix juste">
+                <input type="hidden" name="subject" value="Sondage tarifs : prix juste par formule">
                 <input type="checkbox" name="botcheck" class="hidden st-224b51">
 
-                <div class="champ-formulaire">
-                    <label class="champ-label" for="prix-basse">Basse saison (novembre à mars)</label>
-                    <input class="champ-saisie" type="number" id="prix-basse" name="prix_juste_basse_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Ex : 60" aria-describedby="aide-prix">
+                <div class="sondage-carrousel" role="group" aria-roledescription="carousel" aria-label="Sondage par formule">
+                    <div class="sondage-piste">
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="1 / 4">
+                        <legend>Séjour en autonomie</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="autonomie-basse">Basse saison (novembre à mars) — € par nuit</label>
+                            <input class="champ-saisie" type="number" id="autonomie-basse" name="autonomie_basse" min="0" max="1000" step="1" inputmode="numeric" placeholder="Ex : 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="autonomie-moyenne">Moyenne saison (avril, mai, septembre, octobre) — € par nuit</label>
+                            <input class="champ-saisie" type="number" id="autonomie-moyenne" name="autonomie_moyenne" min="0" max="1000" step="1" inputmode="numeric" placeholder="Ex : 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="autonomie-haute">Haute saison (juin à août, fêtes) — € par nuit</label>
+                            <input class="champ-saisie" type="number" id="autonomie-haute" name="autonomie_haute" min="0" max="1000" step="1" inputmode="numeric" placeholder="Ex : 60">
+                        </div>
+                        <p class="aide-champ">Séjour minimum : 1 nuit, 2 nuits en haute saison.</p>
+                    </fieldset>
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="2 / 4">
+                        <legend>Chambre d'hôtes (petit-déjeuner inclus)</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="chambre_hotes-basse">Basse saison (novembre à mars) — € par nuit</label>
+                            <input class="champ-saisie" type="number" id="chambre_hotes-basse" name="chambre_hotes_basse" min="0" max="1000" step="1" inputmode="numeric" placeholder="Ex : 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="chambre_hotes-moyenne">Moyenne saison (avril, mai, septembre, octobre) — € par nuit</label>
+                            <input class="champ-saisie" type="number" id="chambre_hotes-moyenne" name="chambre_hotes_moyenne" min="0" max="1000" step="1" inputmode="numeric" placeholder="Ex : 60">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="chambre_hotes-haute">Haute saison (juin à août, fêtes) — € par nuit</label>
+                            <input class="champ-saisie" type="number" id="chambre_hotes-haute" name="chambre_hotes_haute" min="0" max="1000" step="1" inputmode="numeric" placeholder="Ex : 60">
+                        </div>
+                        <p class="aide-champ">Séjour minimum : 1 nuit, 2 nuits en haute saison.</p>
+                    </fieldset>
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="3 / 4">
+                        <legend>Après-midi (11 h – 16 h)</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="apres_midi-seance">Prix pour l'après-midi (€ pour la séance)</label>
+                            <input class="champ-saisie" type="number" id="apres_midi-seance" name="apres_midi_seance" min="0" max="1000" step="1" inputmode="numeric">
+                        </div>
+                    </fieldset>
+                    <fieldset class="sondage-diapo" role="group" aria-roledescription="slide" aria-label="4 / 4">
+                        <legend>Alternance et longs séjours</legend>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="alternance-semaine">Prix par semaine (€)</label>
+                            <input class="champ-saisie" type="number" id="alternance-semaine" name="alternance_semaine" min="0" max="1000" step="1" inputmode="numeric">
+                        </div>
+                        <div class="champ-formulaire">
+                            <label class="champ-label" for="alternance-mois">Prix par mois (€)</label>
+                            <input class="champ-saisie" type="number" id="alternance-mois" name="alternance_mois" min="0" max="1000" step="1" inputmode="numeric">
+                        </div>
+                    </fieldset>
+                    </div>
+                    <div class="sondage-nav">
+                        <button type="button" class="sondage-prec" aria-label="Formule précédente">←</button>
+                        <span class="sondage-compteur" data-modele="Formule {n} sur {total}" aria-live="polite"></span>
+                        <button type="button" class="sondage-suiv" aria-label="Formule suivante">→</button>
+                    </div>
                 </div>
 
-                <div class="champ-formulaire">
-                    <label class="champ-label" for="prix-moyenne">Moyenne saison (avril, mai, septembre, octobre)</label>
-                    <input class="champ-saisie" type="number" id="prix-moyenne" name="prix_juste_moyenne_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Ex : 60" aria-describedby="aide-prix">
-                </div>
-
-                <div class="champ-formulaire">
-                    <label class="champ-label" for="prix-haute">Haute saison (juin à août, fêtes)</label>
-                    <input class="champ-saisie" type="number" id="prix-haute" name="prix_juste_haute_saison" min="0" max="500" step="1" inputmode="numeric" placeholder="Ex : 60" aria-describedby="aide-prix">
-                </div>
-                <p class="aide-champ" id="aide-prix">Séjour minimum : 1 nuit, 2 nuits en haute saison.</p>
                 <div class="champ-formulaire">
                     <label class="champ-label" for="prix-commentaire">Un commentaire ? (facultatif)</label>
                     <textarea class="champ-saisie" id="prix-commentaire" name="commentaire" rows="4"></textarea>

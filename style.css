@@ -5325,3 +5325,75 @@ body.page-formules .formules-info {
     justify-content: center;
     margin: 0 0 1.5rem;
 }
+
+/* ===== Sondage par formule : carrousel (sondage-formules.js) ===== */
+.sondage-diapo {
+    border: 1px solid var(--border-color);
+    border-radius: var(--rayon);
+    background: var(--papier);
+    padding: 1.25rem;
+    margin: 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sondage-diapo legend {
+    font-family: var(--police-titre);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--vert);
+    padding: 0 0.5rem;
+}
+
+.sondage-nav {
+    display: none;
+}
+
+.sondage-actif .sondage-piste {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.sondage-actif .sondage-piste::-webkit-scrollbar {
+    display: none;
+}
+
+.sondage-actif .sondage-diapo {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    margin: 0;
+}
+
+.sondage-actif .sondage-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sondage-nav button {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    border: 1px solid var(--vert);
+    background: var(--papier);
+    color: var(--vert);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.sondage-nav button:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.sondage-compteur {
+    min-width: 9rem;
+    text-align: center;
+    color: var(--text-light);
+}
