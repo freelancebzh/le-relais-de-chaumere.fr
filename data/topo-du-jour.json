@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "meteo": {
-    "ciel": "pluie",
+    "ciel": "ciel peu nuageux à nuageux",
     "mini": 11,
     "maxi": 16,
-    "pluie": 65,
-    "vent": 16
+    "pluie": 25,
+    "vent": 9
   },
-  "texte": "Bonjour depuis notre gîte à Domagné ! C'est une journée bien arrosée qui nous attend avec de la pluie et des températures comprises entre 11 et 16 degrés, sous un vent qui pourra souffler jusqu'à 16 kilomètres par heure.\n\nMalgré cette météo capricieuse avec 65 pourcent de risque de pluie, c'est l'occasion idéale pour partir à la découverte de notre patrimoine en visitant le Château de Fougères ou en profitant des espaces culturels comme Les 3 CHA.",
+  "texte": "Bonjour depuis Domagné ! Côté météo, nous profitons aujourd'hui d'un ciel partagé entre nuages et belles éclaircies, avec des températures douces oscillant entre 11 et 16 degrés. Le vent reste discret et le léger risque de pluie ne devrait pas gâcher votre journée dans notre belle Ille-et-Vilaine.\n\nPour en profiter pleinement, nous vous conseillons une jolie balade pour admirer les superbes extérieurs du Jardin du Bois-Cornillé, parfaits pour une belle promenade automnale. Vous pourrez ensuite flâner tranquillement dans les rues historiques de Vitré ou partir à la découverte du charmant patrimoine de Châteaugiron. Passez une excellente journée dans notre région !",
   "traductions": {}
 }
