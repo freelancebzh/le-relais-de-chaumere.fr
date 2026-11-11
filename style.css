@@ -5221,3 +5221,94 @@ body.page-pistes .budget-source {
         align-items: start;
     }
 }
+
+/* ===== Page formules ===== */
+body.page-formules .formules-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+
+body.page-formules .formules-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+body.page-formules .formules-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+body.page-formules .formule-carte {
+    background: var(--papier);
+    border: 1px solid var(--border-color);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+body.page-formules .formule-carte h2 {
+    font-size: 1.3rem;
+    text-align: left;
+    margin: 0.25rem 0 0.5rem;
+    color: var(--vert);
+}
+
+body.page-formules .formule-icone {
+    font-size: 2rem;
+    margin: 0;
+}
+
+body.page-formules .formule-pour {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+body.page-formules .formule-carte ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+body.page-formules .formule-carte li {
+    margin-bottom: 0.4rem;
+}
+
+body.page-formules .formule-ou {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    font-weight: 600;
+    color: var(--accent-hover);
+}
+
+body.page-formules .formules-tableau-cadre {
+    overflow-x: auto;
+}
+
+body.page-formules .formules-tableau {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--papier);
+    border-radius: var(--rayon);
+}
+
+body.page-formules .formules-tableau th,
+body.page-formules .formules-tableau td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+body.page-formules .formules-tableau thead th {
+    background: var(--vert);
+    color: #ffffff;
+}
+
+body.page-formules .formules-info {
+    text-align: center;
+    max-width: 760px;
+}
