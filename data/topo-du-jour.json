@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-15",
   "meteo": {
-    "ciel": "ciel peu nuageux à nuageux",
-    "mini": 5,
-    "maxi": 12,
-    "pluie": 5,
-    "vent": 23
+    "ciel": "pluie",
+    "mini": 3,
+    "maxi": 14,
+    "pluie": 93,
+    "vent": 27
   },
-  "texte": "Bonjour depuis Domagné ! Le temps s'annonce plutôt calme aujourd'hui, avec un ciel partagé entre belles éclaircies et quelques nuages. Les températures douces, comprises entre 5 et 12 degrés, et le très faible risque de pluie invitent à profiter pleinement de notre belle région bretonne sans craindre les intempéries.\n\nPour votre journée, nous vous conseillons une jolie promenade au Jardin du Bois-Cornillé ou la découverte du charmant patrimoine de Châteaugiron. Si vous préférez une immersion culturelle à l'intérieur au cas où le vent se ferait un peu trop frais, une visite du château de Vitré saura combler toutes vos attentes pour un moment inoubliable.",
+  "texte": "Bonjour de Domagné où le temps est bien humide aujourd'hui, avec de la pluie au programme, un thermomètre qui joue entre 3 et 14 degrés et un petit vent bien frais pour vous inciter à rester au chaud.\n\nPour occuper cette journée pluvieuse, nous vous conseillons de flâner à l'abri dans le charmant centre historique de Vitré, de découvrir l'art contemporain aux 3 CHA à Châteaugiron ou de vous détendre en savourant un bon repas au restaurant Le Bacchus.",
   "traductions": {}
 }
