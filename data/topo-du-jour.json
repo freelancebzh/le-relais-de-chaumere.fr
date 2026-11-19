@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-19",
   "meteo": {
-    "ciel": "averses",
-    "mini": 11,
-    "maxi": 16,
-    "pluie": 100,
-    "vent": 33
+    "ciel": "ciel peu nuageux à nuageux",
+    "mini": 10,
+    "maxi": 13,
+    "pluie": 53,
+    "vent": 30
   },
-  "texte": "Bonjour depuis Domagné ! Le temps est bien capricieux aujourd'hui avec des averses inévitables, un thermomètre qui joue entre 11 et 16 degrés et un vent qui souffle jusqu'à 33 kilomètres par heure. \n\nPour profiter de cette journée malgré la pluie, nous vous conseillons de flâner à Vitré ou de découvrir les richesses du Château de Madame de Sévigné. Vous pouvez aussi opter pour une agréable visite au Jardin du Bois-Cornillé ou prendre le temps d'explorer Châteaugiron. Passez une excellente journée dans notre belle région !",
+  "texte": "Bonjour à tous depuis Domagné ! Aujourd'hui, le ciel oscille entre belles éclaircies et passages nuageux avec des températures comprises entre 10 et 13 degrés, sous un vent modéré et un risque de pluie qu'il faudra garder à l'œil. \n\nPour profiter de cette journée dans notre belle région, nous vous conseillons une agréable promenade dans les rues historiques de Châteaugiron, une visite passionnante du patrimoine de Vitré, ou une belle flânerie au Jardin du Bois-Cornillé pour admirer la nature environnante.",
   "traductions": {}
 }
