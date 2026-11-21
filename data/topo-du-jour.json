@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-21",
   "meteo": {
-    "ciel": "ciel peu nuageux à nuageux",
-    "mini": 10,
-    "maxi": 13,
-    "pluie": 53,
-    "vent": 30
+    "ciel": "pluie",
+    "mini": 7,
+    "maxi": 12,
+    "pluie": 73,
+    "vent": 23
   },
-  "texte": "Bonjour à tous depuis Domagné ! Aujourd'hui, le ciel oscille entre belles éclaircies et passages nuageux avec des températures comprises entre 10 et 13 degrés, sous un vent modéré et un risque de pluie qu'il faudra garder à l'œil. \n\nPour profiter de cette journée dans notre belle région, nous vous conseillons une agréable promenade dans les rues historiques de Châteaugiron, une visite passionnante du patrimoine de Vitré, ou une belle flânerie au Jardin du Bois-Cornillé pour admirer la nature environnante.",
+  "texte": "Bonjour depuis Domagné ! C'est une journée bien fraîche et pluvieuse qui nous attend, avec des températures oscillant entre 7 et 12 degrés et un petit vent bien breton. \n\nPour profiter de la région bien au sec, partez à la découverte du riche patrimoine couvert de la zone en visitant le Château de Fougères ou le Château de Madame de Sévigné. Vous pouvez aussi flâner tranquillement à l'abri au Jardin du Bois-Cornillé ou admirer les œuvres proposées à L'artothèque du Quai des arts.",
   "traductions": {}
 }
