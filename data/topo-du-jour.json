@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "meteo": {
     "ciel": "pluie",
-    "mini": 9,
+    "mini": 6,
     "maxi": 12,
-    "pluie": 100,
-    "vent": 28
+    "pluie": 28,
+    "vent": 23
   },
-  "texte": "Bonjour depuis Domagné ! Sous une pluie continue et un thermomètre oscillant entre 9 et 12 degrés, l'Ille-et-Vilaine invite aujourd'hui au cocooning, rafraîchi par un vent modéré soufflant jusqu'à 28 kilomètres par heure. \n\nPour profiter de cette journée humide sans attraper froid, partez à la découverte du patrimoine couvert en visitant le superbe Château de Fougères ou en vous abritant au Château de Madame de Sévigné. Vous pouvez aussi flâner au sec du côté des expositions proposées par Les 3 CHA ou savourer un moment gourmand et chaleureux bien à l'abri à La Java Bleue.",
+  "texte": "Bonjour depuis Domagné ! Le temps est à la pluie aujourd'hui avec des températures comprises entre 6 et 12 degrés, un petit risque d'averses et un vent soufflant jusqu'à 23 kilomètres par heure. \n\nPour profiter de cette journée fraîche et humide tout en restant au sec, nous vous conseillons de découvrir la richesse des environs en visitant le château de Châteaugiron, en explorant le patrimoine historique de Vitré, ou en flânant tranquillement dans les espaces culturels des 3 CHA.",
   "traductions": {}
 }
