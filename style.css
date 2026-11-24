@@ -5462,3 +5462,10 @@ body.page-formules .formules-info {
 .faq details p {
     margin: 0.75rem 0 0;
 }
+
+/* Titres de section des guides locaux : passés de div à h2, même apparence qu'avant */
+h2.section-title {
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: normal;
+}
