@@ -5397,3 +5397,68 @@ body.page-formules .formules-info {
     text-align: center;
     color: var(--text-light);
 }
+
+/* ===== Pages charte, partenaires et FAQ ===== */
+.bloc-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+
+.bloc-page h2 {
+    margin-bottom: 1rem;
+}
+
+.liste-engagements {
+    padding-left: 1.2rem;
+}
+
+.liste-engagements li {
+    margin-bottom: 0.6rem;
+}
+
+.tableau-cadre {
+    overflow-x: auto;
+}
+
+.tableau-engagements {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--papier);
+}
+
+.tableau-engagements th,
+.tableau-engagements td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tableau-engagements thead th {
+    background: var(--vert);
+    color: #ffffff;
+}
+
+.tableau-engagements tbody th {
+    color: var(--vert);
+    width: 35%;
+}
+
+.faq details {
+    background: var(--papier);
+    border: 1px solid var(--border-color);
+    border-radius: var(--rayon);
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--vert);
+}
+
+.faq details p {
+    margin: 0.75rem 0 0;
+}
