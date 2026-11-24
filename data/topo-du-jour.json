@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "meteo": {
     "ciel": "pluie",
-    "mini": 6,
-    "maxi": 12,
-    "pluie": 28,
-    "vent": 23
+    "mini": 4,
+    "maxi": 9,
+    "pluie": 78,
+    "vent": 21
   },
-  "texte": "Bonjour depuis Domagné ! Le temps est à la pluie aujourd'hui avec des températures comprises entre 6 et 12 degrés, un petit risque d'averses et un vent soufflant jusqu'à 23 kilomètres par heure. \n\nPour profiter de cette journée fraîche et humide tout en restant au sec, nous vous conseillons de découvrir la richesse des environs en visitant le château de Châteaugiron, en explorant le patrimoine historique de Vitré, ou en flânant tranquillement dans les espaces culturels des 3 CHA.",
+  "texte": "Bonjour depuis Domagné ! Le temps est à la pluie aujourd'hui, avec des températures fraîches oscillant entre 4 et 9 degrés, un vent modéré et un ciel bien gris. \n\nPour",
   "traductions": {}
 }
