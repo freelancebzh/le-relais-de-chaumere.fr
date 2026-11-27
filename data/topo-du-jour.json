@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-27",
   "meteo": {
     "ciel": "pluie",
-    "mini": 4,
-    "maxi": 9,
-    "pluie": 78,
-    "vent": 21
+    "mini": 6,
+    "maxi": 8,
+    "pluie": 68,
+    "vent": 18
   },
-  "texte": "Bonjour depuis Domagné ! Le temps est à la pluie aujourd'hui, avec des températures fraîches oscillant entre 4 et 9 degrés, un vent modéré et un ciel bien gris. \n\nPour",
+  "texte": "Bonjour depuis Domagné ! En ce moment, le temps est pluvieux avec des températures comprises entre 6 et 8 degrés, un risque de pluie évalué à 68 pour cent et un vent soufflant jusqu'à 18 kilomètres par heure.\n\nPour profiter de cette journée fraîche et humide tout en restant au sec, nous vous conseillons de découvrir la richesse culturelle de Châteaugiron, d'admirer le patrimoine historique de Vitré ou de flâner à l'abri au Jardin du Bois-Cornillé.",
   "traductions": {}
 }
